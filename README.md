@@ -9,11 +9,22 @@ This tool allows you to export your COROS training plan to an ICS calendar file 
 
 ## Setup
 
-I have already created a virtual environment for you in the `venv` folder and installed the necessary dependencies.
-
-If you need to reinstall them in the future:
-1.  Create a virtual environment: `python3 -m venv venv`
-2.  Install dependencies: `./venv/bin/pip install -r requirements.txt`
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/coros-to-ics.git
+    cd coros-to-ics
+    ```
+2.  Create a virtual environment:
+    ```bash
+    python3 -m venv venv
+    ```
+3.  Activate the virtual environment:
+    -   **Mac/Linux:** `source venv/bin/activate`
+    -   **Windows:** `venv\Scripts\activate`
+4.  Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
@@ -34,10 +45,11 @@ If you need to reinstall them in the future:
 
 ### Step 2: Convert to ICS
 
-1.  Run the Python script using the virtual environment:
+1.  Run the Python script:
     ```bash
-    ./venv/bin/python convert_to_ics.py
+    python convert_to_ics.py
     ```
+    *(Make sure your virtual environment is activated)*
 2.  The script will ask for a start date.
     - Press **Enter** to start the plan today.
     - Or enter a specific date in `YYYY-MM-DD` format (e.g., `2024-01-01`).
