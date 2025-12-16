@@ -177,15 +177,17 @@ def create_ics_file(workouts, start_date=None, output_file='coros_training_plan.
         
         workout_count_in_week += 1
     
-    # Write to file
-    with open(output_file, 'wb') as f:
-        f.write(cal.to_ical())
-    
-    print(f"✅ ICS file created: {output_file}")
-    print(f"📅 Total events: {len(workouts)}")
-    print(f"🏃 Training plan starts: {start_date.strftime('%Y-%m-%d')}")
-    
-    return output_file
+    # Write to file or return bytes
+    if output_file:
+        with open(output_file, 'wb') as f:
+            f.write(cal.to_ical())
+        
+        print(f"✅ ICS file created: {output_file}")
+        print(f"📅 Total events: {len(workouts)}")
+        print(f"🏃 Training plan starts: {start_date.strftime('%Y-%m-%d')}")
+        return output_file
+    else:
+        return cal.to_ical()
 
 def main():
     """Main function"""
