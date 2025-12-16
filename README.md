@@ -24,7 +24,7 @@ This tool allows you to export your COROS training plan to an ICS calendar file 
 
 ### Step 2: Generate ICS File
 
-1.  Open the [COROS Training Plan Exporter](https://coros-to-ics.vercel.app/) (or your deployed Vercel URL).
+1.  Open the [COROS Training Plan Exporter](https://coros-training-plan-exporter.vercel.app/).
 2.  Paste the training data into the text area.
 3.  (Optional) Enter a start date.
 4.  Click **Download ICS**.
