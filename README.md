@@ -1,4 +1,4 @@
-# COROS Training Plan to ICS Converter
+# COROS Training Plan Exporter
 
 This tool allows you to export your COROS training plan to an ICS calendar file that can be imported into Google Calendar, Apple Calendar, Outlook, etc.
 
@@ -11,8 +11,8 @@ This tool allows you to export your COROS training plan to an ICS calendar file 
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/YOUR_USERNAME/coros-to-ics.git
-    cd coros-to-ics
+    git clone https://github.com/winnwy/COROS-Training-Plan-Exporter.git
+    cd COROS-Training-Plan-Exporter
     ```
 2.  Create a virtual environment:
     ```bash
