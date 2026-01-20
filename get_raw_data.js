@@ -16,4 +16,4 @@ document.execCommand("Copy");
 textArea.remove();
 
 console.log("✅ Training data copied to clipboard!");
-console.log("👉 Now paste this into a file named 'training_data.txt' in this folder.");
+

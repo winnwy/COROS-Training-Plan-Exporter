@@ -8,19 +8,26 @@ app.secret_key = 'supersecretkey'  # Required for flash messages
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    try:
+        with open('get_raw_data.js', 'r') as f:
+            extraction_script = f.read()
+    except Exception:
+        extraction_script = "Error loading script."
+
+
     if request.method == 'POST':
         training_data = request.form.get('training_data')
         start_date_str = request.form.get('start_date')
         
         if not training_data:
             flash('Please paste your training data.', 'error')
-            return render_template('index.html')
+            return render_template('index.html', extraction_script=extraction_script)
             
         try:
             workouts = parse_training_data(training_data)
             if not workouts:
                 flash('No workouts found in the data. Please check the format.', 'error')
-                return render_template('index.html')
+                return render_template('index.html', extraction_script=extraction_script)
                 
             start_date = None
             if start_date_str:
@@ -40,9 +47,9 @@ def index():
             
         except Exception as e:
             flash(f'An error occurred: {str(e)}', 'error')
-            return render_template('index.html')
+            return render_template('index.html', extraction_script=extraction_script)
 
-    return render_template('index.html')
+    return render_template('index.html', extraction_script=extraction_script)
 
 if __name__ == '__main__':
     app.run(debug=True)

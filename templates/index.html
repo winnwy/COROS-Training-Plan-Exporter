@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,11 +100,11 @@
             font-size: 0.875rem;
             border-radius: 4px;
         }
-        
+
         .instructions p {
             margin: 0 0 0.5rem 0;
         }
-        
+
         .instructions ol {
             margin: 0;
             padding-left: 1.5rem;
@@ -121,36 +122,119 @@
             color: #991b1b;
             border: 1px solid #fecaca;
         }
+
+        .code-container {
+            margin-bottom: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: #f1f5f9;
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #e2e8f0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .code-content {
+            padding: 1rem;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 0.875rem;
+            margin: 0;
+            white-space: pre-wrap;
+            max-height: 200px;
+            /* Optional: limit height */
+            overflow-y: auto;
+        }
+
+        .copy-btn {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            width: auto;
+            display: inline-block;
+        }
+
+        .copy-btn:hover {
+            background-color: #f8fafc;
+        }
+
+        details summary {
+            cursor: pointer;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>COROS to ICS Converter</h1>
-        
+
         <div class="instructions">
             <p><strong>How to use:</strong></p>
             <ol>
                 <li>Go to your COROS Training Plan page.</li>
                 <li>Open Developer Tools (F12) -> Console.</li>
-                <li>Paste the extraction script (from <code>get_raw_data.js</code>) and press Enter.</li>
-                <li>Paste the copied data below.</li>
+                <li>Copy and run the extraction script below:
+                    <details>
+                        <summary>Show Extraction Script</summary>
+                        <div class="code-container">
+                            <div class="code-header">
+                                <span>JavaScript Code</span>
+                                <button class="copy-btn" onclick="copyScript()">Copy to Clipboard</button>
+                            </div>
+                            <pre class="code-content" id="script-content">{{ extraction_script }}</pre>
+                        </div>
+                    </details>
+                </li>
+                <li>Paste the output data into the text area below.</li>
             </ol>
         </div>
 
+        <script>
+            function copyScript() {
+                const scriptContent = document.getElementById('script-content').innerText;
+                navigator.clipboard.writeText(scriptContent).then(() => {
+                    const btn = document.querySelector('.copy-btn');
+                    const originalText = btn.innerText;
+                    btn.innerText = 'Copied!';
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            }
+        </script>
+
         {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="flash-message flash-{{ category }}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="flash-message flash-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
 
         <form method="POST">
             <div class="form-group">
                 <label for="training_data">Training Data</label>
-                <textarea id="training_data" name="training_data" placeholder="Paste your training data here..." required></textarea>
+                <textarea id="training_data" name="training_data" placeholder="Paste your training data here..."
+                    required></textarea>
             </div>
 
             <div class="form-group">
@@ -163,4 +247,5 @@
         </form>
     </div>
 </body>
+
 </html>
