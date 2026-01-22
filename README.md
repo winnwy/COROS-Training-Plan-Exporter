@@ -4,7 +4,7 @@ A simple web tool to convert COROS training plans into ICS calendar files for Go
 
 ## Features
 
-- **🔗 Direct URL Scraping**: Simply paste a COROS training plan URL (find one at [COROS Training Plans](https://coros.com/training)). No need for manual copying or developer console scripts.
+- **🔗 Direct URL Scraping**: Simply paste a COROS training plan URL (find one at [COROS Training Plans](https://coros.com/training). Remember to select from the Training Plans tab). 
 - **📅 Smart Start Date**: The app aligns your start date to the correct weekday. If your plan starts on a Tuesday and you pick a Monday, it automatically shifts to the next Tuesday.
 - **👀 Plan Preview**: View the calculated dates and workouts before downloading to ensure everything looks right.
 - **✅ All-Day Events**: Workouts are created as all-day events at the top of your calendar for better visibility.
@@ -54,7 +54,7 @@ If you want to run the code yourself or contribute:
 2.  Open your browser and navigate to: http://127.0.0.1:5000
 
 3.  **Paste your COROS Plan URL**.
-    - You can get this from the COROS app or website. For example, `https://t.coros.com/schedule-plan/share?planId=447304491073716224&region=2`
+    - You can get this from the COROS app or website.
 
 4.  **(Optional) Select a Start Date**.
     - Leave blank to start "today" (aligned to the plan's first weekday).
