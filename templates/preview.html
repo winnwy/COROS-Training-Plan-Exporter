@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Your Plan - COROS to ICS</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .summary {
+            background-color: #eff6ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .summary-item {
+            text-align: center;
+        }
+
+        .summary-label {
+            display: block;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .summary-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 0.75rem;
+            background-color: #f1f5f9;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 600;
+        }
+
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            flex: 1;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: #e2e8f0;
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #cbd5e1;
+        }
+
+        .week-header {
+            background-color: #f8fafc;
+            color: #64748b;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Plan Preview</h1>
+
+        <div class="summary">
+            <div class="summary-item">
+                <span class="summary-label">Start Date</span>
+                <span class="summary-value">{{ start_date }}</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Total Workouts</span>
+                <span class="summary-value">{{ total_workouts }}</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">Total Weeks</span>
+                <span class="summary-value">{{ total_weeks }}</span>
+            </div>
+        </div>
+
+        <div style="max-height: 400px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 6px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Workout</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for workout in workouts %}
+                    {% if loop.first or workout.week != loop.previtem.week %}
+                    <tr class="week-header">
+                        <td colspan="4">Week {{ workout.week }}</td>
+                    </tr>
+                    {% endif %}
+                    <tr>
+                        <td>{{ workout.date_str }}</td>
+                        <td>{{ workout.weekday_name }}</td>
+                        <td style="font-weight: 500;">{{ workout.title }}</td>
+                        <td style="color: #64748b; font-size: 0.85rem;">{{ workout.description }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <p style="text-align: center; color: #64748b; font-size: 0.875rem; margin-top: 1rem;">
+            Only showing the calculated dates. Click confirm to download the ICS file.
+        </p>
+
+        <form action="/generate" method="POST" class="actions">
+            <!-- Hidden inputs to pass data to generation endpoint -->
+            <!-- Note: For large plans this might be heavy, but standard plans are <100kb json -->
+            <input type="hidden" name="workouts_json" value='{{ workouts_json }}'>
+
+            <a href="/" style="flex:1; text-decoration: none;">
+                <button type="button" class="btn-secondary">Back</button>
+            </a>
+            <button type="submit" class="btn-primary">Confirm & Download ICS</button>
+        </form>
+    </div>
+</body>
+
+</html>

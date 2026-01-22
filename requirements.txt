@@ -1,2 +1,4 @@
 icalendar
 flask
+requests
+beautifulsoup4

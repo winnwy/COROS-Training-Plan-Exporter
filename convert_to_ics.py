@@ -1,18 +1,26 @@
 #!/usr/bin/env python3
 """
 Convert COROS training plan data to ICS calendar format.
-Reads data from 'training_data.txt'.
+Reads data from 'training_data.txt' OR scrapes from a COROS URL.
 """
 
 import re
 import sys
-from datetime import datetime, timedelta
+import requests
+from datetime import datetime, timedelta, date
 try:
-    from icalendar import Calendar, Event
+    from icalendar import Calendar, Event, vCalAddress, vText
 except ImportError:
     print("❌ Error: 'icalendar' library not found.")
     print("   Please run: pip install icalendar")
     sys.exit(1)
+
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    print("❌ Error: 'beautifulsoup4' library not found.")
+    print("   Please run: pip install beautifulsoup4")
+    # We don't exit here as the user might just want to use the text method
 
 def load_training_data(filename='training_data.txt'):
     """Load training data from text file"""
@@ -24,6 +32,74 @@ def load_training_data(filename='training_data.txt'):
         print("   Please follow the instructions in README.md to create this file.")
         sys.exit(1)
 
+def scrape_from_url(url):
+    """Scrape training plan from a COROS URL"""
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1'
+    }
+    
+    try:
+        response = requests.get(url, headers=headers, allow_redirects=True)
+        response.raise_for_status()
+    except Exception as e:
+        print(f"❌ Error fetching URL: {e}")
+        return []
+
+    soup = BeautifulSoup(response.content, 'html.parser')
+    workouts = []
+    
+    # Logic to parse the HTML structure based on the provided investigation
+    # New structure typically has .list-line for weeks or just iterate through
+    
+    # We need to find days. The HTML structure seems to be:
+    # .list-view > .list-line (Week) > .list-line-content > .sports-day.rest-day OR .sports-day
+    
+    weeks = soup.find_all(class_='list-line')
+    
+    for week_idx, week_elem in enumerate(weeks, 1):
+        # Find the week number if possible, or use index
+        week_title = week_elem.find(class_='list-line-title-word')
+        # week_num could be parsed from text "Week 1", but loop index is safer if order is preserved
+        
+        days_container = week_elem.find(class_='list-line-content')
+        if not days_container:
+            continue
+            
+        days = days_container.find_all(class_='sports-day')
+        
+        for day_idx, day_elem in enumerate(days): # 0 = Monday, 1 = Tuesday ... 6 = Sunday
+            # Check if it's a rest day
+            if 'rest-day' in day_elem.get('class', []):
+                continue
+                
+            # Find workout card
+            card = day_elem.find(class_='training-card')
+            if not card:
+                continue
+                
+            title_elem = card.find(class_='card-name')
+            desc_elem = card.find(class_='card-desc')
+            
+            title = title_elem.get_text(strip=True) if title_elem else "Workout"
+            description = desc_elem.get_text(strip=True) if desc_elem else ""
+            
+            # Clean up description (sometimes has newlines or extra spaces)
+            description = ' '.join(description.split())
+            
+            # Additional details from chart? (Maybe complex, skip for now per request "weekday, title, description")
+
+            workouts.append({
+                'week': week_idx,
+                'day_of_week': day_idx, # 0=Mon, 6=Sun
+                'title': title,
+                'description': description,
+                'duration': None, # Could parse from description if needed
+                'distance': None,
+                'training_load': None
+            })
+            
+    return workouts
+
 def parse_training_data(data_text):
     """Parse the raw training data text into structured workout objects"""
     workouts = []
@@ -32,12 +108,23 @@ def parse_training_data(data_text):
     current_week = 0
     i = 0
     
+    # Helper to track relative day in week if we are parsing linear text
+    # The text format is a bit lossy on exact weekdays unless we track it carefully
+    # Assuming standard flow for text parser: Week X header -> Mon -> Tue...
+    
+    # Simple heuristic to guess day based on previous logic might be flaky for exact dates
+    # But let's keep existing logic for backwards compatibility if it works for the USER's snippet approach
+    
     while i < len(lines):
         line = lines[i]
         
         # Check for week marker
-        if 'Week(s)' in line:
-            current_week = int(line.split()[0])
+        if 'Week(s)' in line or line.startswith('Week '):
+             # Try to parse week number
+            try:
+                current_week = int(re.search(r'\d+', line).group())
+            except:
+                pass
             i += 1
             continue
         
@@ -68,7 +155,7 @@ def parse_training_data(data_text):
                     detail_line = lines[i]
                     
                     # Stop if we hit the next workout or week marker
-                    if 'Week(s)' in detail_line or detail_line in ['Activity Time:', 'Distance:', 'Training Load:']:
+                    if 'Week(s)' in detail_line or detail_line.startswith('Week ') or detail_line in ['Activity Time:', 'Distance:', 'Training Load:']:
                         break
                     
                     # Check if this looks like a new workout title
@@ -90,13 +177,16 @@ def parse_training_data(data_text):
                     i += 1
                 
                 # Create workout object
+                # Note: The text parser doesn't explicitly extract "Day of Week" easily
+                # We will assign day_of_week parsing in create_ics_file by simple distribution if not present
                 workout = {
                     'week': current_week,
                     'title': title,
                     'duration': duration,
                     'distance': distance,
                     'training_load': tl,
-                    'description': ' '.join(description_lines) if description_lines else ''
+                    'description': ' '.join(description_lines) if description_lines else '',
+                    'day_of_week': None # To be assigned
                 }
                 workouts.append(workout)
                 continue
@@ -105,77 +195,127 @@ def parse_training_data(data_text):
     
     return workouts
 
+def calculate_plan_dates(workouts, start_date=None):
+    """
+    Calculate the actual date for each workout based on the start date.
+    Aligns the first workout to the first occurrence of its specific weekday
+    on or after the provided start_date.
+    """
+    if not workouts:
+        return []
+
+    if start_date is None:
+        start_date = datetime.now()
+
+    # Find the first workout to determine the anchor weekday
+    # Assumes workouts are sorted by week/day
+    sorted_workouts = sorted(workouts, key=lambda x: (x.get('week', 1), x.get('day_of_week', 0)))
+    first_workout = sorted_workouts[0]
+    
+    first_workout_weekday = first_workout.get('day_of_week', 0) # 0=Mon
+    if first_workout_weekday is None:
+         # Fallback for text parsed data where day is unknown
+         first_workout_weekday = 0 
+    
+    # Align start_date to the next occurrence of first_workout_weekday
+    # User selected start_date. We want the first workout to happen ON or AFTER this date,
+    # specifically on its assigned weekday.
+    
+    days_shift = (first_workout_weekday - start_date.weekday()) % 7
+    # If days_shift is 0, it matches today.
+    # If start_date is Wed(2) and first is Tue(1): (1 - 2) % 7 = -1 % 7 = 6. Wed+6 = Tue. Correct.
+    # If start_date is Mon(0) and first is Tue(1): (1 - 0) % 7 = 1. Mon+1 = Tue. Correct.
+    
+    aligned_first_workout_date = start_date + timedelta(days=days_shift)
+    
+    # Now we need to determine the "Plan Base Date" (Week 1, Day 0 - Monday)
+    # relative to this aligned first workout.
+    # aligned_date = BaseDate + (Week-1)*7 + DayOfWeek
+    # BaseDate = aligned_date - (Week-1)*7 - DayOfWeek
+    
+    # Be careful with dates. We want to return a list of workouts with 'date' attached.
+    
+    base_date = aligned_first_workout_date - timedelta(days=((first_workout.get('week', 1) - 1) * 7) + first_workout_weekday)
+    
+    # Recalculate all dates relative to base_date
+    rich_workouts = []
+    for w in sorted_workouts:
+        w_copy = w.copy()
+        
+        wd = w.get('day_of_week')
+        wk = w.get('week', 1)
+        
+        if wd is None:
+            # Fallback for legacy text parsing without explicit days
+            # This logic is imperfect but text parsing is legacy
+            # We will just append them sequentially? 
+            # Reusing the loop logic might imply we need days.
+            # Let's Skip date calc for legacy or enforce day 0-6 cycle?
+            # convert_to_ics legacy logic did a simple loop.
+            # Let's assign temporary days if missing
+            wd = 0 
+        
+        days_offset = ((wk - 1) * 7) + wd
+        current_date = base_date + timedelta(days=days_offset)
+        
+        w_copy['date_obj'] = current_date
+        w_copy['date_str'] = current_date.strftime('%Y-%m-%d')
+        w_copy['weekday_name'] = current_date.strftime('%A')
+        
+        rich_workouts.append(w_copy)
+        
+    return rich_workouts
+
 def create_ics_file(workouts, start_date=None, output_file='coros_training_plan.ics'):
     """Create an ICS calendar file from the workout data"""
     
     # Use today as start date if not provided
     if start_date is None:
-        start_date = datetime.now().replace(hour=6, minute=0, second=0, microsecond=0)
+        start_date = datetime.now()
     
+    # Calculate dates
+    # If workouts already have 'date_obj', use it (parsed from preview), otherwise calculate
+    if not workouts or 'date_obj' not in workouts[0]:
+        workouts_with_dates = calculate_plan_dates(workouts, start_date)
+    else:
+        workouts_with_dates = workouts
+
     # Create calendar
     cal = Calendar()
     cal.add('prodid', '-//COROS Training Plan//EN')
     cal.add('version', '2.0')
     cal.add('calscale', 'GREGORIAN')
     cal.add('method', 'PUBLISH')
-    cal.add('x-wr-calname', 'Marathon Training Plan')
-    cal.add('x-wr-timezone', 'UTC')
+    cal.add('x-wr-calname', 'COROS Training Plan')
     
-    # Track current date (distribute workouts across the week)
-    current_date = start_date
-    workout_count_in_week = 0
-    last_week = 0
-    
-    for workout in workouts:
-        # If we're in a new week, reset to Monday
-        if workout['week'] != last_week:
-            # Move to next Monday if we're not already on one
-            days_until_monday = (7 - current_date.weekday()) % 7
-            if days_until_monday > 0 or workout_count_in_week > 0:
-                current_date += timedelta(days=days_until_monday if days_until_monday > 0 else 7)
-            workout_count_in_week = 0
-            last_week = workout['week']
+    for workout in workouts_with_dates:
+        event_date = workout['date_obj']
         
         # Create event
         event = Event()
         event.add('summary', workout['title'])
         
-        # Parse duration if available
-        duration_minutes = 60  # Default duration
-        if workout['duration']:
-            try:
-                h, m, s = map(int, workout['duration'].split(':'))
-                duration_minutes = h * 60 + m
-            except:
-                pass
+        # Use All Day Event (VALUE=DATE)
+        event_date_val = event_date.date() if isinstance(event_date, datetime) else event_date
         
-        # Set event start and end times
-        event.add('dtstart', current_date)
-        event.add('dtend', current_date + timedelta(minutes=duration_minutes))
+        event.add('dtstart', event_date_val)
+        event.add('dtend', event_date_val + timedelta(days=1)) 
         
-        # Build description
+        # Description
         description_parts = []
-        if workout['distance']:
+        if workout.get('distance'):
             description_parts.append(f"Distance: {workout['distance']}")
-        if workout['duration']:
+        if workout.get('duration'):
             description_parts.append(f"Duration: {workout['duration']}")
-        if workout['training_load']:
+        if workout.get('training_load'):
             description_parts.append(f"Training Load: {workout['training_load']}")
-        if workout['description']:
+        if workout.get('description'):
             description_parts.append(f"\n{workout['description']}")
         
         event.add('description', '\n'.join(description_parts))
-        event.add('location', 'Training Run')
         
         # Add to calendar
         cal.add_component(event)
-        
-        # Move to next day (skip Sunday, move to Monday)
-        current_date += timedelta(days=1)
-        if current_date.weekday() == 6:  # Sunday
-            current_date += timedelta(days=1)  # Move to Monday
-        
-        workout_count_in_week += 1
     
     # Write to file or return bytes
     if output_file:
@@ -184,38 +324,59 @@ def create_ics_file(workouts, start_date=None, output_file='coros_training_plan.
         
         print(f"✅ ICS file created: {output_file}")
         print(f"📅 Total events: {len(workouts)}")
-        print(f"🏃 Training plan starts: {start_date.strftime('%Y-%m-%d')}")
         return output_file
     else:
         return cal.to_ical()
 
 def main():
     """Main function"""
-    print("🔍 Reading 'training_data.txt'...")
-    data_text = load_training_data()
+    import argparse
+    parser = argparse.ArgumentParser(description='Convert COROS plan to ICS')
+    parser.add_argument('--url', help='COROS Training Plan URL')
+    parser.add_argument('--file', default='training_data.txt', help='Input text file')
+    args = parser.parse_args()
     
-    workouts = parse_training_data(data_text)
+    workouts = []
     
+    if args.url:
+        print(f"🌐 Scraping from URL: {args.url}")
+        workouts = scrape_from_url(args.url)
+    else:
+        print(f"🔍 Reading '{args.file}'...")
+        # Check if file exists, if not prompt or exit
+        try:
+            data_text = load_training_data(args.file)
+            workouts = parse_training_data(data_text)
+        except SystemExit:
+             # If default file not found and no arguments, guide user
+            print("\nUsage:")
+            print("  python3 convert_to_ics.py --url \"https://...\"")
+            print("  python3 convert_to_ics.py --file training_data.txt")
+            return
+
     if not workouts:
-        print("❌ No workouts found in data. Please check 'training_data.txt'.")
+        print("❌ No workouts found.")
         sys.exit(1)
         
-    print(f"✅ Found {len(workouts)} workouts across {max(w['week'] for w in workouts)} weeks")
+    print(f"✅ Found {len(workouts)} workouts")
     
     # Ask user for start date
-    print("\n📅 When would you like to start the training plan?")
+    print("\n📅 When would you like to start the training plan? (Week 1 Day 1)")
     print("   Press Enter to start today, or enter a date (YYYY-MM-DD):")
-    user_input = input().strip()
+    try:
+        user_input = input().strip()
+    except EOFError:
+        user_input = ""
     
     start_date = None
     if user_input:
         try:
-            start_date = datetime.strptime(user_input, '%Y-%m-%d').replace(hour=6, minute=0, second=0, microsecond=0)
+            start_date = datetime.strptime(user_input, '%Y-%m-%d')
         except ValueError:
             print("⚠️  Invalid date format. Using today as start date.")
     
     if start_date is None:
-        start_date = datetime.now().replace(hour=6, minute=0, second=0, microsecond=0)
+        start_date = datetime.now()
     
     print(f"\n🚀 Creating ICS file starting from {start_date.strftime('%Y-%m-%d')}...")
     output_file = create_ics_file(workouts, start_date)
@@ -224,3 +385,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

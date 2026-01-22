@@ -186,39 +186,12 @@
         <div class="instructions">
             <p><strong>How to use:</strong></p>
             <ol>
-                <li>Go to your COROS Training Plan page.</li>
-                <li>Open Developer Tools (F12) -> Console.</li>
-                <li>Copy and run the extraction script below:
-                    <details>
-                        <summary>Show Extraction Script</summary>
-                        <div class="code-container">
-                            <div class="code-header">
-                                <span>JavaScript Code</span>
-                                <button class="copy-btn" onclick="copyScript()">Copy to Clipboard</button>
-                            </div>
-                            <pre class="code-content" id="script-content">{{ extraction_script }}</pre>
-                        </div>
-                    </details>
-                </li>
-                <li>Paste the output data into the text area below.</li>
+                <li>Paste your COROS Training Plan URL below.</li>
+                <li>(Optional) Select a Start Date.</li>
+                <li>Click <strong>Preview Plan</strong> to see the schedule.</li>
+                <li>Confirm and download your ICS file.</li>
             </ol>
         </div>
-
-        <script>
-            function copyScript() {
-                const scriptContent = document.getElementById('script-content').innerText;
-                navigator.clipboard.writeText(scriptContent).then(() => {
-                    const btn = document.querySelector('.copy-btn');
-                    const originalText = btn.innerText;
-                    btn.innerText = 'Copied!';
-                    setTimeout(() => {
-                        btn.innerText = originalText;
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy: ', err);
-                });
-            }
-        </script>
 
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
@@ -232,18 +205,23 @@
 
         <form method="POST">
             <div class="form-group">
-                <label for="training_data">Training Data</label>
-                <textarea id="training_data" name="training_data" placeholder="Paste your training data here..."
-                    required></textarea>
+                <label for="plan_url">COROS Training Plan URL</label>
+                <input type="url" id="plan_url" name="plan_url"
+                    placeholder="https://t.coros.com/schedule-plan/share?planId=..."
+                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; box-sizing: border-box;"
+                    required>
+                <small style="color: #64748b; display: block; margin-top: 0.25rem;">Paste the sharing URL straight from
+                    the COROS app or website.</small>
             </div>
 
             <div class="form-group">
                 <label for="start_date">Start Date (Optional)</label>
                 <input type="date" id="start_date" name="start_date">
-                <small style="color: #64748b; display: block; margin-top: 0.25rem;">Leave blank to start today</small>
+                <small style="color: #64748b; display: block; margin-top: 0.25rem;">Leave blank to start today. The plan
+                    will align to the next matching weekday.</small>
             </div>
 
-            <button type="submit">Generate ICS File</button>
+            <button type="submit">Preview Plan</button>
         </form>
     </div>
 </body>
