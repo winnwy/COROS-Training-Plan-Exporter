@@ -108,7 +108,7 @@ def scrape_from_url(url):
     for entity in entities:
         day_no = entity.get('dayNo', 1)
         week = ((day_no - 1) // 7) + 1
-        day_of_week = (day_no - 1) % 7  # 0=Mon, 6=Sun
+        day_of_week = day_no % 7  # dayNo directly maps: 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri, 5=Sat, 6=Sun
         
         # Get program info for this entity using idInPlan
         entity_id_in_plan = entity.get('idInPlan')
