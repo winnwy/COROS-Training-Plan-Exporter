@@ -4,15 +4,34 @@ A simple web tool to convert COROS training plans into ICS calendar files for Go
 
 ## Features
 
-- **🔗 Direct URL Scraping**: Simply paste a COROS training plan URL (find one at [COROS Training Plans](https://coros.com/training). Remember to select from the Training Plans tab). 
-- **📅 Smart Start Date**: The app aligns your start date to the correct weekday. If your plan starts on a Tuesday and you pick a Monday, it automatically shifts to the next Tuesday.
-- **👀 Plan Preview**: View the calculated dates and workouts before downloading to ensure everything looks right.
-- **✅ All-Day Events**: Workouts are created as all-day events at the top of your calendar for better visibility.
+- **🔗 Direct URL Scraping**: Simply paste a COROS training plan URL from [COROS Training Plans](https://coros.com/training) or any shared plan link.
+- **📋 Detailed Workout Information**: Extracts specific workout names (e.g., "Aerobic run", "Easy Run with 400m Pickups") and coach's instructions from COROS API.
+- **📊 Complete Workout Breakdown**: Each event includes detailed structure showing warm-up, training segments, cool-down with durations and distances.
+- **📅 Smart Start Date**: Automatically aligns your start date to the correct weekday. If your plan starts on a Tuesday and you pick a Monday, it shifts to the next Tuesday.
+- **👀 Plan Preview**: View calculated dates, workout titles, and detailed descriptions before downloading.
+- **✅ All-Day Events**: Workouts are created as all-day events for maximum visibility in your calendar.
+- **🌍 Multi-Region Support**: Works with all COROS training plans regardless of region.
 
 ## Use Online
 You can use the hosted version directly without installing anything:
 [COROS Training Plan Exporter](https://coros-training-plan-exporter.vercel.app/)
 
+## Example Output
+
+Each calendar event includes:
+
+**Title**: `Easy Run with 400m Pickups`
+
+**Description**:
+```
+The pace for the 400m pickups is up to the runner. They should 
+feel smooth and controlled, but faster than your easy pace.
+
+Workout Structure:
+• Warm Up: 5min
+• Training: 6.44km
+• Cool Down: 5min
+```
 
 ## Development / Run Locally
 
