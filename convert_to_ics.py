@@ -6,6 +6,7 @@ Reads data from 'training_data.txt' OR scrapes from a COROS URL.
 
 import re
 import sys
+import json
 import requests
 from datetime import datetime, timedelta, date
 try:
@@ -22,6 +23,33 @@ except ImportError:
     print("   Please run: pip install beautifulsoup4")
     # We don't exit here as the user might just want to use the text method
 
+# Global dictionary cache
+_DICTIONARY_CACHE = None
+
+def load_dictionary(dict_file='coros_dictionary.json'):
+    """Load the COROS dictionary file for translating keys to natural language"""
+    global _DICTIONARY_CACHE
+    if _DICTIONARY_CACHE is not None:
+        return _DICTIONARY_CACHE
+    
+    try:
+        with open(dict_file, 'r', encoding='utf-8') as f:
+            _DICTIONARY_CACHE = json.load(f)
+            return _DICTIONARY_CACHE
+    except FileNotFoundError:
+        print(f"⚠️  Warning: Dictionary file '{dict_file}' not found. Workout names won't be translated.")
+        return {}
+    except json.JSONDecodeError:
+        print(f"⚠️  Warning: Invalid dictionary file. Workout names won't be translated.")
+        return {}
+
+def translate_key(key, dictionary, max_length=None):
+    """Translate a dictionary key to natural language"""
+    translation = dictionary.get(key, key)
+    if max_length and len(translation) > max_length:
+        translation = translation[:max_length] + '...'
+    return translation
+
 def load_training_data(filename='training_data.txt'):
     """Load training data from text file"""
     try:
@@ -33,72 +61,212 @@ def load_training_data(filename='training_data.txt'):
         sys.exit(1)
 
 def scrape_from_url(url):
-    """Scrape training plan from a COROS URL"""
+    """Fetch training plan from COROS API and translate dictionary keys"""
+    # Extract plan ID and region from URL
+    plan_id_match = re.search(r'planId=([0-9]+)', url)
+    region_match = re.search(r'region=([0-9]+)', url)
+    
+    if not plan_id_match:
+        print("❌ Error: Could not extract plan ID from URL")
+        return []
+    
+    plan_id = plan_id_match.group(1)
+    region = region_match.group(1) if region_match else "1"
+    
+    # Load dictionary for translations
+    dictionary = load_dictionary()
+    
+    # Fetch from API
+    api_url = f"https://teamapi.coros.com/training/plan/detail"
+    params = {
+        'supportRestExercise': '1',
+        'id': plan_id,
+        'region': region
+    }
     headers = {
-        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1'
+        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15'
     }
     
     try:
-        response = requests.get(url, headers=headers, allow_redirects=True)
+        response = requests.get(api_url, params=params, headers=headers)
         response.raise_for_status()
+        data = response.json()
     except Exception as e:
-        print(f"❌ Error fetching URL: {e}")
+        print(f"❌ Error fetching training plan from API: {e}")
         return []
-
-    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    if 'data' not in data or 'entities' not in data['data']:
+        print("❌ Error: Invalid API response")
+        return []
+    
     workouts = []
+    entities = data['data']['entities']
+    # Build programs dict keyed by idInPlan (entities reference programs by idInPlan, not by index)
+    programs = {prog.get('idInPlan'): prog for prog in data['data'].get('programs', []) if prog.get('idInPlan')}
     
-    # Logic to parse the HTML structure based on the provided investigation
-    # New structure typically has .list-line for weeks or just iterate through
-    
-    # We need to find days. The HTML structure seems to be:
-    # .list-view > .list-line (Week) > .list-line-content > .sports-day.rest-day OR .sports-day
-    
-    weeks = soup.find_all(class_='list-line')
-    
-    for week_idx, week_elem in enumerate(weeks, 1):
-        # Find the week number if possible, or use index
-        week_title = week_elem.find(class_='list-line-title-word')
-        # week_num could be parsed from text "Week 1", but loop index is safer if order is preserved
+    # Calculate which week each day belongs to (7 days per week)
+    for entity in entities:
+        day_no = entity.get('dayNo', 1)
+        week = ((day_no - 1) // 7) + 1
+        day_of_week = (day_no - 1) % 7  # 0=Mon, 6=Sun
         
-        days_container = week_elem.find(class_='list-line-content')
-        if not days_container:
+        # Get program info for this entity using idInPlan
+        entity_id_in_plan = entity.get('idInPlan')
+        program = programs.get(entity_id_in_plan, {})
+        
+        # Get detailed workout name from program  
+        workout_name_key = program.get('name', '')
+        workout_overview_key = program.get('overview', '')
+        workout_title = translate_key(workout_name_key, dictionary) if workout_name_key else None
+        workout_overview = translate_key(workout_overview_key, dictionary) if workout_overview_key else None
+        
+        # Check if there's exerciseBarChart data (new API format)
+        exercise_bar_chart = entity.get('exerciseBarChart', [])
+        
+        # Also check for old sport format for backwards compatibility
+        sport = entity.get('sport')
+        
+        if not exercise_bar_chart and not sport:
+            # No workout data at all, skip
             continue
-            
-        days = days_container.find_all(class_='sports-day')
         
-        for day_idx, day_elem in enumerate(days): # 0 = Monday, 1 = Tuesday ... 6 = Sunday
-            # Check if it's a rest day
-            if 'rest-day' in day_elem.get('class', []):
-                continue
+        # Parse based on which format is available
+        if exercise_bar_chart:
+            # New format: parse from exerciseBarChart
+            exercise_details = []
+            total_duration = 0
+            total_distance = 0
+            training_exercises = []  # Track non-warmup/cooldown exercises
+            
+            for exercise in exercise_bar_chart:
+                ex_name_key = exercise.get('name', '')
+                ex_name = translate_key(ex_name_key, dictionary)
                 
-            # Find workout card
-            card = day_elem.find(class_='training-card')
-            if not card:
-                continue
+                # Format target (time or distance)
+                target_type = exercise.get('targetType')
+                target_value = exercise.get('targetValue', 0)
                 
-            title_elem = card.find(class_='card-name')
-            desc_elem = card.find(class_='card-desc')
+                if target_type == 2:  # Time
+                    total_duration += target_value
+                    target = f"{target_value // 60}min" if target_value >= 60 else f"{target_value}s"
+                elif target_type == 5:  # Distance
+                    total_distance += target_value
+                    target = f"{target_value / 100000:.2f}km"
+                else:
+                    target = ""
+                
+                if ex_name and target:
+                    exercise_details.append(f"{ex_name}: {target}")
+                    # Track training segments (exclude warm up and cool down)
+                    if ex_name not in ['Warm Up', 'Cool Down']:
+                        training_exercises.append({
+                            'name': ex_name,
+                            'target_type': target_type,
+                            'target_value': target_value,
+                            'distance': target_value if target_type == 5 else 0
+                        })
             
-            title = title_elem.get_text(strip=True) if title_elem else "Workout"
-            description = desc_elem.get_text(strip=True) if desc_elem else ""
+            # Build title - use program name if available, otherwise build from components
+            if workout_title:
+                # Use the detailed workout name from programs
+                title = workout_title
+            else:
+                # Fallback: build title from actual workout components 
+                title_parts = []
+                for detail in exercise_details[:5]:  # Limit to first 5 components for readability
+                    title_parts.append(detail.replace(": ", " "))
+                
+                if len(exercise_details) > 5:
+                    title = " + ".join(title_parts) + f" + {len(exercise_details) - 5} more"
+                elif title_parts:
+                    title = " + ".join(title_parts)
+                else:
+                    title = "Workout"
             
-            # Clean up description (sometimes has newlines or extra spaces)
-            description = ' '.join(description.split())
+            # Build description with overview and component breakdown
+            description = workout_overview if workout_overview else ""
             
-            # Additional details from chart? (Maybe complex, skip for now per request "weekday, title, description")
-
-            workouts.append({
-                'week': week_idx,
-                'day_of_week': day_idx, # 0=Mon, 6=Sun
-                'title': title,
-                'description': description,
-                'duration': None, # Could parse from description if needed
-                'distance': None,
-                'training_load': None
-            })
+            # Always add workout structure breakdown
+            if exercise_details:
+                if description:
+                    description += "\n\n"
+                description += "Workout Structure:\n" + "\n".join([f"• {d}" for d in exercise_details])
             
+            # Strip any leading/trailing whitespace
+            description = description.strip()
+            
+            duration = f"{total_duration // 60}min" if total_duration > 0 else None
+            distance = f"{total_distance / 100000:.2f} km" if total_distance > 0 else None
+            training_load = None  # Not available in exerciseBarChart format
+            
+        else:
+            # Old format: parse from sport object
+            workout_name_key = sport.get('name', '')
+            workout_overview_key = sport.get('overview', '')
+            
+            title = translate_key(workout_name_key, dictionary) if workout_name_key else "Workout"
+            description = translate_key(workout_overview_key, dictionary) if workout_overview_key else ""
+            
+            # Convert distance and duration
+            distance_cm = sport.get('distance', 0)
+            duration_sec = sport.get('duration', 0)
+            training_load = sport.get('trainingLoad', 0)
+            
+            # Build exercise details
+            exercise_details = []
+            for exercise in sport.get('exercises', []):
+                ex_name_key = exercise.get('name', '')
+                ex_name = translate_key(ex_name_key, dictionary)
+                
+                # Format target (time or distance)
+                target_type = exercise.get('targetType')
+                target_value = exercise.get('targetValue', 0)
+                
+                if target_type == 2:  # Time
+                    target = f"{target_value // 60}min" if target_value >= 60 else f"{target_value}s"
+                elif target_type == 5:  # Distance
+                    target = f"{target_value / 100000:.2f}km"
+                else:
+                    target = ""
+                
+                # Format intensity
+                intensity_type = exercise.get('intensityType', 0)
+                intensity_str = ""
+                if intensity_type == 3:  # Pace
+                    intensity_pct = exercise.get('intensityPercent', 0) / 1000
+                    intensity_pct_ext = exercise.get('intensityPercentExtend', 0) / 1000
+                    if intensity_pct > 0:
+                        intensity_str = f"@ {intensity_pct:.0f}-{intensity_pct_ext:.0f}% threshold"
+                
+                if ex_name and target:
+                    detail = f"{ex_name}: {target}"
+                    if intensity_str:
+                        detail += f" {intensity_str}"
+                    exercise_details.append(detail)
+            
+            # Combine description with exercise details
+            if exercise_details:
+                description += "\n\nWorkout Structure:\n" + "\n".join([f"• {d}" for d in exercise_details])
+            
+            # Strip any leading/trailing whitespace
+            description = description.strip()
+            
+            duration = f"{duration_sec // 60}min" if duration_sec > 0 else None
+            distance = f"{distance_cm / 100000:.2f} km" if distance_cm > 0 else None
+            training_load = str(training_load) if training_load > 0 else None
+        
+        workouts.append({
+            'week': week,
+            'day_of_week': day_of_week,
+            'title': title,
+            'description': description,
+            'duration': duration,
+            'distance': distance,
+            'training_load': training_load
+        })
+    
     return workouts
+
 
 def parse_training_data(data_text):
     """Parse the raw training data text into structured workout objects"""

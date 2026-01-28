@@ -154,7 +154,7 @@
             </div>
         </div>
 
-        <div style="max-height: 400px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 6px;">
+        <div style="max-height: 500px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 6px;">
             <table>
                 <thead>
                     <tr>
@@ -175,7 +175,16 @@
                         <td>{{ workout.date_str }}</td>
                         <td>{{ workout.weekday_name }}</td>
                         <td style="font-weight: 500;">{{ workout.title }}</td>
-                        <td style="color: #64748b; font-size: 0.85rem;">{{ workout.description }}</td>
+                        <td style="color: #64748b; font-size: 0.85rem;">
+                            {% if workout.description %}
+                            <details style="cursor: pointer;">
+                                <summary style="color: var(--primary-color);">View Details</summary>
+                                <div style="margin-top: 0.5rem; white-space: pre-wrap; color: var(--text-color); line-height: 1.6;">{{ workout.description }}</div>
+                            </details>
+                            {% else %}
+                            <span style="color: #94a3b8;">No description</span>
+                            {% endif %}
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

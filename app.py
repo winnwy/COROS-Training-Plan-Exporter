@@ -17,6 +17,8 @@ def index():
             return render_template('index.html')
             
         try:
+            # Import the updated scraper with dictionary translation
+            # scrape_from_url now uses API and translates workout names/descriptions automatically
             from convert_to_ics import scrape_from_url, calculate_plan_dates
             import json
             
