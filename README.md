@@ -39,7 +39,7 @@ Run it locally, use the CLI, or build on the shared decoder (`coros_decode.py`) 
 ## What you get
 
 ### 📅 Calendar (`.ics`)
-One event per workout, dated to your start day. For **run, bike, and strength**, each event carries the full decoded workout:
+One event per workout, dated to your start day. Each event has a stable id, so if COROS revises your plan and you **re-download and re-import, your calendar updates in place** — no duplicate events. For **run, bike, and strength**, each event carries the full decoded workout:
 
 > **Threshold** — Tue 24 Jun
 > ```
