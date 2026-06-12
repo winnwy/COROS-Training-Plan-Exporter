@@ -118,6 +118,19 @@ def test_strength_description_renders(tr):
     assert ("×" in desc) or ("reps" in desc) or ("hold" in desc)
 
 
+def test_no_bare_kind_target(tr):
+    # an absolute (non-%) HR/pace/power target must not render a misleading
+    # bare "@ HR"/"@ pace"/"@ power" — Target.human() returns "" instead.
+    for name in ("bike_threshold", "run_intervals_pace", "run_simple", "strength_injury_prevention"):
+        plan = D.decode_plan(load(name), tr)
+        for w in plan.workouts:
+            for b in w.blocks:
+                for s in ([b] if isinstance(b, D.Step) else b.steps):
+                    assert s.target.human() not in ("HR", "pace", "power"), \
+                        f"{name}: bare kind target on {s.name!r}"
+                    assert " @ HR" not in s.human() and " @ pace" not in s.human()
+
+
 def test_distance_cm_to_m(tr):
     plan = D.decode_plan(load("run_simple"), tr)
     dists = [s.dur_value for w in plan.workouts for b in w.blocks

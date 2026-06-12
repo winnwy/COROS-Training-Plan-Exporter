@@ -68,9 +68,9 @@ def index():
                                    plan_url=plan_url)
             
         except Exception as e:
-            flash(f'An error occurred: {str(e)}', 'error')
             import traceback
-            traceback.print_exc()
+            traceback.print_exc()   # server-side log
+            flash('Something went wrong reading that plan. Check the URL and try again.', 'error')
             return render_template('index.html')
 
     return render_template('index.html')
@@ -99,8 +99,10 @@ def generate():
             download_name='coros_training_plan.ics',
             mimetype='text/calendar'
         )
-    except Exception as e:
-        return f"Error generating ICS: {str(e)}", 500
+    except Exception:
+        import traceback
+        traceback.print_exc()   # server-side log; don't leak internals to client
+        return "Sorry, we couldn't generate the calendar from that data.", 500
 
 
 @app.route('/generate-fit', methods=['POST'])
@@ -119,10 +121,12 @@ def generate_fit():
             mimetype='application/zip'
         )
     except ValueError as e:
-        # e.g. no run/bike workouts to export
+        # our own message (e.g. "No run/bike/strength workouts ..."), safe to show
         return f"Could not build Garmin workouts: {str(e)}", 400
-    except Exception as e:
-        return f"Error generating FIT: {str(e)}", 500
+    except Exception:
+        import traceback
+        traceback.print_exc()   # server-side log; don't leak internals to client
+        return "Sorry, we couldn't build the Garmin workouts.", 500
 
 
 if __name__ == '__main__':
