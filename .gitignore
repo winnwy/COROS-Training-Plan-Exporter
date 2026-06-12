@@ -1,10 +1,19 @@
-venv/
+# Python
 __pycache__/
 *.pyc
+venv/
+.venv/
+.pytest_cache/
+
+# Secrets / local env (e.g. INTERVALS_ICU_API_KEY for the POC)
+.env
+.env.*
+
+# Generated output
 *.ics
+poc/out/
 training_data.txt
+
+# OS / tooling
 .DS_Store
 .gstack/
-
-# POC generated output
-poc/out/
