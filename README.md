@@ -159,7 +159,7 @@ One decoder, many exporters — so the calendar and the watch always agree.
 | ✅ Single workout export — paste a `programId=` link → one `.ics` event / one `.FIT` | shipped |
 | 🧪 `.ZWO` / intervals.icu structured export | experimental (POC) |
 | 🔬 Direct Garmin Connect upload (unofficial API) | researched, not built |
-| 🚧 Swim / triathlon / climbing | calendar at overview level only (no `.FIT`) |
+| ✅ Swim / triathlon / climbing — calendar with full set structure (sets, reps, rest) | shipped (no `.FIT`; use the calendar) |
 
 ## License
 

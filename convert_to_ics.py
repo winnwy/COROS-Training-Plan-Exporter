@@ -243,7 +243,7 @@ def scrape_from_url(url):
         if not exercise_bar_chart and not sport:
             # No bar-chart/sport summary (e.g. strength plans). If the decoder has
             # rich blocks for this program, build the event entirely from it.
-            if rich is not None and rich.blocks:
+            if rich is not None and rich.has_structure:
                 rich_desc = coros_decode.format_description(rich, include_summary=False)
                 workouts.append({
                     'week': week,
@@ -382,9 +382,11 @@ def scrape_from_url(url):
             distance = f"{distance_cm / 100000:.2f} km" if distance_cm > 0 else None
             training_load = str(training_load) if training_load > 0 else None
         
-        # Rich detail override for run/bike (full steps, intervals, % targets).
-        # create_ics_file prints its own Distance/Duration, so include_summary=False.
-        if rich is not None and rich.is_rich and rich.blocks:
+        # Structured-detail override for any sport that decoded into steps
+        # (run/bike/strength + swim/climb — was is_rich-only, which left swim
+        # events overview-blank). create_ics_file prints its own
+        # Distance/Duration, so include_summary=False.
+        if rich is not None and rich.has_structure:
             rich_desc = coros_decode.format_description(rich, include_summary=False)
             if rich_desc:
                 description = rich_desc
