@@ -644,6 +644,26 @@ def calculate_plan_dates(workouts, start_date=None):
         
     return rich_workouts
 
+def build_dated_workouts(plan_url, start_date=None):
+    """Fetch a COROS plan/workout link and return its workouts dated from start_date.
+
+    The one path from a link to a dated workout list — shared by the web preview
+    and the auto-updating calendar feed so they always agree on dates. Raises
+    ValueError for an unrecognized link (via parse_coros_url); returns [] when the
+    fetch yields nothing. A workout link self-dates to start_date (no Monday
+    alignment); a plan aligns to the first workout's weekday on/after start_date.
+    """
+    if start_date is None:
+        start_date = datetime.now()
+    kind, _id, _region = parse_coros_url(plan_url)   # may raise ValueError
+    if kind == "workout":
+        return scrape_workout_from_url(plan_url, start_date) or []
+    workouts = scrape_from_url(plan_url) or []
+    if not workouts:
+        return []
+    return calculate_plan_dates(workouts, start_date)
+
+
 def create_ics_file(workouts, start_date=None, output_file='coros_training_plan.ics'):
     """Create an ICS calendar file from the workout data"""
     
