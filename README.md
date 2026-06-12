@@ -2,9 +2,15 @@
 
 Turn a COROS training plan into something you can actually use outside the COROS app — a **calendar feed** (`.ics`) today, and **structured workouts** (`.ZWO` / intervals.icu) experimentally.
 
-COROS publishes its plans through a public API, but the workout details are stored as shortcodes (`T3001`, `P12999`, …). This tool fetches a plan, **decodes those shortcodes into plain English** using a bundled dictionary, and exports the result.
+## ▶️ Try it now — no install
 
-**Use it online (no install):** https://coros-training-plan-exporter.vercel.app/
+### **[coros-training-plan-exporter.vercel.app](https://coros-training-plan-exporter.vercel.app/)**
+
+Paste a COROS plan URL, preview the schedule, download the `.ics`. That's it. The hosted app is live and runs the full decoder, so run/bike workouts come through with every interval and HR/pace target spelled out (see the example below).
+
+---
+
+COROS publishes its plans through a public API, but the workout details are stored as shortcodes (`T3001`, `P12999`, …). This tool fetches a plan, **decodes those shortcodes into plain English** using a bundled dictionary, and exports the result. Prefer to run it yourself? See [Run locally](#run-locally).
 
 ---
 
