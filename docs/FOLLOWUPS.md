@@ -43,7 +43,8 @@ See `BUILD_PLAN.md` for full context.
   Garmin FIT) — needs user sign-off per BUILD_PLAN §2/§8.1.
 
 ## Standing task
-- [ ] **Keep `README.md` in sync with deliverables — rewrite it whenever deliverables change.**
-  Current README predates the decoder/rich-.ics work, the POC, and the structured-export
-  research. Rewrite for readability + match actual outputs (.ics rich detail now; .ZWO/
-  intervals.icu/Garmin as researched/optional). Update on every deliverable change.
+- [x] First full README rewrite done 2026-06-12 — readability + matches current
+  deliverables (rich `.ics`, structured-export POC, researched Garmin, deferred
+  strength/swim/tri).
+- [ ] **Standing:** keep `README.md` in sync with deliverables — refresh on every
+  deliverable change, not just the first time.
