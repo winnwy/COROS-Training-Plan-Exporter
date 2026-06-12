@@ -1,95 +1,117 @@
-# COROS Training Plan Exporter to ICS
+# COROS Training Plan Exporter
 
-A simple web tool to convert COROS training plans into ICS calendar files for Google Calendar, Apple Calendar, Outlook, etc.
+Turn a COROS training plan into something you can actually use outside the COROS app — a **calendar feed** (`.ics`) today, and **structured workouts** (`.ZWO` / intervals.icu) experimentally.
 
-## Features
+COROS publishes its plans through a public API, but the workout details are stored as shortcodes (`T3001`, `P12999`, …). This tool fetches a plan, **decodes those shortcodes into plain English** using a bundled dictionary, and exports the result.
 
-- **🔗 Direct URL Scraping**: Simply paste a COROS training plan URL from [COROS Training Plans](https://coros.com/training) or any shared plan link.
-- **📋 Detailed Workout Information**: Extracts specific workout names (e.g., "Aerobic run", "Easy Run with 400m Pickups") and coach's instructions from COROS API.
-- **📊 Complete Workout Breakdown**: Each event includes detailed structure showing warm-up, training segments, cool-down with durations and distances.
-- **📅 Smart Start Date**: Automatically aligns your start date to the correct weekday. If your plan starts on a Tuesday and you pick a Monday, it shifts to the next Tuesday.
-- **👀 Plan Preview**: View calculated dates, workout titles, and detailed descriptions before downloading.
-- **✅ All-Day Events**: Workouts are created as all-day events for maximum visibility in your calendar.
-- **🌍 Multi-Region Support**: Works with all COROS training plans regardless of region.
+**Use it online (no install):** https://coros-training-plan-exporter.vercel.app/
 
-## Use Online
-You can use the hosted version directly without installing anything:
-[COROS Training Plan Exporter](https://coros-training-plan-exporter.vercel.app/)
+---
 
-## Example Output
+## What you get
 
-Each calendar event includes:
+### 📅 Calendar export (`.ics`) — the main feature
+Paste a COROS plan URL and download an `.ics` you can import into Google Calendar, Apple Calendar, Outlook, etc. One all-day event per workout, dated to your start day (aligned to the plan's first weekday).
 
-**Title**: `Easy Run with 400m Pickups`
+For **run and bike** plans, each event now carries the **full decoded workout** — warm-up, every interval, and cool-down, with targets:
 
-**Description**:
 ```
-The pace for the 400m pickups is up to the runner. They should 
-feel smooth and controlled, but faster than your easy pace.
+Threshold                                    (Tue 24 Jun)
 
-Workout Structure:
-• Warm Up: 5min
-• Training: 6.44km
-• Cool Down: 5min
+Duration: 60min / Training Load: 103
+This should not feel like an easy session (RPE 8/10). Slowly progress
+towards threshold and try to remain seated throughout.
+
+Workout:
+ • Warm Up — open
+ • Training — 30min @ 80–90% HR
+3×
+   • Training — 5min @ 96–102% HR
+   • Rest — 5min @ 80–90% HR
+ • Cool Down — open
 ```
 
-## Development / Run Locally
+Intervals are shown as repeats (`3× (...)`), and HR / pace targets are decoded as `%`-of-threshold ranges. Other sports still export, with the basic summary breakdown.
 
-If you want to run the code yourself or contribute:
+### 🏃 Structured workout export (experimental — POC)
+A `.ics` event is just a reminder. To get a **watch-guided** workout (the watch steps you through the intervals), use the proof-of-concept exporter in [`poc/`](poc/): it converts a run/bike plan to Zwift **`.ZWO`** files and can upload them to **intervals.icu** (which forwards to Garmin/Zwift). See [`poc/README.md`](poc/README.md). This is research-stage and opt-in, not wired into the web app.
 
-### Prerequisites
+---
 
-- Python 3.10+
-- Internet connection (to fetch the plan)
+## Use online
 
-### Installation
+The hosted version needs nothing installed: **https://coros-training-plan-exporter.vercel.app/**
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/winnwy/COROS-Training-Plan-Exporter.git
-    cd COROS-Training-Plan-Exporter
-    ```
+1. Paste your COROS plan URL.
+2. (Optional) pick a start date — blank = today, aligned to the plan's first weekday.
+3. **Preview** the schedule, then **download** the `.ics`.
+4. Import it into your calendar app.
 
-2.  Create and activate a virtual environment (optional but recommended):
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
+---
 
-3.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Run locally
 
-## Usage
+**Prerequisites:** Python 3.10+ and an internet connection.
 
-1.  Start the application:
-    ```bash
-    ./run.sh
-    # OR
-    python3 app.py
-    ```
+```bash
+git clone https://github.com/winnwy/COROS-Training-Plan-Exporter.git
+cd COROS-Training-Plan-Exporter
+python3 -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-2.  Open your browser and navigate to: http://127.0.0.1:5000
+### Web app
+```bash
+./run.sh            # or: python3 app.py
+# open http://127.0.0.1:5000
+```
 
-3.  **Paste your COROS Plan URL**.
-    - You can get this from the COROS app or website.
+### CLI
+```bash
+python3 convert_to_ics.py --url "https://training.coros.com/schedule-plan/share?planId=<ID>&region=1"
+# writes coros_training_plan.ics  (prompts for a start date; press Enter for today)
+```
 
-4.  **(Optional) Select a Start Date**.
-    - Leave blank to start "today" (aligned to the plan's first weekday).
-    - Pick a specific date to align the plan anchor to that week.
+### Structured-workout POC
+```bash
+python3 poc/coros_to_zwo.py --plan <ID> --start 2026-07-01      # writes .zwo files (dry run)
+# real upload: set INTERVALS_ICU_API_KEY + INTERVALS_ICU_ATHLETE_ID and add --upload
+```
 
-5.  Click **Preview Plan**.
+---
 
-6.  Review the schedule and click **Confirm & Download ICS**.
+## How it works
 
-7.  Import the downloaded `.ics` file into your favorite calendar app.
+```
+COROS plan URL
+   └─ teamapi.coros.com/training/plan/detail        (public API, no login)
+        └─ coros_decode.py        decode shortcodes + build a normalized
+                                   Step / RepeatGroup / Workout model
+             ├─ convert_to_ics.py  → .ics calendar (rich run/bike detail)
+             └─ poc/coros_to_zwo.py → .ZWO / intervals.icu  (structured, experimental)
+```
 
-## Development
+`coros_decode.py` is the shared decoder — one source of truth that both the calendar exporter and the structured-export POC build on.
 
-- **`app.py`**: Flask web server handling the UI and routing.
-- **`convert_to_ics.py`**: Core logic for scraping URLs, calculating dates, and generating ICS files.
-- **`templates/`**: HTML frontend (`index.html`, `preview.html`).
+## Project layout
+
+| Path | Purpose |
+|---|---|
+| `app.py` | Flask web app (UI + routing) |
+| `convert_to_ics.py` | URL scraping, date alignment, `.ics` generation |
+| `coros_decode.py` | Shared decoder → normalized workout model + rich description |
+| `coros_dictionary.json` | Shortcode → natural-language dictionary (~6,800 entries) |
+| `templates/` | Web frontend (`index.html`, `preview.html`) |
+| `poc/` | Structured-export proof of concept (`.ZWO` / intervals.icu) |
+| `tests/` | pytest + committed raw API fixtures |
+| `docs/` | [Build plan](docs/BUILD_PLAN.md), [full site map](docs/coros_map/COROS_MAP.md), [follow-ups](docs/FOLLOWUPS.md) |
+
+## Status
+
+- ✅ **Shipped:** `.ics` export with rich run/bike detail (steps, intervals, HR/pace % targets).
+- 🧪 **Experimental:** structured export to `.ZWO` / intervals.icu (run/bike, POC).
+- 🔬 **Researched, not built:** Garmin `.FIT` files and direct Garmin upload — see [`docs/BUILD_PLAN.md`](docs/BUILD_PLAN.md) §4.
+- 🚧 **Deferred:** rich detail for strength / swim / triathlon plans (strength plans currently export empty — tracked in [`docs/FOLLOWUPS.md`](docs/FOLLOWUPS.md)).
 
 ## License
 
