@@ -133,7 +133,8 @@ One decoder, many exporters — so the calendar and the watch always agree.
 | `convert_to_ics.py` | URL scraping, date alignment, `.ics` generation |
 | `coros_to_fit.py` | Garmin `.FIT` workout exporter (run/bike/strength) |
 | `coros_decode.py` | Shared decoder → normalized workout model |
-| `coros_dictionary.json` | Shortcode → natural-language dictionary (~6,800 entries) |
+| `coros_dictionary.json` | Shortcode → natural-language dictionary (~7,100 entries) |
+| `scripts/refresh_dictionary.py` | Re-pull the dictionary from COROS's locale bundle (run when codes show as raw `W302xx`) |
 | `templates/` | Web frontend (`index.html`, `preview.html`) |
 | `poc/` | `.ZWO` / intervals.icu proof of concept |
 | `tests/` | pytest + committed raw API fixtures (`python -m pytest tests/`) |

@@ -13,11 +13,12 @@ other sports decode structurally (steps + durations) without sport-specific
 intensity interpretation.
 """
 from __future__ import annotations
+import re
 from dataclasses import dataclass, field
 from typing import Optional, Union
 
 # ---- decode tables (docs/coros_map/COROS_MAP.md §4) ----
-SPORT = {1: "Run", 2: "Bike", 3: "Swim", 4: "Strength", 9: "Hybrid"}
+SPORT = {1: "Run", 2: "Bike", 3: "Swim", 4: "Strength", 7: "Climb", 9: "Hybrid"}
 ROLE = {1: "warmup", 2: "active", 3: "cooldown", 4: "rest"}
 INTENSITY_KIND = {0: "none", 1: "weight", 2: "HR", 3: "pace", 5: "swim",
                   7: "HR", 8: "pace", 9: "power", 10: "climb"}
@@ -218,6 +219,42 @@ def _blocks_from(exercises: list, translate, sport: str = "") -> list:
     return out
 
 
+# COROS shortcode keys look like W30291 / T1120 / TD1030 / P12999 / S4274:
+# 1–4 leading capitals then 3+ digits. Real COROS name-codes carry 4–5 digits, so
+# requiring 3+ keeps human-authored names that merely look codish — "EMOM12",
+# "WOD21", "Z30" (2 digits), "4 mile with strides", "Marathon!" — from matching.
+# Used to tell an UNTRANSLATED CODE from an already-readable name.
+_SHORTCODE_RE = re.compile(r"^[A-Z]{1,4}\d{3,}$")
+
+
+def _workout_title(name_key, translate, sport: str, idx: int) -> str:
+    """Resolve a workout title, with a graceful fallback for untranslated codes.
+
+    `translate_key` returns the key unchanged on a dictionary miss, so
+    `translated == name_key` means "not found in the dictionary". But that alone
+    is ambiguous: it's also true for plain-text plan names that were never
+    shortcodes (e.g. "4 mile with strides"), which we must KEEP, not clobber.
+    So we fall back to "<Sport> Workout" only when the name is BOTH unresolved
+    AND shortcode-shaped (e.g. "W30291" — the COROS locale dictionary drifts and
+    newer name-codes lag behind our bundle). An unresolved but human-readable
+    name is already good; keep it.
+
+    Defensive: COROS sends `name` as a string, but coerce non-strings (a stray
+    int/None on malformed data must not crash the whole plan decode), and match
+    the shortcode test against the stripped key — COROS data carries codes with
+    trailing whitespace (e.g. "E11002\\xa0"), which would otherwise leak raw.
+    """
+    if not isinstance(name_key, str):
+        name_key = ""
+    title = translate(name_key)
+    if title and title != name_key:
+        return title                                   # resolved from dictionary
+    key = name_key.strip()
+    if key and not _SHORTCODE_RE.match(key):
+        return key                                     # unresolved but already readable
+    return f"{sport} Workout" if sport else f"Workout {idx + 1}"   # raw code / empty -> fallback
+
+
 def decode_plan(data: dict, translate) -> Plan:
     """`data` = response['data']; `translate(key)->str` resolves shortcodes."""
     plan = Plan(title=translate(data.get("name", "")) or "COROS Plan",
@@ -230,7 +267,7 @@ def decode_plan(data: dict, translate) -> Plan:
         w = Workout(
             index=idx, sport=sport,
             id_in_plan=prog.get("idInPlan"),
-            title=translate(prog.get("name", "")) or f"Workout {idx+1}",
+            title=_workout_title(prog.get("name", ""), translate, sport, idx),
             overview=translate(prog.get("overview", "")) or "",
             distance_m=int((prog.get("distance") or 0) // 100),
             duration_s=int(prog.get("duration") or 0),
