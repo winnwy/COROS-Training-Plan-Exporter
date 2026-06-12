@@ -33,7 +33,7 @@ We inspected **all 210 public catalog items** (146 workouts + 64 plans) across a
 ## 2. Scope (confirmed with user)
 
 - **Calendar export — build now:** (a) richer per-workout detail in each event, AND (b) strength/exercise-plan support.
-- **All structured-workout export targets — research only (no build yet):** this includes Garmin (§4c) **and** the intervals.icu API / `.ZWO` options (§4a–4b) surfaced by research. §4/§8/§9 evaluate and *recommend* among them, but none is committed build scope until the user signs off. The "primary structured sink" in §8.1 is a research recommendation, and "4a" in §9 is explicitly gated behind that sign-off — do not start coding any §4 target without it.
+- **Structured export — partially built (user signed off 2026-06-12):** Garmin **`.FIT`** export for run/bike is **DONE** (`coros_to_fit.py` — durations + interval repeats exact, targets in step names, USB sideload; `tests/test_fit.py`). Still not built: intervals.icu / `.ZWO` to production (POC in `poc/`), direct Garmin Connect upload (unofficial API), and strength/swim FIT schemas.
 
 ## 3. Work items
 

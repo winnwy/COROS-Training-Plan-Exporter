@@ -39,8 +39,19 @@ Workout:
 
 Intervals are shown as repeats (`3× (...)`), and HR / pace targets are decoded as `%`-of-threshold ranges. **Strength** plans render each movement as `sets×reps @ weight` (or `Ns hold`), with bodyweight moves omitting the load — e.g. `Deadlifts with Bands — 3×10 @ 6.8 kg (rest 60s)`. Swim / triathlon / climbing plans export at overview level for now.
 
-### 🏃 Structured workout export (experimental — POC)
-A `.ics` event is just a reminder. To get a **watch-guided** workout (the watch steps you through the intervals), use the proof-of-concept exporter in [`poc/`](poc/): it converts a run/bike plan to Zwift **`.ZWO`** files and can upload them to **intervals.icu** (which forwards to Garmin/Zwift). See [`poc/README.md`](poc/README.md). This is research-stage and opt-in, not wired into the web app.
+### ⌚ Garmin watch export (`.FIT`)
+A `.ics` event is just a reminder. To get a **watch-guided** workout (your Garmin steps you through warm-up, every interval, and cool-down), use `coros_to_fit.py` — it turns a **run/bike** plan into Garmin `.FIT` workout files:
+
+```bash
+pip install -r requirements-fit.txt
+python3 coros_to_fit.py --plan <ID> --out ./fit_out
+# then copy the .fit files to your watch's GARMIN/NewFiles/ folder over USB
+```
+
+Durations and interval repeats are encoded exactly (the watch guides the structure); the intended HR/pace target is carried in each step's name (e.g. `Training @ 96–102% HR`), because COROS uses %-of-threshold which doesn't map cleanly onto Garmin's zone model. Strength/swim use a different FIT schema (not yet supported).
+
+### 🏃 Also: `.ZWO` / intervals.icu (experimental POC)
+The proof-of-concept in [`poc/`](poc/) converts run/bike plans to Zwift **`.ZWO`** files and can upload them to **intervals.icu** (which forwards to Garmin/Zwift). See [`poc/README.md`](poc/README.md). Opt-in, not wired into the web app.
 
 ---
 
@@ -94,6 +105,7 @@ COROS plan URL
         └─ coros_decode.py        decode shortcodes + build a normalized
                                    Step / RepeatGroup / Workout model
              ├─ convert_to_ics.py  → .ics calendar (rich run/bike detail)
+             ├─ coros_to_fit.py    → Garmin .FIT workouts  (run/bike, sideload)
              └─ poc/coros_to_zwo.py → .ZWO / intervals.icu  (structured, experimental)
 ```
 
@@ -108,6 +120,7 @@ COROS plan URL
 | `coros_decode.py` | Shared decoder → normalized workout model + rich description |
 | `coros_dictionary.json` | Shortcode → natural-language dictionary (~6,800 entries) |
 | `templates/` | Web frontend (`index.html`, `preview.html`) |
+| `coros_to_fit.py` | Garmin `.FIT` workout exporter (run/bike) — needs `requirements-fit.txt` |
 | `poc/` | Structured-export proof of concept (`.ZWO` / intervals.icu) |
 | `tests/` | pytest + committed raw API fixtures |
 | `docs/` | [Build plan](docs/BUILD_PLAN.md), [full site map](docs/coros_map/COROS_MAP.md), [follow-ups](docs/FOLLOWUPS.md) |
@@ -115,8 +128,9 @@ COROS plan URL
 ## Status
 
 - ✅ **Shipped:** `.ics` export with rich detail for **run, bike, and strength** (steps/movements, intervals, sets×reps, HR/pace % targets, weight).
-- 🧪 **Experimental:** structured export to `.ZWO` / intervals.icu (run/bike, POC).
-- 🔬 **Researched, not built:** Garmin `.FIT` files and direct Garmin upload — see [`docs/BUILD_PLAN.md`](docs/BUILD_PLAN.md) §4.
+- ⌚ **Shipped (CLI):** Garmin `.FIT` workout export for run/bike (`coros_to_fit.py`) — sideload to the watch.
+- 🧪 **Experimental:** `.ZWO` / intervals.icu structured export (run/bike, POC).
+- 🔬 **Researched, not built:** direct Garmin Connect upload (unofficial API) — see [`docs/BUILD_PLAN.md`](docs/BUILD_PLAN.md) §4.
 - 🚧 **Basic only:** swim / triathlon / climbing plans export at overview level (no per-step detail yet) — tracked in [`docs/FOLLOWUPS.md`](docs/FOLLOWUPS.md).
 
 ## License

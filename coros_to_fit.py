@@ -1,0 +1,159 @@
+"""
+Export a COROS run/bike plan to Garmin .FIT structured-workout files.
+
+One .fit per workout. Sideload by copying to the watch's GARMIN/NewFiles/
+folder (some models: GARMIN/Workouts/) over USB — no account, no Garmin login.
+
+Design notes (see docs/BUILD_PLAN.md §4c):
+- Reuses the shared decoder (coros_decode) for the normalized Step/RepeatGroup
+  model, so .ics / .ZWO / .FIT all share one source of truth.
+- FIT structure: File Id (type=WORKOUT) -> Workout (num_valid_steps) -> ordered
+  Workout Steps with zero-based message_index; intervals become a
+  REPEAT_UNTIL_STEPS_CMPLT step pointing back to the first member.
+- Targets: COROS gives %-of-threshold (HR/pace), which does NOT map cleanly onto
+  FIT's %max-HR / zone model. Rather than encode a wrong absolute zone, we keep
+  durations + repeats exact (the watch guides the structure and beeps on step
+  changes) and put the intended target in the step NAME ("Training @ 96-102% HR").
+- Scope: run + bike. Strength/swim use different FIT schemas (deferred).
+
+Usage:
+    python coros_to_fit.py --plan 459583119950004224 [--region 1] [--out ./fit] [--limit N]
+"""
+import argparse
+import os
+import sys
+from datetime import datetime
+
+from fit_tool.fit_file_builder import FitFileBuilder
+from fit_tool.profile.messages.file_id_message import FileIdMessage
+from fit_tool.profile.messages.workout_message import WorkoutMessage
+from fit_tool.profile.messages.workout_step_message import WorkoutStepMessage
+from fit_tool.profile.profile_type import (
+    FileType, Sport, Intensity, WorkoutStepDuration, WorkoutStepTarget,
+)
+
+sys.path.insert(0, os.path.dirname(__file__))
+import coros_decode as D
+import convert_to_ics as C
+import requests
+
+HDRS = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15"}
+DETAIL = "https://teamapi.coros.com/training/plan/detail"
+
+SPORT_FIT = {"Run": Sport.RUNNING, "Bike": Sport.CYCLING}
+INTENSITY_FIT = {
+    "warmup": Intensity.WARMUP, "active": Intensity.ACTIVE, "rest": Intensity.REST,
+    "recovery": Intensity.RECOVERY, "cooldown": Intensity.COOLDOWN,
+}
+
+
+def _step_name(step: D.Step) -> str:
+    """Short label carrying the target, e.g. 'Training @ 96-102% HR'."""
+    t = step.target.human()
+    name = f"{step.name} @ {t}" if t else step.name
+    return name[:48]
+
+
+def _emit_step(idx: int, step: D.Step) -> WorkoutStepMessage:
+    m = WorkoutStepMessage()
+    m.message_index = idx
+    m.workout_step_name = _step_name(step)
+    m.intensity = INTENSITY_FIT.get(step.role, Intensity.ACTIVE)
+    if step.dur_kind == "time" and step.dur_value > 0:
+        m.duration_type = WorkoutStepDuration.TIME
+        m.duration_time = float(step.dur_value)          # seconds
+    elif step.dur_kind == "distance" and step.dur_value > 0:
+        m.duration_type = WorkoutStepDuration.DISTANCE
+        m.duration_distance = float(step.dur_value)      # metres
+    else:
+        m.duration_type = WorkoutStepDuration.OPEN        # lap-button to advance
+    m.target_type = WorkoutStepTarget.OPEN
+    return m
+
+
+def _emit_repeat(idx: int, from_idx: int, count: int) -> WorkoutStepMessage:
+    m = WorkoutStepMessage()
+    m.message_index = idx
+    m.duration_type = WorkoutStepDuration.REPEAT_UNTIL_STEPS_CMPLT
+    m.duration_step = from_idx          # repeat from this message_index
+    m.target_type = WorkoutStepTarget.OPEN
+    m.target_repeat_steps = count       # number of repetitions
+    return m
+
+
+def workout_to_fit_steps(workout: D.Workout):
+    """Flatten the normalized blocks into ordered FIT WorkoutStepMessages."""
+    steps = []
+    for block in workout.blocks:
+        if isinstance(block, D.RepeatGroup):
+            first = len(steps)
+            for s in block.steps:
+                steps.append(_emit_step(len(steps), s))
+            steps.append(_emit_repeat(len(steps), first, block.count))
+        else:
+            steps.append(_emit_step(len(steps), block))
+    return steps
+
+
+def build_fit(workout: D.Workout) -> bytes:
+    builder = FitFileBuilder(auto_define=True)
+
+    fid = FileIdMessage()
+    fid.type = FileType.WORKOUT
+    fid.manufacturer = 255              # development / undefined
+    fid.product = 0
+    fid.serial_number = 0x434F524F      # "CORO"
+    fid.time_created = round(datetime.now().timestamp() * 1000)
+    builder.add(fid)
+
+    steps = workout_to_fit_steps(workout)
+
+    wkt = WorkoutMessage()
+    wkt.workout_name = (workout.title or "COROS Workout")[:64]
+    wkt.sport = SPORT_FIT.get(workout.sport, Sport.GENERIC)
+    wkt.num_valid_steps = len(steps)
+    builder.add(wkt)
+
+    for s in steps:
+        builder.add(s)
+
+    return builder.build().to_bytes()
+
+
+def fetch_plan(plan_id, region):
+    r = requests.get(DETAIL, params={"supportRestExercise": "1", "id": plan_id, "region": region},
+                     headers=HDRS, timeout=25)
+    r.raise_for_status()
+    return r.json().get("data") or {}
+
+
+def main():
+    ap = argparse.ArgumentParser(description="COROS run/bike plan -> Garmin .FIT workouts")
+    ap.add_argument("--plan", required=True)
+    ap.add_argument("--region", default="1")
+    ap.add_argument("--out", default=os.path.join(os.path.dirname(__file__), "fit_out"))
+    ap.add_argument("--limit", type=int, default=0)
+    args = ap.parse_args()
+
+    dictionary = C.load_dictionary()
+    tr = lambda k: (C.translate_key(k, dictionary) if k else "")
+    data = fetch_plan(args.plan, args.region)
+    plan = D.decode_plan(data, tr)
+    workouts = [w for w in plan.workouts if w.sport in SPORT_FIT and w.blocks]
+    if args.limit:
+        workouts = workouts[:args.limit]
+
+    os.makedirs(args.out, exist_ok=True)
+    print(f"Plan: {plan.title!r} — {len(workouts)} run/bike workouts -> .FIT")
+    for n, w in enumerate(workouts, 1):
+        fit = build_fit(w)
+        safe = "".join(c if c.isalnum() else "_" for c in w.title)[:30]
+        path = os.path.join(args.out, f"{n:03d}_{w.sport.lower()}_{safe}.fit")
+        with open(path, "wb") as f:
+            f.write(fit)
+    print(f"Wrote {len(workouts)} .fit files to {args.out}/")
+    print("Sideload: copy to your watch's GARMIN/NewFiles/ folder over USB.")
+
+
+if __name__ == "__main__":
+    main()
