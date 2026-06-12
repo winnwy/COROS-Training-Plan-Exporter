@@ -11,13 +11,11 @@ pre-existing, not regressions from that change):
 
 - [ ] **⚠️ Strength/exercise plans return 0 workouts with no message.**
   `scrape_from_url` skips entities that lack `exerciseBarChart`/`sport`
-  (`convert_to_ics.py` ~line 129-131 `if not exercise_bar_chart and not sport: continue`),
-  so strength/gym plans yield an empty result; the web app (`app.py` `index()`)
-  then just bounces back to the form with no explanation.
-  - *Pre-existing.* Real fix is rich strength support = **build-plan A2 (deferred)**.
-  - *Quick interim:* when `scrape_from_url` returns 0 workouts, surface a clear
-    message ("This plan type isn't supported yet — strength/gym plans coming soon")
-    instead of a silent empty bounce.
+  ~~(`convert_to_ics.py` ... `if not exercise_bar_chart and not sport: continue`)~~
+  - [x] **FIXED (A2, 2026-06-12):** the skip now builds from the decoder when a
+    program has rich blocks. Strength plans render full detail (sets×reps @ weight,
+    rest, bodyweight); swim/tri/climb produce overview-level events instead of empty.
+    A genuine 0-workout case is now rare, so the "not supported yet" message is moot.
 
 - [ ] **⚠️ CLI blocks on an interactive start-date prompt; no flag for non-interactive use.**
   `convert_to_ics.py` `main()` prompts on stdin for the start date; with no TTY
@@ -38,7 +36,9 @@ See `BUILD_PLAN.md` for full context.
   single-locale. Decide whether to parameterize.
 - [ ] A4: log dictionary misses (`translate_key` returns raw key on miss; ~109 of
   482 movements lack `_desc`).
-- [ ] A2: strength/exercise-plan rich decode (sets/reps/weight/rest/form cues).
+- [x] A2: strength/exercise-plan rich decode — DONE 2026-06-12 (sets×reps @ weight,
+  holds, rest, bodyweight; supersets via groups; `part` decodable but omitted with
+  muscle/equipment per coverage findings). Form cues not shown inline (length).
 - [ ] §4 (research-gated): structured export to production (intervals.icu / .ZWO /
   Garmin FIT) — needs user sign-off per BUILD_PLAN §2/§8.1.
 

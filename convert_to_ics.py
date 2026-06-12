@@ -136,11 +136,27 @@ def scrape_from_url(url):
         
         # Also check for old sport format for backwards compatibility
         sport = entity.get('sport')
-        
+
+        # Decoded rich workout for this day (run/bike/strength/hybrid)
+        rich = _rich_by_id.get(entity_id_in_plan) if coros_decode else None
+
         if not exercise_bar_chart and not sport:
-            # No workout data at all, skip
+            # No bar-chart/sport summary (e.g. strength plans). If the decoder has
+            # rich blocks for this program, build the event entirely from it.
+            if rich is not None and rich.blocks:
+                rich_desc = coros_decode.format_description(rich, include_summary=False)
+                workouts.append({
+                    'week': week,
+                    'day_of_week': day_of_week,
+                    'title': rich.title or workout_title or 'Workout',
+                    'description': rich_desc or (workout_overview or ''),
+                    'duration': f"{rich.duration_s // 60}min" if rich.duration_s else None,
+                    'distance': f"{rich.distance_m / 1000:.2f} km" if rich.distance_m else None,
+                    'training_load': str(rich.training_load) if rich.training_load else None,
+                })
+            # else: genuinely no workout data, skip
             continue
-        
+
         # Parse based on which format is available
         if exercise_bar_chart:
             # New format: parse from exerciseBarChart
@@ -268,7 +284,6 @@ def scrape_from_url(url):
         
         # Rich detail override for run/bike (full steps, intervals, % targets).
         # create_ics_file prints its own Distance/Duration, so include_summary=False.
-        rich = _rich_by_id.get(entity_id_in_plan) if coros_decode else None
         if rich is not None and rich.is_rich and rich.blocks:
             rich_desc = coros_decode.format_description(rich, include_summary=False)
             if rich_desc:

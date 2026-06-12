@@ -77,6 +77,47 @@ def test_description_renders_and_caps(tr):
     assert len(D.format_description(w, max_chars=50)) <= 50
 
 
+def test_strength_is_rich_and_decodes(tr):
+    plan = D.decode_plan(load("strength_injury_prevention"), tr)
+    assert plan.workouts, "strength plan should decode workouts"
+    assert all(w.sport in ("Strength", "Hybrid") for w in plan.workouts), "expected strength/hybrid sport"
+    assert all(w.is_rich for w in plan.workouts), "strength must render rich now"
+
+
+def test_strength_sets_reps_and_weight(tr):
+    plan = D.decode_plan(load("strength_injury_prevention"), tr)
+    steps = [s for w in plan.workouts for b in w.blocks
+             for s in ([b] if isinstance(b, D.Step) else b.steps)]
+    # weighted movement: reps + sets>1 + a kg weight target
+    weighted = [s for s in steps if s.target.kind == "weight" and s.target.weight_g]
+    assert weighted, "expected at least one weighted movement"
+    w = weighted[0]
+    assert "kg" in w.target.human()
+    reps_sets = [s for s in steps if s.dur_kind == "reps" and s.sets > 1]
+    assert reps_sets, "expected movements with multiple sets"
+    # rendered line shows the NxM sets form
+    assert "×" in reps_sets[0].human()
+
+
+def test_strength_bodyweight_has_no_weight(tr):
+    plan = D.decode_plan(load("strength_injury_prevention"), tr)
+    steps = [s for w in plan.workouts for b in w.blocks
+             for s in ([b] if isinstance(b, D.Step) else b.steps)]
+    # a bodyweight movement (intensityType weight but no value, or no intensity)
+    # must not render "@ weight"/"@ 0"
+    for s in steps:
+        assert "@ weight" not in s.human() and "@ 0" not in s.human()
+
+
+def test_strength_description_renders(tr):
+    plan = D.decode_plan(load("strength_injury_prevention"), tr)
+    w = max(plan.workouts, key=lambda x: len(x.blocks))
+    desc = D.format_description(w)
+    assert "Workout:" in desc
+    # should contain at least one set/rep or hold token
+    assert ("×" in desc) or ("reps" in desc) or ("hold" in desc)
+
+
 def test_distance_cm_to_m(tr):
     plan = D.decode_plan(load("run_simple"), tr)
     dists = [s.dur_value for w in plan.workouts for b in w.blocks
