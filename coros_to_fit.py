@@ -53,11 +53,27 @@ INTENSITY_FIT = {
 }
 
 
+_ASCII_FOLD = {"–": "-", "—": "-", "×": "x", "·": "-", "’": "'", "“": '"', "”": '"'}
+
+
+def _ascii_fold(s: str) -> str:
+    return "".join(_ASCII_FOLD.get(c, c) for c in s)
+
+
+def _truncate_bytes(s: str, limit: int = 48) -> str:
+    """Truncate to <= limit UTF-8 bytes without splitting a character."""
+    b = s.encode("utf-8")
+    if len(b) <= limit:
+        return s
+    return b[:limit].decode("utf-8", "ignore")
+
+
 def _step_name(step: D.Step) -> str:
-    """Short label carrying the target, e.g. 'Training @ 96-102% HR'."""
+    """Short, display-safe label carrying the target, e.g. 'Training @ 96-102% HR'.
+    ASCII-folded (older Garmins render non-ASCII poorly) and byte-bounded."""
     t = step.target.human()
     name = f"{step.name} @ {t}" if t else step.name
-    return name[:48]
+    return _truncate_bytes(_ascii_fold(name), 48)
 
 
 def _emit_step(idx: int, step: D.Step) -> WorkoutStepMessage:

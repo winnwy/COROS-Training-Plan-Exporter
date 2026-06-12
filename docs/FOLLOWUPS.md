@@ -37,14 +37,19 @@ Fixed in the same pass:
 - [x] `dayNo: None` would crash the scrape → guarded (`entity.get('dayNo') or 0`).
 - [x] Web error responses leaked `str(e)` → generic messages, traceback logged server-side.
 
-Still open (lower severity):
-- [ ] `/generate` accepts arbitrary `workouts_json` (hidden field, but POST-able): validate
-  it's a list of dicts with `title`/`date_str` before building, to avoid 500s on crafted input.
-- [ ] Render the actual absolute HR (bpm) / pace / power value (we currently suppress it);
-  needs unit handling per `hrType` / `intensityDisplayUnit`.
-- [ ] `_step_name` should truncate on encoded bytes + ASCII-fold `–`/`×` for older Garmin displays.
-- [ ] Prod config: don't run `app.run(debug=True)`; move `secret_key` to an env var.
-- [ ] `sportType: None` decodes to the literal sport `"None"` — default to "" / "Workout".
+Second pass (all fixed 2026-06-12):
+- [x] `/generate` now validates `workouts_json` is a list of dicts with `title` and a
+  parseable `date_str` (400 on bad input) — `tests/test_app.py`.
+- [x] Absolute **HR** now renders as bpm (e.g. `@ 102–127 bpm`). Pace/power absolute
+  values remain suppressed (encoding/unit not confidently decodable — still open below).
+- [x] `_step_name` truncates on UTF-8 bytes + ASCII-folds `–`/`×`/etc. for older Garmins.
+- [x] Prod config: `debug` off unless `FLASK_DEBUG=1`; `secret_key` from `SECRET_KEY` env.
+- [x] `sportType: None` now decodes to `""` (not the literal `"None"`).
+- [x] `Target.is_range` returns a real bool.
+
+Still open (low):
+- [ ] Render absolute **pace/power** values (only HR was confidently decodable; pace is
+  encoded oddly, e.g. 383386). Needs unit confirmation before rendering.
 
 ## Carried over from the build plan / reviews (not yet done)
 See `BUILD_PLAN.md` for full context.
@@ -53,10 +58,13 @@ See `BUILD_PLAN.md` for full context.
   `((dayNo-1)//7)+1` shifted ~all workouts off their real dates; `dayNo` is an
   absolute 0-based index). Extracted `day_no_to_week_dow` + regression tests
   (tests/test_dates.py). Verified ~9/10 workouts were landing on wrong dates before.
-- [ ] A4: region/i18n — `scrape_from_url` hardcodes `region="1"`; dictionary is
-  single-locale. Decide whether to parameterize.
-- [ ] A4: log dictionary misses (`translate_key` returns raw key on miss; ~109 of
-  482 movements lack `_desc`).
+- [~] A4: region/i18n — region IS already parsed from the plan URL by
+  `scrape_from_url` (the `region=1` is only the default when absent), so region works.
+  True i18n (non-English output) needs additional locale dictionaries we don't have —
+  **out of scope** until those exist. Closing the region part.
+- [~] A4: dictionary-miss logging — decided **won't do** for now: low-value telemetry,
+  and real movements have ~98% name / 93% `_desc` coverage; genuine misses already
+  degrade gracefully (raw code shown, never a crash). Revisit if coverage gaps surface.
 - [x] A2: strength/exercise-plan rich decode — DONE 2026-06-12 (sets×reps @ weight,
   holds, rest, bodyweight; supersets via groups; `part` decodable but omitted with
   muscle/equipment per coverage findings). Form cues not shown inline (length).

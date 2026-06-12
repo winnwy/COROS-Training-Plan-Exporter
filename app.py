@@ -2,9 +2,11 @@ from flask import Flask, render_template, request, send_file, flash
 from convert_to_ics import parse_training_data, create_ics_file
 from datetime import datetime
 import io
+import os
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'  # Required for flash messages
+# Only used to sign flash-message cookies (no auth/session data). Override in prod.
+app.secret_key = os.environ.get('SECRET_KEY', 'dev-flash-key')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -85,11 +87,19 @@ def generate():
             return "Error: No workout data provided", 400
             
         workouts = json.loads(workouts_json)
-        
-        # Re-hydrate date objects for create_ics_file
+
+        # Validate shape (this is a public endpoint; the field is POST-able directly)
+        if not isinstance(workouts, list) or not all(isinstance(w, dict) for w in workouts):
+            return "Invalid workout data.", 400
         for w in workouts:
-            if 'date_str' in w:
-                w['date_obj'] = datetime.strptime(w['date_str'], '%Y-%m-%d')
+            if 'title' not in w:
+                return "Invalid workout data: missing title.", 400
+            ds = w.get('date_str')
+            if ds is not None:
+                try:
+                    w['date_obj'] = datetime.strptime(str(ds), '%Y-%m-%d')
+                except ValueError:
+                    return "Invalid workout data: bad date.", 400
         
         ics_bytes = create_ics_file(workouts, output_file=None)
         
@@ -130,4 +140,5 @@ def generate_fit():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # debug off by default; opt in locally with FLASK_DEBUG=1
+    app.run(debug=os.environ.get('FLASK_DEBUG') == '1')

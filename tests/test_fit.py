@@ -119,6 +119,18 @@ def test_strength_fit_weight_in_step_name():
     assert any("kg" in n for n in names), "expected a weighted movement name with kg"
 
 
+def test_fit_step_names_ascii_and_byte_bounded():
+    # older Garmins render non-ASCII poorly; names must be ASCII + <=48 bytes
+    for name in ("bike_threshold", "strength_injury_prevention"):
+        plan = _plan(name)
+        for w in plan.workouts:
+            for s in _messages(F.build_fit(w))["WorkoutStepMessage"]:
+                n = s.workout_step_name
+                if n:
+                    assert all(ord(c) < 128 for c in n), f"non-ASCII in {n!r}"
+                    assert len(n.encode("utf-8")) <= 48
+
+
 def test_parse_plan_url():
     assert F.parse_plan_url("https://x/share?planId=123&region=2") == ("123", "2")
     assert F.parse_plan_url("https://x/share?planId=123") == ("123", "1")  # region defaults

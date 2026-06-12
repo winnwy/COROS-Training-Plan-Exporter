@@ -118,6 +118,14 @@ def test_strength_description_renders(tr):
     assert ("×" in desc) or ("reps" in desc) or ("hold" in desc)
 
 
+def test_absolute_hr_renders_bpm(tr):
+    # the bike plan has an absolute-HR target (102-127, no %) -> render as bpm
+    plan = D.decode_plan(load("bike_threshold"), tr)
+    humans = [s.target.human() for w in plan.workouts for b in w.blocks
+              for s in ([b] if isinstance(b, D.Step) else b.steps)]
+    assert any("bpm" in h for h in humans), "expected an absolute HR rendered as bpm"
+
+
 def test_no_bare_kind_target(tr):
     # an absolute (non-%) HR/pace/power target must not render a misleading
     # bare "@ HR"/"@ pace"/"@ power" — Target.human() returns "" instead.
