@@ -8,7 +8,7 @@ COROS training plans live inside the COROS app. This tool reads a plan from its 
 
 No sign-up, no install. Paste a plan link, preview it, download.
 
-![Preview of a decoded COROS plan — collapsible weeks and per-workout detail](docs/img/preview.png)
+![Preview of a decoded COROS plan — collapsible weeks expanding to show each workout's breakdown](docs/img/preview.gif)
 
 ---
 
@@ -55,6 +55,10 @@ Intervals show as repeats (`3× …`), targets as %-of-threshold ranges, and str
 
 ### ⌚ Garmin watch (`.FIT`)
 A calendar event is just a reminder. A `.FIT` workout is **watch-guided** — your Garmin steps you through it. Works for **run, bike, and strength** (sets become repeats). Download from the web app, or use the CLI.
+
+<img src="docs/img/watch.gif" alt="How a converted workout looks on a Garmin watch — stepping through warm-up, intervals and cool-down" width="280">
+
+*Roughly how it plays out on the watch (illustration): each step shows its target and time, counting you through the workout.*
 
 **Put it on your watch (USB sideload):**
 1. Download the `.FIT` `.zip` (web button or CLI) and unzip it.
