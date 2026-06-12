@@ -86,9 +86,37 @@ def test_fit_run_plan_has_distance_steps_and_named_targets():
     assert any(s.workout_step_name and "@" in s.workout_step_name for s in steps)
 
 
-def test_fit_only_run_bike_in_scope():
-    # strength workouts are out of scope; SPORT_FIT excludes them
-    assert "Strength" not in F.SPORT_FIT and "Run" in F.SPORT_FIT and "Bike" in F.SPORT_FIT
+def test_fit_scope_run_bike_strength_not_swim():
+    for s in ("Run", "Bike", "Strength", "Hybrid"):
+        assert s in F.SPORT_FIT
+    assert "Swim" not in F.SPORT_FIT and "Climb" not in F.SPORT_FIT
+
+
+def test_strength_fit_sets_expand_to_repeats():
+    plan = _plan("strength_injury_prevention")
+    w = max((x for x in plan.workouts if x.blocks), key=lambda x: len(x.blocks))
+    m = _messages(F.build_fit(w))
+    wkt = m["WorkoutMessage"][0]
+    assert _v(wkt.sport) == Sport.TRAINING.value
+    steps = m["WorkoutStepMessage"]
+    # a strength movement with N sets -> a REPS step + a REPEAT step whose count == sets
+    reps_steps = [s for s in steps if _dur(s) == WorkoutStepDuration.REPS.value]
+    assert reps_steps, "expected REPS-duration strength steps"
+    repeats = [s for s in steps if _dur(s) == REP]
+    assert repeats, "expected set-repeat steps"
+    # find a movement with sets>1 in the model and confirm a matching repeat count exists
+    multi = [b for b in w.blocks if isinstance(b, D.Step) and b.role == "active" and b.sets > 1]
+    if multi:
+        assert any(r.target_repeat_steps == multi[0].sets for r in repeats)
+
+
+def test_strength_fit_weight_in_step_name():
+    plan = _plan("strength_injury_prevention")
+    names = []
+    for w in plan.workouts:
+        names += [s.workout_step_name for s in _messages(F.build_fit(w))["WorkoutStepMessage"]
+                  if s.workout_step_name]
+    assert any("kg" in n for n in names), "expected a weighted movement name with kg"
 
 
 def test_parse_plan_url():

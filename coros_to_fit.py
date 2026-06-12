@@ -1,5 +1,5 @@
 """
-Export a COROS run/bike plan to Garmin .FIT structured-workout files.
+Export a COROS run/bike/strength plan to Garmin .FIT structured-workout files.
 
 One .fit per workout. Sideload by copying to the watch's GARMIN/NewFiles/
 folder (some models: GARMIN/Workouts/) over USB — no account, no Garmin login.
@@ -14,7 +14,8 @@ Design notes (see docs/BUILD_PLAN.md §4c):
   FIT's %max-HR / zone model. Rather than encode a wrong absolute zone, we keep
   durations + repeats exact (the watch guides the structure and beeps on step
   changes) and put the intended target in the step NAME ("Training @ 96-102% HR").
-- Scope: run + bike. Strength/swim use different FIT schemas (deferred).
+- Scope: run, bike, and strength (strength sets expand to repeat blocks; sport
+  TRAINING / sub-sport STRENGTH_TRAINING). Swim/climbing deferred.
 
 Usage:
     python coros_to_fit.py --plan 459583119950004224 [--region 1] [--out ./fit] [--limit N]
@@ -32,7 +33,7 @@ from fit_tool.profile.messages.file_id_message import FileIdMessage
 from fit_tool.profile.messages.workout_message import WorkoutMessage
 from fit_tool.profile.messages.workout_step_message import WorkoutStepMessage
 from fit_tool.profile.profile_type import (
-    FileType, Sport, Intensity, WorkoutStepDuration, WorkoutStepTarget,
+    FileType, Sport, SubSport, Intensity, WorkoutStepDuration, WorkoutStepTarget,
 )
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -43,7 +44,9 @@ import requests
 HDRS = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15"}
 DETAIL = "https://teamapi.coros.com/training/plan/detail"
 
-SPORT_FIT = {"Run": Sport.RUNNING, "Bike": Sport.CYCLING}
+SPORT_FIT = {"Run": Sport.RUNNING, "Bike": Sport.CYCLING,
+             "Strength": Sport.TRAINING, "Hybrid": Sport.TRAINING}
+STRENGTH_SPORTS = {"Strength", "Hybrid"}
 INTENSITY_FIT = {
     "warmup": Intensity.WARMUP, "active": Intensity.ACTIVE, "rest": Intensity.REST,
     "recovery": Intensity.RECOVERY, "cooldown": Intensity.COOLDOWN,
@@ -62,7 +65,10 @@ def _emit_step(idx: int, step: D.Step) -> WorkoutStepMessage:
     m.message_index = idx
     m.workout_step_name = _step_name(step)
     m.intensity = INTENSITY_FIT.get(step.role, Intensity.ACTIVE)
-    if step.dur_kind == "time" and step.dur_value > 0:
+    if step.dur_kind == "reps" and step.dur_value > 0:
+        m.duration_type = WorkoutStepDuration.REPS        # strength: N reps
+        m.duration_reps = step.dur_value
+    elif step.dur_kind == "time" and step.dur_value > 0:
         m.duration_type = WorkoutStepDuration.TIME
         m.duration_time = float(step.dur_value)          # seconds
     elif step.dur_kind == "distance" and step.dur_value > 0:
@@ -72,6 +78,10 @@ def _emit_step(idx: int, step: D.Step) -> WorkoutStepMessage:
         m.duration_type = WorkoutStepDuration.OPEN        # lap-button to advance
     m.target_type = WorkoutStepTarget.OPEN
     return m
+
+
+def _rest_step_for(seconds):
+    return D.Step(role="rest", name="Rest", dur_kind="time", dur_value=int(seconds))
 
 
 def _emit_repeat(idx: int, from_idx: int, count: int) -> WorkoutStepMessage:
@@ -85,16 +95,33 @@ def _emit_repeat(idx: int, from_idx: int, count: int) -> WorkoutStepMessage:
 
 
 def workout_to_fit_steps(workout: D.Workout):
-    """Flatten the normalized blocks into ordered FIT WorkoutStepMessages."""
+    """Flatten the normalized blocks into ordered FIT WorkoutStepMessages.
+
+    Strength movements with multiple sets are expanded into a repeat block
+    ([work, rest] x sets), which is how a watch guides straight sets."""
+    strength = workout.sport in STRENGTH_SPORTS
     steps = []
+
+    def add(step):
+        steps.append(_emit_step(len(steps), step))
+
+    def add_repeat(from_idx, count):
+        steps.append(_emit_repeat(len(steps), from_idx, count))
+
     for block in workout.blocks:
         if isinstance(block, D.RepeatGroup):
             first = len(steps)
             for s in block.steps:
-                steps.append(_emit_step(len(steps), s))
-            steps.append(_emit_repeat(len(steps), first, block.count))
+                add(s)
+            add_repeat(first, block.count)
+        elif strength and block.role == "active" and block.sets > 1:
+            first = len(steps)
+            add(block)                       # the work set (N reps / time hold)
+            if block.rest_s > 0:
+                add(_rest_step_for(block.rest_s))
+            add_repeat(first, block.sets)     # repeat work(+rest) for each set
         else:
-            steps.append(_emit_step(len(steps), block))
+            add(block)
     return steps
 
 
@@ -114,6 +141,8 @@ def build_fit(workout: D.Workout) -> bytes:
     wkt = WorkoutMessage()
     wkt.workout_name = (workout.title or "COROS Workout")[:64]
     wkt.sport = SPORT_FIT.get(workout.sport, Sport.GENERIC)
+    if workout.sport in STRENGTH_SPORTS:
+        wkt.sub_sport = SubSport.STRENGTH_TRAINING
     wkt.num_valid_steps = len(steps)
     builder.add(wkt)
 
@@ -171,12 +200,12 @@ def fit_zip_for_plan(plan_url):
     plan = decode_plan_for(plan_id, region)
     workouts = exportable(plan.workouts)
     if not workouts:
-        raise ValueError("No run/bike workouts in this plan to export as .FIT")
+        raise ValueError("No run/bike/strength workouts in this plan to export as .FIT")
     return workouts_to_zip(plan.workouts)
 
 
 def main():
-    ap = argparse.ArgumentParser(description="COROS run/bike plan -> Garmin .FIT workouts")
+    ap = argparse.ArgumentParser(description="COROS run/bike/strength plan -> Garmin .FIT workouts")
     ap.add_argument("--plan", required=True)
     ap.add_argument("--region", default="1")
     ap.add_argument("--out", default=os.path.join(os.path.dirname(__file__), "fit_out"))
@@ -189,7 +218,7 @@ def main():
         workouts = workouts[:args.limit]
 
     os.makedirs(args.out, exist_ok=True)
-    print(f"Plan: {plan.title!r} — {len(workouts)} run/bike workouts -> .FIT")
+    print(f"Plan: {plan.title!r} — {len(workouts)} run/bike/strength workouts -> .FIT")
     for n, w in enumerate(workouts, 1):
         path = os.path.join(args.out, _fit_filename(n, w))
         with open(path, "wb") as f:

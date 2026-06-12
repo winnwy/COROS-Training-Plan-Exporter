@@ -45,8 +45,11 @@ See `BUILD_PLAN.md` for full context.
   reuses the shared decoder; durations + interval repeats exact, targets carried
   in step names; tests/test_fit.py. Sideload via GARMIN/NewFiles. Strength/swim FIT
   (different schema) and direct Garmin Connect upload still open.
+- [x] Strength `.FIT` DONE 2026-06-12 — sets expand to repeat blocks (work+rest
+  ×sets), reps via REPS duration, sport TRAINING / sub-sport STRENGTH_TRAINING,
+  weight in step name. Also served by the web /generate-fit route.
 - [ ] §4 (still open): `.ZWO`/intervals.icu to production (POC exists), direct
-  Garmin Connect upload (unofficial API), and strength/swim FIT schemas.
+  Garmin Connect upload (unofficial API), and swim/climbing FIT schemas.
 
 ## Standing task
 - [x] First full README rewrite done 2026-06-12 — readability + matches current
