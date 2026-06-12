@@ -59,9 +59,11 @@ See `BUILD_PLAN.md` for full context.
   absolute 0-based index). Extracted `day_no_to_week_dow` + regression tests
   (tests/test_dates.py). Verified ~9/10 workouts were landing on wrong dates before.
 - [~] A4: region/i18n — region IS already parsed from the plan URL by
-  `scrape_from_url` (the `region=1` is only the default when absent), so region works.
-  True i18n (non-English output) needs additional locale dictionaries we don't have —
-  **out of scope** until those exist. Closing the region part.
+  `scrape_from_url`, so region works. Non-English output is now **feasible**
+  (not blocked): `scripts/refresh_dictionary.py` can pull other locale bundles
+  (`zh-CN/de-DE/fr-FR/es-ES/ja-JP` all exist) — see open item L1 in the session
+  log. Updated 2026-06-12 (the earlier "out of scope until dictionaries exist"
+  is stale — the dictionaries are fetchable).
 - [~] A4: dictionary-miss logging — decided **won't do** for now: low-value telemetry,
   and real movements have ~98% name / 93% `_desc` coverage; genuine misses already
   degrade gracefully (raw code shown, never a crash). Revisit if coverage gaps surface.
@@ -75,8 +77,13 @@ See `BUILD_PLAN.md` for full context.
 - [x] Strength `.FIT` DONE 2026-06-12 — sets expand to repeat blocks (work+rest
   ×sets), reps via REPS duration, sport TRAINING / sub-sport STRENGTH_TRAINING,
   weight in step name. Also served by the web /generate-fit route.
-- [ ] §4 (still open): `.ZWO`/intervals.icu to production (POC exists), direct
-  Garmin Connect upload (unofficial API), and swim/climbing FIT schemas.
+- [x] §4: `.ZWO` export to production DONE 2026-06-12 (#26) — `coros_to_zwo.py`,
+  driven by the shared decoder; run/bike, real %FTP power targets, pace/HR as
+  FreeRide + note (no fake power); plan→zip / workout→file; `tests/test_zwo.py`.
+  POC retired. Live intervals.icu upload = **no-go** (see session log below).
+- [ ] §4 (still open): direct Garmin Connect upload (unofficial API — account-ban
+  risk, superseded by `.ZWO`/intervals.icu), and swim/climbing **FIT** schemas
+  (the calendar already renders swim/climb structure as of #25).
 
 ## Standing task
 - [x] First full README rewrite done 2026-06-12 — readability + matches current
@@ -87,9 +94,39 @@ See `BUILD_PLAN.md` for full context.
 
 ## Design (2026-06-12)
 - [x] Redesigned index + preview to a minimal warm-orange theme (frontend only).
-- [ ] a11y: white text on #ff9800 buttons is ~2:1 (below WCAG AA). Kept per chosen brand color; fix = dark text on the orange button if AA is required.
+- [x] a11y: the white-on-`#ff9800` ~2:1 concern is **moot** — the orange theme was
+  reverted to blue (`--primary-color: #2563eb`); white-on-`#2563eb` is ~5:1 (passes
+  WCAG AA). Closed 2026-06-12.
 
 ## UX (2026-06-12)
 - [x] Reverted the orange redesign (kept old blue design per preference).
 - [x] Preview UX: collapsible week sections (week 1 open, rest collapsed) + Expand/Collapse all, animated inline workout-detail expand, sticky table + week headers.
 - [x] Landing: loading state on submit + single-page transition (fetch + in-place swap to preview; progressive enhancement, form still works with JS off).
+
+## Session 2026-06-12 — workout export + improvements (PRs #22–#26, all merged)
+Shipped:
+- [x] #22 — refreshed `coros_dictionary.json` from COROS's live locale bundle (+300 codes)
+  + graceful title fallback (raw `W302xx` no longer leak); `scripts/refresh_dictionary.py`.
+- [x] #23 — **standalone workout export**: paste a workout link (`programId=`) → one
+  dated `.ics` event / one `.fit`. `decode_workout` wraps a `program/detail` payload as
+  a one-program plan (shared decoder).
+- [x] #24 — **CI** (GitHub Actions): `pytest` + `compileall` on push/PR, Python 3.10–3.13.
+- [x] #25 — **swim/climb/tri render full set structure** in the calendar (`Workout.has_structure`
+  tier; fixed a second hidden `is_rich` gate on the plan path).
+- [x] #26 — **`.ZWO` export** (run/bike) — see §4 above.
+
+Open (genuinely actionable):
+- [ ] **W1: web `.ZWO` download button** — `.ZWO` is CLI-only; the web preview offers
+  `.ics`+`.FIT` but not `.ZWO`. Trivial (mirror `/generate-fit`; no secrets — it's a file).
+- [ ] **L1: locale / non-English output** — `--locale` flag + pull the matching dictionary
+  via `refresh_dictionary.py` (zh/de/fr/es/ja bundles exist). Region already parsed.
+- [ ] **swim/climbing `.FIT` schemas** — calendar renders them (#25); FIT does not (harder schema).
+- [ ] **absolute pace/power value rendering** — only HR decoded to bpm; pace encoded oddly
+  (e.g. `383386`), absolute power suppressed. Blocked on confirming the unit encoding. (low)
+
+Parked by decision (revisit only with a reason):
+- Live intervals.icu **upload** — no-go 2026-06-12 (account-free `.ZWO` file is enough;
+  the live push is the upkeep magnet — API drift + secret handling for a narrow audience).
+- Catalog browse/enumeration (A3) — cut (ToS exposure).
+- Direct Garmin Connect upload — account-ban risk; superseded by `.ZWO`/intervals.icu.
+- Climbing grades (`gradeSystem`/`onsightGradeOffset`) — niche; structure already renders.
