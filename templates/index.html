@@ -1,229 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COROS Training Plan to ICS</title>
+    <title>COROS Plan Exporter</title>
+    <meta name="description" content="Turn a COROS training plan into a calendar (.ics) or Garmin watch workouts (.FIT).">
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --primary-hover: #1d4ed8;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #1e293b;
-            --border-color: #e2e8f0;
+        :root{
+            --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+            --accent:#ff9800; --accent-d:#fb8c00; --soft:#f8fafc;
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.5;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
+        *{box-sizing:border-box}
+        body{
+            margin:0; min-height:100vh; background:#fff; color:var(--ink);
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+            line-height:1.5; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px;
         }
-
-        .container {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            width: 100%;
-            max-width: 600px;
-        }
-
-        h1 {
-            margin-top: 0;
-            color: var(--text-color);
-            font-size: 1.5rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        textarea {
-            width: 100%;
-            height: 200px;
-            padding: 0.75rem;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 0.875rem;
-            resize: vertical;
-            box-sizing: border-box;
-        }
-
-        input[type="date"] {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            box-sizing: border-box;
-        }
-
-        button {
-            display: block;
-            width: 100%;
-            padding: 0.75rem;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        button:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .instructions {
-            background-color: #eff6ff;
-            border-left: 4px solid var(--primary-color);
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            font-size: 0.875rem;
-            border-radius: 4px;
-        }
-
-        .instructions p {
-            margin: 0 0 0.5rem 0;
-        }
-
-        .instructions ol {
-            margin: 0;
-            padding-left: 1.5rem;
-        }
-
-        .flash-message {
-            padding: 1rem;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-            font-size: 0.875rem;
-        }
-
-        .flash-error {
-            background-color: #fef2f2;
-            color: #991b1b;
-            border: 1px solid #fecaca;
-        }
-
-        .code-container {
-            margin-bottom: 0.5rem;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            overflow: hidden;
-            background-color: #f1f5f9;
-        }
-
-        .code-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            background-color: #e2e8f0;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .code-content {
-            padding: 1rem;
-            overflow-x: auto;
-            font-family: monospace;
-            font-size: 0.875rem;
-            margin: 0;
-            white-space: pre-wrap;
-            max-height: 200px;
-            /* Optional: limit height */
-            overflow-y: auto;
-        }
-
-        .copy-btn {
-            background-color: white;
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            cursor: pointer;
-            width: auto;
-            display: inline-block;
-        }
-
-        .copy-btn:hover {
-            background-color: #f8fafc;
-        }
-
-        details summary {
-            cursor: pointer;
-            color: var(--primary-color);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
+        .box{width:100%; max-width:480px; text-align:center}
+        .brand{font-weight:700; font-size:15px; margin-bottom:36px}
+        .brand b{color:var(--accent)}
+        h1{font-size:27px; line-height:1.3; letter-spacing:-.02em; font-weight:700; margin:0 0 26px}
+        form{text-align:left}
+        .flash{padding:12px 14px; border-radius:10px; margin-bottom:16px; font-size:14px;
+            background:#fef2f2; color:#991b1b; border:1px solid #fecaca}
+        input{width:100%; border:1.5px solid var(--line); border-radius:11px; padding:14px 15px;
+            font-size:15px; outline:none; font-family:inherit; color:var(--ink); background:#fff}
+        input:focus{border-color:var(--accent); box-shadow:0 0 0 4px rgba(255,152,0,.18)}
+        input::placeholder{color:#94a3b8}
+        .url{margin-bottom:10px}
+        .date-row{display:flex; align-items:center; gap:10px; margin-bottom:14px}
+        .date-row label{font-size:13px; color:var(--muted); white-space:nowrap}
+        .date-row input{padding:10px 12px; font-size:14px}
+        button{width:100%; border:0; background:var(--accent); color:#fff; font-weight:700;
+            font-size:16px; padding:15px; border-radius:11px; cursor:pointer; transition:background .15s}
+        button:hover{background:var(--accent-d)}
+        button:focus-visible{outline:3px solid rgba(255,152,0,.5); outline-offset:2px}
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>COROS to ICS Converter</h1>
-
-        <div class="instructions">
-            <p><strong>How to use:</strong></p>
-            <ol>
-                <li>Paste your COROS Training Plan URL below.</li>
-                <li>(Optional) Select a Start Date.</li>
-                <li>Click <strong>Preview Plan</strong> to see the schedule with full workout details.</li>
-                <li>Confirm and download your ICS file.</li>
-            </ol>
-        </div>
+    <div class="box">
+        <div class="brand">COROS Plan <b>Exporter</b></div>
+        <h1>Turn your COROS plan into a calendar or Garmin workouts.</h1>
 
         {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-        {% for category, message in messages %}
-        <div class="flash-message flash-{{ category }}">
-            {{ message }}
-        </div>
-        {% endfor %}
-        {% endif %}
+          {% for category, message in messages %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
         {% endwith %}
 
         <form method="POST">
-            <div class="form-group">
-                <label for="plan_url">COROS Training Plan URL</label>
-                <input type="url" id="plan_url" name="plan_url"
-                    placeholder="https://t.coros.com/schedule-plan/share?planId=..."
-                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; box-sizing: border-box;"
-                    required>
-                <small style="color: #64748b; display: block; margin-top: 0.25rem;">Paste the sharing URL straight from
-                    the COROS app or website.</small>
-            </div>
-
-            <div class="form-group">
-                <label for="start_date">Start Date (Optional)</label>
+            <input class="url" type="url" name="plan_url" required
+                   placeholder="Paste your COROS plan link…">
+            <div class="date-row">
+                <label for="start_date">Start date (optional)</label>
                 <input type="date" id="start_date" name="start_date">
-                <small style="color: #64748b; display: block; margin-top: 0.25rem;">Leave blank to start today. The plan
-                    will align to the next matching weekday.</small>
             </div>
-
-            <button type="submit">Preview Plan</button>
+            <button type="submit">Preview plan</button>
         </form>
     </div>
 </body>
-
 </html>

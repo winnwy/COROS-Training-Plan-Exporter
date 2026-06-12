@@ -84,3 +84,7 @@ See `BUILD_PLAN.md` for full context.
   strength/swim/tri).
 - [ ] **Standing:** keep `README.md` in sync with deliverables — refresh on every
   deliverable change, not just the first time.
+
+## Design (2026-06-12)
+- [x] Redesigned index + preview to a minimal warm-orange theme (frontend only).
+- [ ] a11y: white text on #ff9800 buttons is ~2:1 (below WCAG AA). Kept per chosen brand color; fix = dark text on the orange button if AA is required.
