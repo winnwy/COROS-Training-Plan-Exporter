@@ -108,20 +108,25 @@ def workout_to_fit_steps(workout: D.Workout):
     def add_repeat(from_idx, count):
         steps.append(_emit_repeat(len(steps), from_idx, count))
 
+    def add_movement(s):
+        # strength straight-set movement -> [work, (rest)] repeated `sets` times
+        if strength and s.role == "active" and s.sets > 1:
+            first = len(steps)
+            add(s)
+            if s.rest_s > 0:
+                add(_rest_step_for(s.rest_s))
+            add_repeat(first, s.sets)
+        else:
+            add(s)
+
     for block in workout.blocks:
         if isinstance(block, D.RepeatGroup):
             first = len(steps)
             for s in block.steps:
-                add(s)
+                add_movement(s)              # members may themselves be multi-set
             add_repeat(first, block.count)
-        elif strength and block.role == "active" and block.sets > 1:
-            first = len(steps)
-            add(block)                       # the work set (N reps / time hold)
-            if block.rest_s > 0:
-                add(_rest_step_for(block.rest_s))
-            add_repeat(first, block.sets)     # repeat work(+rest) for each set
         else:
-            add(block)
+            add_movement(block)
     return steps
 
 

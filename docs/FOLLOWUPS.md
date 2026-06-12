@@ -27,6 +27,25 @@ pre-existing, not regressions from that change):
 - Run/bike, HR + pace, single targets + ranges, intervals (`N× (...)`), and the coach
   overview all render correctly through both the CLI and the web download.
 
+## Code review (2026-06-12, 3 parallel agents)
+Fixed in the same pass:
+- [x] Decoder rendered a misleading bare `@ HR` for absolute (non-%) HR/pace/power
+  targets → `Target.human()` now returns "" for value-less targets (regression test added).
+- [x] FIT: sets-expansion now also runs for movements inside a RepeatGroup (defensive;
+  not present in current COROS data but correct).
+- [x] `requests.get` in `scrape_from_url` had no timeout → added `timeout=25`.
+- [x] `dayNo: None` would crash the scrape → guarded (`entity.get('dayNo') or 0`).
+- [x] Web error responses leaked `str(e)` → generic messages, traceback logged server-side.
+
+Still open (lower severity):
+- [ ] `/generate` accepts arbitrary `workouts_json` (hidden field, but POST-able): validate
+  it's a list of dicts with `title`/`date_str` before building, to avoid 500s on crafted input.
+- [ ] Render the actual absolute HR (bpm) / pace / power value (we currently suppress it);
+  needs unit handling per `hrType` / `intensityDisplayUnit`.
+- [ ] `_step_name` should truncate on encoded bytes + ASCII-fold `–`/`×` for older Garmin displays.
+- [ ] Prod config: don't run `app.run(debug=True)`; move `secret_key` to an env var.
+- [ ] `sportType: None` decodes to the literal sport `"None"` — default to "" / "Workout".
+
 ## Carried over from the build plan / reviews (not yet done)
 See `BUILD_PLAN.md` for full context.
 - [x] A4: date audit DONE 2026-06-12 — found + fixed a **real bug** (not in

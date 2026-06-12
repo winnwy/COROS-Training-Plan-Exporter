@@ -46,7 +46,9 @@ class Target:
             if self.is_range:
                 return f"{self.pct_low:.0f}–{self.pct_high:.0f}% {label}"
             return f"{self.pct_low:.0f}% {label}"
-        return self.kind
+        # No %-of-threshold value (target is an absolute HR/pace/power we don't
+        # render yet). Return nothing rather than a misleading bare "@ HR".
+        return ""
 
 
 @dataclass

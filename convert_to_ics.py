@@ -100,7 +100,7 @@ def scrape_from_url(url):
     }
     
     try:
-        response = requests.get(api_url, params=params, headers=headers)
+        response = requests.get(api_url, params=params, headers=headers, timeout=25)
         response.raise_for_status()
         data = response.json()
     except Exception as e:
@@ -129,7 +129,7 @@ def scrape_from_url(url):
     
     # Calculate which week each day belongs to (7 days per week)
     for entity in entities:
-        day_no = entity.get('dayNo', 1)
+        day_no = entity.get('dayNo') or 0   # missing/None/0 -> plan day 0
         week, day_of_week = day_no_to_week_dow(day_no)
         
         # Get program info for this entity using idInPlan
