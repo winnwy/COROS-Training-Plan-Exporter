@@ -239,6 +239,23 @@ def test_parse_coros_url_rejects_bare_and_garbage():
             C.parse_coros_url(bad)
 
 
+def test_parse_coros_url_planId_wins_over_programId():
+    # both ids present -> a plan link is unambiguous, planId wins
+    assert C.parse_coros_url("https://x/share?planId=123&programId=456")[:2] == ("plan", "123")
+
+
+def test_parse_coros_url_ignores_nested_id_in_other_param():
+    # a programId buried in a redirect/next value must NOT hijack a plan link
+    assert C.parse_coros_url(
+        "https://x/share?planId=123&next=/p?programId=456")[:2] == ("plan", "123")
+
+
+def test_decode_workout_rejects_non_dict_payload(tr):
+    for bad in ([], "x", None, 5):
+        with pytest.raises(ValueError):
+            D.decode_workout(bad, tr)
+
+
 def test_distance_cm_to_m(tr):
     plan = D.decode_plan(load("run_simple"), tr)
     dists = [s.dur_value for w in plan.workouts for b in w.blocks

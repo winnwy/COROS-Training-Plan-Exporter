@@ -170,6 +170,15 @@ def test_fit_for_workout_rejects_plan_url():
         F.fit_for_workout("https://x?planId=123&region=1")
 
 
+def test_workout_fit_filename_is_ascii_and_safe():
+    # non-ASCII titles must not leak into the filename / Content-Disposition
+    w = D.Workout(index=0, sport="Run", title="日本語 café run")
+    fn = F._workout_fit_filename(w)
+    assert fn.endswith(".fit") and all(ord(c) < 128 for c in fn)
+    # an all-non-ascii title degrades to the safe default, never an empty name
+    assert F._workout_fit_filename(D.Workout(index=0, sport="Run", title="日本語")) == "coros_workout.fit"
+
+
 def test_workouts_to_zip_contains_valid_fit_files():
     import io, zipfile
     plan = _plan("bike_threshold")

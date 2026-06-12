@@ -287,6 +287,8 @@ def decode_workout(data: dict, translate) -> Workout:
     the plan's dated schedule wrapper. So wrap it as a one-program synthetic
     plan and reuse decode_plan — one decode path for plans and workouts, no
     duplicated logic."""
+    if not isinstance(data, dict):
+        raise ValueError("Unexpected workout payload from COROS (expected an object).")
     synthetic = {"name": data.get("name", ""), "region": data.get("region", 1),
                  "programs": [data]}
     return decode_plan(synthetic, translate).workouts[0]

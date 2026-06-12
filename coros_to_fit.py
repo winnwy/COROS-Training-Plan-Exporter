@@ -240,7 +240,9 @@ def decode_workout_for(program_id, region):
 
 
 def _workout_fit_filename(w):
-    safe = "".join(c if c.isalnum() else "_" for c in (w.title or "workout")).strip("_")[:40]
+    # ASCII-only (matches _fit_filename): keeps the Content-Disposition header
+    # safe regardless of the HTTP layer, and older Garmins render non-ASCII poorly.
+    safe = "".join(c if (c.isascii() and c.isalnum()) else "_" for c in (w.title or "workout")).strip("_")[:40]
     return f"{safe or 'coros_workout'}.fit"
 
 

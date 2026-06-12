@@ -10,6 +10,7 @@ import sys
 import json
 import requests
 from datetime import datetime, timedelta, date
+from urllib.parse import urlparse, parse_qs
 try:
     from icalendar import Calendar, Event, vCalAddress, vText
 except ImportError:
@@ -86,15 +87,20 @@ def parse_coros_url(url):
     links carry programId= (or workoutId=); plan links carry planId=. A bare
     number or anything else raises ValueError — the link self-identifies, so we
     don't guess by double-fetching (see docs/WORKOUT_EXPORT_PLAN.md D1).
+
+    Reads the URL's actual top-level query params (not a substring match on the
+    whole URL) so an id nested in a redirect/next= value can't hijack the
+    classification, and planId wins over programId when both are present — a
+    planId is the unambiguous "this is a plan" signal.
     """
-    region_match = re.search(r'region=([0-9]+)', url or "")
-    region = region_match.group(1) if region_match else "1"
-    workout_match = re.search(r'(?:programId|workoutId)=([0-9]+)', url or "")
-    if workout_match:
-        return ("workout", workout_match.group(1), region)
-    plan_match = re.search(r'planId=([0-9]+)', url or "")
-    if plan_match:
-        return ("plan", plan_match.group(1), region)
+    q = parse_qs(urlparse(url or "").query)
+    region = q.get("region", ["1"])[0]
+    if "planId" in q:
+        return ("plan", q["planId"][0], region)
+    if "programId" in q:
+        return ("workout", q["programId"][0], region)
+    if "workoutId" in q:
+        return ("workout", q["workoutId"][0], region)
     raise ValueError(
         "Couldn't find a workout or plan id in that link. Paste the full COROS "
         "link — it should contain planId= (a plan) or programId= (a workout).")
