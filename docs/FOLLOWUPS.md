@@ -17,10 +17,9 @@ pre-existing, not regressions from that change):
     rest, bodyweight); swim/tri/climb produce overview-level events instead of empty.
     A genuine 0-workout case is now rare, so the "not supported yet" message is moot.
 
-- [ ] **⚠️ CLI blocks on an interactive start-date prompt; no flag for non-interactive use.**
-  `convert_to_ics.py` `main()` prompts on stdin for the start date; with no TTY
-  (background/CI/automation) it hangs (observed during verify — a backgrounded run
-  wedged here). Add a `--start YYYY-MM-DD` / `--date` flag that bypasses the prompt.
+- [x] **FIXED 2026-06-12: CLI `--start YYYY-MM-DD` / `--date` flag added** (bypasses
+  the interactive prompt; validated up front; logic extracted to `resolve_start_date`
+  + tested). No longer hangs with no TTY.
 
 ### Verified good (no action — recorded so we don't re-check)
 - Bad/garbage `planId` and malformed URLs return the index page gracefully (no 500).
@@ -30,8 +29,11 @@ pre-existing, not regressions from that change):
 
 ## Carried over from the build plan / reviews (not yet done)
 See `BUILD_PLAN.md` for full context.
-- [ ] A4: audit `calculate_plan_dates` (`convert_to_ics.py` ~366-435) — verify it
-  doesn't shift workouts when the plan's first day isn't day 0; add a fixture test.
+- [x] A4: date audit DONE 2026-06-12 — found + fixed a **real bug** (not in
+  `calculate_plan_dates` but in `scrape_from_url`'s `dayNo→week` mapping:
+  `((dayNo-1)//7)+1` shifted ~all workouts off their real dates; `dayNo` is an
+  absolute 0-based index). Extracted `day_no_to_week_dow` + regression tests
+  (tests/test_dates.py). Verified ~9/10 workouts were landing on wrong dates before.
 - [ ] A4: region/i18n — `scrape_from_url` hardcodes `region="1"`; dictionary is
   single-locale. Decide whether to parameterize.
 - [ ] A4: log dictionary misses (`translate_key` returns raw key on miss; ~109 of
