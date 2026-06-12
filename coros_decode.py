@@ -30,13 +30,15 @@ class Target:
     pct_low: float = 0.0        # % of threshold, e.g. 96.0  (0 = no % target)
     pct_high: float = 0.0
     weight_g: int = 0           # strength only
+    abs_low: int = 0            # absolute HR (bpm) when no % target
+    abs_high: int = 0
 
     @property
     def is_range(self) -> bool:
-        return self.pct_high and round(self.pct_high, 1) != round(self.pct_low, 1)
+        return bool(self.pct_high) and round(self.pct_high, 1) != round(self.pct_low, 1)
 
     def human(self) -> str:
-        if self.kind in ("none", "") :
+        if self.kind in ("none", ""):
             return ""
         if self.kind == "weight" and self.weight_g:
             kg = self.weight_g / 1000
@@ -46,8 +48,13 @@ class Target:
             if self.is_range:
                 return f"{self.pct_low:.0f}–{self.pct_high:.0f}% {label}"
             return f"{self.pct_low:.0f}% {label}"
-        # No %-of-threshold value (target is an absolute HR/pace/power we don't
-        # render yet). Return nothing rather than a misleading bare "@ HR".
+        # Absolute HR (bpm) — the only absolute target type seen in real data.
+        if self.kind == "HR" and self.abs_low:
+            if self.abs_high and self.abs_high != self.abs_low:
+                return f"{self.abs_low}–{self.abs_high} bpm"
+            return f"{self.abs_low} bpm"
+        # Other absolute targets (pace/power) have an unclear unit encoding —
+        # suppress rather than print a misleading bare "@ pace".
         return ""
 
 
@@ -143,6 +150,10 @@ def _target_from(ex: dict) -> Target:
         t.pct_low = ex["intensityPercent"] / 1000.0
         ext = ex.get("intensityPercentExtend") or ex["intensityPercent"]
         t.pct_high = ext / 1000.0
+    elif kind == "HR" and ex.get("intensityValue"):
+        # absolute HR target (bpm), possibly a range via intensityValueExtend
+        t.abs_low = int(ex["intensityValue"])
+        t.abs_high = int(ex.get("intensityValueExtend") or ex["intensityValue"])
     return t
 
 
@@ -213,7 +224,8 @@ def decode_plan(data: dict, translate) -> Plan:
                 weeks=data.get("totalWeeks"), total_days=data.get("totalDay"),
                 region=data.get("region", 1))
     for idx, prog in enumerate(data.get("programs", [])):
-        sport = SPORT.get(prog.get("sportType"), str(prog.get("sportType")))
+        st = prog.get("sportType")
+        sport = SPORT.get(st, str(st) if st is not None else "")
         exercises = prog.get("exercises", []) or []
         w = Workout(
             index=idx, sport=sport,
