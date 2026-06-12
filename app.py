@@ -21,28 +21,44 @@ def index():
         try:
             # Import the updated scraper with dictionary translation
             # scrape_from_url now uses API and translates workout names/descriptions automatically
-            from convert_to_ics import scrape_from_url, calculate_plan_dates
+            from convert_to_ics import (scrape_from_url, scrape_workout_from_url,
+                                        parse_coros_url, calculate_plan_dates)
             import json
-            
-            workouts = scrape_from_url(plan_url)
-            if not workouts:
-                flash('Failed to scrape workouts. Please check the URL.', 'error')
-                return render_template('index.html')
-            
-            # Determine start date
+
+            # Determine start date first (the workout path dates at scrape time)
             start_date = None
             if start_date_str:
                 try:
                     start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
                 except ValueError:
                     pass
-            
             if start_date is None:
                 start_date = datetime.now()
-                
-            # Calculate Preview Dates
-            workouts_with_dates = calculate_plan_dates(workouts, start_date)
-            
+
+            # A workout link self-identifies (programId vs planId). Bad links
+            # raise ValueError, which we surface as a friendly message.
+            try:
+                kind, _id, _region = parse_coros_url(plan_url)
+            except ValueError as e:
+                flash(str(e), 'error')
+                return render_template('index.html')
+
+            if kind == "workout":
+                # Single undated workout: scrape_workout_from_url already dates it
+                # to start_date — do NOT run calculate_plan_dates (it would force
+                # the day to Monday and shift the date).
+                workouts_with_dates = scrape_workout_from_url(plan_url, start_date)
+                if not workouts_with_dates:
+                    flash('Failed to read that workout. Please check the link.', 'error')
+                    return render_template('index.html')
+            else:
+                workouts = scrape_from_url(plan_url)
+                if not workouts:
+                    flash('Failed to scrape workouts. Please check the URL.', 'error')
+                    return render_template('index.html')
+                # Calculate Preview Dates
+                workouts_with_dates = calculate_plan_dates(workouts, start_date)
+
             # Prepare data for preview
             total_weeks = max((w.get('week', 1) for w in workouts_with_dates), default=0)
             
@@ -64,7 +80,7 @@ def index():
             return render_template('preview.html',
                                    workouts=workouts_with_dates,
                                    start_date=start_date.strftime('%Y-%m-%d'),
-                                   total_workouts=len(workouts),
+                                   total_workouts=len(workouts_with_dates),
                                    total_weeks=total_weeks,
                                    workouts_json=workouts_json,
                                    plan_url=plan_url)
@@ -123,6 +139,17 @@ def generate_fit():
         return "Error: No plan URL provided", 400
     try:
         import coros_to_fit
+        from convert_to_ics import parse_coros_url
+        kind, _id, _region = parse_coros_url(plan_url)
+        if kind == "workout":
+            # one workout -> bare .fit (no zip to unzip for a single file)
+            filename, fit_bytes = coros_to_fit.fit_for_workout(plan_url)
+            return send_file(
+                io.BytesIO(fit_bytes),
+                as_attachment=True,
+                download_name=filename,
+                mimetype='application/octet-stream'
+            )
         zip_bytes = coros_to_fit.fit_zip_for_plan(plan_url)
         return send_file(
             io.BytesIO(zip_bytes),

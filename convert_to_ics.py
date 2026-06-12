@@ -4,11 +4,13 @@ Convert COROS training plan data to ICS calendar format.
 Reads data from 'training_data.txt' OR scrapes from a COROS URL.
 """
 
+import os
 import re
 import sys
 import json
 import requests
 from datetime import datetime, timedelta, date
+from urllib.parse import urlparse, parse_qs
 try:
     from icalendar import Calendar, Event, vCalAddress, vText
 except ImportError:
@@ -26,12 +28,18 @@ except ImportError:
 # Global dictionary cache
 _DICTIONARY_CACHE = None
 
-def load_dictionary(dict_file='coros_dictionary.json'):
-    """Load the COROS dictionary file for translating keys to natural language"""
+def load_dictionary(dict_file=None):
+    """Load the COROS dictionary file for translating keys to natural language.
+
+    Resolve relative to this module (not the cwd) so the CLI translates
+    correctly when run from any directory."""
     global _DICTIONARY_CACHE
     if _DICTIONARY_CACHE is not None:
         return _DICTIONARY_CACHE
-    
+
+    if dict_file is None:
+        dict_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'coros_dictionary.json')
+
     try:
         with open(dict_file, 'r', encoding='utf-8') as f:
             _DICTIONARY_CACHE = json.load(f)
@@ -70,6 +78,87 @@ def day_no_to_week_dow(day_no):
     chosen start date afterward.
     """
     return (day_no // 7) + 1, day_no % 7
+
+
+def parse_coros_url(url):
+    """Classify a COROS link as a workout or a plan and pull its id + region.
+
+    Returns (kind, id, region) where kind is 'workout' or 'plan'. Workout
+    links carry programId= (or workoutId=); plan links carry planId=. A bare
+    number or anything else raises ValueError — the link self-identifies, so we
+    don't guess by double-fetching (see docs/WORKOUT_EXPORT_PLAN.md D1).
+
+    Reads the URL's actual top-level query params (not a substring match on the
+    whole URL) so an id nested in a redirect/next= value can't hijack the
+    classification, and planId wins over programId when both are present — a
+    planId is the unambiguous "this is a plan" signal.
+    """
+    q = parse_qs(urlparse(url or "").query)
+    region = q.get("region", ["1"])[0]
+    if "planId" in q:
+        return ("plan", q["planId"][0], region)
+    if "programId" in q:
+        return ("workout", q["programId"][0], region)
+    if "workoutId" in q:
+        return ("workout", q["workoutId"][0], region)
+    raise ValueError(
+        "Couldn't find a workout or plan id in that link. Paste the full COROS "
+        "link — it should contain planId= (a plan) or programId= (a workout).")
+
+
+def scrape_workout_from_url(url, start_date=None):
+    """Fetch a single COROS workout (program/detail) and return a one-element
+    list shaped like create_ics_file expects — dated to start_date (default
+    today), no week/day alignment (a workout has no schedule)."""
+    kind, workout_id, region = parse_coros_url(url)   # raises ValueError on bad input
+    if kind != "workout":
+        # a plan link slipped in here — defer to the plan path
+        return scrape_from_url(url)
+
+    dictionary = load_dictionary()
+    api_url = "https://teamapi.coros.com/training/program/detail"
+    params = {'id': workout_id, 'region': region}
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15'
+    }
+    try:
+        response = requests.get(api_url, params=params, headers=headers, timeout=25)
+        response.raise_for_status()
+        data = response.json()
+    except Exception as e:
+        print(f"❌ Error fetching workout from API: {e}")
+        return []
+
+    program = data.get('data')
+    if not program:
+        print("❌ Error: Invalid API response")
+        return []
+
+    import coros_decode
+    tr = lambda k: (translate_key(k, dictionary) if k else "")
+    w = coros_decode.decode_workout(program, tr)
+    # create_ics_file prints its own Distance/Duration/TL, so suppress the
+    # decoder's summary line to avoid duplicating them (include_summary=False).
+    description = coros_decode.format_description(w, include_summary=False) or w.overview or ""
+
+    if start_date is None:
+        start_date = datetime.now()
+    # week=1 + day_of_week=the chosen weekday so that even if a caller runs this
+    # through calculate_plan_dates, the anchor shift is 0 and the date stays put
+    # (the web path skips alignment outright). date_obj is honoured directly by
+    # create_ics_file.
+    return [{
+        'week': 1,
+        'day_of_week': start_date.weekday(),
+        'title': w.title,
+        'description': description,
+        'duration': f"{w.duration_s // 60}min" if w.duration_s else None,
+        'distance': f"{w.distance_m / 1000:.2f} km" if w.distance_m else None,
+        'training_load': str(w.training_load) if w.training_load else None,
+        'date_obj': start_date,
+        'date_str': start_date.strftime('%Y-%m-%d'),
+        'weekday_name': start_date.strftime('%A'),
+    }]
 
 
 def scrape_from_url(url):
@@ -587,9 +676,27 @@ def main():
             parser.error(f"invalid --start date '{args.start}': expected YYYY-MM-DD")
     
     workouts = []
-    
+
     if args.url:
         print(f"🌐 Scraping from URL: {args.url}")
+        try:
+            kind, _id, _region = parse_coros_url(args.url)
+        except ValueError as e:
+            print(f"❌ {e}")
+            sys.exit(1)
+        if kind == "workout":
+            # A single workout has no schedule — date it to --start (or today)
+            # and write a one-event calendar. No week/day alignment.
+            start_date = resolve_start_date(args.start)
+            workouts = scrape_workout_from_url(args.url, start_date)
+            if not workouts:
+                print("❌ Could not read that workout.")
+                sys.exit(1)
+            print(f"✅ Workout: {workouts[0]['title']}")
+            print(f"\n🚀 Creating ICS file dated {start_date.strftime('%Y-%m-%d')}...")
+            output_file = create_ics_file(workouts, start_date, output_file='coros_workout.ics')
+            print(f"\n✨ Done! Import '{output_file}' into your calendar app.")
+            return
         workouts = scrape_from_url(args.url)
     else:
         print(f"🔍 Reading '{args.file}'...")

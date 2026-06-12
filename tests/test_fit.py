@@ -137,6 +137,48 @@ def test_parse_plan_url():
     assert F.parse_plan_url("https://x/nope") == (None, "1")
 
 
+def _program(name):
+    return json.load(open(os.path.join(FIX, f"{name}.json")))["data"]
+
+
+def test_fit_for_workout_run_returns_bare_fit(monkeypatch):
+    monkeypatch.setattr(F, "fetch_program", lambda pid, region: _program("workout_run_intervals"))
+    fname, data = F.fit_for_workout("https://x?programId=1&region=1")
+    assert fname.endswith(".fit")
+    m = _messages(data)
+    assert _v(m["FileIdMessage"][0].type) == FileType.WORKOUT.value
+    assert _v(m["WorkoutMessage"][0].sport) == Sport.RUNNING.value
+    assert m["WorkoutStepMessage"]
+
+
+def test_fit_for_workout_swim_raises_clear_error(monkeypatch):
+    monkeypatch.setattr(F, "fetch_program", lambda pid, region: _program("workout_swim"))
+    with pytest.raises(ValueError, match="calendar"):
+        F.fit_for_workout("https://x?programId=1&region=1")
+
+
+def test_fit_for_workout_no_blocks_raises(monkeypatch):
+    # FIT-able sport but no structured steps -> clear ValueError, not an empty FIT
+    monkeypatch.setattr(F, "decode_workout_for",
+                        lambda pid, region: D.Workout(index=0, sport="Run", title="Easy Run"))
+    with pytest.raises(ValueError, match="structured steps"):
+        F.fit_for_workout("https://x?programId=1&region=1")
+
+
+def test_fit_for_workout_rejects_plan_url():
+    with pytest.raises(ValueError, match="plan"):
+        F.fit_for_workout("https://x?planId=123&region=1")
+
+
+def test_workout_fit_filename_is_ascii_and_safe():
+    # non-ASCII titles must not leak into the filename / Content-Disposition
+    w = D.Workout(index=0, sport="Run", title="日本語 café run")
+    fn = F._workout_fit_filename(w)
+    assert fn.endswith(".fit") and all(ord(c) < 128 for c in fn)
+    # an all-non-ascii title degrades to the safe default, never an empty name
+    assert F._workout_fit_filename(D.Workout(index=0, sport="Run", title="日本語")) == "coros_workout.fit"
+
+
 def test_workouts_to_zip_contains_valid_fit_files():
     import io, zipfile
     plan = _plan("bike_threshold")

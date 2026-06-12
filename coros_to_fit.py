@@ -43,6 +43,7 @@ import requests
 
 HDRS = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15"}
 DETAIL = "https://teamapi.coros.com/training/plan/detail"
+PROGRAM_DETAIL = "https://teamapi.coros.com/training/program/detail"
 
 SPORT_FIT = {"Run": Sport.RUNNING, "Bike": Sport.CYCLING,
              "Strength": Sport.TRAINING, "Hybrid": Sport.TRAINING}
@@ -225,13 +226,72 @@ def fit_zip_for_plan(plan_url):
     return workouts_to_zip(plan.workouts)
 
 
+def fetch_program(program_id, region):
+    r = requests.get(PROGRAM_DETAIL, params={"id": program_id, "region": region},
+                     headers=HDRS, timeout=25)
+    r.raise_for_status()
+    return r.json().get("data") or {}
+
+
+def decode_workout_for(program_id, region):
+    dictionary = C.load_dictionary()
+    tr = lambda k: (C.translate_key(k, dictionary) if k else "")
+    return D.decode_workout(fetch_program(program_id, region), tr)
+
+
+def _workout_fit_filename(w):
+    # ASCII-only (matches _fit_filename): keeps the Content-Disposition header
+    # safe regardless of the HTTP layer, and older Garmins render non-ASCII poorly.
+    safe = "".join(c if (c.isascii() and c.isalnum()) else "_" for c in (w.title or "workout")).strip("_")[:40]
+    return f"{safe or 'coros_workout'}.fit"
+
+
+def fit_for_workout(url):
+    """End-to-end: a single COROS workout URL -> (filename, .fit bytes).
+
+    A single workout downloads as a bare .fit (no zip — one file). Raises
+    ValueError, which the web layer surfaces to the user, when the workout
+    can't become a watch workout: a non-FIT sport (swim/climb — no FIT schema
+    yet) or a workout with no structured steps (e.g. an open/easy session)."""
+    kind, workout_id, region = C.parse_coros_url(url)   # raises ValueError on bad input
+    if kind != "workout":
+        raise ValueError("That looks like a plan link — use the plan .FIT export instead.")
+    w = decode_workout_for(workout_id, region)
+    if w.sport not in SPORT_FIT:
+        raise ValueError(f"This {w.sport or 'kind of'} workout can't be exported as .FIT "
+                         f"yet — use the calendar (.ics) export.")
+    if not w.blocks:
+        raise ValueError("This workout has no structured steps to put on the watch — "
+                         "use the calendar (.ics) export.")
+    return _workout_fit_filename(w), build_fit(w)
+
+
 def main():
-    ap = argparse.ArgumentParser(description="COROS run/bike/strength plan -> Garmin .FIT workouts")
-    ap.add_argument("--plan", required=True)
+    ap = argparse.ArgumentParser(description="COROS run/bike/strength plan or workout -> Garmin .FIT")
+    src = ap.add_mutually_exclusive_group(required=True)
+    src.add_argument("--plan", help="plan id or share URL (planId=...)")
+    src.add_argument("--workout", help="workout id or share URL (programId=...) -> one .fit")
     ap.add_argument("--region", default="1")
     ap.add_argument("--out", default=os.path.join(os.path.dirname(__file__), "fit_out"))
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
+
+    if args.workout:
+        url = args.workout
+        if re.fullmatch(r"[0-9]+", url):
+            url = f"https://training.coros.com/workout-program?programId={url}&region={args.region}"
+        try:
+            filename, data = fit_for_workout(url)
+        except ValueError as e:
+            print(f"Error: {e}")
+            sys.exit(1)
+        os.makedirs(args.out, exist_ok=True)
+        path = os.path.join(args.out, filename)
+        with open(path, "wb") as f:
+            f.write(data)
+        print(f"Wrote {path}")
+        print("Sideload: copy to your watch's GARMIN/NewFiles/ folder over USB.")
+        return
 
     plan = decode_plan_for(args.plan, args.region)
     workouts = exportable(plan.workouts)

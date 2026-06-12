@@ -186,6 +186,76 @@ def test_title_fallback_edge_cases(tr):
         assert D._workout_title(name, tr, "Strength", 0) == name
 
 
+def _workout(name):
+    return json.load(open(os.path.join(FIX, f"{name}.json")))["data"]
+
+
+def test_decode_workout_run_intervals(tr):
+    w = D.decode_workout(_workout("workout_run_intervals"), tr)
+    assert w.sport == "Run" and w.is_rich
+    groups = [b for b in w.blocks if isinstance(b, D.RepeatGroup)]
+    assert groups and groups[0].count >= 2, "expected an interval repeat group"
+    targets = [s.target for b in w.blocks
+               for s in ([b] if isinstance(b, D.Step) else b.steps)]
+    assert any(t.kind == "pace" and t.pct_low for t in targets), "expected pace %targets"
+
+
+def test_decode_workout_strength_sets(tr):
+    w = D.decode_workout(_workout("workout_strength_sets"), tr)
+    assert w.sport in ("Strength", "Hybrid") and w.is_rich
+    steps = [s for b in w.blocks for s in ([b] if isinstance(b, D.Step) else b.steps)]
+    assert any(s.dur_kind == "reps" for s in steps), "expected rep-based strength steps"
+
+
+def test_decode_workout_swim_decodes_structure_but_renders_overview_only(tr):
+    # D5: swim parses into blocks, but format_description stays overview-only
+    # (swim not in RICH_SPORTS). Documents the known limitation.
+    w = D.decode_workout(_workout("workout_swim"), tr)
+    assert w.sport == "Swim" and not w.is_rich
+    assert w.blocks, "swim structure should still decode into blocks"
+    assert "Workout:" not in D.format_description(w), "swim body must be overview-only"
+
+
+def test_decode_workout_missing_title_falls_back(tr):
+    w = D.decode_workout(_workout("workout_missing_title"), tr)
+    assert w.title == "Run Workout"   # name was an unresolved W-code
+
+
+def test_parse_coros_url_workout():
+    assert C.parse_coros_url(
+        "https://training.coros.com/workout-program?programId=478&region=2") == ("workout", "478", "2")
+    assert C.parse_coros_url("https://x?workoutId=99")[:2] == ("workout", "99")
+
+
+def test_parse_coros_url_plan():
+    assert C.parse_coros_url(
+        "https://training.coros.com/schedule-plan/share?planId=123&region=1") == ("plan", "123", "1")
+    assert C.parse_coros_url("https://x?planId=123")[2] == "1"   # region defaults
+
+
+def test_parse_coros_url_rejects_bare_and_garbage():
+    for bad in ("478100463168962560", "https://example.com/nope", "", None):
+        with pytest.raises(ValueError):
+            C.parse_coros_url(bad)
+
+
+def test_parse_coros_url_planId_wins_over_programId():
+    # both ids present -> a plan link is unambiguous, planId wins
+    assert C.parse_coros_url("https://x/share?planId=123&programId=456")[:2] == ("plan", "123")
+
+
+def test_parse_coros_url_ignores_nested_id_in_other_param():
+    # a programId buried in a redirect/next value must NOT hijack a plan link
+    assert C.parse_coros_url(
+        "https://x/share?planId=123&next=/p?programId=456")[:2] == ("plan", "123")
+
+
+def test_decode_workout_rejects_non_dict_payload(tr):
+    for bad in ([], "x", None, 5):
+        with pytest.raises(ValueError):
+            D.decode_workout(bad, tr)
+
+
 def test_distance_cm_to_m(tr):
     plan = D.decode_plan(load("run_simple"), tr)
     dists = [s.dur_value for w in plan.workouts for b in w.blocks
