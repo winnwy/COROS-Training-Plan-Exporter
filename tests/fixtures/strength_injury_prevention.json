@@ -1,0 +1,4747 @@
+{
+ "apiCode": "9D102114",
+ "data": {
+  "access": 1,
+  "authorId": "427472625600577536",
+  "category": 0,
+  "competitions": [],
+  "createTime": "2023-10-18 14:35:52",
+  "entities": [
+   {
+    "dayNo": 0,
+    "executeStatus": 0,
+    "id": "455706700727631885",
+    "idInPlan": "1",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "1",
+    "score": "0",
+    "sortNo": 1,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 2,
+    "executeStatus": 0,
+    "id": "455706872526323740",
+    "idInPlan": "3",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "2",
+    "score": "0",
+    "sortNo": 2,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 4,
+    "executeStatus": 0,
+    "id": "455706872526323741",
+    "idInPlan": "2",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "3",
+    "score": "0",
+    "sortNo": 3,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 7,
+    "executeStatus": 0,
+    "id": "455706961915330609",
+    "idInPlan": "4",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "4",
+    "score": "0",
+    "sortNo": 4,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 9,
+    "executeStatus": 0,
+    "id": "455708104913502313",
+    "idInPlan": "16",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "10",
+    "score": "0",
+    "sortNo": 5,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 11,
+    "executeStatus": 0,
+    "id": "455706961915330611",
+    "idInPlan": "6",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "6",
+    "score": "0",
+    "sortNo": 6,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 14,
+    "executeStatus": 0,
+    "id": "455707093448704054",
+    "idInPlan": "7",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "7",
+    "score": "0",
+    "sortNo": 7,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 16,
+    "executeStatus": 0,
+    "id": "455710758666420411",
+    "idInPlan": "80",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "23",
+    "score": "0",
+    "sortNo": 8,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 18,
+    "executeStatus": 0,
+    "id": "455707541199044628",
+    "idInPlan": "8",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "9",
+    "score": "0",
+    "sortNo": 9,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 21,
+    "executeStatus": 0,
+    "id": "455709751765024826",
+    "idInPlan": "37",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "14",
+    "score": "0",
+    "sortNo": 10,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 23,
+    "executeStatus": 0,
+    "id": "455706961915330610",
+    "idInPlan": "5",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "5",
+    "score": "0",
+    "sortNo": 11,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 25,
+    "executeStatus": 0,
+    "id": "455708104913502315",
+    "idInPlan": "15",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "12",
+    "score": "0",
+    "sortNo": 12,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 28,
+    "executeStatus": 0,
+    "id": "455710482714771628",
+    "idInPlan": "67",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "19",
+    "score": "0",
+    "sortNo": 13,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 30,
+    "executeStatus": 0,
+    "id": "455707541199044627",
+    "idInPlan": "10",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "8",
+    "score": "0",
+    "sortNo": 14,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 32,
+    "executeStatus": 0,
+    "id": "455710292394033250",
+    "idInPlan": "45",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "15",
+    "score": "0",
+    "sortNo": 15,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 35,
+    "executeStatus": 0,
+    "id": "455710482714771629",
+    "idInPlan": "69",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "20",
+    "score": "0",
+    "sortNo": 16,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 37,
+    "executeStatus": 0,
+    "id": "455708104913502316",
+    "idInPlan": "14",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "13",
+    "score": "0",
+    "sortNo": 17,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 39,
+    "executeStatus": 0,
+    "id": "455710292394033251",
+    "idInPlan": "61",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "16",
+    "score": "0",
+    "sortNo": 18,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 42,
+    "executeStatus": 0,
+    "id": "455710482714771630",
+    "idInPlan": "71",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "21",
+    "score": "0",
+    "sortNo": 19,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 44,
+    "executeStatus": 0,
+    "id": "455710758666420412",
+    "idInPlan": "99",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "24",
+    "score": "0",
+    "sortNo": 20,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 46,
+    "executeStatus": 0,
+    "id": "455710292394033252",
+    "idInPlan": "64",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "17",
+    "score": "0",
+    "sortNo": 21,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 49,
+    "executeStatus": 0,
+    "id": "455710482714771631",
+    "idInPlan": "73",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "22",
+    "score": "0",
+    "sortNo": 22,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 51,
+    "executeStatus": 0,
+    "id": "455710758666420413",
+    "idInPlan": "101",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "25",
+    "score": "0",
+    "sortNo": 23,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   },
+   {
+    "dayNo": 53,
+    "executeStatus": 0,
+    "id": "455710292394033253",
+    "idInPlan": "66",
+    "operateUserId": "427472625600577536",
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "planProgramId": "18",
+    "score": "0",
+    "sortNo": 24,
+    "sortNoInSchedule": 0,
+    "standardRate": "0",
+    "thirdParty": false
+   }
+  ],
+  "eventTags": [],
+  "executeStatus": 0,
+  "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+  "id": "455706700727631876",
+  "inSchedule": 0,
+  "likeTpIds": [],
+  "maxIdInPlan": "101",
+  "maxPlanProgramId": "25",
+  "maxWeeks": 3,
+  "minWeeks": 3,
+  "name": "P10017",
+  "nickname": "COROS Official",
+  "officalConfig": {
+   "difficultyList": [],
+   "isOffical": 0,
+   "targetList": []
+  },
+  "officialPrimaryIdStr": "477575758825570306,477575758825570307",
+  "operateUserId": "427472625600577536",
+  "overview": "P10085",
+  "pbVersion": 2,
+  "planIcon": 4,
+  "profile": "",
+  "programs": [
+   {
+    "access": 1,
+    "authorId": "427472625600577536",
+    "createTimestamp": 1752654469,
+    "deleted": 0,
+    "distance": 0.0,
+    "distanceDisplayUnit": 3,
+    "duration": 2734,
+    "elevGain": 0.0,
+    "essence": 0,
+    "estimatedDistance": 0,
+    "estimatedTime": 2734,
+    "estimatedType": 6,
+    "estimatedValue": 0,
+    "exerciseNum": 7,
+    "exercises": [
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 1,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284679",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1120",
+      "originId": "425898928110747648",
+      "overview": "sid_strength_warm_up",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 16777216,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 133,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png,https://s3.coros.com/source/exercise_img/0/04846c3ded814ab8b4afd9188231efed.png,https://s3.coros.com/source/exercise_img/0/09ac8240464545c08ebe07affdc683df.png,https://s3.coros.com/source/exercise_img/0/c37b914b77ab4955920281eef73f33ca.png,https://s3.coros.com/source/exercise_img/0/e5b56159c6c24700bfd7f13e1336754e.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284680",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 4540,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6,
+       7
+      ],
+      "name": "T1190",
+      "originId": "428453781890580481",
+      "overview": "sid_strength_lunge_with_elastic_band",
+      "part": [
+       4,
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 33554432,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/93bbf85a4a4a411788007706c4868e2f.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5a7f643cbe30443891eb8de12e3d8b63.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/04846c3ded814ab8b4afd9188231efed.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/40c9e73e814741bd825988b44babbac1.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/09ac8240464545c08ebe07affdc683df.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/613256cca5bf49629dda6cfe22c664c6.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c37b914b77ab4955920281eef73f33ca.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/35fb2d046d554e3a9c7d7f419527f2d7.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e5b56159c6c24700bfd7f13e1336754e.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/12364c9e50624d33b4afbfc24854f540.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/062f6126c734424fb039c95899203813.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/5a7f643cbe30443891eb8de12e3d8b63.mp4,https://s3.coros.com/source/exercise_gif/0/40c9e73e814741bd825988b44babbac1.mp4,https://s3.coros.com/source/exercise_gif/0/613256cca5bf49629dda6cfe22c664c6.mp4,https://s3.coros.com/source/exercise_gif/0/35fb2d046d554e3a9c7d7f419527f2d7.mp4,https://s3.coros.com/source/exercise_gif/0/12364c9e50624d33b4afbfc24854f540.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 0,
+      "groupId": "0",
+      "id": "470474601632284681",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": true,
+      "isIntensityPercent": false,
+      "name": "",
+      "originId": "0",
+      "overview": "",
+      "restType": 0,
+      "restValue": 30,
+      "sets": 3,
+      "sortNo": 50331648,
+      "sourceId": "0",
+      "sourceUrl": "",
+      "sportType": 0,
+      "status": 1,
+      "subType": 0,
+      "targetType": 2,
+      "targetValue": 200,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 132,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png,https://s3.coros.com/source/exercise_img/0/643e686194634e30b95199615ca1a906.png,https://s3.coros.com/source/exercise_img/0/50d7b04cd0a542798db45032c08fb076.png,https://s3.coros.com/source/exercise_img/0/407eff4a7157431a90cf2b91c75d373a.png,https://s3.coros.com/source/exercise_img/0/c953a49fd6614584a9429f64835bb369.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "470474601632284681",
+      "hrType": 0,
+      "id": "470474601632284685",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       11
+      ],
+      "muscleRelevance": [
+       1,
+       11
+      ],
+      "name": "T1107",
+      "originId": "425846214098075649",
+      "overview": "sid_strength_lateral_raises_with_bands",
+      "part": [
+       1
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 1,
+      "sortNo": 50397184,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/d74f8469be9842429bd0d9412ac5b8be.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/2757f2b596f7470881ae056233de57f8.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/643e686194634e30b95199615ca1a906.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fb18fa86216b447cb8d67a047ab231cd.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/50d7b04cd0a542798db45032c08fb076.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5e3bef1e420440758317883afde80c51.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/407eff4a7157431a90cf2b91c75d373a.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/662787336f204dc982ce2bdd2ee85355.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c953a49fd6614584a9429f64835bb369.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b028900a388d42dc979699b9a89cd515.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/f2cf0cd200d345c5bc64c8843e67a3ad.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/2757f2b596f7470881ae056233de57f8.mp4,https://s3.coros.com/source/exercise_gif/0/fb18fa86216b447cb8d67a047ab231cd.mp4,https://s3.coros.com/source/exercise_gif/0/5e3bef1e420440758317883afde80c51.mp4,https://s3.coros.com/source/exercise_gif/0/662787336f204dc982ce2bdd2ee85355.mp4,https://s3.coros.com/source/exercise_gif/0/b028900a388d42dc979699b9a89cd515.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 140,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png,https://s3.coros.com/source/exercise_img/0/cf8c6e1b9c1845459765cecad304289f.png,https://s3.coros.com/source/exercise_img/0/f65f950490164ac292459da69746d9f5.png,https://s3.coros.com/source/exercise_img/0/fd8721d57aa64624ad6682d6b6befc70.png,https://s3.coros.com/source/exercise_img/0/da37d7a51fb74a27b1c12848c666e82d.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "470474601632284681",
+      "hrType": 0,
+      "id": "470474601632284686",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       1
+      ],
+      "muscleRelevance": [
+       1
+      ],
+      "name": "T1108",
+      "originId": "425846351000158208",
+      "overview": "sid_strength_front_raises_with_bands",
+      "part": [
+       1
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 1,
+      "sortNo": 50462720,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/c69b9e352b8e4556abf8e8e07ce34356.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/091deb3b38b94273bdb30ae3a7864276.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cf8c6e1b9c1845459765cecad304289f.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/8607ded372a543868460d727fba9ef76.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/f65f950490164ac292459da69746d9f5.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/800842b109eb4eca8c835a9108250923.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/fd8721d57aa64624ad6682d6b6befc70.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/403b43d2732f40ba87da5d08abbe05f2.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/da37d7a51fb74a27b1c12848c666e82d.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/d1e37d48f51a4c5dbc9243115c52c918.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/6f6c747814564bfda702c88ca39b2de0.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/091deb3b38b94273bdb30ae3a7864276.mp4,https://s3.coros.com/source/exercise_gif/0/8607ded372a543868460d727fba9ef76.mp4,https://s3.coros.com/source/exercise_gif/0/800842b109eb4eca8c835a9108250923.mp4,https://s3.coros.com/source/exercise_gif/0/403b43d2732f40ba87da5d08abbe05f2.mp4,https://s3.coros.com/source/exercise_gif/0/d1e37d48f51a4c5dbc9243115c52c918.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 33,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png,https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png,https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png,https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png,https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284682",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6
+      ],
+      "name": "T1150",
+      "originId": "426618429085237248",
+      "overview": "sid_strength_bird_dog_type",
+      "part": [
+       0
+      ],
+      "restType": 1,
+      "restValue": 30,
+      "sets": 3,
+      "sortNo": 67108864,
+      "sourceUrl": "https://s3.coros.com/source/exercise_img/0/ee9e3938c8ea4721a556afbd2b83cab8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+       }
+      ],
+      "videoUrl": "https://s3.coros.com/source/exercise_gif/0/4c2380a4ec9d4474893e629c5ba7653d.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4,https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4,https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4,https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4,https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 1,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png,https://s3.coros.com/source/exercise_img/0/1bb8270ef7bb410798a15df59ad20b06.png,https://s3.coros.com/source/exercise_img/0/ae3a681337294d0d8237e0bd2ca65237.png,https://s3.coros.com/source/exercise_img/0/eaf6c86413a14727a2cc7bfe50cc9428.png,https://s3.coros.com/source/exercise_img/0/ff169723425146b39ae79b3b2ef8ab54.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284683",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       7
+      ],
+      "muscleRelevance": [
+       1,
+       6,
+       7
+      ],
+      "name": "T1007",
+      "originId": "425827765602926593",
+      "overview": "sid_strength_burpees",
+      "part": [
+       0
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 4,
+      "sortNo": 83886080,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/f6abbeb1cce64fb3b23628592fa33fa8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/c36919d6977a4585b62c0defe05db905.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1bb8270ef7bb410798a15df59ad20b06.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3c539a511ae24d7f9db42d57895690a6.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ae3a681337294d0d8237e0bd2ca65237.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/bff4d0dae714435680de8a5390c855eb.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/eaf6c86413a14727a2cc7bfe50cc9428.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/68fd2553667d453d81741623ebb42aca.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ff169723425146b39ae79b3b2ef8ab54.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/580772088725463aac56fad0d499103c.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/0878d2d7d1b84f379a2a86216a187853.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/c36919d6977a4585b62c0defe05db905.mp4,https://s3.coros.com/source/exercise_gif/0/3c539a511ae24d7f9db42d57895690a6.mp4,https://s3.coros.com/source/exercise_gif/0/bff4d0dae714435680de8a5390c855eb.mp4,https://s3.coros.com/source/exercise_gif/0/68fd2553667d453d81741623ebb42aca.mp4,https://s3.coros.com/source/exercise_gif/0/580772088725463aac56fad0d499103c.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 3,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284684",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1122",
+      "originId": "425898949585584128",
+      "overview": "sid_strength_cool_down",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 100663296,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     }
+    ],
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "id": "455706872526323739",
+    "idInPlan": "3",
+    "isTargetTypeConsistent": 0,
+    "name": "P11854",
+    "nickname": "COROS Official",
+    "originEssence": 0,
+    "overview": "P11349",
+    "pbVersion": 2,
+    "pitch": 0,
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "poolLength": 2500,
+    "poolLengthId": 1,
+    "poolLengthUnit": 2,
+    "profile": "",
+    "referExercise": {
+     "hrType": 0,
+     "intensityType": 1,
+     "valueType": 1
+    },
+    "sex": 0,
+    "simple": false,
+    "sourceId": "425868113867882497",
+    "sourceUrl": "https://s3.coros.com/source/source_default/0/e3611f19b15648338b0f229b2b1b1015.jpg",
+    "sportType": 4,
+    "star": 0,
+    "status": 1,
+    "subType": 65535,
+    "targetType": 2,
+    "targetValue": 2734,
+    "totalSets": 18,
+    "trainingLoad": 0,
+    "type": 0,
+    "unit": 1,
+    "userId": "427472625600577536",
+    "version": 7,
+    "videoCoverUrl": "",
+    "videoUrl": ""
+   },
+   {
+    "access": 1,
+    "authorId": "427472625600577536",
+    "createTimestamp": 1752654469,
+    "deleted": 0,
+    "distance": 0.0,
+    "distanceDisplayUnit": 3,
+    "duration": 2694,
+    "elevGain": 0.0,
+    "essence": 0,
+    "estimatedDistance": 0,
+    "estimatedTime": 2694,
+    "estimatedType": 6,
+    "estimatedValue": 0,
+    "exerciseNum": 7,
+    "exercises": [
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 1,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284672",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1120",
+      "originId": "425898928110747648",
+      "overview": "sid_strength_warm_up",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 16777216,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 150,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/a511cb555e994488982b1875a676a3fe.png,https://s3.coros.com/source/exercise_img/0/79436f12466244c1a5d60e08420d2c07.png,https://s3.coros.com/source/exercise_img/0/02c44b736081488d9c9392a2651694e5.png,https://s3.coros.com/source/exercise_img/0/c25ad3221ceb4771be00070f368a7640.png,https://s3.coros.com/source/exercise_img/0/49b6503a82504055a4f22bc1e29c43b4.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284673",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       8
+      ],
+      "muscleRelevance": [
+       7,
+       8,
+       13,
+       14
+      ],
+      "name": "T1110",
+      "originId": "425846497029046272",
+      "overview": "sid_strength_deadlifts_with_bands",
+      "part": [
+       3,
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 33554432,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/7c4d0fbb1bee4fada46de8c567fcef92.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/a511cb555e994488982b1875a676a3fe.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a511cb555e994488982b1875a676a3fe.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/cff653f1c27843bc9c23d95928c259e9.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/79436f12466244c1a5d60e08420d2c07.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/bfa4bd09d7ec4428a52bf9ac7a4b4df4.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/02c44b736081488d9c9392a2651694e5.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e2943be57db84953bc64327661faba69.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c25ad3221ceb4771be00070f368a7640.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/64bc94270d024c03b99b218fdad1d468.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/49b6503a82504055a4f22bc1e29c43b4.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/d90e70217b2449b490c68529dfc1f881.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/fbf269be831941bdaf33452b71675b99.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/cff653f1c27843bc9c23d95928c259e9.mp4,https://s3.coros.com/source/exercise_gif/0/bfa4bd09d7ec4428a52bf9ac7a4b4df4.mp4,https://s3.coros.com/source/exercise_gif/0/e2943be57db84953bc64327661faba69.mp4,https://s3.coros.com/source/exercise_gif/0/64bc94270d024c03b99b218fdad1d468.mp4,https://s3.coros.com/source/exercise_gif/0/d90e70217b2449b490c68529dfc1f881.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 37,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/6db312d84ee549c9b390065c8d86128e.png,https://s3.coros.com/source/exercise_img/0/ea751560f2f24d6593e53989e3cb1fd0.png,https://s3.coros.com/source/exercise_img/0/4436a62d7014431fa79e5eade648a7e9.png,https://s3.coros.com/source/exercise_img/0/1776c6dd9b0a4011a52adce35251be5f.png,https://s3.coros.com/source/exercise_img/0/9a7e6be190fb40bc8cbf3a92dabfd798.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284674",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       8
+      ],
+      "muscleRelevance": [
+       7,
+       8,
+       14
+      ],
+      "name": "T1061",
+      "originId": "425832054396207105",
+      "overview": "sid_strength_squats",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 50331648,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/5011181115d74b7787acc1f78c30dce6.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/6db312d84ee549c9b390065c8d86128e.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/6db312d84ee549c9b390065c8d86128e.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/528111ae862b461eb2884dd9c15b01ad.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ea751560f2f24d6593e53989e3cb1fd0.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/ebec3b8e3f1448d1b9996d200f7ed03a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/4436a62d7014431fa79e5eade648a7e9.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/acf6af88d89640e8962cfeb799a5ff7f.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1776c6dd9b0a4011a52adce35251be5f.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/be3edc87c6554fd6b7b3c964fed0ddc6.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/9a7e6be190fb40bc8cbf3a92dabfd798.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/1b7573b92b5441b7b3ba35db8db13fd6.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/39ce1cd8450e4e2aab7afd6be34d740e.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/528111ae862b461eb2884dd9c15b01ad.mp4,https://s3.coros.com/source/exercise_gif/0/ebec3b8e3f1448d1b9996d200f7ed03a.mp4,https://s3.coros.com/source/exercise_gif/0/acf6af88d89640e8962cfeb799a5ff7f.mp4,https://s3.coros.com/source/exercise_gif/0/be3edc87c6554fd6b7b3c964fed0ddc6.mp4,https://s3.coros.com/source/exercise_gif/0/1b7573b92b5441b7b3ba35db8db13fd6.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 56,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/3b2d4620d9314afbafa39c201966cf96.png,https://s3.coros.com/source/exercise_img/0/620739b9bc9d4a6eac1c0b019bfdc88e.png,https://s3.coros.com/source/exercise_img/0/55d1af4689b34efbb20b9d1363a05971.png,https://s3.coros.com/source/exercise_img/0/d99bf1e2b43b49899c21eb06571486e3.png,https://s3.coros.com/source/exercise_img/0/cdd446c2f6174f50b0053e23bcede1fc.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9,
+       10
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284675",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       8
+      ],
+      "muscleRelevance": [
+       8,
+       14
+      ],
+      "name": "T1033",
+      "originId": "425830845094477824",
+      "overview": "sid_strength_bridge",
+      "part": [
+       4,
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 67108864,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/c00446f7b4d24ba6a3f8197491b628a6.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/3b2d4620d9314afbafa39c201966cf96.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3b2d4620d9314afbafa39c201966cf96.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b813c4f32635415899cc0f25308de856.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/620739b9bc9d4a6eac1c0b019bfdc88e.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/d889275be3934e2f8cf589683f95433d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/55d1af4689b34efbb20b9d1363a05971.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/56d97e4374bb4295adb76e338e571c2c.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/d99bf1e2b43b49899c21eb06571486e3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3a30275ae2d845868edf3e28e338d454.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cdd446c2f6174f50b0053e23bcede1fc.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/d91cf6d340c4477791f294c0ac0b9cac.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/c4e3ec03f5aa4e6e95f5a4a118b0303b.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/b813c4f32635415899cc0f25308de856.mp4,https://s3.coros.com/source/exercise_gif/0/d889275be3934e2f8cf589683f95433d.mp4,https://s3.coros.com/source/exercise_gif/0/56d97e4374bb4295adb76e338e571c2c.mp4,https://s3.coros.com/source/exercise_gif/0/3a30275ae2d845868edf3e28e338d454.mp4,https://s3.coros.com/source/exercise_gif/0/d91cf6d340c4477791f294c0ac0b9cac.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 138,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/261252c14641491ebc60078cbc57b75c.png,https://s3.coros.com/source/exercise_img/0/e1ff9620861344b6a7d5afced3c19145.png,https://s3.coros.com/source/exercise_img/0/1885638effa241c1b8a8267def9e98bb.png,https://s3.coros.com/source/exercise_img/0/8bd5ce47e5a14957aae0cc05b6354e64.png,https://s3.coros.com/source/exercise_img/0/e60f189647c54de5a4881def734ae9a2.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284676",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       9
+      ],
+      "muscleRelevance": [
+       9
+      ],
+      "name": "T1114",
+      "originId": "425846666680254464",
+      "overview": "sid_strength_hip_adductions_with_bands",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 83886080,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/457ab9f3fde04332a2b407f695ee4ed5.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/261252c14641491ebc60078cbc57b75c.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/261252c14641491ebc60078cbc57b75c.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b192803d5e8744e2bd10fc49fa37edbc.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e1ff9620861344b6a7d5afced3c19145.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/219513ae100a4c75bb7d01404bbb1ea4.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1885638effa241c1b8a8267def9e98bb.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/678c28b93e42498dbfeb5f168fb1e425.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/8bd5ce47e5a14957aae0cc05b6354e64.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/6d9377a434cb4bc1b08d20aa4a5d7dfc.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e60f189647c54de5a4881def734ae9a2.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/39320e38e02f46cc912cae423c674f03.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/280121bae151466b804b6f967718d02c.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/b192803d5e8744e2bd10fc49fa37edbc.mp4,https://s3.coros.com/source/exercise_gif/0/219513ae100a4c75bb7d01404bbb1ea4.mp4,https://s3.coros.com/source/exercise_gif/0/678c28b93e42498dbfeb5f168fb1e425.mp4,https://s3.coros.com/source/exercise_gif/0/6d9377a434cb4bc1b08d20aa4a5d7dfc.mp4,https://s3.coros.com/source/exercise_gif/0/39320e38e02f46cc912cae423c674f03.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 151,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/c2de3ef84db44bb497b2f092f100f237.png,https://s3.coros.com/source/exercise_img/0/8818a15e36eb45de9fb5f5720c1a6606.png,https://s3.coros.com/source/exercise_img/0/eebc896783f24485ae644a5759aa46a8.png,https://s3.coros.com/source/exercise_img/0/d977645caedd4c8896bbdb31e7651a7b.png,https://s3.coros.com/source/exercise_img/0/c82c74d3c7cf4144aea2f1c76d2dc6ff.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284677",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       7
+      ],
+      "muscleRelevance": [
+       7,
+       15
+      ],
+      "name": "T1155",
+      "originId": "426619291299921921",
+      "overview": "sid_strength_standing_leg_lifts",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 30,
+      "sets": 3,
+      "sortNo": 100663296,
+      "sourceUrl": "https://s3.coros.com/source/exercise_img/0/718c73d49b8744f08c0cea138c8da0f1.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/c2de3ef84db44bb497b2f092f100f237.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c2de3ef84db44bb497b2f092f100f237.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/9962aaf74c7e4bcaa4dad668e55ec96d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/8818a15e36eb45de9fb5f5720c1a6606.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5d124361b41c40a3a5bb3890d49a800a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/eebc896783f24485ae644a5759aa46a8.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fe9fb477ef084eb3b7fbdcf2113dc7ff.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/d977645caedd4c8896bbdb31e7651a7b.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fb2a8022fce643d09e2a827624c02275.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c82c74d3c7cf4144aea2f1c76d2dc6ff.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/4affc7ed1d8b4c9c94de65c82ca12a10.mp4"
+       }
+      ],
+      "videoUrl": "https://s3.coros.com/source/exercise_gif/0/1871fee794c745fcb1b3b4612c382cf8.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/9962aaf74c7e4bcaa4dad668e55ec96d.mp4,https://s3.coros.com/source/exercise_gif/0/5d124361b41c40a3a5bb3890d49a800a.mp4,https://s3.coros.com/source/exercise_gif/0/fe9fb477ef084eb3b7fbdcf2113dc7ff.mp4,https://s3.coros.com/source/exercise_gif/0/fb2a8022fce643d09e2a827624c02275.mp4,https://s3.coros.com/source/exercise_gif/0/4affc7ed1d8b4c9c94de65c82ca12a10.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 3,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284678",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1122",
+      "originId": "425898949585584128",
+      "overview": "sid_strength_cool_down",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 117440512,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     }
+    ],
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "id": "455706700727631884",
+    "idInPlan": "1",
+    "isTargetTypeConsistent": 0,
+    "name": "P10573",
+    "nickname": "COROS Official",
+    "originEssence": 0,
+    "overview": "P11349",
+    "pbVersion": 2,
+    "pitch": 0,
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "poolLength": 2500,
+    "poolLengthId": 1,
+    "poolLengthUnit": 2,
+    "profile": "",
+    "referExercise": {
+     "hrType": 0,
+     "intensityType": 1,
+     "valueType": 1
+    },
+    "sex": 0,
+    "simple": false,
+    "sourceId": "425868142590476288",
+    "sourceUrl": "https://s3.coros.com/source/source_default/0/1a3b389aac8a4fe5915860cef62b2b5b.jpg",
+    "sportType": 4,
+    "star": 0,
+    "status": 1,
+    "subType": 65535,
+    "targetType": 2,
+    "targetValue": 2694,
+    "totalSets": 17,
+    "trainingLoad": 0,
+    "type": 0,
+    "unit": 1,
+    "userId": "427472625600577536",
+    "version": 6,
+    "videoCoverUrl": "",
+    "videoUrl": ""
+   },
+   {
+    "access": 1,
+    "authorId": "427472625600577536",
+    "createTimestamp": 1752654469,
+    "deleted": 0,
+    "distance": 0.0,
+    "distanceDisplayUnit": 3,
+    "duration": 2884,
+    "elevGain": 0.0,
+    "essence": 0,
+    "estimatedDistance": 0,
+    "estimatedTime": 2884,
+    "estimatedType": 6,
+    "estimatedValue": 0,
+    "exerciseNum": 7,
+    "exercises": [
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 1,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284687",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1120",
+      "originId": "425898928110747648",
+      "overview": "sid_strength_warm_up",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 16777216,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 289,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/c176d6c12a55402d930b759c792551c3.png,https://s3.coros.com/source/exercise_img/0/6e381c3dfcc84d2ca3b88accee8ee375.png,https://s3.coros.com/source/exercise_img/0/c031346090ec4a2a92ac8e4843b69452.png,https://s3.coros.com/source/exercise_img/0/f9403fbe42fc4ddea90a9eedee81d802.png,https://s3.coros.com/source/exercise_img/0/875c031119d043c3b613771f17f1bd5f.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       3
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284688",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 4540,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       12
+      ],
+      "muscleRelevance": [
+       3,
+       11,
+       12
+      ],
+      "name": "T1054",
+      "originId": "425831875618193408",
+      "overview": "sid_strength_barbell_row",
+      "part": [
+       3,
+       6
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 33554432,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/fe4b3d98b1254baa8e8984cf72f2a6bd.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/c176d6c12a55402d930b759c792551c3.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c176d6c12a55402d930b759c792551c3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3cf6538b2060409887e4795eb1d9098d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/6e381c3dfcc84d2ca3b88accee8ee375.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b6c70a71bd0f45c6a48b9ba27508e0bd.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c031346090ec4a2a92ac8e4843b69452.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/bb665e52908343828eb29cb5bf1b9557.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/f9403fbe42fc4ddea90a9eedee81d802.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/cabb05fa0a9d41f39d881d2c244bb344.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/875c031119d043c3b613771f17f1bd5f.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e5402094836249e69fbc53497cc5d3a9.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/f060360177454efeba08d8a79f9dfd21.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/3cf6538b2060409887e4795eb1d9098d.mp4,https://s3.coros.com/source/exercise_gif/0/b6c70a71bd0f45c6a48b9ba27508e0bd.mp4,https://s3.coros.com/source/exercise_gif/0/bb665e52908343828eb29cb5bf1b9557.mp4,https://s3.coros.com/source/exercise_gif/0/cabb05fa0a9d41f39d881d2c244bb344.mp4,https://s3.coros.com/source/exercise_gif/0/e5402094836249e69fbc53497cc5d3a9.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 23,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/06be456a186e449d8245754d89e0d7df.png,https://s3.coros.com/source/exercise_img/0/af5fd249fba6441b9bfec1a19cca0972.png,https://s3.coros.com/source/exercise_img/0/438d27f1613c4d87aa156f5c762dab67.png,https://s3.coros.com/source/exercise_img/0/585dcee1bd5641bf96d138d1e0901ecc.png,https://s3.coros.com/source/exercise_img/0/acf40fc0d2f846bfae8e376b7af37200.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284689",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       2
+      ],
+      "muscleRelevance": [
+       2,
+       4
+      ],
+      "name": "T1184",
+      "originId": "428453257099264001",
+      "overview": "sid_strength_kneeling_push_ups",
+      "part": [
+       2,
+       6
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 50331648,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/fddbf3f6fad64d7ab93c410a3633a1c4.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/06be456a186e449d8245754d89e0d7df.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/06be456a186e449d8245754d89e0d7df.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/8650741c9e0247499041135e0d3be2ba.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/af5fd249fba6441b9bfec1a19cca0972.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/a3462636352b451bb3b4f6591e631c95.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/438d27f1613c4d87aa156f5c762dab67.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/197f811ea92b49d5b27fbc44a7c5b564.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/585dcee1bd5641bf96d138d1e0901ecc.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/a86e30de8b6b4570bea6f0725718723a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/acf40fc0d2f846bfae8e376b7af37200.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3c282255c6044a8bbffc1a74b7794939.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/82d7cfba7a6c4e97a63fff8d66aaac8b.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/8650741c9e0247499041135e0d3be2ba.mp4,https://s3.coros.com/source/exercise_gif/0/a3462636352b451bb3b4f6591e631c95.mp4,https://s3.coros.com/source/exercise_gif/0/197f811ea92b49d5b27fbc44a7c5b564.mp4,https://s3.coros.com/source/exercise_gif/0/a86e30de8b6b4570bea6f0725718723a.mp4,https://s3.coros.com/source/exercise_gif/0/3c282255c6044a8bbffc1a74b7794939.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 35,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/6b68c78df20a44f09d0f1917318cd865.png,https://s3.coros.com/source/exercise_img/0/13040b39b7864d21be7dac69d9c5bd8b.png,https://s3.coros.com/source/exercise_img/0/e76e0c0e47924c659cea99d56a5694d5.png,https://s3.coros.com/source/exercise_img/0/48d57de111754e9bba11ab6757ef6363.png,https://s3.coros.com/source/exercise_img/0/cd88c3f108614b81b6499d7eb22c8408.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284690",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6,
+       13
+      ],
+      "name": "T1010",
+      "originId": "425827856334110721",
+      "overview": "sid_strength_planks",
+      "part": [
+       4
+      ],
+      "restType": 1,
+      "restValue": 90,
+      "sets": 3,
+      "sortNo": 67108864,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/0a7949ad72b54c36aab3185723e6a8a7.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 30,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/6b68c78df20a44f09d0f1917318cd865.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/6b68c78df20a44f09d0f1917318cd865.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/c519b9fce76e46d285a1bc3c5740266d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/13040b39b7864d21be7dac69d9c5bd8b.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e26cb424a34a4aa8aabaf6be15bccb72.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e76e0c0e47924c659cea99d56a5694d5.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/522a38f036e045dea5f8e6e36c2674da.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/48d57de111754e9bba11ab6757ef6363.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/a80e5b58d14a4701b0ee61660164c6d4.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cd88c3f108614b81b6499d7eb22c8408.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/321f02a4ad114846b85e026f57578cf1.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/fcb940766db4439eb4ae0c107109fe82.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/c519b9fce76e46d285a1bc3c5740266d.mp4,https://s3.coros.com/source/exercise_gif/0/e26cb424a34a4aa8aabaf6be15bccb72.mp4,https://s3.coros.com/source/exercise_gif/0/522a38f036e045dea5f8e6e36c2674da.mp4,https://s3.coros.com/source/exercise_gif/0/a80e5b58d14a4701b0ee61660164c6d4.mp4,https://s3.coros.com/source/exercise_gif/0/321f02a4ad114846b85e026f57578cf1.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 59,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/5ef9a6ae34ab429a9cff982b3e1fc769.png,https://s3.coros.com/source/exercise_img/0/b058a96c0c334ee89ff6fe0bbe123343.png,https://s3.coros.com/source/exercise_img/0/3aa1750fc484414596ee02787b1f00de.png,https://s3.coros.com/source/exercise_img/0/cd2875c2e2ab4518ad178db46aed2df4.png,https://s3.coros.com/source/exercise_img/0/045ed8234c36406ea7d96ac0038825b6.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       2,
+       4,
+       16
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284691",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6
+      ],
+      "name": "T1145",
+      "originId": "426618096225271809",
+      "overview": "sid_strength_trunk_rotations",
+      "part": [
+       4
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 83886080,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/d414b8fc20974c32865711f0b16e4596.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/5ef9a6ae34ab429a9cff982b3e1fc769.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/5ef9a6ae34ab429a9cff982b3e1fc769.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/66efb361f8ea4c3b908296e72763d8cd.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/b058a96c0c334ee89ff6fe0bbe123343.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/78b7aafc615e4ed490288d7aa22c6d5f.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3aa1750fc484414596ee02787b1f00de.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/90c0856dad6e44d8844048bb9955d0c2.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cd2875c2e2ab4518ad178db46aed2df4.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/094bdf4f3abc443c8b3b63f95ec46f69.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/045ed8234c36406ea7d96ac0038825b6.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/718734977abc4eb093b816141527474d.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/37a9151b434d446cbbc7ab9a5f9d58ea.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/66efb361f8ea4c3b908296e72763d8cd.mp4,https://s3.coros.com/source/exercise_gif/0/78b7aafc615e4ed490288d7aa22c6d5f.mp4,https://s3.coros.com/source/exercise_gif/0/90c0856dad6e44d8844048bb9955d0c2.mp4,https://s3.coros.com/source/exercise_gif/0/094bdf4f3abc443c8b3b63f95ec46f69.mp4,https://s3.coros.com/source/exercise_gif/0/718734977abc4eb093b816141527474d.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 33,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png,https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png,https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png,https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png,https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284692",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6
+      ],
+      "name": "T1150",
+      "originId": "426618429085237248",
+      "overview": "sid_strength_bird_dog_type",
+      "part": [
+       0
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 4,
+      "sortNo": 100663296,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/ee9e3938c8ea4721a556afbd2b83cab8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/4c2380a4ec9d4474893e629c5ba7653d.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4,https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4,https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4,https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4,https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 3,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284693",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1122",
+      "originId": "425898949585584128",
+      "overview": "sid_strength_cool_down",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 117440512,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     }
+    ],
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "id": "455706872526323738",
+    "idInPlan": "2",
+    "isTargetTypeConsistent": 0,
+    "name": "P10574",
+    "nickname": "COROS Official",
+    "originEssence": 0,
+    "overview": "P11350",
+    "pbVersion": 2,
+    "pitch": 0,
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "poolLength": 2500,
+    "poolLengthId": 1,
+    "poolLengthUnit": 2,
+    "profile": "",
+    "referExercise": {
+     "hrType": 0,
+     "intensityType": 1,
+     "valueType": 1
+    },
+    "sex": 0,
+    "simple": false,
+    "sourceId": "425868142590476288",
+    "sourceUrl": "https://s3.coros.com/source/source_default/0/1a3b389aac8a4fe5915860cef62b2b5b.jpg",
+    "sportType": 4,
+    "star": 0,
+    "status": 1,
+    "subType": 65535,
+    "targetType": 2,
+    "targetValue": 2884,
+    "totalSets": 18,
+    "trainingLoad": 0,
+    "type": 0,
+    "unit": 1,
+    "userId": "427472625600577536",
+    "version": 6,
+    "videoCoverUrl": "",
+    "videoUrl": ""
+   },
+   {
+    "access": 1,
+    "authorId": "427472625600577536",
+    "createTimestamp": 1752654469,
+    "deleted": 0,
+    "distance": 0.0,
+    "distanceDisplayUnit": 3,
+    "duration": 2754,
+    "elevGain": 0.0,
+    "essence": 0,
+    "estimatedDistance": 0,
+    "estimatedTime": 2754,
+    "estimatedType": 6,
+    "estimatedValue": 0,
+    "exerciseNum": 7,
+    "exercises": [
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 1,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284694",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1120",
+      "originId": "425898928110747648",
+      "overview": "sid_strength_warm_up",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 16777216,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 295,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/94359d57808849bb8e9d7d07ad4a3964.png,https://s3.coros.com/source/exercise_img/0/884dc6d4037f4b3c8c0219185c7b5086.png,https://s3.coros.com/source/exercise_img/0/1aecf6f14d744684a4e037db39108a62.png,https://s3.coros.com/source/exercise_img/0/2ab67e2a77f44e488fa816124c735cf6.png,https://s3.coros.com/source/exercise_img/0/325809bbb2eb4d289d2ae7bd6af5efb8.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       3
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284695",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       8,
+       14
+      ],
+      "muscleRelevance": [
+       8,
+       13,
+       14,
+       15
+      ],
+      "name": "T1067",
+      "originId": "425832295182811136",
+      "overview": "sid_strength_deadlifts",
+      "part": [
+       3,
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 33554432,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/7d33bd0b9a1e4e1288cff105d75376a8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/94359d57808849bb8e9d7d07ad4a3964.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/94359d57808849bb8e9d7d07ad4a3964.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/45558ca476ac448a9c3727443af1c055.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/884dc6d4037f4b3c8c0219185c7b5086.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/0ac58a1552f54684b44500b323a21d30.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1aecf6f14d744684a4e037db39108a62.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/655abe21a4e24624a77ffa572457e451.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/2ab67e2a77f44e488fa816124c735cf6.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3d5c139e4cf84a169c237b2de081af3f.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/325809bbb2eb4d289d2ae7bd6af5efb8.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/7dd811492b82467b9d01a015089ceac4.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/a5182de1e74f4196899afce235b637ee.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/45558ca476ac448a9c3727443af1c055.mp4,https://s3.coros.com/source/exercise_gif/0/0ac58a1552f54684b44500b323a21d30.mp4,https://s3.coros.com/source/exercise_gif/0/655abe21a4e24624a77ffa572457e451.mp4,https://s3.coros.com/source/exercise_gif/0/3d5c139e4cf84a169c237b2de081af3f.mp4,https://s3.coros.com/source/exercise_gif/0/7dd811492b82467b9d01a015089ceac4.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 37,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/6db312d84ee549c9b390065c8d86128e.png,https://s3.coros.com/source/exercise_img/0/ea751560f2f24d6593e53989e3cb1fd0.png,https://s3.coros.com/source/exercise_img/0/4436a62d7014431fa79e5eade648a7e9.png,https://s3.coros.com/source/exercise_img/0/1776c6dd9b0a4011a52adce35251be5f.png,https://s3.coros.com/source/exercise_img/0/9a7e6be190fb40bc8cbf3a92dabfd798.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284696",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       8
+      ],
+      "muscleRelevance": [
+       7,
+       8,
+       14
+      ],
+      "name": "T1061",
+      "originId": "425832054396207105",
+      "overview": "sid_strength_squats",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 50331648,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/5011181115d74b7787acc1f78c30dce6.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/6db312d84ee549c9b390065c8d86128e.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/6db312d84ee549c9b390065c8d86128e.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/528111ae862b461eb2884dd9c15b01ad.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ea751560f2f24d6593e53989e3cb1fd0.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/ebec3b8e3f1448d1b9996d200f7ed03a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/4436a62d7014431fa79e5eade648a7e9.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/acf6af88d89640e8962cfeb799a5ff7f.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1776c6dd9b0a4011a52adce35251be5f.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/be3edc87c6554fd6b7b3c964fed0ddc6.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/9a7e6be190fb40bc8cbf3a92dabfd798.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/1b7573b92b5441b7b3ba35db8db13fd6.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/39ce1cd8450e4e2aab7afd6be34d740e.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/528111ae862b461eb2884dd9c15b01ad.mp4,https://s3.coros.com/source/exercise_gif/0/ebec3b8e3f1448d1b9996d200f7ed03a.mp4,https://s3.coros.com/source/exercise_gif/0/acf6af88d89640e8962cfeb799a5ff7f.mp4,https://s3.coros.com/source/exercise_gif/0/be3edc87c6554fd6b7b3c964fed0ddc6.mp4,https://s3.coros.com/source/exercise_gif/0/1b7573b92b5441b7b3ba35db8db13fd6.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 56,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/3b2d4620d9314afbafa39c201966cf96.png,https://s3.coros.com/source/exercise_img/0/620739b9bc9d4a6eac1c0b019bfdc88e.png,https://s3.coros.com/source/exercise_img/0/55d1af4689b34efbb20b9d1363a05971.png,https://s3.coros.com/source/exercise_img/0/d99bf1e2b43b49899c21eb06571486e3.png,https://s3.coros.com/source/exercise_img/0/cdd446c2f6174f50b0053e23bcede1fc.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9,
+       10
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284697",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       8
+      ],
+      "muscleRelevance": [
+       8,
+       14
+      ],
+      "name": "T1033",
+      "originId": "425830845094477824",
+      "overview": "sid_strength_bridge",
+      "part": [
+       4,
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 67108864,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/c00446f7b4d24ba6a3f8197491b628a6.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/3b2d4620d9314afbafa39c201966cf96.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3b2d4620d9314afbafa39c201966cf96.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b813c4f32635415899cc0f25308de856.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/620739b9bc9d4a6eac1c0b019bfdc88e.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/d889275be3934e2f8cf589683f95433d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/55d1af4689b34efbb20b9d1363a05971.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/56d97e4374bb4295adb76e338e571c2c.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/d99bf1e2b43b49899c21eb06571486e3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3a30275ae2d845868edf3e28e338d454.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cdd446c2f6174f50b0053e23bcede1fc.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/d91cf6d340c4477791f294c0ac0b9cac.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/c4e3ec03f5aa4e6e95f5a4a118b0303b.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/b813c4f32635415899cc0f25308de856.mp4,https://s3.coros.com/source/exercise_gif/0/d889275be3934e2f8cf589683f95433d.mp4,https://s3.coros.com/source/exercise_gif/0/56d97e4374bb4295adb76e338e571c2c.mp4,https://s3.coros.com/source/exercise_gif/0/3a30275ae2d845868edf3e28e338d454.mp4,https://s3.coros.com/source/exercise_gif/0/d91cf6d340c4477791f294c0ac0b9cac.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 138,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/261252c14641491ebc60078cbc57b75c.png,https://s3.coros.com/source/exercise_img/0/e1ff9620861344b6a7d5afced3c19145.png,https://s3.coros.com/source/exercise_img/0/1885638effa241c1b8a8267def9e98bb.png,https://s3.coros.com/source/exercise_img/0/8bd5ce47e5a14957aae0cc05b6354e64.png,https://s3.coros.com/source/exercise_img/0/e60f189647c54de5a4881def734ae9a2.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284698",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 4540,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       9
+      ],
+      "muscleRelevance": [
+       9
+      ],
+      "name": "T1114",
+      "originId": "425846666680254464",
+      "overview": "sid_strength_hip_adductions_with_bands",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 83886080,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/457ab9f3fde04332a2b407f695ee4ed5.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/261252c14641491ebc60078cbc57b75c.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/261252c14641491ebc60078cbc57b75c.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b192803d5e8744e2bd10fc49fa37edbc.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e1ff9620861344b6a7d5afced3c19145.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/219513ae100a4c75bb7d01404bbb1ea4.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1885638effa241c1b8a8267def9e98bb.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/678c28b93e42498dbfeb5f168fb1e425.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/8bd5ce47e5a14957aae0cc05b6354e64.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/6d9377a434cb4bc1b08d20aa4a5d7dfc.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e60f189647c54de5a4881def734ae9a2.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/39320e38e02f46cc912cae423c674f03.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/280121bae151466b804b6f967718d02c.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/b192803d5e8744e2bd10fc49fa37edbc.mp4,https://s3.coros.com/source/exercise_gif/0/219513ae100a4c75bb7d01404bbb1ea4.mp4,https://s3.coros.com/source/exercise_gif/0/678c28b93e42498dbfeb5f168fb1e425.mp4,https://s3.coros.com/source/exercise_gif/0/6d9377a434cb4bc1b08d20aa4a5d7dfc.mp4,https://s3.coros.com/source/exercise_gif/0/39320e38e02f46cc912cae423c674f03.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 151,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/c2de3ef84db44bb497b2f092f100f237.png,https://s3.coros.com/source/exercise_img/0/8818a15e36eb45de9fb5f5720c1a6606.png,https://s3.coros.com/source/exercise_img/0/eebc896783f24485ae644a5759aa46a8.png,https://s3.coros.com/source/exercise_img/0/d977645caedd4c8896bbdb31e7651a7b.png,https://s3.coros.com/source/exercise_img/0/c82c74d3c7cf4144aea2f1c76d2dc6ff.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284699",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 4540,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       7
+      ],
+      "muscleRelevance": [
+       7,
+       15
+      ],
+      "name": "T1155",
+      "originId": "426619291299921921",
+      "overview": "sid_strength_standing_leg_lifts",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 30,
+      "sets": 3,
+      "sortNo": 100663296,
+      "sourceUrl": "https://s3.coros.com/source/exercise_img/0/718c73d49b8744f08c0cea138c8da0f1.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/c2de3ef84db44bb497b2f092f100f237.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c2de3ef84db44bb497b2f092f100f237.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/9962aaf74c7e4bcaa4dad668e55ec96d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/8818a15e36eb45de9fb5f5720c1a6606.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5d124361b41c40a3a5bb3890d49a800a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/eebc896783f24485ae644a5759aa46a8.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fe9fb477ef084eb3b7fbdcf2113dc7ff.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/d977645caedd4c8896bbdb31e7651a7b.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fb2a8022fce643d09e2a827624c02275.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c82c74d3c7cf4144aea2f1c76d2dc6ff.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/4affc7ed1d8b4c9c94de65c82ca12a10.mp4"
+       }
+      ],
+      "videoUrl": "https://s3.coros.com/source/exercise_gif/0/1871fee794c745fcb1b3b4612c382cf8.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/9962aaf74c7e4bcaa4dad668e55ec96d.mp4,https://s3.coros.com/source/exercise_gif/0/5d124361b41c40a3a5bb3890d49a800a.mp4,https://s3.coros.com/source/exercise_gif/0/fe9fb477ef084eb3b7fbdcf2113dc7ff.mp4,https://s3.coros.com/source/exercise_gif/0/fb2a8022fce643d09e2a827624c02275.mp4,https://s3.coros.com/source/exercise_gif/0/4affc7ed1d8b4c9c94de65c82ca12a10.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 3,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284700",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1122",
+      "originId": "425898949585584128",
+      "overview": "sid_strength_cool_down",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 117440512,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     }
+    ],
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "id": "455706961915330606",
+    "idInPlan": "4",
+    "isTargetTypeConsistent": 0,
+    "name": "P10575",
+    "nickname": "COROS Official",
+    "originEssence": 0,
+    "overview": "P11351",
+    "pbVersion": 2,
+    "pitch": 0,
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "poolLength": 2500,
+    "poolLengthId": 1,
+    "poolLengthUnit": 2,
+    "profile": "",
+    "referExercise": {
+     "hrType": 0,
+     "intensityType": 1,
+     "valueType": 1
+    },
+    "sex": 0,
+    "simple": false,
+    "sourceId": "425868142590476288",
+    "sourceUrl": "https://s3.coros.com/source/source_default/0/1a3b389aac8a4fe5915860cef62b2b5b.jpg",
+    "sportType": 4,
+    "star": 0,
+    "status": 1,
+    "subType": 65535,
+    "targetType": 2,
+    "targetValue": 2754,
+    "totalSets": 17,
+    "trainingLoad": 0,
+    "type": 0,
+    "unit": 1,
+    "userId": "427472625600577536",
+    "version": 7,
+    "videoCoverUrl": "",
+    "videoUrl": ""
+   },
+   {
+    "access": 1,
+    "authorId": "427472625600577536",
+    "createTimestamp": 1752654469,
+    "deleted": 0,
+    "distance": 0.0,
+    "distanceDisplayUnit": 3,
+    "duration": 2802,
+    "elevGain": 0.0,
+    "essence": 0,
+    "estimatedDistance": 0,
+    "estimatedTime": 2802,
+    "estimatedType": 6,
+    "estimatedValue": 0,
+    "exerciseNum": 7,
+    "exercises": [
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 1,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284701",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1120",
+      "originId": "425898928110747648",
+      "overview": "sid_strength_warm_up",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 16777216,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 133,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png,https://s3.coros.com/source/exercise_img/0/04846c3ded814ab8b4afd9188231efed.png,https://s3.coros.com/source/exercise_img/0/09ac8240464545c08ebe07affdc683df.png,https://s3.coros.com/source/exercise_img/0/c37b914b77ab4955920281eef73f33ca.png,https://s3.coros.com/source/exercise_img/0/e5b56159c6c24700bfd7f13e1336754e.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284702",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 4540,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6,
+       7
+      ],
+      "name": "T1190",
+      "originId": "428453781890580481",
+      "overview": "sid_strength_lunge_with_elastic_band",
+      "part": [
+       4,
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 33554432,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/93bbf85a4a4a411788007706c4868e2f.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5a7f643cbe30443891eb8de12e3d8b63.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/04846c3ded814ab8b4afd9188231efed.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/40c9e73e814741bd825988b44babbac1.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/09ac8240464545c08ebe07affdc683df.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/613256cca5bf49629dda6cfe22c664c6.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c37b914b77ab4955920281eef73f33ca.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/35fb2d046d554e3a9c7d7f419527f2d7.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e5b56159c6c24700bfd7f13e1336754e.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/12364c9e50624d33b4afbfc24854f540.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/062f6126c734424fb039c95899203813.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/5a7f643cbe30443891eb8de12e3d8b63.mp4,https://s3.coros.com/source/exercise_gif/0/40c9e73e814741bd825988b44babbac1.mp4,https://s3.coros.com/source/exercise_gif/0/613256cca5bf49629dda6cfe22c664c6.mp4,https://s3.coros.com/source/exercise_gif/0/35fb2d046d554e3a9c7d7f419527f2d7.mp4,https://s3.coros.com/source/exercise_gif/0/12364c9e50624d33b4afbfc24854f540.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 0,
+      "groupId": "0",
+      "id": "470474601632284703",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": true,
+      "isIntensityPercent": false,
+      "name": "",
+      "originId": "0",
+      "overview": "",
+      "restType": 0,
+      "restValue": 30,
+      "sets": 3,
+      "sortNo": 50331648,
+      "sourceId": "0",
+      "sourceUrl": "",
+      "sportType": 0,
+      "status": 1,
+      "subType": 0,
+      "targetType": 2,
+      "targetValue": 216,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 132,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png,https://s3.coros.com/source/exercise_img/0/643e686194634e30b95199615ca1a906.png,https://s3.coros.com/source/exercise_img/0/50d7b04cd0a542798db45032c08fb076.png,https://s3.coros.com/source/exercise_img/0/407eff4a7157431a90cf2b91c75d373a.png,https://s3.coros.com/source/exercise_img/0/c953a49fd6614584a9429f64835bb369.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "470474601632284703",
+      "hrType": 0,
+      "id": "470474601632284707",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       11
+      ],
+      "muscleRelevance": [
+       1,
+       11
+      ],
+      "name": "T1107",
+      "originId": "425846214098075649",
+      "overview": "sid_strength_lateral_raises_with_bands",
+      "part": [
+       1
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 1,
+      "sortNo": 50397184,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/d74f8469be9842429bd0d9412ac5b8be.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/2757f2b596f7470881ae056233de57f8.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/643e686194634e30b95199615ca1a906.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fb18fa86216b447cb8d67a047ab231cd.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/50d7b04cd0a542798db45032c08fb076.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5e3bef1e420440758317883afde80c51.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/407eff4a7157431a90cf2b91c75d373a.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/662787336f204dc982ce2bdd2ee85355.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c953a49fd6614584a9429f64835bb369.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b028900a388d42dc979699b9a89cd515.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/f2cf0cd200d345c5bc64c8843e67a3ad.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/2757f2b596f7470881ae056233de57f8.mp4,https://s3.coros.com/source/exercise_gif/0/fb18fa86216b447cb8d67a047ab231cd.mp4,https://s3.coros.com/source/exercise_gif/0/5e3bef1e420440758317883afde80c51.mp4,https://s3.coros.com/source/exercise_gif/0/662787336f204dc982ce2bdd2ee85355.mp4,https://s3.coros.com/source/exercise_gif/0/b028900a388d42dc979699b9a89cd515.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 140,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png,https://s3.coros.com/source/exercise_img/0/cf8c6e1b9c1845459765cecad304289f.png,https://s3.coros.com/source/exercise_img/0/f65f950490164ac292459da69746d9f5.png,https://s3.coros.com/source/exercise_img/0/fd8721d57aa64624ad6682d6b6befc70.png,https://s3.coros.com/source/exercise_img/0/da37d7a51fb74a27b1c12848c666e82d.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "470474601632284703",
+      "hrType": 0,
+      "id": "470474601632284708",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       1
+      ],
+      "muscleRelevance": [
+       1
+      ],
+      "name": "T1108",
+      "originId": "425846351000158208",
+      "overview": "sid_strength_front_raises_with_bands",
+      "part": [
+       1
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 1,
+      "sortNo": 50462720,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/c69b9e352b8e4556abf8e8e07ce34356.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/091deb3b38b94273bdb30ae3a7864276.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cf8c6e1b9c1845459765cecad304289f.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/8607ded372a543868460d727fba9ef76.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/f65f950490164ac292459da69746d9f5.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/800842b109eb4eca8c835a9108250923.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/fd8721d57aa64624ad6682d6b6befc70.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/403b43d2732f40ba87da5d08abbe05f2.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/da37d7a51fb74a27b1c12848c666e82d.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/d1e37d48f51a4c5dbc9243115c52c918.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/6f6c747814564bfda702c88ca39b2de0.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/091deb3b38b94273bdb30ae3a7864276.mp4,https://s3.coros.com/source/exercise_gif/0/8607ded372a543868460d727fba9ef76.mp4,https://s3.coros.com/source/exercise_gif/0/800842b109eb4eca8c835a9108250923.mp4,https://s3.coros.com/source/exercise_gif/0/403b43d2732f40ba87da5d08abbe05f2.mp4,https://s3.coros.com/source/exercise_gif/0/d1e37d48f51a4c5dbc9243115c52c918.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 1,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png,https://s3.coros.com/source/exercise_img/0/1bb8270ef7bb410798a15df59ad20b06.png,https://s3.coros.com/source/exercise_img/0/ae3a681337294d0d8237e0bd2ca65237.png,https://s3.coros.com/source/exercise_img/0/eaf6c86413a14727a2cc7bfe50cc9428.png,https://s3.coros.com/source/exercise_img/0/ff169723425146b39ae79b3b2ef8ab54.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284704",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       7
+      ],
+      "muscleRelevance": [
+       1,
+       6,
+       7
+      ],
+      "name": "T1007",
+      "originId": "425827765602926593",
+      "overview": "sid_strength_burpees",
+      "part": [
+       0
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 67108864,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/f6abbeb1cce64fb3b23628592fa33fa8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/c36919d6977a4585b62c0defe05db905.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1bb8270ef7bb410798a15df59ad20b06.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3c539a511ae24d7f9db42d57895690a6.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ae3a681337294d0d8237e0bd2ca65237.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/bff4d0dae714435680de8a5390c855eb.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/eaf6c86413a14727a2cc7bfe50cc9428.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/68fd2553667d453d81741623ebb42aca.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ff169723425146b39ae79b3b2ef8ab54.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/580772088725463aac56fad0d499103c.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/0878d2d7d1b84f379a2a86216a187853.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/c36919d6977a4585b62c0defe05db905.mp4,https://s3.coros.com/source/exercise_gif/0/3c539a511ae24d7f9db42d57895690a6.mp4,https://s3.coros.com/source/exercise_gif/0/bff4d0dae714435680de8a5390c855eb.mp4,https://s3.coros.com/source/exercise_gif/0/68fd2553667d453d81741623ebb42aca.mp4,https://s3.coros.com/source/exercise_gif/0/580772088725463aac56fad0d499103c.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 33,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png,https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png,https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png,https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png,https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284705",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6
+      ],
+      "name": "T1150",
+      "originId": "426618429085237248",
+      "overview": "sid_strength_bird_dog_type",
+      "part": [
+       0
+      ],
+      "restType": 1,
+      "restValue": 30,
+      "sets": 3,
+      "sortNo": 83886080,
+      "sourceUrl": "https://s3.coros.com/source/exercise_img/0/ee9e3938c8ea4721a556afbd2b83cab8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+       }
+      ],
+      "videoUrl": "https://s3.coros.com/source/exercise_gif/0/4c2380a4ec9d4474893e629c5ba7653d.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4,https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4,https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4,https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4,https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 3,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284706",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1122",
+      "originId": "425898949585584128",
+      "overview": "sid_strength_cool_down",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 100663296,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     }
+    ],
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "id": "455708104913502312",
+    "idInPlan": "16",
+    "isTargetTypeConsistent": 0,
+    "name": "P11873",
+    "nickname": "COROS Official",
+    "originEssence": 0,
+    "overview": "P11351",
+    "pbVersion": 2,
+    "pitch": 0,
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "poolLength": 2500,
+    "poolLengthId": 1,
+    "poolLengthUnit": 2,
+    "profile": "",
+    "referExercise": {
+     "hrType": 0,
+     "intensityType": 1,
+     "valueType": 1
+    },
+    "sex": 0,
+    "simple": false,
+    "sourceId": "425868113867882497",
+    "sourceUrl": "https://s3.coros.com/source/source_default/0/e3611f19b15648338b0f229b2b1b1015.jpg",
+    "sportType": 4,
+    "star": 0,
+    "status": 1,
+    "subType": 65535,
+    "targetType": 2,
+    "targetValue": 2802,
+    "totalSets": 17,
+    "trainingLoad": 0,
+    "type": 0,
+    "unit": 1,
+    "userId": "427472625600577536",
+    "version": 8,
+    "videoCoverUrl": "",
+    "videoUrl": ""
+   },
+   {
+    "access": 1,
+    "authorId": "427472625600577536",
+    "createTimestamp": 1752654469,
+    "deleted": 0,
+    "distance": 0.0,
+    "distanceDisplayUnit": 3,
+    "duration": 2968,
+    "elevGain": 0.0,
+    "essence": 0,
+    "estimatedDistance": 0,
+    "estimatedTime": 2968,
+    "estimatedType": 6,
+    "estimatedValue": 0,
+    "exerciseNum": 7,
+    "exercises": [
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 1,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284709",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1120",
+      "originId": "425898928110747648",
+      "overview": "sid_strength_warm_up",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 16777216,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 289,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/c176d6c12a55402d930b759c792551c3.png,https://s3.coros.com/source/exercise_img/0/6e381c3dfcc84d2ca3b88accee8ee375.png,https://s3.coros.com/source/exercise_img/0/c031346090ec4a2a92ac8e4843b69452.png,https://s3.coros.com/source/exercise_img/0/f9403fbe42fc4ddea90a9eedee81d802.png,https://s3.coros.com/source/exercise_img/0/875c031119d043c3b613771f17f1bd5f.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       3
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284710",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       12
+      ],
+      "muscleRelevance": [
+       3,
+       11,
+       12
+      ],
+      "name": "T1054",
+      "originId": "425831875618193408",
+      "overview": "sid_strength_barbell_row",
+      "part": [
+       3,
+       6
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 33554432,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/fe4b3d98b1254baa8e8984cf72f2a6bd.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/c176d6c12a55402d930b759c792551c3.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c176d6c12a55402d930b759c792551c3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3cf6538b2060409887e4795eb1d9098d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/6e381c3dfcc84d2ca3b88accee8ee375.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b6c70a71bd0f45c6a48b9ba27508e0bd.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c031346090ec4a2a92ac8e4843b69452.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/bb665e52908343828eb29cb5bf1b9557.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/f9403fbe42fc4ddea90a9eedee81d802.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/cabb05fa0a9d41f39d881d2c244bb344.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/875c031119d043c3b613771f17f1bd5f.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e5402094836249e69fbc53497cc5d3a9.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/f060360177454efeba08d8a79f9dfd21.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/3cf6538b2060409887e4795eb1d9098d.mp4,https://s3.coros.com/source/exercise_gif/0/b6c70a71bd0f45c6a48b9ba27508e0bd.mp4,https://s3.coros.com/source/exercise_gif/0/bb665e52908343828eb29cb5bf1b9557.mp4,https://s3.coros.com/source/exercise_gif/0/cabb05fa0a9d41f39d881d2c244bb344.mp4,https://s3.coros.com/source/exercise_gif/0/e5402094836249e69fbc53497cc5d3a9.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 23,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/06be456a186e449d8245754d89e0d7df.png,https://s3.coros.com/source/exercise_img/0/af5fd249fba6441b9bfec1a19cca0972.png,https://s3.coros.com/source/exercise_img/0/438d27f1613c4d87aa156f5c762dab67.png,https://s3.coros.com/source/exercise_img/0/585dcee1bd5641bf96d138d1e0901ecc.png,https://s3.coros.com/source/exercise_img/0/acf40fc0d2f846bfae8e376b7af37200.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284711",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       2
+      ],
+      "muscleRelevance": [
+       2,
+       4
+      ],
+      "name": "T1184",
+      "originId": "428453257099264001",
+      "overview": "sid_strength_kneeling_push_ups",
+      "part": [
+       2,
+       6
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 50331648,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/fddbf3f6fad64d7ab93c410a3633a1c4.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/06be456a186e449d8245754d89e0d7df.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/06be456a186e449d8245754d89e0d7df.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/8650741c9e0247499041135e0d3be2ba.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/af5fd249fba6441b9bfec1a19cca0972.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/a3462636352b451bb3b4f6591e631c95.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/438d27f1613c4d87aa156f5c762dab67.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/197f811ea92b49d5b27fbc44a7c5b564.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/585dcee1bd5641bf96d138d1e0901ecc.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/a86e30de8b6b4570bea6f0725718723a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/acf40fc0d2f846bfae8e376b7af37200.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3c282255c6044a8bbffc1a74b7794939.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/82d7cfba7a6c4e97a63fff8d66aaac8b.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/8650741c9e0247499041135e0d3be2ba.mp4,https://s3.coros.com/source/exercise_gif/0/a3462636352b451bb3b4f6591e631c95.mp4,https://s3.coros.com/source/exercise_gif/0/197f811ea92b49d5b27fbc44a7c5b564.mp4,https://s3.coros.com/source/exercise_gif/0/a86e30de8b6b4570bea6f0725718723a.mp4,https://s3.coros.com/source/exercise_gif/0/3c282255c6044a8bbffc1a74b7794939.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 35,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/6b68c78df20a44f09d0f1917318cd865.png,https://s3.coros.com/source/exercise_img/0/13040b39b7864d21be7dac69d9c5bd8b.png,https://s3.coros.com/source/exercise_img/0/e76e0c0e47924c659cea99d56a5694d5.png,https://s3.coros.com/source/exercise_img/0/48d57de111754e9bba11ab6757ef6363.png,https://s3.coros.com/source/exercise_img/0/cd88c3f108614b81b6499d7eb22c8408.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284712",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6,
+       13
+      ],
+      "name": "T1010",
+      "originId": "425827856334110721",
+      "overview": "sid_strength_planks",
+      "part": [
+       4
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 4,
+      "sortNo": 67108864,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/0a7949ad72b54c36aab3185723e6a8a7.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 45,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/6b68c78df20a44f09d0f1917318cd865.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/6b68c78df20a44f09d0f1917318cd865.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/c519b9fce76e46d285a1bc3c5740266d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/13040b39b7864d21be7dac69d9c5bd8b.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e26cb424a34a4aa8aabaf6be15bccb72.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e76e0c0e47924c659cea99d56a5694d5.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/522a38f036e045dea5f8e6e36c2674da.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/48d57de111754e9bba11ab6757ef6363.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/a80e5b58d14a4701b0ee61660164c6d4.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cd88c3f108614b81b6499d7eb22c8408.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/321f02a4ad114846b85e026f57578cf1.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/fcb940766db4439eb4ae0c107109fe82.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/c519b9fce76e46d285a1bc3c5740266d.mp4,https://s3.coros.com/source/exercise_gif/0/e26cb424a34a4aa8aabaf6be15bccb72.mp4,https://s3.coros.com/source/exercise_gif/0/522a38f036e045dea5f8e6e36c2674da.mp4,https://s3.coros.com/source/exercise_gif/0/a80e5b58d14a4701b0ee61660164c6d4.mp4,https://s3.coros.com/source/exercise_gif/0/321f02a4ad114846b85e026f57578cf1.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 59,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/5ef9a6ae34ab429a9cff982b3e1fc769.png,https://s3.coros.com/source/exercise_img/0/b058a96c0c334ee89ff6fe0bbe123343.png,https://s3.coros.com/source/exercise_img/0/3aa1750fc484414596ee02787b1f00de.png,https://s3.coros.com/source/exercise_img/0/cd2875c2e2ab4518ad178db46aed2df4.png,https://s3.coros.com/source/exercise_img/0/045ed8234c36406ea7d96ac0038825b6.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       2,
+       4,
+       16
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284713",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6
+      ],
+      "name": "T1145",
+      "originId": "426618096225271809",
+      "overview": "sid_strength_trunk_rotations",
+      "part": [
+       4
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 83886080,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/d414b8fc20974c32865711f0b16e4596.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/5ef9a6ae34ab429a9cff982b3e1fc769.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/5ef9a6ae34ab429a9cff982b3e1fc769.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/66efb361f8ea4c3b908296e72763d8cd.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/b058a96c0c334ee89ff6fe0bbe123343.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/78b7aafc615e4ed490288d7aa22c6d5f.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3aa1750fc484414596ee02787b1f00de.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/90c0856dad6e44d8844048bb9955d0c2.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cd2875c2e2ab4518ad178db46aed2df4.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/094bdf4f3abc443c8b3b63f95ec46f69.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/045ed8234c36406ea7d96ac0038825b6.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/718734977abc4eb093b816141527474d.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/37a9151b434d446cbbc7ab9a5f9d58ea.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/66efb361f8ea4c3b908296e72763d8cd.mp4,https://s3.coros.com/source/exercise_gif/0/78b7aafc615e4ed490288d7aa22c6d5f.mp4,https://s3.coros.com/source/exercise_gif/0/90c0856dad6e44d8844048bb9955d0c2.mp4,https://s3.coros.com/source/exercise_gif/0/094bdf4f3abc443c8b3b63f95ec46f69.mp4,https://s3.coros.com/source/exercise_gif/0/718734977abc4eb093b816141527474d.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 33,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png,https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png,https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png,https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png,https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284714",
+      "intensityCustom": 1,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6
+      ],
+      "name": "T1150",
+      "originId": "426618429085237248",
+      "overview": "sid_strength_bird_dog_type",
+      "part": [
+       0
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 4,
+      "sortNo": 100663296,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/ee9e3938c8ea4721a556afbd2b83cab8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/4c2380a4ec9d4474893e629c5ba7653d.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4,https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4,https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4,https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4,https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 3,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284715",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1122",
+      "originId": "425898949585584128",
+      "overview": "sid_strength_cool_down",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 117440512,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     }
+    ],
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "id": "455706961915330608",
+    "idInPlan": "6",
+    "isTargetTypeConsistent": 0,
+    "name": "P10577",
+    "nickname": "COROS Official",
+    "originEssence": 0,
+    "overview": "P11353",
+    "pbVersion": 2,
+    "pitch": 0,
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "poolLength": 2500,
+    "poolLengthId": 1,
+    "poolLengthUnit": 2,
+    "profile": "",
+    "referExercise": {
+     "hrType": 0,
+     "intensityType": 1,
+     "valueType": 1
+    },
+    "sex": 0,
+    "simple": false,
+    "sourceId": "425868142590476288",
+    "sourceUrl": "https://s3.coros.com/source/source_default/0/1a3b389aac8a4fe5915860cef62b2b5b.jpg",
+    "sportType": 4,
+    "star": 0,
+    "status": 1,
+    "subType": 65535,
+    "targetType": 2,
+    "targetValue": 2968,
+    "totalSets": 19,
+    "trainingLoad": 0,
+    "type": 0,
+    "unit": 1,
+    "userId": "427472625600577536",
+    "version": 6,
+    "videoCoverUrl": "",
+    "videoUrl": ""
+   },
+   {
+    "access": 1,
+    "authorId": "427472625600577536",
+    "createTimestamp": 1752654469,
+    "deleted": 0,
+    "distance": 0.0,
+    "distanceDisplayUnit": 3,
+    "duration": 2478,
+    "elevGain": 0.0,
+    "essence": 0,
+    "estimatedDistance": 0,
+    "estimatedTime": 2478,
+    "estimatedType": 6,
+    "estimatedValue": 0,
+    "exerciseNum": 7,
+    "exercises": [
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 1,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284716",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1120",
+      "originId": "425898928110747648",
+      "overview": "sid_strength_warm_up",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 16777216,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 295,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/94359d57808849bb8e9d7d07ad4a3964.png,https://s3.coros.com/source/exercise_img/0/884dc6d4037f4b3c8c0219185c7b5086.png,https://s3.coros.com/source/exercise_img/0/1aecf6f14d744684a4e037db39108a62.png,https://s3.coros.com/source/exercise_img/0/2ab67e2a77f44e488fa816124c735cf6.png,https://s3.coros.com/source/exercise_img/0/325809bbb2eb4d289d2ae7bd6af5efb8.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       3
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284717",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       8,
+       14
+      ],
+      "muscleRelevance": [
+       8,
+       13,
+       14,
+       15
+      ],
+      "name": "T1067",
+      "originId": "425832295182811136",
+      "overview": "sid_strength_deadlifts",
+      "part": [
+       3,
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 33554432,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/7d33bd0b9a1e4e1288cff105d75376a8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/94359d57808849bb8e9d7d07ad4a3964.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/94359d57808849bb8e9d7d07ad4a3964.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/45558ca476ac448a9c3727443af1c055.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/884dc6d4037f4b3c8c0219185c7b5086.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/0ac58a1552f54684b44500b323a21d30.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1aecf6f14d744684a4e037db39108a62.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/655abe21a4e24624a77ffa572457e451.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/2ab67e2a77f44e488fa816124c735cf6.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3d5c139e4cf84a169c237b2de081af3f.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/325809bbb2eb4d289d2ae7bd6af5efb8.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/7dd811492b82467b9d01a015089ceac4.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/a5182de1e74f4196899afce235b637ee.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/45558ca476ac448a9c3727443af1c055.mp4,https://s3.coros.com/source/exercise_gif/0/0ac58a1552f54684b44500b323a21d30.mp4,https://s3.coros.com/source/exercise_gif/0/655abe21a4e24624a77ffa572457e451.mp4,https://s3.coros.com/source/exercise_gif/0/3d5c139e4cf84a169c237b2de081af3f.mp4,https://s3.coros.com/source/exercise_gif/0/7dd811492b82467b9d01a015089ceac4.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 55,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/b11708fc281a4e6fb97b0426e7a3551d.png,https://s3.coros.com/source/exercise_img/0/7788e419d73d4dcd83384f2fc6bc5fa4.png,https://s3.coros.com/source/exercise_img/0/4e80c442e7534423a790aa03dd84819c.png,https://s3.coros.com/source/exercise_img/0/b738d9ef2ea447a4bbabff6d7cb6ef6e.png,https://s3.coros.com/source/exercise_img/0/1ef45992653540eabac0073933133cb1.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284718",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       7
+      ],
+      "muscleRelevance": [
+       7,
+       15
+      ],
+      "name": "T1128",
+      "originId": "426617375744507904",
+      "overview": "sid_strength_hands_on_the_wall_and_high_knees",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 50331648,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/d278a35cfe4a4836a8cdba7d972b4aef.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 30,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/b11708fc281a4e6fb97b0426e7a3551d.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/b11708fc281a4e6fb97b0426e7a3551d.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/91b09ae89d1344c093e0120c86cc1b3f.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/7788e419d73d4dcd83384f2fc6bc5fa4.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/6fd9d9b46610418b844dd2d98bc0cb03.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/4e80c442e7534423a790aa03dd84819c.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/2069b8cdacf84c87b3166f5dd36b054e.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/b738d9ef2ea447a4bbabff6d7cb6ef6e.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/c828e1adc78c4b9ba6cc367fa6ca642d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1ef45992653540eabac0073933133cb1.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/85ace73ad95e4bffbc6b736f9cf2909d.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/b573636325594e49919d14dde144b849.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/91b09ae89d1344c093e0120c86cc1b3f.mp4,https://s3.coros.com/source/exercise_gif/0/6fd9d9b46610418b844dd2d98bc0cb03.mp4,https://s3.coros.com/source/exercise_gif/0/2069b8cdacf84c87b3166f5dd36b054e.mp4,https://s3.coros.com/source/exercise_gif/0/c828e1adc78c4b9ba6cc367fa6ca642d.mp4,https://s3.coros.com/source/exercise_gif/0/85ace73ad95e4bffbc6b736f9cf2909d.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 54,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/bd9398666ed248418c215a12804d9003.png,https://s3.coros.com/source/exercise_img/0/6198943cec9d47568557123ffcbdd4ec.png,https://s3.coros.com/source/exercise_img/0/5cbc127db60a4a2b925d9e3fd8e46fc9.png,https://s3.coros.com/source/exercise_img/0/afcfa3e785004857856d8e6523e9b036.png,https://s3.coros.com/source/exercise_img/0/938b48c09eda4630855023f7d9623f0c.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284719",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       7
+      ],
+      "muscleRelevance": [
+       7,
+       14
+      ],
+      "name": "T1164",
+      "originId": "426801647558246401",
+      "overview": "sid_strength_split_bench_squat",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 67108864,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/6a19a7814b1f4e1bb1e40c01566dc54b.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 10,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/bd9398666ed248418c215a12804d9003.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/bd9398666ed248418c215a12804d9003.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/84b0cb04cc5a47c6a52869a5580b14ed.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/6198943cec9d47568557123ffcbdd4ec.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fa039704893944558cacf2a1f7d0a367.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/5cbc127db60a4a2b925d9e3fd8e46fc9.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/a583a69cb67a4db89927233d03676354.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/afcfa3e785004857856d8e6523e9b036.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/ca2dd2dcdd9046ad8c44c941dc50d3f4.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/938b48c09eda4630855023f7d9623f0c.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fdd4a1cf404a406cb21ab66619ee92d2.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/79f139f3f7154759b286c200725f71e2.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/84b0cb04cc5a47c6a52869a5580b14ed.mp4,https://s3.coros.com/source/exercise_gif/0/fa039704893944558cacf2a1f7d0a367.mp4,https://s3.coros.com/source/exercise_gif/0/a583a69cb67a4db89927233d03676354.mp4,https://s3.coros.com/source/exercise_gif/0/ca2dd2dcdd9046ad8c44c941dc50d3f4.mp4,https://s3.coros.com/source/exercise_gif/0/fdd4a1cf404a406cb21ab66619ee92d2.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 42,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/57a8420fe0a04986ac571d6f30f9cb6a.png,https://s3.coros.com/source/exercise_img/0/ac650e561ce143a59611d219d2930e41.png,https://s3.coros.com/source/exercise_img/0/2875e7157aaf4154a6cbc5a4a24ea9bd.png,https://s3.coros.com/source/exercise_img/0/6235a7d5de6840f8bdf165fb7874ed1c.png,https://s3.coros.com/source/exercise_img/0/5799c9d6ad194dd9a19ea008ece844cb.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284720",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       14
+      ],
+      "muscleRelevance": [
+       14
+      ],
+      "name": "T1133",
+      "originId": "426617687129636865",
+      "overview": "sid_strength_unilateral_supine_buttocks_lift_hip_lif",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 83886080,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/bbf635440f06411f9c667f4ed5525428.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/57a8420fe0a04986ac571d6f30f9cb6a.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/57a8420fe0a04986ac571d6f30f9cb6a.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3a8e75685b0f49399847c8be88af4dde.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ac650e561ce143a59611d219d2930e41.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/f735ef7c601c4ddbb2d6b72448f8e321.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/2875e7157aaf4154a6cbc5a4a24ea9bd.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/6548935582494d5c987fb2f571d903a4.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/6235a7d5de6840f8bdf165fb7874ed1c.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/95a21f3d8ec94bdcbb6f9ea22be268ac.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/5799c9d6ad194dd9a19ea008ece844cb.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3bca839007584a93bc977c054624b85d.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/89e6f87590bb437b9a75e03931f68f3e.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/3a8e75685b0f49399847c8be88af4dde.mp4,https://s3.coros.com/source/exercise_gif/0/f735ef7c601c4ddbb2d6b72448f8e321.mp4,https://s3.coros.com/source/exercise_gif/0/6548935582494d5c987fb2f571d903a4.mp4,https://s3.coros.com/source/exercise_gif/0/95a21f3d8ec94bdcbb6f9ea22be268ac.mp4,https://s3.coros.com/source/exercise_gif/0/3bca839007584a93bc977c054624b85d.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 49,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/a052735df68c4fe498e7f85ea103da1c.png,https://s3.coros.com/source/exercise_img/0/16c878071b4d45148aa189bddc34f5b3.png,https://s3.coros.com/source/exercise_img/0/1201d265a9294c97b84a6335184e0fc2.png,https://s3.coros.com/source/exercise_img/0/9d104f2eafd74616aaef7cf343998240.png,https://s3.coros.com/source/exercise_img/0/14f4fa17bf1f43c0aa175506bcc227fa.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284721",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       15
+      ],
+      "muscleRelevance": [
+       15
+      ],
+      "name": "T1070",
+      "originId": "425832417320943617",
+      "overview": "sid_strength_standing_calf_raises",
+      "part": [
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 100663296,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/7959451c5d0140a5892914951d5d41a0.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/a052735df68c4fe498e7f85ea103da1c.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a052735df68c4fe498e7f85ea103da1c.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/05ebff5fa6e04606bbb78ab7d597efbb.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/16c878071b4d45148aa189bddc34f5b3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5806b2bbc62241ba93e57e08228cc6cd.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1201d265a9294c97b84a6335184e0fc2.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3d7e092b2e5e4646939efcc1e26d3a6f.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/9d104f2eafd74616aaef7cf343998240.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fe0c143412ab41c989076e55c2098f78.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/14f4fa17bf1f43c0aa175506bcc227fa.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/6f4ed049cfc847bbbb7e8adb79c709d2.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/4fb1cc58656345a1b4ea98bdfe662328.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/05ebff5fa6e04606bbb78ab7d597efbb.mp4,https://s3.coros.com/source/exercise_gif/0/5806b2bbc62241ba93e57e08228cc6cd.mp4,https://s3.coros.com/source/exercise_gif/0/3d7e092b2e5e4646939efcc1e26d3a6f.mp4,https://s3.coros.com/source/exercise_gif/0/fe0c143412ab41c989076e55c2098f78.mp4,https://s3.coros.com/source/exercise_gif/0/6f4ed049cfc847bbbb7e8adb79c709d2.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 3,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284722",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1122",
+      "originId": "425898949585584128",
+      "overview": "sid_strength_cool_down",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 117440512,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 300,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     }
+    ],
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "id": "455707093448704053",
+    "idInPlan": "7",
+    "isTargetTypeConsistent": 0,
+    "name": "P10578",
+    "nickname": "COROS Official",
+    "originEssence": 0,
+    "overview": "P11354",
+    "pbVersion": 2,
+    "pitch": 0,
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "poolLength": 2500,
+    "poolLengthId": 1,
+    "poolLengthUnit": 2,
+    "profile": "",
+    "referExercise": {
+     "hrType": 0,
+     "intensityType": 1,
+     "valueType": 1
+    },
+    "sex": 0,
+    "simple": false,
+    "sourceId": "425706707117850624",
+    "sourceUrl": "https://s3.coros.com/source/source_default/0/ee2ec19837ba4093b7c8617eb2f9b1f5.jpg",
+    "sportType": 4,
+    "star": 0,
+    "status": 1,
+    "subType": 65535,
+    "targetType": 2,
+    "targetValue": 2478,
+    "totalSets": 17,
+    "trainingLoad": 0,
+    "type": 0,
+    "unit": 1,
+    "userId": "427472625600577536",
+    "version": 7,
+    "videoCoverUrl": "",
+    "videoUrl": ""
+   },
+   {
+    "access": 1,
+    "authorId": "427472625600577536",
+    "createTimestamp": 1752654469,
+    "deleted": 0,
+    "distance": 0.0,
+    "distanceDisplayUnit": 3,
+    "duration": 2874,
+    "elevGain": 0.0,
+    "essence": 0,
+    "estimatedDistance": 0,
+    "estimatedTime": 2874,
+    "estimatedType": 6,
+    "estimatedValue": 0,
+    "exerciseNum": 7,
+    "exercises": [
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 1,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284723",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1120",
+      "originId": "425898928110747648",
+      "overview": "sid_strength_warm_up",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 16777216,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 133,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png,https://s3.coros.com/source/exercise_img/0/04846c3ded814ab8b4afd9188231efed.png,https://s3.coros.com/source/exercise_img/0/09ac8240464545c08ebe07affdc683df.png,https://s3.coros.com/source/exercise_img/0/c37b914b77ab4955920281eef73f33ca.png,https://s3.coros.com/source/exercise_img/0/e5b56159c6c24700bfd7f13e1336754e.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284724",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 4540,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6,
+       7
+      ],
+      "name": "T1190",
+      "originId": "428453781890580481",
+      "overview": "sid_strength_lunge_with_elastic_band",
+      "part": [
+       4,
+       5
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 33554432,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/93bbf85a4a4a411788007706c4868e2f.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/727d620f69a74b1cb1181dd2e056c149.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5a7f643cbe30443891eb8de12e3d8b63.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/04846c3ded814ab8b4afd9188231efed.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/40c9e73e814741bd825988b44babbac1.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/09ac8240464545c08ebe07affdc683df.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/613256cca5bf49629dda6cfe22c664c6.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c37b914b77ab4955920281eef73f33ca.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/35fb2d046d554e3a9c7d7f419527f2d7.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/e5b56159c6c24700bfd7f13e1336754e.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/12364c9e50624d33b4afbfc24854f540.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_gif/0/062f6126c734424fb039c95899203813.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/5a7f643cbe30443891eb8de12e3d8b63.mp4,https://s3.coros.com/source/exercise_gif/0/40c9e73e814741bd825988b44babbac1.mp4,https://s3.coros.com/source/exercise_gif/0/613256cca5bf49629dda6cfe22c664c6.mp4,https://s3.coros.com/source/exercise_gif/0/35fb2d046d554e3a9c7d7f419527f2d7.mp4,https://s3.coros.com/source/exercise_gif/0/12364c9e50624d33b4afbfc24854f540.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 0,
+      "groupId": "0",
+      "id": "470474601632284725",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": true,
+      "isIntensityPercent": false,
+      "name": "",
+      "originId": "0",
+      "overview": "",
+      "restType": 0,
+      "restValue": 30,
+      "sets": 3,
+      "sortNo": 50331648,
+      "sourceId": "0",
+      "sourceUrl": "",
+      "sportType": 0,
+      "status": 1,
+      "subType": 0,
+      "targetType": 2,
+      "targetValue": 240,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     },
+     {
+      "access": 0,
+      "animationId": 132,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png,https://s3.coros.com/source/exercise_img/0/643e686194634e30b95199615ca1a906.png,https://s3.coros.com/source/exercise_img/0/50d7b04cd0a542798db45032c08fb076.png,https://s3.coros.com/source/exercise_img/0/407eff4a7157431a90cf2b91c75d373a.png,https://s3.coros.com/source/exercise_img/0/c953a49fd6614584a9429f64835bb369.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "470474601632284725",
+      "hrType": 0,
+      "id": "470474601632284729",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       11
+      ],
+      "muscleRelevance": [
+       1,
+       11
+      ],
+      "name": "T1107",
+      "originId": "425846214098075649",
+      "overview": "sid_strength_lateral_raises_with_bands",
+      "part": [
+       1
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 1,
+      "sortNo": 50397184,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/d74f8469be9842429bd0d9412ac5b8be.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/232e71a0f1124ce1a703e1ca95feb234.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/2757f2b596f7470881ae056233de57f8.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/643e686194634e30b95199615ca1a906.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/fb18fa86216b447cb8d67a047ab231cd.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/50d7b04cd0a542798db45032c08fb076.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/5e3bef1e420440758317883afde80c51.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/407eff4a7157431a90cf2b91c75d373a.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/662787336f204dc982ce2bdd2ee85355.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/c953a49fd6614584a9429f64835bb369.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/b028900a388d42dc979699b9a89cd515.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/f2cf0cd200d345c5bc64c8843e67a3ad.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/2757f2b596f7470881ae056233de57f8.mp4,https://s3.coros.com/source/exercise_gif/0/fb18fa86216b447cb8d67a047ab231cd.mp4,https://s3.coros.com/source/exercise_gif/0/5e3bef1e420440758317883afde80c51.mp4,https://s3.coros.com/source/exercise_gif/0/662787336f204dc982ce2bdd2ee85355.mp4,https://s3.coros.com/source/exercise_gif/0/b028900a388d42dc979699b9a89cd515.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 140,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png,https://s3.coros.com/source/exercise_img/0/cf8c6e1b9c1845459765cecad304289f.png,https://s3.coros.com/source/exercise_img/0/f65f950490164ac292459da69746d9f5.png,https://s3.coros.com/source/exercise_img/0/fd8721d57aa64624ad6682d6b6befc70.png,https://s3.coros.com/source/exercise_img/0/da37d7a51fb74a27b1c12848c666e82d.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       9
+      ],
+      "exerciseType": 2,
+      "groupId": "470474601632284725",
+      "hrType": 0,
+      "id": "470474601632284730",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 6800,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       1
+      ],
+      "muscleRelevance": [
+       1
+      ],
+      "name": "T1108",
+      "originId": "425846351000158208",
+      "overview": "sid_strength_front_raises_with_bands",
+      "part": [
+       1
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 1,
+      "sortNo": 50462720,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/c69b9e352b8e4556abf8e8e07ce34356.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a8e075672e0c4a4398fd5722107ad72a.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/091deb3b38b94273bdb30ae3a7864276.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/cf8c6e1b9c1845459765cecad304289f.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/8607ded372a543868460d727fba9ef76.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/f65f950490164ac292459da69746d9f5.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/800842b109eb4eca8c835a9108250923.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/fd8721d57aa64624ad6682d6b6befc70.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/403b43d2732f40ba87da5d08abbe05f2.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/da37d7a51fb74a27b1c12848c666e82d.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/d1e37d48f51a4c5dbc9243115c52c918.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/6f6c747814564bfda702c88ca39b2de0.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/091deb3b38b94273bdb30ae3a7864276.mp4,https://s3.coros.com/source/exercise_gif/0/8607ded372a543868460d727fba9ef76.mp4,https://s3.coros.com/source/exercise_gif/0/800842b109eb4eca8c835a9108250923.mp4,https://s3.coros.com/source/exercise_gif/0/403b43d2732f40ba87da5d08abbe05f2.mp4,https://s3.coros.com/source/exercise_gif/0/d1e37d48f51a4c5dbc9243115c52c918.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 1,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png,https://s3.coros.com/source/exercise_img/0/1bb8270ef7bb410798a15df59ad20b06.png,https://s3.coros.com/source/exercise_img/0/ae3a681337294d0d8237e0bd2ca65237.png,https://s3.coros.com/source/exercise_img/0/eaf6c86413a14727a2cc7bfe50cc9428.png,https://s3.coros.com/source/exercise_img/0/ff169723425146b39ae79b3b2ef8ab54.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284726",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       7
+      ],
+      "muscleRelevance": [
+       1,
+       6,
+       7
+      ],
+      "name": "T1007",
+      "originId": "425827765602926593",
+      "overview": "sid_strength_burpees",
+      "part": [
+       0
+      ],
+      "restType": 1,
+      "restValue": 60,
+      "sets": 3,
+      "sortNo": 67108864,
+      "sourceUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/f6abbeb1cce64fb3b23628592fa33fa8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 12,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/d1489755faa6437ab013409f51afc6b4.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/c36919d6977a4585b62c0defe05db905.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/1bb8270ef7bb410798a15df59ad20b06.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3c539a511ae24d7f9db42d57895690a6.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ae3a681337294d0d8237e0bd2ca65237.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/bff4d0dae714435680de8a5390c855eb.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/eaf6c86413a14727a2cc7bfe50cc9428.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/68fd2553667d453d81741623ebb42aca.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/ff169723425146b39ae79b3b2ef8ab54.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/580772088725463aac56fad0d499103c.mp4"
+       }
+      ],
+      "videoUrl": "https://d31oxp44ddzkyk.cloudfront.net/source/exercise_img/0/0878d2d7d1b84f379a2a86216a187853.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/c36919d6977a4585b62c0defe05db905.mp4,https://s3.coros.com/source/exercise_gif/0/3c539a511ae24d7f9db42d57895690a6.mp4,https://s3.coros.com/source/exercise_gif/0/bff4d0dae714435680de8a5390c855eb.mp4,https://s3.coros.com/source/exercise_gif/0/68fd2553667d453d81741623ebb42aca.mp4,https://s3.coros.com/source/exercise_gif/0/580772088725463aac56fad0d499103c.mp4"
+     },
+     {
+      "access": 0,
+      "animationId": 33,
+      "coverUrlArrStr": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png,https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png,https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png,https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png,https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "equipment": [
+       1
+      ],
+      "exerciseType": 2,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284727",
+      "intensityCustom": 0,
+      "intensityDisplayUnit": 7,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 1,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "muscle": [
+       6
+      ],
+      "muscleRelevance": [
+       6
+      ],
+      "name": "T1150",
+      "originId": "426618429085237248",
+      "overview": "sid_strength_bird_dog_type",
+      "part": [
+       0
+      ],
+      "restType": 1,
+      "restValue": 30,
+      "sets": 3,
+      "sortNo": 83886080,
+      "sourceUrl": "https://s3.coros.com/source/exercise_img/0/ee9e3938c8ea4721a556afbd2b83cab8.png",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 3,
+      "targetValue": 15,
+      "thumbnailUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+      "userId": 427472625600577536,
+      "videoInfos": [
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/138c987b0b29413d910bc6cd3146fc69.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/3124d4d8d12445dab8346e0787030cab.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/68c3d7c6dcfd4799b72e0c287514acc7.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/507b66afa2d047a4bee729c29f9acaba.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4"
+       },
+       {
+        "coverUrl": "https://s3.coros.com/source/exercise_img/0/a6d23e6a74f24308b8762ffdfbdd07d3.png",
+        "videoUrl": "https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+       }
+      ],
+      "videoUrl": "https://s3.coros.com/source/exercise_gif/0/4c2380a4ec9d4474893e629c5ba7653d.gif",
+      "videoUrlArrStr": "https://s3.coros.com/source/exercise_gif/0/3343b2b388334a11886d64be6fe0a116.mp4,https://s3.coros.com/source/exercise_gif/0/e4cc7adb265f4f99adf0cabec7098c1a.mp4,https://s3.coros.com/source/exercise_gif/0/32decfdf2d9447e294fbf751283bc56d.mp4,https://s3.coros.com/source/exercise_gif/0/3ab5ae4a05f74d6db263be7e42a32286.mp4,https://s3.coros.com/source/exercise_gif/0/3e94e5ecd04a40c3b76838f59e9e3b49.mp4"
+     },
+     {
+      "access": 0,
+      "createTimestamp": 1752654469,
+      "defaultOrder": 0,
+      "exerciseType": 3,
+      "groupId": "0",
+      "hrType": 0,
+      "id": "470474601632284728",
+      "intensityCustom": 0,
+      "intensityMultiplier": 0,
+      "intensityPercent": 0,
+      "intensityPercentExtend": 0,
+      "intensityType": 0,
+      "intensityValue": 0,
+      "intensityValueExtend": 0,
+      "isDefaultAdd": 0,
+      "isGroup": false,
+      "isIntensityPercent": false,
+      "name": "T1122",
+      "originId": "425898949585584128",
+      "overview": "sid_strength_cool_down",
+      "part": [
+       0
+      ],
+      "restType": 3,
+      "restValue": 0,
+      "sets": 1,
+      "sortNo": 100663296,
+      "sourceUrl": "",
+      "sportType": 4,
+      "status": 1,
+      "targetDisplayUnit": 0,
+      "targetType": 2,
+      "targetValue": 600,
+      "userId": 427472625600577536,
+      "videoInfos": [],
+      "videoUrl": ""
+     }
+    ],
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "id": "455710758666420408",
+    "idInPlan": "80",
+    "isTargetTypeConsistent": 0,
+    "name": "P10586",
+    "nickname": "COROS Official",
+    "originEssence": 0,
+    "overview": "P11362",
+    "pbVersion": 2,
+    "pitch": 0,
+    "planId": "455706700727631876",
+    "planIdIndex": 0,
+    "poolLength": 2500,
+    "poolLengthId": 1,
+    "poolLengthUnit": 2,
+    "profile": "",
+    "referExercise": {
+     "hrType": 0,
+     "intensityType": 1,
+     "valueType": 1
+    },
+    "sex": 0,
+    "simple": false,
+    "sourceId": "425868113867882497",
+    "sourceUrl": "https://s3.coros.com/source/source_default/0/e3611f19b15648338b0f229b2b1b1015.jpg",
+    "sportType": 4,
+    "star": 0,
+    "status": 1,
+    "subType": 65535,
+    "targetType": 2,
+    "targetValue": 2874,
+    "totalSets": 17,
+    "trainingLoad": 0,
+    "type": 0,
+    "unit": 1,
+    "userId": "427472625600577536",
+    "version": 7,
+    "videoCoverUrl": "",
+    "videoUrl": ""
+   }
+  ],
+  "region": 1,
+  "sex": 0,
+  "sourceId": "425868113867882497",
+  "sourceUrl": "https://s3.coros.com/source/source_default/0/e3611f19b15648338b0f229b2b1b1015.jpg",
+  "sportDatasInPlan": [],
+  "sportDatasNotInPlan": [],
+  "starTimestamp": 1697639752,
+  "status": 1,
+  "thirdPartyId": 0,
+  "totalDay": 54,
+  "totalDistance": 0,
+  "totalDuration": 69887,
+  "totalTrainingLoad": 0,
+  "totalWeeks": 8,
+  "unit": 1,
+  "updateTime": "2026-05-18 12:45:41",
+  "updateTimestamp": 1779108341,
+  "userId": "427472625600577536",
+  "userInfos": [
+   {
+    "headPic": "https://s3.coros.com/avatar/202006/15929469488S2L23P0B1SR2K0GXF0J",
+    "nickname": "COROS Official",
+    "profile": "",
+    "sex": 0,
+    "timezone": 32,
+    "unit": 1,
+    "userId": 427472625600577536,
+    "weightUpdateDate": "2026-06-12 02:14:04"
+   }
+  ],
+  "version": 21,
+  "weekStages": [
+   {
+    "createTime": 1697640391,
+    "id": "455706872526323742",
+    "planId": "455706700727631876",
+    "stage": 0,
+    "sumByType": [],
+    "trainSum": {
+     "actualDistance": "0",
+     "actualDuration": 0,
+     "actualElevGain": 0,
+     "actualPitch": 0,
+     "actualTrainingLoad": 0,
+     "planDistance": "0",
+     "planDuration": 8312,
+     "planElevGain": 0,
+     "planHybridTotalSets": 0,
+     "planPitch": 0,
+     "planSets": 53,
+     "planTrainingLoad": 0
+    },
+    "updateTime": 1779106090,
+    "weekNo": 1
+   },
+   {
+    "createTime": 1697641214,
+    "id": "455707093448704055",
+    "planId": "455706700727631876",
+    "stage": 0,
+    "sumByType": [],
+    "trainSum": {
+     "actualDistance": "0",
+     "actualDuration": 0,
+     "actualElevGain": 0,
+     "actualPitch": 0,
+     "actualTrainingLoad": 0,
+     "planDistance": "0",
+     "planDuration": 8524,
+     "planElevGain": 0,
+     "planHybridTotalSets": 0,
+     "planPitch": 0,
+     "planSets": 53,
+     "planTrainingLoad": 0
+    },
+    "updateTime": 1779106090,
+    "weekNo": 2
+   },
+   {
+    "createTime": 1697642882,
+    "id": "455707541199044629",
+    "planId": "455706700727631876",
+    "stage": 0,
+    "sumByType": [],
+    "trainSum": {
+     "actualDistance": "0",
+     "actualDuration": 0,
+     "actualElevGain": 0,
+     "actualPitch": 0,
+     "actualTrainingLoad": 0,
+     "planDistance": "0",
+     "planDuration": 8508,
+     "planElevGain": 0,
+     "planHybridTotalSets": 0,
+     "planPitch": 0,
+     "planSets": 53,
+     "planTrainingLoad": 0
+    },
+    "updateTime": 1779106090,
+    "weekNo": 3
+   },
+   {
+    "createTime": 1697651117,
+    "id": "455709751765024827",
+    "planId": "455706700727631876",
+    "stage": 0,
+    "sumByType": [],
+    "trainSum": {
+     "actualDistance": "0",
+     "actualDuration": 0,
+     "actualElevGain": 0,
+     "actualPitch": 0,
+     "actualTrainingLoad": 0,
+     "planDistance": "0",
+     "planDuration": 9083,
+     "planElevGain": 0,
+     "planHybridTotalSets": 0,
+     "planPitch": 0,
+     "planSets": 57,
+     "planTrainingLoad": 0
+    },
+    "updateTime": 1779106090,
+    "weekNo": 4
+   },
+   {
+    "createTime": 1697651117,
+    "id": "455709751765024828",
+    "planId": "455706700727631876",
+    "stage": 0,
+    "sumByType": [],
+    "trainSum": {
+     "actualDistance": "0",
+     "actualDuration": 0,
+     "actualElevGain": 0,
+     "actualPitch": 0,
+     "actualTrainingLoad": 0,
+     "planDistance": "0",
+     "planDuration": 9016,
+     "planElevGain": 0,
+     "planHybridTotalSets": 0,
+     "planPitch": 0,
+     "planSets": 55,
+     "planTrainingLoad": 0
+    },
+    "updateTime": 1779106090,
+    "weekNo": 5
+   },
+   {
+    "createTime": 1697653841,
+    "id": "455710482714771632",
+    "planId": "455706700727631876",
+    "stage": 0,
+    "sumByType": [],
+    "trainSum": {
+     "actualDistance": "0",
+     "actualDuration": 0,
+     "actualElevGain": 0,
+     "actualPitch": 0,
+     "actualTrainingLoad": 0,
+     "planDistance": "0",
+     "planDuration": 9064,
+     "planElevGain": 0,
+     "planHybridTotalSets": 0,
+     "planPitch": 0,
+     "planSets": 53,
+     "planTrainingLoad": 0
+    },
+    "updateTime": 1779106090,
+    "weekNo": 6
+   },
+   {
+    "createTime": 1697653841,
+    "id": "455710482714771633",
+    "planId": "455706700727631876",
+    "stage": 0,
+    "sumByType": [],
+    "trainSum": {
+     "actualDistance": "0",
+     "actualDuration": 0,
+     "actualElevGain": 0,
+     "actualPitch": 0,
+     "actualTrainingLoad": 0,
+     "planDistance": "0",
+     "planDuration": 8824,
+     "planElevGain": 0,
+     "planHybridTotalSets": 0,
+     "planPitch": 0,
+     "planSets": 51,
+     "planTrainingLoad": 0
+    },
+    "updateTime": 1779106090,
+    "weekNo": 7
+   },
+   {
+    "createTime": 1697653841,
+    "id": "455710482714771634",
+    "planId": "455706700727631876",
+    "stage": 0,
+    "sumByType": [],
+    "trainSum": {
+     "actualDistance": "0",
+     "actualDuration": 0,
+     "actualElevGain": 0,
+     "actualPitch": 0,
+     "actualTrainingLoad": 0,
+     "planDistance": "0",
+     "planDuration": 8556,
+     "planElevGain": 0,
+     "planHybridTotalSets": 0,
+     "planPitch": 0,
+     "planSets": 51,
+     "planTrainingLoad": 0
+    },
+    "updateTime": 1779106090,
+    "weekNo": 8
+   }
+  ]
+ },
+ "message": "OK",
+ "result": "0000"
+}

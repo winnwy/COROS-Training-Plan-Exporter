@@ -21,7 +21,7 @@ SPORT = {1: "Run", 2: "Bike", 3: "Swim", 4: "Strength", 9: "Hybrid"}
 ROLE = {1: "warmup", 2: "active", 3: "cooldown", 4: "rest"}
 INTENSITY_KIND = {0: "none", 1: "weight", 2: "HR", 3: "pace", 5: "swim",
                   7: "HR", 8: "pace", 9: "power", 10: "climb"}
-RICH_SPORTS = {"Run", "Bike"}   # v1 scope for full intensity rendering
+RICH_SPORTS = {"Run", "Bike", "Strength", "Hybrid"}   # full detail rendering
 
 
 @dataclass
@@ -57,6 +57,8 @@ class Step:
     dur_value: int = 0          # seconds | metres | reps | 0
     target: Target = field(default_factory=Target)
     rest_s: int = 0
+    sets: int = 1               # strength: number of straight sets
+    hold: bool = False          # strength: time target is an isometric hold
 
     def human_duration(self) -> str:
         if self.dur_kind == "time":
@@ -70,8 +72,18 @@ class Step:
         return "open"
 
     def human(self) -> str:
+        # duration / rep token (sets-aware for strength)
+        if self.dur_kind == "reps":
+            base = f"{self.dur_value} reps" if self.sets <= 1 else f"{self.sets}×{self.dur_value}"
+        elif self.dur_kind == "time" and self.hold:
+            h = f"{self.dur_value}s" if self.dur_value < 60 else f"{self.dur_value // 60}min"
+            base = f"{h} hold" if self.sets <= 1 else f"{self.sets}×{h} hold"
+        else:
+            base = self.human_duration()
+            if self.sets and self.sets > 1:
+                base = f"{self.sets}×{base}"
+        line = f"{self.name} — {base}"
         t = self.target.human()
-        line = f"{self.name} — {self.human_duration()}"
         if t:
             line += f" @ {t}"
         if self.rest_s:
@@ -121,6 +133,8 @@ def _target_from(ex: dict) -> Target:
     t = Target(kind=kind)
     if kind == "weight":
         t.weight_g = ex.get("intensityValue", 0) or 0
+        if not t.weight_g:
+            t.kind = "none"      # intensityType=weight but no value -> bodyweight
     # %threshold is present whenever intensityPercent > 0 (the isIntensityPercent
     # flag is set on some sports but absent on others, e.g. run pace).
     if ex.get("intensityPercent"):
@@ -130,7 +144,7 @@ def _target_from(ex: dict) -> Target:
     return t
 
 
-def _step_from(ex: dict, translate) -> Step:
+def _step_from(ex: dict, translate, sport: str = "") -> Step:
     tt = ex.get("targetType")
     tv = ex.get("targetValue", 0) or 0
     if tt == 2:
@@ -143,11 +157,14 @@ def _step_from(ex: dict, translate) -> Step:
         dk, dv = "open", 0
     role = ROLE.get(ex.get("exerciseType"), "active")
     name = translate(ex.get("name", "")) or role.replace("warmup", "Warm Up").title()
+    is_strength = sport in ("Strength", "Hybrid")
     return Step(role=role, name=name, dur_kind=dk, dur_value=dv,
-                target=_target_from(ex), rest_s=int(ex.get("restValue", 0) or 0))
+                target=_target_from(ex), rest_s=int(ex.get("restValue", 0) or 0),
+                sets=int(ex.get("sets", 1) or 1),
+                hold=bool(is_strength and dk == "time" and role == "active"))
 
 
-def _blocks_from(exercises: list, translate) -> list:
+def _blocks_from(exercises: list, translate, sport: str = "") -> list:
     """Build ordered blocks, folding consecutive same-`groupId` members into a
     RepeatGroup. The interval HEADER (isGroup=true) carries the repeat `sets`
     count but NO groupId; its members (which follow it) share a groupId. So we
@@ -161,7 +178,7 @@ def _blocks_from(exercises: list, translate) -> list:
             pending_count = ex.get("sets", 1) or 1
             continue
         gid = ex.get("groupId")
-        step = _step_from(ex, translate)
+        step = _step_from(ex, translate, sport)
         if gid and gid not in ("0", 0):
             if cur is not None and gid == cur_gid:
                 cur.steps.append(step)
@@ -204,7 +221,7 @@ def decode_plan(data: dict, translate) -> Plan:
             distance_m=int((prog.get("distance") or 0) // 100),
             duration_s=int(prog.get("duration") or 0),
             training_load=prog.get("trainingLoad"),
-            blocks=_blocks_from(exercises, translate),
+            blocks=_blocks_from(exercises, translate, sport),
         )
         plan.workouts.append(w)
     return plan
