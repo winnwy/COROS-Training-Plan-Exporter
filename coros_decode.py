@@ -93,6 +93,7 @@ class Workout:
     index: int
     sport: str
     title: str
+    id_in_plan: Optional[int] = None
     overview: str = ""
     distance_m: int = 0
     duration_s: int = 0
@@ -197,6 +198,7 @@ def decode_plan(data: dict, translate) -> Plan:
         exercises = prog.get("exercises", []) or []
         w = Workout(
             index=idx, sport=sport,
+            id_in_plan=prog.get("idInPlan"),
             title=translate(prog.get("name", "")) or f"Workout {idx+1}",
             overview=translate(prog.get("overview", "")) or "",
             distance_m=int((prog.get("distance") or 0) // 100),
@@ -209,19 +211,20 @@ def decode_plan(data: dict, translate) -> Plan:
 
 
 # ---------------- rendering: rich .ics DESCRIPTION ----------------
-def format_description(w: Workout, max_chars: int = 4000) -> str:
+def format_description(w: Workout, max_chars: int = 4000, include_summary: bool = True) -> str:
     """Human-readable structured body for an .ics VEVENT DESCRIPTION.
 
     Rich sports get the full step breakdown with repeats; others get the
-    overview + summary line only (backward-compatible behavior)."""
+    overview only. Set include_summary=False when the caller already prints
+    its own Distance/Duration lines (e.g. create_ics_file)."""
     head = []
     summary = []
-    if w.duration_s:
+    if include_summary and w.duration_s:
         m = w.duration_s // 60
         summary.append(f"{m}min")
-    if w.distance_m:
+    if include_summary and w.distance_m:
         summary.append(f"{w.distance_m/1000:.2f} km")
-    if w.training_load:
+    if include_summary and w.training_load:
         summary.append(f"TL {w.training_load}")
     if summary:
         head.append(" · ".join(summary))

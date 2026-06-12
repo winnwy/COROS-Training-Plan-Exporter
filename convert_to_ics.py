@@ -103,6 +103,17 @@ def scrape_from_url(url):
     entities = data['data']['entities']
     # Build programs dict keyed by idInPlan (entities reference programs by idInPlan, not by index)
     programs = {prog.get('idInPlan'): prog for prog in data['data'].get('programs', []) if prog.get('idInPlan')}
+
+    # Rich per-workout detail via the shared decoder (run/bike). Falls back to
+    # the legacy per-entity rendering below for other sports / older payloads.
+    try:
+        import coros_decode
+        _tr = lambda k: (translate_key(k, dictionary) if k else "")
+        _decoded = coros_decode.decode_plan(data['data'], _tr)
+        _rich_by_id = {w.id_in_plan: w for w in _decoded.workouts if w.id_in_plan is not None}
+    except Exception as e:
+        print(f"⚠️  Rich decoder unavailable, using basic rendering: {e}")
+        coros_decode, _rich_by_id = None, {}
     
     # Calculate which week each day belongs to (7 days per week)
     for entity in entities:
@@ -255,6 +266,16 @@ def scrape_from_url(url):
             distance = f"{distance_cm / 100000:.2f} km" if distance_cm > 0 else None
             training_load = str(training_load) if training_load > 0 else None
         
+        # Rich detail override for run/bike (full steps, intervals, % targets).
+        # create_ics_file prints its own Distance/Duration, so include_summary=False.
+        rich = _rich_by_id.get(entity_id_in_plan) if coros_decode else None
+        if rich is not None and rich.is_rich and rich.blocks:
+            rich_desc = coros_decode.format_description(rich, include_summary=False)
+            if rich_desc:
+                description = rich_desc
+                if rich.training_load and not training_load:
+                    training_load = str(rich.training_load)
+
         workouts.append({
             'week': week,
             'day_of_week': day_of_week,
