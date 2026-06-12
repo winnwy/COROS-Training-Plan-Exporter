@@ -1,74 +1,75 @@
 # COROS Training Plan Exporter
 
-Turn a COROS training plan into something you can actually use outside the COROS app — a **calendar feed** (`.ics`) today, and **structured workouts** (`.ZWO` / intervals.icu) experimentally.
+**Get your COROS training plan out of the COROS app — into your calendar, or onto your Garmin watch.**
 
-## ▶️ Try it now — no install
+COROS training plans live inside the COROS app. This tool reads a plan from its public link, decodes it into plain English, and hands it back to you as a **calendar you can subscribe to** or **structured workouts your watch can guide you through**.
 
-### **[coros-training-plan-exporter.vercel.app](https://coros-training-plan-exporter.vercel.app/)**
+### ▶️ [**Try it now → coros-training-plan-exporter.vercel.app**](https://coros-training-plan-exporter.vercel.app/)
 
-Paste a COROS plan URL, preview the schedule, download the `.ics`. That's it. The hosted app is live and runs the full decoder, so run/bike workouts come through with every interval and HR/pace target spelled out (see the example below).
+No sign-up, no install. Paste a plan link, preview it, download.
 
 ---
 
-COROS publishes its plans through a public API, but the workout details are stored as shortcodes (`T3001`, `P12999`, …). This tool fetches a plan, **decodes those shortcodes into plain English** using a bundled dictionary, and exports the result. Prefer to run it yourself? See [Run locally](#run-locally).
+## Two ways to use it
+
+```
+                         ┌─────────────────────────────┐
+   a COROS plan link ──► │  COROS Training Plan Exporter │ ──►  📅 calendar (.ics)
+                         └─────────────────────────────┘ ──►  ⌚ Garmin workouts (.FIT)
+```
+
+### 🏃 If you just want to follow your plan
+Use the [web app](https://coros-training-plan-exporter.vercel.app/). Paste your plan link and get either:
+- **A calendar** (`.ics`) — every workout on the right day in Google / Apple / Outlook, with the full breakdown in each event.
+- **Garmin watch workouts** (`.FIT`) — download, copy to your watch, and it guides you through warm-up, intervals, and cool-down.
+
+No coding required. [Jump to the how-to →](#-how-to-use-the-web-app)
+
+### 🛠️ If you're a developer
+Run it locally, use the CLI, or build on the shared decoder (`coros_decode.py`) that turns a COROS plan into a normalized workout model feeding every export format. [Jump to dev setup →](#run-it-yourself)
 
 ---
 
 ## What you get
 
-### 📅 Calendar export (`.ics`) — the main feature
-Paste a COROS plan URL and download an `.ics` you can import into Google Calendar, Apple Calendar, Outlook, etc. One all-day event per workout, dated to your start day (aligned to the plan's first weekday).
+### 📅 Calendar (`.ics`)
+One event per workout, dated to your start day. For **run, bike, and strength**, each event carries the full decoded workout:
 
-For **run, bike, and strength** plans, each event now carries the **full decoded workout** — warm-up, every interval or movement, and cool-down, with targets:
+> **Threshold** — Tue 24 Jun
+> ```
+> Duration: 60min · Training Load: 103
+> This should not feel like an easy session (RPE 8/10)...
+>
+> Workout:
+>  • Warm Up — open
+>  • Training — 30min @ 80–90% HR
+> 3×
+>    • Training — 5min @ 96–102% HR
+>    • Rest — 5min @ 80–90% HR
+>  • Cool Down — open
+> ```
 
-```
-Threshold                                    (Tue 24 Jun)
+Intervals show as repeats (`3× …`), targets as %-of-threshold ranges, and strength as `sets × reps @ weight` (e.g. `Deadlifts with Bands — 3×10 @ 6.8 kg`).
 
-Duration: 60min / Training Load: 103
-This should not feel like an easy session (RPE 8/10). Slowly progress
-towards threshold and try to remain seated throughout.
-
-Workout:
- • Warm Up — open
- • Training — 30min @ 80–90% HR
-3×
-   • Training — 5min @ 96–102% HR
-   • Rest — 5min @ 80–90% HR
- • Cool Down — open
-```
-
-Intervals are shown as repeats (`3× (...)`), and HR / pace targets are decoded as `%`-of-threshold ranges. **Strength** plans render each movement as `sets×reps @ weight` (or `Ns hold`), with bodyweight moves omitting the load — e.g. `Deadlifts with Bands — 3×10 @ 6.8 kg (rest 60s)`. Swim / triathlon / climbing plans export at overview level for now.
-
-### ⌚ Garmin watch export (`.FIT`)
-A `.ics` event is just a reminder. To get a **watch-guided** workout (your Garmin steps you through warm-up, every interval/movement, and cool-down), use `coros_to_fit.py` — it turns a **run, bike, or strength** plan into Garmin `.FIT` workout files (strength sets expand to repeats, e.g. 3 sets of 12 reps):
-
-Easiest from the web app: on the preview page, click **Download Garmin .FIT**. Or from the CLI:
-```bash
-python3 coros_to_fit.py --plan <ID> --out ./fit_out
-# then copy the .fit files to your watch's GARMIN/NewFiles/ folder over USB
-```
-
-Durations and interval repeats are encoded exactly (the watch guides the structure); the intended HR/pace target is carried in each step's name (e.g. `Training @ 96–102% HR`), because COROS uses %-of-threshold which doesn't map cleanly onto Garmin's zone model. Strength/swim use a different FIT schema (not yet supported).
-
-### 🏃 Also: `.ZWO` / intervals.icu (experimental POC)
-The proof-of-concept in [`poc/`](poc/) converts run/bike plans to Zwift **`.ZWO`** files and can upload them to **intervals.icu** (which forwards to Garmin/Zwift). See [`poc/README.md`](poc/README.md). Opt-in, not wired into the web app.
+### ⌚ Garmin watch (`.FIT`)
+A calendar event is just a reminder. A `.FIT` workout is **watch-guided** — your Garmin steps you through it. Works for **run, bike, and strength** (sets become repeats). Download from the web app, or use the CLI.
 
 ---
 
-## Use online
+## 📲 How to use the web app
 
-The hosted version needs nothing installed: **https://coros-training-plan-exporter.vercel.app/**
-
-1. Paste your COROS plan URL.
-2. (Optional) pick a start date — blank = today, aligned to the plan's first weekday.
-3. **Preview** the schedule, then **download** the `.ics`.
-4. Import it into your calendar app.
+1. Open **[the app](https://coros-training-plan-exporter.vercel.app/)**.
+2. Paste your COROS plan link (from the COROS app's "share plan", or any plan on [coros.com/training](https://coros.com/training)).
+3. *(Optional)* pick a start date — blank means today, aligned to the plan's first weekday.
+4. **Preview** the schedule.
+5. Download **`.ics`** (calendar) or **Garmin `.FIT`** (watch).
+6. Import the `.ics` into your calendar, or unzip the `.FIT` files and copy them to your watch's `GARMIN/NewFiles/` folder over USB.
 
 ---
 
-## Run locally
+## Run it yourself
 
-**Prerequisites:** Python 3.10+ and an internet connection.
+**Requirements:** Python 3.10+ and an internet connection.
 
 ```bash
 git clone https://github.com/winnwy/COROS-Training-Plan-Exporter.git
@@ -77,61 +78,63 @@ python3 -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\activ
 pip install -r requirements.txt
 ```
 
-### Web app
+**Web app**
 ```bash
-./run.sh            # or: python3 app.py
-# open http://127.0.0.1:5000
+python3 app.py          # then open http://127.0.0.1:5000
 ```
 
-### CLI
+**CLI — calendar**
 ```bash
-python3 convert_to_ics.py --url "https://training.coros.com/schedule-plan/share?planId=<ID>&region=1"
-# writes coros_training_plan.ics  (prompts for a start date; press Enter for today)
+python3 convert_to_ics.py --url "https://training.coros.com/schedule-plan/share?planId=<ID>&region=1" --start 2026-07-01
+# writes coros_training_plan.ics  (--start is optional; omit for an interactive prompt)
 ```
 
-### Structured-workout POC
+**CLI — Garmin `.FIT`**
 ```bash
-python3 poc/coros_to_zwo.py --plan <ID> --start 2026-07-01      # writes .zwo files (dry run)
-# real upload: set INTERVALS_ICU_API_KEY + INTERVALS_ICU_ATHLETE_ID and add --upload
+python3 coros_to_fit.py --plan <ID> --out ./fit_out
+# one .fit per run/bike/strength workout -> copy to the watch's GARMIN/NewFiles/
 ```
 
 ---
 
 ## How it works
 
+COROS stores workout details as shortcodes (`T3001`, `P12999`, …). The tool fetches a plan from the **public** COROS API, decodes those shortcodes via a bundled dictionary into a normalized workout model, and renders that model into each output format:
+
 ```
-COROS plan URL
+COROS plan link
    └─ teamapi.coros.com/training/plan/detail        (public API, no login)
-        └─ coros_decode.py        decode shortcodes + build a normalized
-                                   Step / RepeatGroup / Workout model
-             ├─ convert_to_ics.py  → .ics calendar (rich run/bike detail)
-             ├─ coros_to_fit.py    → Garmin .FIT workouts  (run/bike/strength, sideload)
-             └─ poc/coros_to_zwo.py → .ZWO / intervals.icu  (structured, experimental)
+        └─ coros_decode.py   decode shortcodes → Step / RepeatGroup / Workout model
+             ├─ convert_to_ics.py   → 📅 .ics calendar (rich run/bike/strength detail)
+             ├─ coros_to_fit.py     → ⌚ Garmin .FIT workouts (sideload to watch)
+             └─ poc/coros_to_zwo.py → 🧪 .ZWO / intervals.icu (experimental)
 ```
 
-`coros_decode.py` is the shared decoder — one source of truth that both the calendar exporter and the structured-export POC build on.
+One decoder, many exporters — so the calendar and the watch always agree.
 
 ## Project layout
 
-| Path | Purpose |
+| Path | What |
 |---|---|
 | `app.py` | Flask web app (UI + routing) |
 | `convert_to_ics.py` | URL scraping, date alignment, `.ics` generation |
-| `coros_decode.py` | Shared decoder → normalized workout model + rich description |
+| `coros_to_fit.py` | Garmin `.FIT` workout exporter (run/bike/strength) |
+| `coros_decode.py` | Shared decoder → normalized workout model |
 | `coros_dictionary.json` | Shortcode → natural-language dictionary (~6,800 entries) |
 | `templates/` | Web frontend (`index.html`, `preview.html`) |
-| `coros_to_fit.py` | Garmin `.FIT` workout exporter (run/bike/strength); also served by the web app |
-| `poc/` | Structured-export proof of concept (`.ZWO` / intervals.icu) |
-| `tests/` | pytest + committed raw API fixtures |
-| `docs/` | [Build plan](docs/BUILD_PLAN.md), [full site map](docs/coros_map/COROS_MAP.md), [follow-ups](docs/FOLLOWUPS.md) |
+| `poc/` | `.ZWO` / intervals.icu proof of concept |
+| `tests/` | pytest + committed raw API fixtures (`python -m pytest tests/`) |
+| `docs/` | [Build plan](docs/BUILD_PLAN.md) · [full site map](docs/coros_map/COROS_MAP.md) · [follow-ups](docs/FOLLOWUPS.md) |
 
 ## Status
 
-- ✅ **Shipped:** `.ics` export with rich detail for **run, bike, and strength** (steps/movements, intervals, sets×reps, HR/pace % targets, weight).
-- ⌚ **Shipped:** Garmin `.FIT` workout export for **run/bike/strength** (`coros_to_fit.py` + web button) — sideload to the watch.
-- 🧪 **Experimental:** `.ZWO` / intervals.icu structured export (run/bike, POC).
-- 🔬 **Researched, not built:** direct Garmin Connect upload (unofficial API) — see [`docs/BUILD_PLAN.md`](docs/BUILD_PLAN.md) §4.
-- 🚧 **Basic only:** swim / triathlon / climbing plans export at overview level (no per-step detail yet) — tracked in [`docs/FOLLOWUPS.md`](docs/FOLLOWUPS.md).
+| | |
+|---|---|
+| ✅ Calendar `.ics` — rich detail for run / bike / strength | shipped |
+| ⌚ Garmin `.FIT` — run / bike / strength (CLI + web) | shipped |
+| 🧪 `.ZWO` / intervals.icu structured export | experimental (POC) |
+| 🔬 Direct Garmin Connect upload (unofficial API) | researched, not built |
+| 🚧 Swim / triathlon / climbing | calendar at overview level only |
 
 ## License
 
