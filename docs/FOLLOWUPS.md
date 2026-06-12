@@ -88,3 +88,8 @@ See `BUILD_PLAN.md` for full context.
 ## Design (2026-06-12)
 - [x] Redesigned index + preview to a minimal warm-orange theme (frontend only).
 - [ ] a11y: white text on #ff9800 buttons is ~2:1 (below WCAG AA). Kept per chosen brand color; fix = dark text on the orange button if AA is required.
+
+## UX (2026-06-12)
+- [x] Reverted the orange redesign (kept old blue design per preference).
+- [x] Preview UX: collapsible week sections (week 1 open, rest collapsed) + Expand/Collapse all, animated inline workout-detail expand, sticky table + week headers.
+- [x] Landing: loading state on submit + single-page transition (fetch + in-place swap to preview; progressive enhancement, form still works with JS off).
