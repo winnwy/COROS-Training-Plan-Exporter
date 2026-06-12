@@ -117,6 +117,15 @@ python3 coros_to_fit.py --workout <ID> --out ./fit_out   # one .fit for a single
 # copy the .fit file(s) to the watch's GARMIN/NewFiles/. Swim/climb workouts aren't .FIT-exportable yet — use the calendar.
 ```
 
+**CLI — Zwift / intervals.icu `.ZWO`**
+```bash
+python3 coros_to_zwo.py --plan <ID> --out ./zwo_out       # zip of .zwo (run/bike workouts in the plan)
+python3 coros_to_zwo.py --workout <ID> --out ./zwo_out    # one .zwo for a single workout
+# import the .zwo into Zwift / intervals.icu / TrainingPeaks. Run/bike only.
+# Power (%FTP) workouts get real power targets; pace/HR workouts get the structure
+# (durations + repeats) with the target in each step's note (no fake power number).
+```
+
 ---
 
 ## How it works
@@ -129,7 +138,7 @@ COROS workout link ──► teamapi.coros.com/training/program/detail
         └─ coros_decode.py   decode shortcodes → Step / RepeatGroup / Workout model
              ├─ convert_to_ics.py   → 📅 .ics calendar (rich run/bike/strength detail)
              ├─ coros_to_fit.py     → ⌚ Garmin .FIT workouts (sideload to watch)
-             └─ poc/coros_to_zwo.py → 🧪 .ZWO / intervals.icu (experimental)
+             └─ coros_to_zwo.py     → 🚴 .ZWO files (run/bike → Zwift / intervals.icu)
 ```
 
 A standalone workout is just one program, so it reuses the exact same decoder (`decode_workout` wraps it as a one-program plan).
@@ -143,11 +152,11 @@ One decoder, many exporters — so the calendar and the watch always agree.
 | `app.py` | Flask web app (UI + routing) |
 | `convert_to_ics.py` | URL scraping, date alignment, `.ics` generation |
 | `coros_to_fit.py` | Garmin `.FIT` workout exporter (run/bike/strength) |
+| `coros_to_zwo.py` | Zwift/intervals.icu `.ZWO` exporter (run/bike) |
 | `coros_decode.py` | Shared decoder → normalized workout model |
 | `coros_dictionary.json` | Shortcode → natural-language dictionary (~7,100 entries) |
 | `scripts/refresh_dictionary.py` | Re-pull the dictionary from COROS's locale bundle (run when codes show as raw `W302xx`) |
 | `templates/` | Web frontend (`index.html`, `preview.html`) |
-| `poc/` | `.ZWO` / intervals.icu proof of concept |
 | `tests/` | pytest + committed raw API fixtures. Run: `pip install -r requirements-dev.txt && python -m pytest tests/` (CI runs this on every push/PR) |
 | `docs/` | [Build plan](docs/BUILD_PLAN.md) · [full site map](docs/coros_map/COROS_MAP.md) · [follow-ups](docs/FOLLOWUPS.md) |
 
@@ -157,7 +166,8 @@ One decoder, many exporters — so the calendar and the watch always agree.
 |---|---|
 | ✅ Plan export — `.ics` + `.FIT`, rich detail for run / bike / strength | shipped |
 | ✅ Single workout export — paste a `programId=` link → one `.ics` event / one `.FIT` | shipped |
-| 🧪 `.ZWO` / intervals.icu structured export | experimental (POC) |
+| ✅ `.ZWO` export — run/bike → Zwift / intervals.icu / TrainingPeaks files | shipped |
+| 🔬 Live intervals.icu calendar upload (their Open API) | researched, not built |
 | 🔬 Direct Garmin Connect upload (unofficial API) | researched, not built |
 | ✅ Swim / triathlon / climbing — calendar with full set structure (sets, reps, rest) | shipped (no `.FIT`; use the calendar) |
 
