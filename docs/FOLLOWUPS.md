@@ -77,10 +77,12 @@ See `BUILD_PLAN.md` for full context.
 - [x] Strength `.FIT` DONE 2026-06-12 — sets expand to repeat blocks (work+rest
   ×sets), reps via REPS duration, sport TRAINING / sub-sport STRENGTH_TRAINING,
   weight in step name. Also served by the web /generate-fit route.
-- [x] §4: `.ZWO` export to production DONE 2026-06-12 (#26) — `coros_to_zwo.py`,
-  driven by the shared decoder; run/bike, real %FTP power targets, pace/HR as
-  FreeRide + note (no fake power); plan→zip / workout→file; `tests/test_zwo.py`.
-  POC retired. Live intervals.icu upload = **no-go** (see session log below).
+- [x] §4: `.ZWO` export shipped 2026-06-12 (#26) then **REMOVED** same day — for
+  COROS's HR/pace-based workouts the ZWO output was mostly FreeRide (structure +
+  notes), which the `.ics` calendar already conveys; only the minority of %FTP
+  cycling workouts got real power. Low value for the surface; cut. The shipped
+  implementation lives in git history (#26) if revisited. Live intervals.icu
+  upload was **no-go** independently.
 - [ ] §4 (still open): direct Garmin Connect upload (unofficial API — account-ban
   risk, superseded by `.ZWO`/intervals.icu), and swim/climbing **FIT** schemas
   (the calendar already renders swim/climb structure as of #25).
@@ -113,11 +115,9 @@ Shipped:
 - [x] #24 — **CI** (GitHub Actions): `pytest` + `compileall` on push/PR, Python 3.10–3.13.
 - [x] #25 — **swim/climb/tri render full set structure** in the calendar (`Workout.has_structure`
   tier; fixed a second hidden `is_rich` gate on the plan path).
-- [x] #26 — **`.ZWO` export** (run/bike) — see §4 above.
+- [x] #26 — `.ZWO` export (run/bike) — shipped then **removed** same day (low value; see §4).
 
 Open (genuinely actionable):
-- [ ] **W1: web `.ZWO` download button** — `.ZWO` is CLI-only; the web preview offers
-  `.ics`+`.FIT` but not `.ZWO`. Trivial (mirror `/generate-fit`; no secrets — it's a file).
 - [ ] **L1: locale / non-English output** — `--locale` flag + pull the matching dictionary
   via `refresh_dictionary.py` (zh/de/fr/es/ja bundles exist). Region already parsed.
 - [ ] **swim/climbing `.FIT` schemas** — calendar renders them (#25); FIT does not (harder schema).
