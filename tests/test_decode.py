@@ -207,13 +207,30 @@ def test_decode_workout_strength_sets(tr):
     assert any(s.dur_kind == "reps" for s in steps), "expected rep-based strength steps"
 
 
-def test_decode_workout_swim_decodes_structure_but_renders_overview_only(tr):
-    # D5: swim parses into blocks, but format_description stays overview-only
-    # (swim not in RICH_SPORTS). Documents the known limitation.
+def test_decode_workout_swim_renders_structure(tr):
+    # Swim is not a RICH_SPORT, but it decodes into blocks and now renders its
+    # set structure (has_structure tier) instead of an overview-only blank.
     w = D.decode_workout(_workout("workout_swim"), tr)
     assert w.sport == "Swim" and not w.is_rich
-    assert w.blocks, "swim structure should still decode into blocks"
-    assert "Workout:" not in D.format_description(w), "swim body must be overview-only"
+    assert w.has_structure and w.blocks
+    body = D.format_description(w)
+    assert "Workout:" in body, "swim body must now show its steps"
+    assert "×" in body, "swim interval repeats (e.g. 6×) must render"
+    assert " m" in body, "swim per-step distances (metres) must render"
+
+
+def test_decode_workout_climb_renders_structure(tr):
+    # Climb (sportType 7) also renders structure; its %target is real data.
+    w = D.decode_workout(_workout("workout_climb"), tr)
+    assert w.sport == "Climb" and not w.is_rich
+    assert w.has_structure
+    assert "Workout:" in D.format_description(w)
+
+
+def test_has_structure_predicate():
+    assert D.Workout(index=0, sport="Swim", title="x",
+                     blocks=[D.Step(role="active", name="Swim", dur_kind="distance", dur_value=100)]).has_structure
+    assert not D.Workout(index=0, sport="Swim", title="x").has_structure  # no blocks -> overview only
 
 
 def test_decode_workout_missing_title_falls_back(tr):

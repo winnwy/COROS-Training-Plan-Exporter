@@ -126,6 +126,15 @@ class Workout:
     def is_rich(self) -> bool:
         return self.sport in RICH_SPORTS
 
+    @property
+    def has_structure(self) -> bool:
+        """True when the workout decoded into renderable steps. Drives the
+        structural body for ANY sport (run/bike/strength + swim/climb), so a
+        swim event shows its sets instead of an overview-only blank. Run/bike
+        intensity still only renders where Target.human() has a %target;
+        sports without one (swim) simply show structure, no fake intensity."""
+        return bool(self.blocks)
+
 
 @dataclass
 class Plan:
@@ -298,9 +307,11 @@ def decode_workout(data: dict, translate) -> Workout:
 def format_description(w: Workout, max_chars: int = 4000, include_summary: bool = True) -> str:
     """Human-readable structured body for an .ics VEVENT DESCRIPTION.
 
-    Rich sports get the full step breakdown with repeats; others get the
-    overview only. Set include_summary=False when the caller already prints
-    its own Distance/Duration lines (e.g. create_ics_file)."""
+    Any sport that decoded into steps gets the full step breakdown with
+    repeats (run/bike/strength + swim/climb); a sport with no decodable
+    structure gets the overview only. Set include_summary=False when the
+    caller already prints its own Distance/Duration lines (e.g.
+    create_ics_file)."""
     head = []
     summary = []
     if include_summary and w.duration_s:
@@ -316,7 +327,7 @@ def format_description(w: Workout, max_chars: int = 4000, include_summary: bool 
         head.append(w.overview)
 
     body = []
-    if w.is_rich and w.blocks:
+    if w.has_structure:
         body.append("Workout:")
         for b in w.blocks:
             if isinstance(b, RepeatGroup):

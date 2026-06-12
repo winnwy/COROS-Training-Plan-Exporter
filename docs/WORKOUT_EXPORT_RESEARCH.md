@@ -49,8 +49,8 @@ Hybrid workout (…2560):
 `1` Run · `2` Bike · `3` Swim · `4` Strength · `5/6` trail/track-ish · `7` Climb · `8` Bouldering · `9` Hybrid.
 
 - **Run / Bike / Strength / Hybrid** → already `RICH_SPORTS`; full step+target+sets detail. ✅
-- **Swim (3)** → the decoder parses structure into `w.blocks` (distance + `sets` + `restValue`, e.g. 6×100m), BUT swim ∉ `RICH_SPORTS`, so `format_description` renders **overview-only** — the step detail is decoded but not printed. So a swim `.ics` event is overview-level today. `poolLength`/`poolLengthUnit` present but `0`/null on the sample. _(Correction per eng-review D5: earlier this section implied swim renders structurally — it does not, without adding a non-rich rendering path. Rich swim is deferred.)_
-- **Climb / Boulder (7/8)** → **not in the decoder's `SPORT` map** (`{1,2,3,4,9}`), so they fall through to `str(sportType)` and render overview-only. They carry climbing-specific fields (`gradeSystem`, `onsightGradeOffset`, `intensityType 10`=climb) that we don't interpret. **Gap, but niche** — fine to ship as overview-level first, like swim/tri in the plan exporter.
+- **Swim (3)** → the decoder parses structure into `w.blocks` (distance + `sets` + `restValue`, e.g. 6×100m), and as of the swim-rendering change `format_description` renders that structure for any sport with blocks (`Workout.has_structure`), so a swim `.ics` event now shows its full set breakdown. `poolLength`/`poolLengthUnit` present but `0`/null on the sample (not surfaced). No swim `.FIT` schema — swim stays calendar-only. _(Updated: earlier this said swim was overview-only; the `has_structure` tier shipped.)_
+- **Climb / Boulder (7=Climb mapped; 8 still numeric)** → render structure too via `has_structure`; the climb `intensityType 10` %target prints as `% climb` (real data). `gradeSystem`/`onsightGradeOffset` still not interpreted (niche). Calendar-only, no `.FIT`.
 
 ---
 
