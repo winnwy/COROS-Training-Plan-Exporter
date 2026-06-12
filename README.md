@@ -82,6 +82,14 @@ A calendar event is just a reminder. A `.FIT` workout is **watch-guided** — yo
 5. Download **`.ics`** (calendar) or **Garmin `.FIT`** (watch). A single workout downloads as one `.fit`; a plan as a `.zip` of `.fit` files.
 6. Import the `.ics` into your calendar, or copy the `.fit` file(s) to your watch's `GARMIN/NewFiles/` folder over USB.
 
+### 🔄 Or subscribe to an auto-updating calendar (optional)
+Don't want to re-download every time COROS revises your plan? On the preview page, expand **"Or subscribe — an auto-updating calendar"** for a subscription link your calendar polls on its own. When COROS changes the plan, the events update in place (stable UIDs, no duplicates).
+
+- **Apple Calendar** — tap **Add** on the `webcal://` link.
+- **Google / Outlook** — copy the `https://…/feed.ics?…` link and paste it into **Add calendar → From URL**.
+
+> **Trade-offs (why it's optional):** calendar apps refresh subscriptions on *their* schedule — typically a few hours, up to a day, **not instant**. Subscribed events are **read-only** (you can't move or delete individual workouts). Want to edit, or want it now? Use the one-time download instead. The start date is fixed in the subscription link so the plan doesn't slide forward on each refresh.
+
 ---
 
 ## Run it yourself
@@ -155,6 +163,7 @@ One decoder, many exporters — so the calendar and the watch always agree.
 |---|---|
 | ✅ Plan export — `.ics` + `.FIT`, rich detail for run / bike / strength | shipped |
 | ✅ Single workout export — paste a `programId=` link → one `.ics` event / one `.FIT` | shipped |
+| ✅ Auto-updating calendar subscription (`webcal://` / `https` feed, `GET /feed.ics`) — optional; stable UIDs update in place | shipped |
 | 🔬 `.ZWO` / intervals.icu structured export | researched, removed (low value: COROS uses HR/pace, not power) |
 | 🔬 Direct Garmin Connect upload (unofficial API) | researched, not built |
 | ✅ Swim / triathlon / climbing — calendar with full set structure (sets, reps, rest) | shipped (no `.FIT`; use the calendar) |
