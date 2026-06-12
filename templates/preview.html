@@ -1,103 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preview — COROS Plan Exporter</title>
+    <title>Preview Your Plan - COROS to ICS</title>
     <style>
-        :root{
-            --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
-            --accent:#ff9800; --accent-d:#fb8c00; --soft:#f8fafc;
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
         }
-        *{box-sizing:border-box}
-        body{margin:0; background:#fff; color:var(--ink); padding:24px;
-            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
-            line-height:1.5; display:flex; justify-content:center}
-        .container{width:100%; max-width:760px}
-        .brand{font-weight:700; font-size:15px; margin-bottom:20px}
-        .brand b{color:var(--accent)}
-        h1{font-size:22px; letter-spacing:-.02em; margin:0 0 18px}
-        .summary{display:flex; gap:28px; padding:16px 20px; background:var(--soft);
-            border:1px solid var(--line); border-radius:12px; margin-bottom:22px}
-        .summary .k{font-size:12px; color:var(--muted); display:block}
-        .summary .v{font-size:18px; font-weight:700}
-        .list{border:1px solid var(--line); border-radius:12px; overflow:hidden; max-height:460px; overflow-y:auto}
-        table{width:100%; border-collapse:collapse; font-size:14px}
-        thead th{position:sticky; top:0; background:#fff; text-align:left; padding:11px 14px;
-            border-bottom:1px solid var(--line); font-size:12px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.04em}
-        td{padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top}
-        tr:last-child td{border-bottom:0}
-        .week td{background:var(--soft); font-weight:700; font-size:12px; color:var(--muted);
-            text-transform:uppercase; letter-spacing:.05em}
-        .wtitle{font-weight:600}
-        details summary{cursor:pointer; color:var(--accent-d); font-weight:600; font-size:13px}
-        details div{margin-top:8px; white-space:pre-wrap; color:var(--ink); line-height:1.6; font-size:13px}
-        .nodesc{color:#94a3b8; font-size:13px}
-        .downloads{margin-top:22px}
-        .downloads h2{font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin:0 0 10px}
-        .btnrow{display:flex; gap:12px; flex-wrap:wrap}
-        button{flex:1; min-width:200px; border:0; border-radius:11px; padding:14px; font-size:15px; font-weight:700; cursor:pointer; font-family:inherit}
-        .primary{background:var(--accent); color:#fff}
-        .primary:hover{background:var(--accent-d)}
-        .ghost{background:#fff; color:var(--ink); border:1.5px solid var(--line)}
-        .ghost:hover{border-color:var(--accent); color:var(--accent-d)}
-        button:focus-visible{outline:3px solid rgba(255,152,0,.5); outline-offset:2px}
-        form{margin:0}
-        .hint{font-size:12.5px; color:var(--muted); margin:10px 2px 0}
-        .back{display:inline-block; margin-top:18px; color:var(--muted); text-decoration:none; font-size:14px; font-weight:600}
-        .back:hover{color:var(--ink)}
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            max-width: 800px;
+            animation: fade-in .28s ease both;
+        }
+
+        @keyframes fade-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+        h1 { color: var(--text-color); font-size: 1.5rem; text-align: center; margin-top: 0; }
+
+        .summary {
+            background-color: #eff6ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.25rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        .summary-item { text-align: center; }
+        .summary-label { display: block; font-size: 0.875rem; color: #64748b; }
+        .summary-value { font-size: 1.25rem; font-weight: 700; color: var(--primary-color); }
+
+        .controls { display: flex; justify-content: flex-end; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .controls button {
+            background: none; border: 1px solid var(--border-color); color: #475569;
+            font-size: 0.8rem; padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer;
+        }
+        .controls button:hover { background: #f1f5f9; }
+
+        .scroll { max-height: 520px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 8px; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        thead th {
+            position: sticky; top: 0; z-index: 2;
+            text-align: left; padding: 0.7rem 0.9rem; background-color: #f1f5f9;
+            border-bottom: 1px solid var(--border-color); font-weight: 600; font-size: 0.8rem;
+            color: #475569; text-transform: uppercase; letter-spacing: 0.03em;
+        }
+        td { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--border-color); }
+
+        /* Week header (collapsible) */
+        .week-header td { padding: 0; background: #f8fafc; position: sticky; top: 34px; z-index: 1; }
+        .week-toggle {
+            width: 100%; display: flex; align-items: center; gap: 0.5rem;
+            background: #f8fafc; border: 0; cursor: pointer; text-align: left;
+            padding: 0.6rem 0.9rem; font-weight: 700; font-size: 0.8rem; color: #64748b;
+            text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        .week-toggle:hover { background: #eef2f7; }
+        .week-toggle .chev { transition: transform .2s ease; display: inline-block; color: var(--primary-color); }
+        tbody.collapsed .week-toggle .chev { transform: rotate(-90deg); }
+        .wk-count { margin-left: auto; font-weight: 600; color: #94a3b8; text-transform: none; letter-spacing: 0; }
+        tbody.collapsed .wk-row, tbody.collapsed .detail-row { display: none; }
+
+        /* Workout rows */
+        .wk-row.has-detail { cursor: pointer; }
+        .wk-row.has-detail:hover { background: #f8fafc; }
+        .wk-title { font-weight: 500; display: flex; align-items: center; gap: 0.4rem; }
+        .row-chev { color: var(--primary-color); font-size: 0.75rem; transition: transform .2s ease; }
+        .wk-row.expanded .row-chev { transform: rotate(90deg); }
+
+        /* Inline detail (animated) */
+        .detail-row td { padding: 0; border-bottom: 1px solid var(--border-color); }
+        .detail-inner {
+            max-height: 0; overflow: hidden; transition: max-height .28s ease;
+            background: #fbfdff; white-space: pre-wrap; line-height: 1.6; color: var(--text-color);
+        }
+        .detail-row.open .detail-inner { max-height: 900px; }
+        .detail-pad { padding: 0.75rem 1.1rem 1rem; }
+
+        .note { text-align: center; color: #64748b; font-size: 0.875rem; margin: 1rem 0; }
+        .actions { display: flex; gap: 1rem; }
+        button.cta { flex: 1; padding: 0.75rem; border-radius: 6px; font-size: 1rem; font-weight: 500; cursor: pointer; border: none; }
+        .btn-primary { background-color: var(--primary-color); color: white; }
+        .btn-primary:hover { background-color: var(--primary-hover); }
+        .btn-secondary { background-color: #e2e8f0; color: var(--text-color); }
+        .btn-secondary:hover { background-color: #cbd5e1; }
+        button:focus-visible { outline: 3px solid rgba(37,99,235,.45); outline-offset: 2px; }
+
+        @media (prefers-reduced-motion: reduce) { *, .container { animation: none !important; transition: none !important; } }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="brand">COROS Plan <b>Exporter</b></div>
-        <h1>Your plan preview</h1>
+        <h1>Plan Preview</h1>
 
         <div class="summary">
-            <div><span class="k">Start date</span><span class="v">{{ start_date }}</span></div>
-            <div><span class="k">Workouts</span><span class="v">{{ total_workouts }}</span></div>
-            <div><span class="k">Weeks</span><span class="v">{{ total_weeks }}</span></div>
+            <div class="summary-item"><span class="summary-label">Start Date</span><span class="summary-value">{{ start_date }}</span></div>
+            <div class="summary-item"><span class="summary-label">Total Workouts</span><span class="summary-value">{{ total_workouts }}</span></div>
+            <div class="summary-item"><span class="summary-label">Total Weeks</span><span class="summary-value">{{ total_weeks }}</span></div>
         </div>
 
-        <div class="list">
+        <div class="controls">
+            <button type="button" id="expandAll">Expand all</button>
+            <button type="button" id="collapseAll">Collapse all</button>
+        </div>
+
+        <div class="scroll">
             <table>
-                <thead><tr><th>Date</th><th>Day</th><th>Workout</th><th>Details</th></tr></thead>
-                <tbody>
-                    {% for workout in workouts %}
-                    {% if loop.first or workout.week != loop.previtem.week %}
-                    <tr class="week"><td colspan="4">Week {{ workout.week }}</td></tr>
-                    {% endif %}
-                    <tr>
-                        <td>{{ workout.date_str }}</td>
-                        <td>{{ workout.weekday_name }}</td>
-                        <td class="wtitle">{{ workout.title }}</td>
-                        <td>
-                            {% if workout.description %}
-                            <details><summary>View</summary><div>{{ workout.description }}</div></details>
-                            {% else %}<span class="nodesc">—</span>{% endif %}
+                <thead><tr><th>Date</th><th>Day</th><th>Workout</th></tr></thead>
+                {% for week, items in workouts|groupby('week') %}
+                <tbody class="week-group{% if not loop.first %} collapsed{% endif %}">
+                    <tr class="week-header">
+                        <td colspan="3">
+                            <button type="button" class="week-toggle" aria-expanded="{{ 'true' if loop.first else 'false' }}">
+                                <span class="chev">▾</span> Week {{ week }}
+                                <span class="wk-count">{{ items|length }} workout{{ 's' if items|length != 1 }}</span>
+                            </button>
                         </td>
                     </tr>
+                    {% for workout in items %}
+                    <tr class="wk-row{% if workout.description %} has-detail{% endif %}">
+                        <td>{{ workout.date_str }}</td>
+                        <td>{{ workout.weekday_name }}</td>
+                        <td class="wk-title">{{ workout.title }}{% if workout.description %}<span class="row-chev">▸</span>{% endif %}</td>
+                    </tr>
+                    {% if workout.description %}
+                    <tr class="detail-row"><td colspan="3"><div class="detail-inner"><div class="detail-pad">{{ workout.description }}</div></div></td></tr>
+                    {% endif %}
                     {% endfor %}
                 </tbody>
+                {% endfor %}
             </table>
         </div>
 
-        <div class="downloads">
-            <h2>Download</h2>
-            <div class="btnrow">
-                <form action="/generate" method="POST">
-                    <input type="hidden" name="workouts_json" value='{{ workouts_json }}'>
-                    <button type="submit" class="primary">📅 Add to calendar (.ics)</button>
-                </form>
-                <form action="/generate-fit" method="POST">
-                    <input type="hidden" name="plan_url" value='{{ plan_url }}'>
-                    <button type="submit" class="ghost">⌚ Garmin watch (.FIT .zip)</button>
-                </form>
-            </div>
-            <p class="hint">Calendar = reminders in any app. Garmin .FIT = watch-guided workouts — unzip and copy to your watch's <code>GARMIN/NewFiles</code> folder.</p>
-        </div>
+        <p class="note">Tap a week to collapse it, or a workout to see its full breakdown.</p>
 
-        <a class="back" href="/">← Start over</a>
+        <form action="/generate" method="POST" class="actions">
+            <input type="hidden" name="workouts_json" value='{{ workouts_json }}'>
+            <a href="/" style="flex:1; text-decoration: none;"><button type="button" class="cta btn-secondary" style="width:100%">Back</button></a>
+            <button type="submit" class="cta btn-primary">Confirm &amp; Download ICS</button>
+        </form>
+
+        <form action="/generate-fit" method="POST" class="actions" style="margin-top: 10px;">
+            <input type="hidden" name="plan_url" value='{{ plan_url }}'>
+            <button type="submit" class="cta btn-secondary" style="flex:1;">⌚ Download Garmin .FIT (run/bike/strength, .zip)</button>
+        </form>
+        <p style="font-size: 0.8em; color: #888; text-align: center; margin-top: 6px;">
+            Calendar import gives reminders. The Garmin .FIT files are watch-guided workouts —
+            unzip and copy to your watch's <code>GARMIN/NewFiles</code> folder over USB.
+        </p>
     </div>
+
+    <script>
+        function initPreview() {
+            document.querySelectorAll('.week-toggle').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var tb = btn.closest('tbody');
+                    tb.classList.toggle('collapsed');
+                    btn.setAttribute('aria-expanded', tb.classList.contains('collapsed') ? 'false' : 'true');
+                });
+            });
+            document.querySelectorAll('.wk-row.has-detail').forEach(function (row) {
+                row.addEventListener('click', function () {
+                    var d = row.nextElementSibling;
+                    if (d && d.classList.contains('detail-row')) {
+                        d.classList.toggle('open');
+                        row.classList.toggle('expanded');
+                    }
+                });
+            });
+            var ea = document.getElementById('expandAll'), ca = document.getElementById('collapseAll');
+            if (ea) ea.addEventListener('click', function () {
+                document.querySelectorAll('tbody.week-group').forEach(function (t) { t.classList.remove('collapsed'); });
+                document.querySelectorAll('.week-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'true'); });
+            });
+            if (ca) ca.addEventListener('click', function () {
+                document.querySelectorAll('tbody.week-group').forEach(function (t) { t.classList.add('collapsed'); });
+                document.querySelectorAll('.week-toggle').forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+            });
+        }
+        initPreview();
+    </script>
 </body>
+
 </html>
