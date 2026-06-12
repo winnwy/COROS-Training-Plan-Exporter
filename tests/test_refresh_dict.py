@@ -38,6 +38,12 @@ def test_parse_locale_bundle_rejects_empty_object():
         R.parse_locale_bundle("window.en_US={}")
 
 
+def test_parse_locale_bundle_tolerates_sourcemap_trailer():
+    # production .prod.js bundles often append a source-map comment after `};`
+    txt = 'window.en_US={"A":"x","B":"y"};\n//# sourceMappingURL=en-US.prod.js.map\n'
+    assert R.parse_locale_bundle(txt) == {"A": "x", "B": "y"}
+
+
 def test_refresh_shrink_guard_refuses_and_leaves_file(tmp_path):
     p = tmp_path / "dict.json"
     p.write_text(json.dumps({"A": "1", "B": "2", "C": "3"}))
@@ -45,6 +51,18 @@ def test_refresh_shrink_guard_refuses_and_leaves_file(tmp_path):
     with pytest.raises(ValueError):
         R.refresh_dictionary(str(p), fetch=fetch)
     assert json.loads(p.read_text()) == {"A": "1", "B": "2", "C": "3"}  # untouched
+
+
+def test_refresh_near_superset_guard_refuses_locale_swap(tmp_path):
+    # equal-or-larger count but mostly-different keys (e.g. wrong locale served
+    # at the same URL) must be refused — count alone wouldn't catch it.
+    p = tmp_path / "dict.json"
+    p.write_text(json.dumps({f"K{i}": "en" for i in range(100)}))
+    # 100 brand-new keys, all 100 old ones removed -> way over the 10% threshold
+    swap = "window.en_US={" + ",".join(f'"Z{i}":"zh"' for i in range(100)) + "}"
+    with pytest.raises(ValueError, match="removed"):
+        R.refresh_dictionary(str(p), fetch=lambda url: swap)
+    assert "K0" in json.loads(p.read_text())   # untouched
 
 
 def test_refresh_writes_superset(tmp_path):

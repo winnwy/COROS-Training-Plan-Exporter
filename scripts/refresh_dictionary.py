@@ -25,8 +25,14 @@ import argparse
 import json
 import os
 import re
+import tempfile
 
 import requests
+
+# Refuse a write that drops more than this fraction of existing keys — guards
+# against a wrong-locale/poisoned fetch of similar SIZE silently replacing the
+# whole dictionary (the count check alone wouldn't catch en-US -> zh-CN).
+MAX_REMOVED_FRACTION = 0.10
 
 LOCALE_URL = "https://static.coros.com/locale/coros-traininghub-v2/en-US.prod.js"
 DICT_PATH = os.path.join(os.path.dirname(__file__), "..", "coros_dictionary.json")
@@ -38,12 +44,19 @@ _PREFIX = re.compile(r"^\s*window\.\w+\s*=\s*")
 
 def parse_locale_bundle(text: str) -> dict:
     """Parse `window.<var> = { ... };` into a dict. Raises ValueError if the
-    text isn't the expected assignment or the body isn't a JSON object."""
+    text isn't the expected assignment or the body isn't a JSON object.
+
+    Uses raw_decode so a trailing `;` or `//# sourceMappingURL=...` comment that
+    production bundles often append after the object doesn't break parsing —
+    raw_decode reads the first JSON value and ignores anything after it."""
     m = _PREFIX.match(text)
     if not m:
         raise ValueError("not a COROS locale bundle (missing 'window.<var> =' prefix)")
-    body = text[m.end():].strip().rstrip(";").strip()
-    obj = json.loads(body)            # raises on malformed JSON
+    body = text[m.end():].strip()
+    try:
+        obj, _ = json.JSONDecoder().raw_decode(body)   # ignores trailing ; / source-map comment
+    except json.JSONDecodeError as e:
+        raise ValueError(f"locale bundle body is not valid JSON: {e}") from e
     if not isinstance(obj, dict) or not obj:
         raise ValueError("locale bundle did not parse to a non-empty object")
     return obj
@@ -80,11 +93,30 @@ def refresh_dictionary(dict_path: str = DICT_PATH, url: str = LOCALE_URL,
         raise ValueError(
             f"refusing to overwrite: parsed {len(new)} entries < current "
             f"{len(old)} (likely a bad/short fetch). File left untouched.")
+    if old and len(removed) > MAX_REMOVED_FRACTION * len(old):
+        raise ValueError(
+            f"refusing to overwrite: {len(removed)} of {len(old)} keys would be "
+            f"removed (> {MAX_REMOVED_FRACTION:.0%}). The live bundle should be a "
+            f"near-superset — this looks like the wrong locale or a bad fetch. "
+            f"File left untouched.")
 
     written = False
     if not dry_run:
-        with open(dict_path, "w", encoding="utf-8") as f:
-            json.dump(new, f, ensure_ascii=False, sort_keys=True, indent=2)
+        # Atomic write: a kill / disk-full mid-write must not truncate the
+        # committed dictionary (load_existing would then swallow the corruption
+        # to {} and disable the shrink guard on the next run).
+        fd, tmp = tempfile.mkstemp(dir=os.path.dirname(os.path.abspath(dict_path)),
+                                   prefix=".dict.", suffix=".tmp")
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                json.dump(new, f, ensure_ascii=False, sort_keys=True, indent=2)
+            os.replace(tmp, dict_path)
+        except BaseException:
+            try:
+                os.unlink(tmp)
+            except OSError:
+                pass
+            raise
         written = True
 
     return {"old": len(old), "new": len(new),

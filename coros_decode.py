@@ -220,13 +220,14 @@ def _blocks_from(exercises: list, translate, sport: str = "") -> list:
 
 
 # COROS shortcode keys look like W30291 / T1120 / TD1030 / P12999 / S4274:
-# 1–4 leading capitals then digits. Human-authored names ("4 mile with strides",
-# "Marathon!", "Full Body - W1") never match — they have spaces/lowercase/leading
-# digits. Used to tell an UNTRANSLATED CODE from an already-readable name.
-_SHORTCODE_RE = re.compile(r"^[A-Z]{1,4}\d{2,}$")
+# 1–4 leading capitals then 3+ digits. Real COROS name-codes carry 4–5 digits, so
+# requiring 3+ keeps human-authored names that merely look codish — "EMOM12",
+# "WOD21", "Z30" (2 digits), "4 mile with strides", "Marathon!" — from matching.
+# Used to tell an UNTRANSLATED CODE from an already-readable name.
+_SHORTCODE_RE = re.compile(r"^[A-Z]{1,4}\d{3,}$")
 
 
-def _workout_title(name_key: str, translate, sport: str, idx: int) -> str:
+def _workout_title(name_key, translate, sport: str, idx: int) -> str:
     """Resolve a workout title, with a graceful fallback for untranslated codes.
 
     `translate_key` returns the key unchanged on a dictionary miss, so
@@ -237,12 +238,20 @@ def _workout_title(name_key: str, translate, sport: str, idx: int) -> str:
     AND shortcode-shaped (e.g. "W30291" — the COROS locale dictionary drifts and
     newer name-codes lag behind our bundle). An unresolved but human-readable
     name is already good; keep it.
+
+    Defensive: COROS sends `name` as a string, but coerce non-strings (a stray
+    int/None on malformed data must not crash the whole plan decode), and match
+    the shortcode test against the stripped key — COROS data carries codes with
+    trailing whitespace (e.g. "E11002\\xa0"), which would otherwise leak raw.
     """
+    if not isinstance(name_key, str):
+        name_key = ""
     title = translate(name_key)
     if title and title != name_key:
         return title                                   # resolved from dictionary
-    if name_key and not _SHORTCODE_RE.match(name_key):
-        return name_key                                # unresolved but already readable
+    key = name_key.strip()
+    if key and not _SHORTCODE_RE.match(key):
+        return key                                     # unresolved but already readable
     return f"{sport} Workout" if sport else f"Workout {idx + 1}"   # raw code / empty -> fallback
 
 
