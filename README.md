@@ -19,7 +19,7 @@ COROS publishes its plans through a public API, but the workout details are stor
 ### 📅 Calendar export (`.ics`) — the main feature
 Paste a COROS plan URL and download an `.ics` you can import into Google Calendar, Apple Calendar, Outlook, etc. One all-day event per workout, dated to your start day (aligned to the plan's first weekday).
 
-For **run and bike** plans, each event now carries the **full decoded workout** — warm-up, every interval, and cool-down, with targets:
+For **run, bike, and strength** plans, each event now carries the **full decoded workout** — warm-up, every interval or movement, and cool-down, with targets:
 
 ```
 Threshold                                    (Tue 24 Jun)
@@ -37,7 +37,7 @@ Workout:
  • Cool Down — open
 ```
 
-Intervals are shown as repeats (`3× (...)`), and HR / pace targets are decoded as `%`-of-threshold ranges. Other sports still export, with the basic summary breakdown.
+Intervals are shown as repeats (`3× (...)`), and HR / pace targets are decoded as `%`-of-threshold ranges. **Strength** plans render each movement as `sets×reps @ weight` (or `Ns hold`), with bodyweight moves omitting the load — e.g. `Deadlifts with Bands — 3×10 @ 6.8 kg (rest 60s)`. Swim / triathlon / climbing plans export at overview level for now.
 
 ### 🏃 Structured workout export (experimental — POC)
 A `.ics` event is just a reminder. To get a **watch-guided** workout (the watch steps you through the intervals), use the proof-of-concept exporter in [`poc/`](poc/): it converts a run/bike plan to Zwift **`.ZWO`** files and can upload them to **intervals.icu** (which forwards to Garmin/Zwift). See [`poc/README.md`](poc/README.md). This is research-stage and opt-in, not wired into the web app.
@@ -114,10 +114,10 @@ COROS plan URL
 
 ## Status
 
-- ✅ **Shipped:** `.ics` export with rich run/bike detail (steps, intervals, HR/pace % targets).
+- ✅ **Shipped:** `.ics` export with rich detail for **run, bike, and strength** (steps/movements, intervals, sets×reps, HR/pace % targets, weight).
 - 🧪 **Experimental:** structured export to `.ZWO` / intervals.icu (run/bike, POC).
 - 🔬 **Researched, not built:** Garmin `.FIT` files and direct Garmin upload — see [`docs/BUILD_PLAN.md`](docs/BUILD_PLAN.md) §4.
-- 🚧 **Deferred:** rich detail for strength / swim / triathlon plans (strength plans currently export empty — tracked in [`docs/FOLLOWUPS.md`](docs/FOLLOWUPS.md)).
+- 🚧 **Basic only:** swim / triathlon / climbing plans export at overview level (no per-step detail yet) — tracked in [`docs/FOLLOWUPS.md`](docs/FOLLOWUPS.md).
 
 ## License
 
