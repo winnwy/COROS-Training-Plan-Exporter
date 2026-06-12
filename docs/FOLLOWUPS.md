@@ -3,6 +3,27 @@
 Running log of things found but deliberately deferred. Each entry: severity,
 where it lives, what to do. Tick when fixed.
 
+## Calendar subscription feed (2026-06-13, branch `feat/calendar-subscription`)
+
+Shipped the optional auto-updating calendar subscription (`GET /feed.ics`,
+webcal:// + https feed, subscribe UI on the preview page). Deferred during /ship:
+
+- [ ] **⚠️ Rate-limit / cache the `/feed.ics` endpoint (deferred by decision).**
+  It's unauthenticated and triggers an outbound COROS fetch (25s timeout) on every
+  poll — a DoS/amplification surface, though the same shape already exists for `/`
+  and `/generate-fit`. `Cache-Control: private, max-age=3600` curbs well-behaved
+  clients but not an attacker. Proper fix on Vercel serverless needs a shared store
+  (Vercel KV / Upstash) since an in-memory limiter doesn't survive across
+  invocations — that's why it's deferred, not a 15-min job. `app.py` `feed()`.
+- [ ] **UID stability on re-poll depends on COROS sending `idInPlan`.** Stable
+  per-event UIDs are what make a re-poll "update in place." When `idInPlan` is
+  present (the normal case) keys are stable. The positional fallback in
+  `convert_to_ics.py` (`d{dayNo}` + within-day counter by iteration order) would
+  reshuffle/duplicate events across polls if COROS ever returns same-day entities
+  without `idInPlan` or reorders them. Harmless for one-shot downloads; load-bearing
+  for the live feed. Action: confirm real COROS payloads always carry `idInPlan`, or
+  derive the fallback key from stable content (title+dayNo) instead of position.
+
 ## From `/verify` of the rich `.ics` change (2026-06-12, branch `feat/unified-decoder`)
 
 Verdict was PASS — rich run/bike detail works end-to-end at both the CLI and the

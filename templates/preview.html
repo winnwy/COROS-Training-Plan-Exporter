@@ -108,6 +108,18 @@
         .btn-secondary:hover { background-color: #cbd5e1; }
         button:focus-visible { outline: 3px solid rgba(37,99,235,.45); outline-offset: 2px; }
 
+        .subscribe { margin-top: 14px; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0 0.9rem; }
+        .subscribe[open] { padding-bottom: 0.9rem; }
+        .subscribe > summary { cursor: pointer; padding: 0.7rem 0; font-size: 0.9rem; color: #475569; font-weight: 500; list-style: none; }
+        .subscribe > summary::-webkit-details-marker { display: none; }
+        .subscribe > summary::before { content: '▸ '; color: var(--primary-color); }
+        .subscribe[open] > summary::before { content: '▾ '; }
+        .sub-note { font-size: 0.8rem; color: #64748b; margin: 0 0 0.7rem; line-height: 1.45; }
+        .sub-row { display: flex; gap: 0.5rem; }
+        .sub-row input { flex: 1; min-width: 0; padding: 0.55rem 0.6rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.8rem; color: #334155; background: #f8fafc; }
+        #copyFeed { flex: 0 0 auto; padding: 0.55rem 0.9rem; }
+        #feedAdd { display: inline-block; margin-top: 0.6rem; text-decoration: none; text-align: center; }
+
         @media (prefers-reduced-motion: reduce) { *, .container { animation: none !important; transition: none !important; } }
     </style>
 </head>
@@ -171,6 +183,25 @@
             Calendar import gives reminders. The Garmin .FIT files are watch-guided workouts —
             unzip and copy to your watch's <code>GARMIN/NewFiles</code> folder over USB.
         </p>
+
+        <details class="subscribe">
+            <summary>Or subscribe — an auto-updating calendar (optional)</summary>
+            <p class="sub-note">
+                Instead of a one-time download, subscribe and your calendar app re-checks this
+                link on its own schedule (typically a few hours, up to a day — <strong>not instant</strong>)
+                and updates the plan in place. Subscribed events are read-only — you can't move or delete
+                individual workouts. Prefer editing? Use the one-time download above.
+            </p>
+            <div class="sub-row">
+                <input type="text" id="feedUrl" readonly aria-label="Calendar subscription link">
+                <button type="button" id="copyFeed" class="cta btn-secondary">Copy</button>
+            </div>
+            <a id="feedAdd" href="#" class="cta btn-primary">Add to Apple Calendar</a>
+            <p class="sub-note" style="margin: 0.6rem 0 0;">
+                <strong>Apple:</strong> tap “Add”. &nbsp;<strong>Google / Outlook:</strong> copy the link and paste it
+                into “Add calendar → From URL”.
+            </p>
+        </details>
     </div>
 
     <script>
@@ -202,6 +233,29 @@
             });
         }
         initPreview();
+
+        // Build the (stateless) subscription URLs from the current host so they work
+        // behind the Vercel proxy. The https URL is paste-able into Google/Outlook;
+        // the webcal:// URL is one-click on Apple. Start date is baked in so the
+        // plan doesn't slide forward each time the calendar app refreshes.
+        (function () {
+            var planUrl = {{ plan_url | tojson }};
+            var startDate = {{ start_date | tojson }};
+            var qs = '/feed.ics?src=' + encodeURIComponent(planUrl) + '&start=' + encodeURIComponent(startDate);
+            var httpsUrl = window.location.origin + qs;
+            var webcalUrl = 'webcal://' + window.location.host + qs;
+            var input = document.getElementById('feedUrl');
+            var add = document.getElementById('feedAdd');
+            var copy = document.getElementById('copyFeed');
+            if (input) input.value = httpsUrl;
+            if (add) add.href = webcalUrl;
+            if (copy) copy.addEventListener('click', function () {
+                navigator.clipboard.writeText(httpsUrl).then(function () {
+                    copy.textContent = 'Copied';
+                    setTimeout(function () { copy.textContent = 'Copy'; }, 1500);
+                });
+            });
+        })();
     </script>
 </body>
 
