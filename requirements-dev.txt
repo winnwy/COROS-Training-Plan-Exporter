@@ -1,0 +1,4 @@
+# Dev/test dependencies. Installs the runtime requirements too, so CI
+# (and contributors) get one install step: `pip install -r requirements-dev.txt`.
+-r requirements.txt
+pytest>=8

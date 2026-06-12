@@ -1,5 +1,7 @@
 # COROS Training Plan Exporter
 
+[![CI](https://github.com/winnwy/COROS-Training-Plan-Exporter/actions/workflows/ci.yml/badge.svg)](https://github.com/winnwy/COROS-Training-Plan-Exporter/actions/workflows/ci.yml)
+
 **Get your COROS training plan — or a single workout — out of the COROS app, into your calendar or onto your Garmin watch.**
 
 COROS plans and workouts live inside the COROS app. This tool reads one from its public link, decodes it into plain English, and hands it back to you as a **calendar you can subscribe to** or **structured workouts your watch can guide you through**.
@@ -146,7 +148,7 @@ One decoder, many exporters — so the calendar and the watch always agree.
 | `scripts/refresh_dictionary.py` | Re-pull the dictionary from COROS's locale bundle (run when codes show as raw `W302xx`) |
 | `templates/` | Web frontend (`index.html`, `preview.html`) |
 | `poc/` | `.ZWO` / intervals.icu proof of concept |
-| `tests/` | pytest + committed raw API fixtures (`python -m pytest tests/`) |
+| `tests/` | pytest + committed raw API fixtures. Run: `pip install -r requirements-dev.txt && python -m pytest tests/` (CI runs this on every push/PR) |
 | `docs/` | [Build plan](docs/BUILD_PLAN.md) · [full site map](docs/coros_map/COROS_MAP.md) · [follow-ups](docs/FOLLOWUPS.md) |
 
 ## Status
