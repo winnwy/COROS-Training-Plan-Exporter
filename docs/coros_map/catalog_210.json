@@ -1,0 +1,3781 @@
+[
+ {
+  "id": "478100463168962560",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "strength"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Foundational Strength Training",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478100488133460068",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "strength"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Metabolic Strength Training",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478100495112781923",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "strength",
+   "station"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Specific Strength Training",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478100503434281060",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "running",
+   "station"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Mixed Cardio Training",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478100541552115811",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness",
+   "run"
+  ],
+  "wt": [
+   "running",
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Aerobic Interval Running",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478100553094840320",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness",
+   "run"
+  ],
+  "wt": [
+   "running",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Anaerobic Interval Running",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478100967022313472",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "running",
+   "station"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Compromised Running Enhancement",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478100590944239616",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "station",
+   "running"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Station Enhancement",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478104124360146944",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "running",
+   "station"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Doubles Training",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478102494688493568",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "station"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Burpee Broad Jumps",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478104132144775268",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "station"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Farmer's Carry",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "478104138855661568",
+  "cat": "workout",
+  "sport": [
+   "hybrid_fitness"
+  ],
+  "wt": [
+   "station"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Lu Peng Hybrid Fitness - Wall Balls",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "476133458610143331",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "ftp"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "title": "20 Minute All-Out Ride",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "474335324133310764",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Ingebrigtsen Strength Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 0
+ },
+ {
+  "id": "457982185383837697",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Interval Run",
+  "author": "coros",
+  "region": 1,
+  "dl": 14852
+ },
+ {
+  "id": "462504388676730880",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "Advanced Half-Marathon Training Plan - Pace",
+  "author": "coros",
+  "region": 1,
+  "dl": 7964
+ },
+ {
+  "id": "451122915111518211",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Track Pyramid - Short Distance",
+  "author": "coros",
+  "region": 1,
+  "dl": 3922
+ },
+ {
+  "id": "462504359148830720",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "Intermediate Half-Marathon Training Plan - Pace",
+  "author": "coros",
+  "region": 1,
+  "dl": 9678
+ },
+ {
+  "id": "451122953766223897",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Track Pyramid - Middle Distance",
+  "author": "coros",
+  "region": 1,
+  "dl": 4255
+ },
+ {
+  "id": "462503693697335296",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "Beginner Half-Marathon Training Plan - Pace",
+  "author": "coros",
+  "region": 1,
+  "dl": 11444
+ },
+ {
+  "id": "454903976977154048",
+  "cat": "workout",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Kilian's Favorite Uphill Workout",
+  "author": "kilian_jornet",
+  "region": 1,
+  "dl": 5035
+ },
+ {
+  "id": "448633401730318357",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "Half Marathon HR Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 4388
+ },
+ {
+  "id": "458286934811394050",
+  "cat": "workout",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [
+   "base_workout",
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Hill Intervals",
+  "author": "coros",
+  "region": 1,
+  "dl": 10273
+ },
+ {
+  "id": "453112661276803072",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "Beginner Half-Marathon Training Plan - HR",
+  "author": "coros",
+  "region": 1,
+  "dl": 10752
+ },
+ {
+  "id": "464137318322847744",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Hannah Otto Sharp Efforts Cycling Workout",
+  "author": "hannah_otto",
+  "region": 1,
+  "dl": 1510
+ },
+ {
+  "id": "453202908203368463",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "Intermediate Half-Marathon Training Plan - HR",
+  "author": "coros",
+  "region": 1,
+  "dl": 9357
+ },
+ {
+  "id": "464137448245608448",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Hannah Otto's Cycling Confidence Builder",
+  "author": "hannah_otto",
+  "region": 1,
+  "dl": 2390
+ },
+ {
+  "id": "447351693032734720",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "1:40 Half-Marathon Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 995
+ },
+ {
+  "id": "447353182581080064",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate"
+  ],
+  "title": "MAF180",
+  "author": "coros",
+  "region": 2,
+  "dl": 1710
+ },
+ {
+  "id": "447352152057364481",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "1:50 Half-Marathon Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 655
+ },
+ {
+  "id": "447353176138629120",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Long Run",
+  "author": "coros",
+  "region": 2,
+  "dl": 1543
+ },
+ {
+  "id": "462667235046113280",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "Sub-2:00 Half Marathon Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 11500
+ },
+ {
+  "id": "448633548029739008",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "30 Minute Base With Pick Ups",
+  "author": "coros",
+  "region": 1,
+  "dl": 3415
+ },
+ {
+  "id": "447352284932915200",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "2:00 Half-Marathon Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 518
+ },
+ {
+  "id": "448633553664786432",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "45 Minute Base With Pick Ups",
+  "author": "coros",
+  "region": 1,
+  "dl": 3125
+ },
+ {
+  "id": "447352732951691264",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "Half-Marathon Finish Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 602
+ },
+ {
+  "id": "448633560377769984",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "1 Hour Base With Pick Ups",
+  "author": "coros",
+  "region": 1,
+  "dl": 4187
+ },
+ {
+  "id": "448053418198745094",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "2:45-3:00 Marathon Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 2717
+ },
+ {
+  "id": "448633609266577408",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Core Strength Routine",
+  "author": "sage_canaday",
+  "region": 1,
+  "dl": 1642
+ },
+ {
+  "id": "448565565710319616",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "Sub-3:15 Marathon Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 1932
+ },
+ {
+  "id": "448633626144456704",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Sally McRae's Power 5 Workout",
+  "author": "sally_mcrae",
+  "region": 1,
+  "dl": 1948
+ },
+ {
+  "id": "448035135596707840",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "3:15-3:35 12-Week Marathon Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3505
+ },
+ {
+  "id": "462693770696245248",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Alex Yee Triathlon Run Workout",
+  "author": "alex_yee",
+  "region": 1,
+  "dl": 1564
+ },
+ {
+  "id": "447892242034769926",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "4:00-4:30 12-Week Marathon Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 2856
+ },
+ {
+  "id": "462693939542147072",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "ftp",
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Alex Yee Triathlon Bike Workout",
+  "author": "alex_yee",
+  "region": 1,
+  "dl": 1354
+ },
+ {
+  "id": "453065796204281857",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "16-Week Beginner Marathon Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 5419
+ },
+ {
+  "id": "462694487418912769",
+  "cat": "workout",
+  "sport": [
+   "swimming"
+  ],
+  "wt": [
+   "base_workout",
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Alex Yee Triathlon Swim Workout",
+  "author": "alex_yee",
+  "region": 1,
+  "dl": 2869
+ },
+ {
+  "id": "453068266884218881",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "16-Week Intermediate Marathon Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 6452
+ },
+ {
+  "id": "447353198687207424",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Threshold Intervals",
+  "author": "coros",
+  "region": 2,
+  "dl": 974
+ },
+ {
+  "id": "453068526998175745",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "Advanced Marathon Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 8048
+ },
+ {
+  "id": "445293177474301952",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Elite Threshold Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 2230
+ },
+ {
+  "id": "453063385117016064",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "Beginner Marathon Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3907
+ },
+ {
+  "id": "448633484135809032",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "threshold",
+   "vo2max",
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Anaerobic into Threshold Development",
+  "author": "coros",
+  "region": 1,
+  "dl": 4355
+ },
+ {
+  "id": "453063389411983360",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "20-Week Intermediate Marathon Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3658
+ },
+ {
+  "id": "462316534591832064",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "vo2max",
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "2min VO2 Max Ride - Beginner",
+  "author": "coros",
+  "region": 1,
+  "dl": 704
+ },
+ {
+  "id": "453064003055435784",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "Advanced Marathon Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3868
+ },
+ {
+  "id": "460117229741195264",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "4min VO2 Max Ride - Intermediate",
+  "author": "coros",
+  "region": 1,
+  "dl": 3103
+ },
+ {
+  "id": "445788191254036481",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "12-Week Molly Seidel Marathon Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 1910
+ },
+ {
+  "id": "460078145538801664",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "6min VO2 Max Ride - Advanced",
+  "author": "coros",
+  "region": 1,
+  "dl": 388
+ },
+ {
+  "id": "447304491073716224",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "3:30 Marathon plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 1135
+ },
+ {
+  "id": "460078048633602048",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "1-minute Intervals- Beginner",
+  "author": "coros",
+  "region": 1,
+  "dl": 509
+ },
+ {
+  "id": "447351626729177088",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "4:00 Marathon plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 377
+ },
+ {
+  "id": "447351626729177401",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "4:30 Marathon plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 201
+ },
+ {
+  "id": "460114756108468233",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "1 min and 2 min Intervals- Advanced",
+  "author": "coros",
+  "region": 1,
+  "dl": 308
+ },
+ {
+  "id": "447351629145096492",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "marathon"
+  ],
+  "diff": [],
+  "title": "5:00 Marathon Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 187
+ },
+ {
+  "id": "453926668980109331",
+  "cat": "workout",
+  "sport": [
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "1 Minute Intervals+ Hills (Beginner)",
+  "author": "coros",
+  "region": 1,
+  "dl": 1068
+ },
+ {
+  "id": "450501329996136460",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "10k"
+  ],
+  "diff": [],
+  "title": "Introduction to 10k Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 9004
+ },
+ {
+  "id": "453926715956314129",
+  "cat": "workout",
+  "sport": [
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "1 Minute Intervals+Hills (Intermediate/Advanced)",
+  "author": "coros",
+  "region": 1,
+  "dl": 1473
+ },
+ {
+  "id": "459397223831224320",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "10k"
+  ],
+  "diff": [],
+  "title": "10k Beginner Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 7766
+ },
+ {
+  "id": "455039942488408064",
+  "cat": "workout",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "2 Minute Hill Intervals",
+  "author": "coros",
+  "region": 1,
+  "dl": 1691
+ },
+ {
+  "id": "459397241011093504",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "10k"
+  ],
+  "diff": [],
+  "title": "10k Intermediate/Advanced Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 12836
+ },
+ {
+  "id": "460231167707365377",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "10-Minute Core Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 4226
+ },
+ {
+  "id": "447275563126800384",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "10k"
+  ],
+  "diff": [],
+  "title": "Sub-45min 10K Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 1088
+ },
+ {
+  "id": "458126689829044224",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Core Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 15660
+ },
+ {
+  "id": "447351017917563065",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "10k"
+  ],
+  "diff": [],
+  "title": "Sub-50min 10K Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 631
+ },
+ {
+  "id": "427957895708196864",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Daily Core for Runners",
+  "author": "coros",
+  "region": 2,
+  "dl": 1338
+ },
+ {
+  "id": "447351233202798764",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "10k"
+  ],
+  "diff": [],
+  "title": "Sub-55min 10K Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 335
+ },
+ {
+  "id": "455504209931059208",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Mobility and Core Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 3610
+ },
+ {
+  "id": "447351442582454441",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "10k"
+  ],
+  "diff": [],
+  "title": "Sub-60min 10K Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 446
+ },
+ {
+  "id": "454389909657141254",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Core Strength Routine",
+  "author": "emelie_forsberg",
+  "region": 1,
+  "dl": 2934
+ },
+ {
+  "id": "452011227087028225",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "10k"
+  ],
+  "diff": [],
+  "title": "Sub-70min 10K Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 753
+ },
+ {
+  "id": "446342566026330112",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "3 Minute Fartlek Workout",
+  "author": "reed_fischer",
+  "region": 1,
+  "dl": 380
+ },
+ {
+  "id": "448633521452531714",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "30 Minute Fartlek",
+  "author": "coros",
+  "region": 1,
+  "dl": 3092
+ },
+ {
+  "id": "450500484156014604",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k"
+  ],
+  "diff": [],
+  "title": "Introduction to 5k Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 6013
+ },
+ {
+  "id": "447353186070740992",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Fartlek Run",
+  "author": "coros",
+  "region": 2,
+  "dl": 413
+ },
+ {
+  "id": "459092752525869056",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k"
+  ],
+  "diff": [],
+  "title": "5k Beginner Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 5987
+ },
+ {
+  "id": "448633514469015554",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Short Interval Fartlek",
+  "author": "coros",
+  "region": 1,
+  "dl": 2335
+ },
+ {
+  "id": "459093090756640768",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k"
+  ],
+  "diff": [],
+  "title": "5k Intermediate/Advanced Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 9157
+ },
+ {
+  "id": "448633529769836549",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "tempo",
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Fartlek Training for Marathon",
+  "author": "coros",
+  "region": 1,
+  "dl": 3154
+ },
+ {
+  "id": "448633322541858816",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k"
+  ],
+  "diff": [],
+  "title": "Sub-25 5K Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 4871
+ },
+ {
+  "id": "458932405292679168",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "5k Pace Intervals- Beginner",
+  "author": "coros",
+  "region": 1,
+  "dl": 9327
+ },
+ {
+  "id": "452011004556132357",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k"
+  ],
+  "diff": [],
+  "title": "Sub-25min 5K Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 423
+ },
+ {
+  "id": "458931328595968000",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "5k Pace Intervals- Intermediate/Adv",
+  "author": "coros",
+  "region": 1,
+  "dl": 11515
+ },
+ {
+  "id": "452010405676630016",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k"
+  ],
+  "diff": [],
+  "title": "Sub-30min 5K Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 262
+ },
+ {
+  "id": "444969090782773248",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "5k Speed Improvement",
+  "author": "coros",
+  "region": 1,
+  "dl": 4386
+ },
+ {
+  "id": "452010861209501696",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k"
+  ],
+  "diff": [],
+  "title": "Sub-35min 5K Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 166
+ },
+ {
+  "id": "460077481161048064",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "60-minute Tempo Ride - Beginner",
+  "author": "coros",
+  "region": 1,
+  "dl": 691
+ },
+ {
+  "id": "452452611480797184",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k"
+  ],
+  "diff": [],
+  "title": "21-Day Habit-Building Plan",
+  "author": "coros",
+  "region": 2,
+  "dl": 1084
+ },
+ {
+  "id": "460092860633628672",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "90-Minute Tempo Ride - Intermediate",
+  "author": "coros",
+  "region": 1,
+  "dl": 1739
+ },
+ {
+  "id": "455706700727631876",
+  "cat": "plan",
+  "sport": [
+   "run",
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k",
+   "10k",
+   "half_marathon",
+   "marathon",
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "Strength Training Plan for Injury Prevention",
+  "author": "coros",
+  "region": 1,
+  "dl": 4239
+ },
+ {
+  "id": "460092865733902339",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "120-Minute Tempo Ride - Advanced",
+  "author": "coros",
+  "region": 1,
+  "dl": 316
+ },
+ {
+  "id": "440284656659775494",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "5k",
+   "10k",
+   "half_marathon",
+   "marathon"
+  ],
+  "diff": [],
+  "title": "10-Week Return to Running Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 1604
+ },
+ {
+  "id": "460077709062750208",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "ftp"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "FTP Intervals- Beginner",
+  "author": "coros",
+  "region": 1,
+  "dl": 533
+ },
+ {
+  "id": "456361811820855296",
+  "cat": "plan",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "Intermediate Mountain Training Plan",
+  "author": "kilian_jornet",
+  "region": 1,
+  "dl": 871
+ },
+ {
+  "id": "460092878350368777",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "ftp"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "FTP Intervals- Intermediate",
+  "author": "coros",
+  "region": 1,
+  "dl": 402
+ },
+ {
+  "id": "456344420156096512",
+  "cat": "plan",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "Advanced Mountain Training Plan",
+  "author": "kilian_jornet",
+  "region": 1,
+  "dl": 369
+ },
+ {
+  "id": "460092884255948800",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "ftp"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "FTP Intervals- Advanced",
+  "author": "coros",
+  "region": 1,
+  "dl": 372
+ },
+ {
+  "id": "444207568924098560",
+  "cat": "plan",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "6-Week Mountain Running Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 1793
+ },
+ {
+  "id": "462212801199521792",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Broken Tempo - Beginner",
+  "author": "coros",
+  "region": 1,
+  "dl": 263
+ },
+ {
+  "id": "453069617114562560",
+  "cat": "plan",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "half_marathon"
+  ],
+  "diff": [],
+  "title": "10-Week Half-Marathon Mountain Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3316
+ },
+ {
+  "id": "462212838780485632",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Broken Tempo - Advanced",
+  "author": "coros",
+  "region": 1,
+  "dl": 184
+ },
+ {
+  "id": "453114052846206977",
+  "cat": "plan",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "10-Week 50k Mountain Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3919
+ },
+ {
+  "id": "462212829653680128",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Broken Tempo - Intermediate",
+  "author": "coros",
+  "region": 1,
+  "dl": 335
+ },
+ {
+  "id": "448633419751145473",
+  "cat": "plan",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "50k Trail Run Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3407
+ },
+ {
+  "id": "448633499705065514",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "800m Speed Workout",
+  "author": "ian_sharman",
+  "region": 1,
+  "dl": 214
+ },
+ {
+  "id": "450446477626621972",
+  "cat": "plan",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "100K Ultra Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3028
+ },
+ {
+  "id": "448633507758129152",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Tabata Running Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 2856
+ },
+ {
+  "id": "448633444178771983",
+  "cat": "plan",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [],
+  "pt": [
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "12-Week 100 Mile Ultra Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 1605
+ },
+ {
+  "id": "460414053861474305",
+  "cat": "workout",
+  "sport": [
+   "bouldering"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Power Endurance",
+  "author": "babsi_zangerl",
+  "region": 1,
+  "dl": 368
+ },
+ {
+  "id": "459583249604329472",
+  "cat": "plan",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [],
+  "pt": [
+   "ultra_distance"
+  ],
+  "diff": [],
+  "title": "100-Miles Cycling Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 1235
+ },
+ {
+  "id": "460417610094395392",
+  "cat": "workout",
+  "sport": [
+   "bouldering"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Bouldering 4x4",
+  "author": "jacopo_larcher",
+  "region": 1,
+  "dl": 273
+ },
+ {
+  "id": "448633358512209920",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "base_plan"
+  ],
+  "diff": [],
+  "title": "Beginner Runner Base Plan (Metric)",
+  "author": "coros",
+  "region": 1,
+  "dl": 1676
+ },
+ {
+  "id": "460414072115085312",
+  "cat": "workout",
+  "sport": [
+   "bouldering"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Bouldering Competition Simulation",
+  "author": "stefano_ghisolfi",
+  "region": 1,
+  "dl": 249
+ },
+ {
+  "id": "453095734273818624",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "base_plan"
+  ],
+  "diff": [],
+  "title": "Beginner Base Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 2214
+ },
+ {
+  "id": "460417603920379904",
+  "cat": "workout",
+  "sport": [
+   "bouldering"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Bouldering Pyramid",
+  "author": "jacopo_larcher",
+  "region": 1,
+  "dl": 32
+ },
+ {
+  "id": "453139240681914369",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "base_plan"
+  ],
+  "diff": [],
+  "title": "Intermediate Base Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 4248
+ },
+ {
+  "id": "426778213681905668",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Stride Development",
+  "author": "coros",
+  "region": 2,
+  "dl": 493
+ },
+ {
+  "id": "448633410322350080",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "speed_development"
+  ],
+  "diff": [],
+  "title": "Run Speed Development",
+  "author": "coros",
+  "region": 1,
+  "dl": 2587
+ },
+ {
+  "id": "455080995128000513",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate"
+  ],
+  "title": "Cadence Drills",
+  "author": "coros",
+  "region": 1,
+  "dl": 2786
+ },
+ {
+  "id": "448633428842299392",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "speed_development"
+  ],
+  "diff": [],
+  "title": "Threshold Development",
+  "author": "coros",
+  "region": 1,
+  "dl": 720
+ },
+ {
+  "id": "426778098525192198",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Cadence Training",
+  "author": "coros",
+  "region": 2,
+  "dl": 315
+ },
+ {
+  "id": "457010345440100360",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "base_plan"
+  ],
+  "diff": [],
+  "title": "Cross Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 6086
+ },
+ {
+  "id": "448633436085862409",
+  "cat": "plan",
+  "sport": [
+   "run"
+  ],
+  "wt": [],
+  "pt": [
+   "base_plan"
+  ],
+  "diff": [],
+  "title": "8-Week Off-Season Training Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 2764
+ },
+ {
+  "id": "460078200031199232",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Sprint Intervals- Beginner",
+  "author": "coros",
+  "region": 1,
+  "dl": 206
+ },
+ {
+  "id": "460090291437879296",
+  "cat": "plan",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [],
+  "pt": [
+   "base_plan"
+  ],
+  "diff": [],
+  "title": "Beginner Base Endurance Cycling Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 1838
+ },
+ {
+  "id": "460117513745907714",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Sprint Intervals- Intermediate",
+  "author": "coros",
+  "region": 1,
+  "dl": 172
+ },
+ {
+  "id": "459580371170934788",
+  "cat": "plan",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [],
+  "pt": [
+   "base_plan"
+  ],
+  "diff": [],
+  "title": "Intermediate Base Endurance Cycling Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 2203
+ },
+ {
+  "id": "460117556158709760",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Sprint Intervals- Advanced",
+  "author": "coros",
+  "region": 1,
+  "dl": 183
+ },
+ {
+  "id": "459583119950004224",
+  "cat": "plan",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [],
+  "pt": [
+   "speed_development"
+  ],
+  "diff": [],
+  "title": "Threshold Development Cycling Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 1570
+ },
+ {
+  "id": "448633393136189441",
+  "cat": "plan",
+  "sport": [
+   "triathlon"
+  ],
+  "wt": [],
+  "pt": [
+   "plan_target_triathlon"
+  ],
+  "diff": [],
+  "title": "Beginner Sprint Distance Triathlon Plan",
+  "author": "coros",
+  "region": 1,
+  "dl": 3209
+ },
+ {
+  "id": "453764033869430785",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate"
+  ],
+  "title": "Beginner Aerobic Power Intervals",
+  "author": "coros",
+  "region": 1,
+  "dl": 2325
+ },
+ {
+  "id": "453764076013797376",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Intermediate/Advanced Aerobic Power Intervals",
+  "author": "coros",
+  "region": 1,
+  "dl": 2636
+ },
+ {
+  "id": "454876880296919040",
+  "cat": "workout",
+  "sport": [
+   "swimming"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Beginner Swim Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 6482
+ },
+ {
+  "id": "454572325508137036",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Single Leg Strength",
+  "author": "coros",
+  "region": 1,
+  "dl": 2139
+ },
+ {
+  "id": "449654661465686046",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Effort Pace: Beginner VO2max Development",
+  "author": "coros",
+  "region": 1,
+  "dl": 3307
+ },
+ {
+  "id": "449654618524401675",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Effort Pace: Beginner Threshold Development",
+  "author": "coros",
+  "region": 1,
+  "dl": 2448
+ },
+ {
+  "id": "449653380497981470",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Effort Pace: Advanced VO2max Development",
+  "author": "coros",
+  "region": 1,
+  "dl": 4141
+ },
+ {
+  "id": "449653006292664350",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Effort Pace: Advanced Threshold Development",
+  "author": "coros",
+  "region": 1,
+  "dl": 2651
+ },
+ {
+  "id": "448633567357091845",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "\"Feel the Burn\" Strength Workout",
+  "author": "hillary_allen",
+  "region": 1,
+  "dl": 646
+ },
+ {
+  "id": "455760489287434247",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Winter Warm-up Routine",
+  "author": "coros",
+  "region": 1,
+  "dl": 1297
+ },
+ {
+  "id": "454133369113067541",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Dynamic Warm-up",
+  "author": "coros",
+  "region": 1,
+  "dl": 2853
+ },
+ {
+  "id": "435424630048735232",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Abdominal Stabilization Workout",
+  "author": "coros",
+  "region": 2,
+  "dl": 182
+ },
+ {
+  "id": "447353176138629170",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Recovery Run",
+  "author": "coros",
+  "region": 2,
+  "dl": 237
+ },
+ {
+  "id": "449958026565304322",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Back to Training - Full Body",
+  "author": "coros",
+  "region": 1,
+  "dl": 2277
+ },
+ {
+  "id": "454761654377431052",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Progression Run",
+  "author": "coros",
+  "region": 1,
+  "dl": 6548
+ },
+ {
+  "id": "454761411443343374",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Progression Run - Fast Finish",
+  "author": "coros",
+  "region": 1,
+  "dl": 3815
+ },
+ {
+  "id": "460462687386779648",
+  "cat": "workout",
+  "sport": [
+   "bouldering"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Progressive Onsite Bouldering Workout",
+  "author": "sasha",
+  "region": 1,
+  "dl": 1068
+ },
+ {
+  "id": "460414069162295297",
+  "cat": "workout",
+  "sport": [
+   "climbing"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Progressive onsite Lead Workout",
+  "author": "stefano_ghisolfi",
+  "region": 1,
+  "dl": 428
+ },
+ {
+  "id": "454876745810755592",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "tempo"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate"
+  ],
+  "title": "Cross Training Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 715
+ },
+ {
+  "id": "447353200566255616",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "VO2max Intervals",
+  "author": "coros",
+  "region": 2,
+  "dl": 249
+ },
+ {
+  "id": "456682459583660032",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Pyramid Fartlek Run",
+  "author": "coros",
+  "region": 1,
+  "dl": 5159
+ },
+ {
+  "id": "448633537554464768",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Pyramid Interval Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 1731
+ },
+ {
+  "id": "447353193855369216",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Pyramid Training",
+  "author": "coros",
+  "region": 2,
+  "dl": 84
+ },
+ {
+  "id": "447353196002852864",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Inverted Pyramid",
+  "author": "coros",
+  "region": 2,
+  "dl": 51
+ },
+ {
+  "id": "456315389666836480",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Full Body - Eccentric/Isometric Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 6771
+ },
+ {
+  "id": "438329806868889600",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Take a Break from Work to Train",
+  "author": "coros",
+  "region": 2,
+  "dl": 189
+ },
+ {
+  "id": "445946743190896640",
+  "cat": "workout",
+  "sport": [
+   "cycling",
+   "run"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Long Ride for Marathon Training",
+  "author": "coros",
+  "region": 1,
+  "dl": 897
+ },
+ {
+  "id": "460077286813777920",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Endurance Ride - Beginner",
+  "author": "coros",
+  "region": 1,
+  "dl": 2030
+ },
+ {
+  "id": "462316153145049088",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Endurance Ride - Intermediate",
+  "author": "coros",
+  "region": 1,
+  "dl": 257
+ },
+ {
+  "id": "462316184820432896",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "base_workout"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Endurance Ride - Advanced",
+  "author": "coros",
+  "region": 1,
+  "dl": 209
+ },
+ {
+  "id": "464137375768035328",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Aerobic Endurance Ride",
+  "author": "hannah_otto",
+  "region": 1,
+  "dl": 2508
+ },
+ {
+  "id": "448633600909426688",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "climbing",
+   "bouldering"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Strength Routine",
+  "author": "andres_marin",
+  "region": 1,
+  "dl": 469
+ },
+ {
+  "id": "449959148357074976",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Power Development - Running Specific",
+  "author": "coros",
+  "region": 1,
+  "dl": 1617
+ },
+ {
+  "id": "449958033007755272",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Strength Development - Running Specific",
+  "author": "coros",
+  "region": 1,
+  "dl": 1928
+ },
+ {
+  "id": "448633592892014592",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Pre-Run Strength Routine",
+  "author": "sally_mcrae",
+  "region": 1,
+  "dl": 1985
+ },
+ {
+  "id": "454227866715078657",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Post Run Strength Routine",
+  "author": "coros",
+  "region": 1,
+  "dl": 2376
+ },
+ {
+  "id": "454069542946258946",
+  "cat": "workout",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [
+   "lower_body",
+   "threshold",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Hills and Threshold Combo（Beginner）",
+  "author": "coros",
+  "region": 1,
+  "dl": 1258
+ },
+ {
+  "id": "454069377053147136",
+  "cat": "workout",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [
+   "lower_body",
+   "threshold",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Hills and Threshold Combo (Intermediate/Advanced)",
+  "author": "coros",
+  "region": 1,
+  "dl": 1542
+ },
+ {
+  "id": "456296527781085199",
+  "cat": "workout",
+  "sport": [
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "lower_body",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Hill Strides Beginner",
+  "author": "coros_offiicial",
+  "region": 1,
+  "dl": 1143
+ },
+ {
+  "id": "456321468656173056",
+  "cat": "workout",
+  "sport": [
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "lower_body",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Hill Strides Advanced",
+  "author": "coros_offiicial",
+  "region": 1,
+  "dl": 1384
+ },
+ {
+  "id": "448633474744762368",
+  "cat": "workout",
+  "sport": [
+   "cycling"
+  ],
+  "wt": [
+   "threshold",
+   "vo2max",
+   "sprint"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Uphill Training",
+  "author": "gerardo_gom_z",
+  "region": 1,
+  "dl": 134
+ },
+ {
+  "id": "444203519313100801",
+  "cat": "workout",
+  "sport": [
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "threshold"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "1:1 Hill Fartlek Workout",
+  "author": "tristan_hogue",
+  "region": 1,
+  "dl": 878
+ },
+ {
+  "id": "461880750835417088",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Full Body Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 447
+ },
+ {
+  "id": "448633618359828480",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Full Body Strength Workout",
+  "author": "grayson_murphy",
+  "region": 1,
+  "dl": 369
+ },
+ {
+  "id": "448633583456927744",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate"
+  ],
+  "title": "Uphill Athlete: Killer Core Routine",
+  "author": "steve_house",
+  "region": 1,
+  "dl": 351
+ },
+ {
+  "id": "448633575410155546",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Uphill Athlete: Strength Routine",
+  "author": "steve_house",
+  "region": 1,
+  "dl": 267
+ },
+ {
+  "id": "444527944761786369",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "lower_body",
+   "core"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Mountain Running Routine",
+  "author": "tristan_hogue",
+  "region": 1,
+  "dl": 1305
+ },
+ {
+  "id": "458165990679822336",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Upper Body Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 12355
+ },
+ {
+  "id": "455504071418363914",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Upper Body Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 3746
+ },
+ {
+  "id": "429534408819785728",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Barehanded Upper-Body Strength",
+  "author": "coros",
+  "region": 2,
+  "dl": 347
+ },
+ {
+  "id": "429699694191624195",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Advanced Upper-Body Strength",
+  "author": "coros",
+  "region": 2,
+  "dl": 303
+ },
+ {
+  "id": "460414075336310784",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "climbing",
+   "bouldering"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Climbing Strength",
+  "author": "stefano_ghisolfi",
+  "region": 1,
+  "dl": 722
+ },
+ {
+  "id": "460414059767054336",
+  "cat": "workout",
+  "sport": [
+   "climbing"
+  ],
+  "wt": [
+   "upper_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Doubles Pure Endurance Training",
+  "author": "babsi_zangerl",
+  "region": 1,
+  "dl": 276
+ },
+ {
+  "id": "448633491652001793",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Speed Play Workout",
+  "author": "sally_mcrae",
+  "region": 1,
+  "dl": 1699
+ },
+ {
+  "id": "454411209742139429",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Hip Mobility",
+  "author": "coros",
+  "region": 1,
+  "dl": 9830
+ },
+ {
+  "id": "455503969949761536",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Lower Body Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 3029
+ },
+ {
+  "id": "435424529383342080",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Lower-Body Strength Training",
+  "author": "coros",
+  "region": 2,
+  "dl": 218
+ },
+ {
+  "id": "438329810352259072",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Lower-Body Physical Training",
+  "author": "coros",
+  "region": 2,
+  "dl": 210
+ },
+ {
+  "id": "460069150535106560",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run",
+   "trail_run"
+  ],
+  "wt": [
+   "lower_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Downhill Strength Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 1816
+ },
+ {
+  "id": "458447501895319552",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Eccentric Lower Body",
+  "author": "coros",
+  "region": 1,
+  "dl": 3022
+ },
+ {
+  "id": "447353202982174720",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Yasso 800s",
+  "author": "coros",
+  "region": 2,
+  "dl": 114
+ },
+ {
+  "id": "453899706249166867",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Aerobic Run ending with 30 second Strides",
+  "author": "coros",
+  "region": 1,
+  "dl": 1885
+ },
+ {
+  "id": "453899769331499039",
+  "cat": "workout",
+  "sport": [
+   "run"
+  ],
+  "wt": [
+   "base_workout",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Aerobic Endurance Run with Strides Intervals",
+  "author": "coros",
+  "region": 1,
+  "dl": 3890
+ },
+ {
+  "id": "460396139552882688",
+  "cat": "workout",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [
+   "tempo",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Tempo Trail Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 5592
+ },
+ {
+  "id": "454716354820489255",
+  "cat": "workout",
+  "sport": [
+   "trail_run"
+  ],
+  "wt": [
+   "threshold",
+   "vo2max"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate",
+   "advanced"
+  ],
+  "title": "Trail Run Fartlek",
+  "author": "coros",
+  "region": 1,
+  "dl": 1632
+ },
+ {
+  "id": "453784877077282816",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "beginner"
+  ],
+  "title": "Beginner Plyometrics",
+  "author": "coros",
+  "region": 1,
+  "dl": 2560
+ },
+ {
+  "id": "453786262204235778",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "advanced"
+  ],
+  "title": "Intermediate/Advanced Plyometrics",
+  "author": "coros",
+  "region": 1,
+  "dl": 2061
+ },
+ {
+  "id": "455947645171712000",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Climbing Hangboard Endurance",
+  "author": "sasha_diguilian",
+  "region": 1,
+  "dl": 313
+ },
+ {
+  "id": "456155260669575168",
+  "cat": "workout",
+  "sport": [
+   "strength"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Bodyweight Tabata Workout",
+  "author": "coros",
+  "region": 1,
+  "dl": 2421
+ },
+ {
+  "id": "450306841797378048",
+  "cat": "workout",
+  "sport": [
+   "strength",
+   "run"
+  ],
+  "wt": [
+   "full_body"
+  ],
+  "pt": [],
+  "diff": [
+   "intermediate"
+  ],
+  "title": "Bodyweight - Running Specific",
+  "author": "coros",
+  "region": 1,
+  "dl": 2712
+ }
+]

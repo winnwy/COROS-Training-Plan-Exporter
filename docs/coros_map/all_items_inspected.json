@@ -1,0 +1,5840 @@
+[
+ {
+  "id": "478100463168962560",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Foundational Strength Training",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "strength"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 13,
+  "targetTypes": {
+   "2": 5,
+   "3": 7,
+   "0": 1
+  },
+  "intensityTypes": {
+   "0": 7,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "478100488133460068",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Metabolic Strength Training",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "strength"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 11,
+  "targetTypes": {
+   "2": 11
+  },
+  "intensityTypes": {
+   "0": 6,
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "478100495112781923",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Specific Strength Training",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "strength",
+   "station"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 11,
+  "targetTypes": {
+   "2": 11
+  },
+  "intensityTypes": {
+   "0": 6,
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "478100503434281060",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Mixed Cardio Training",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "running",
+   "station"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 11,
+  "targetTypes": {
+   "2": 11
+  },
+  "intensityTypes": {
+   "0": 9,
+   "3": 1,
+   "1": 1
+  },
+  "trainingLoad": 136,
+  "ok": true
+ },
+ {
+  "id": "478100541552115811",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Aerobic Interval Running",
+  "catalog_sport": [
+   "hybrid_fitness",
+   "run"
+  ],
+  "workout_target": [
+   "running",
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "3": 3,
+   "0": 2
+  },
+  "trainingLoad": 1479,
+  "ok": true
+ },
+ {
+  "id": "478100553094840320",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Anaerobic Interval Running",
+  "catalog_sport": [
+   "hybrid_fitness",
+   "run"
+  ],
+  "workout_target": [
+   "running",
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "0": 4,
+   "3": 1
+  },
+  "trainingLoad": 1336,
+  "ok": true
+ },
+ {
+  "id": "478100967022313472",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Compromised Running Enhancement",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "running",
+   "station"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 22,
+  "targetTypes": {
+   "2": 22
+  },
+  "intensityTypes": {
+   "0": 18,
+   "1": 4
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "478100590944239616",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Station Enhancement",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "station",
+   "running"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 20,
+  "targetTypes": {
+   "2": 20
+  },
+  "intensityTypes": {
+   "0": 11,
+   "1": 9
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "478104124360146944",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Doubles Training",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "running",
+   "station"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 14,
+  "targetTypes": {
+   "2": 14
+  },
+  "intensityTypes": {
+   "0": 10,
+   "1": 4
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "478102494688493568",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Burpee Broad Jumps",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "station"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 7
+  },
+  "intensityTypes": {
+   "0": 4,
+   "1": 3
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "478104132144775268",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Farmer's Carry",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "station"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 7
+  },
+  "intensityTypes": {
+   "0": 3,
+   "1": 4
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "478104138855661568",
+  "kind": "workout",
+  "title": "Lu Peng Hybrid Fitness - Wall Balls",
+  "catalog_sport": [
+   "hybrid_fitness"
+  ],
+  "workout_target": [
+   "station"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Hybrid",
+  "exercises": 3,
+  "targetTypes": {
+   "2": 3
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 1
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "476133458610143331",
+  "kind": "workout",
+  "title": "20 Minute All-Out Ride",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "ftp"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 3,
+  "targetTypes": {
+   "2": 3
+  },
+  "intensityTypes": {
+   "0": 3
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "474335324133310764",
+  "kind": "workout",
+  "title": "Ingebrigtsen Strength Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 5,
+  "targetTypes": {
+   "3": 5
+  },
+  "intensityTypes": {
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "457982185383837697",
+  "kind": "workout",
+  "title": "Interval Run",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 9,
+  "targetTypes": {
+   "2": 9
+  },
+  "intensityTypes": {
+   "0": 3,
+   "2": 6
+  },
+  "trainingLoad": 107,
+  "ok": true
+ },
+ {
+  "id": "462504388676730880",
+  "kind": "plan",
+  "title": "Advanced Half-Marathon Training Plan - Pace",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 66,
+  "exercises": 255,
+  "sportMix": {
+   "Run": 66
+  },
+  "targetTypes": {
+   "2": 130,
+   "5": 125
+  },
+  "intensityTypes": {
+   "0": 151,
+   "3": 98,
+   "2": 6
+  },
+  "trainingLoad": 28825,
+  "ok": true
+ },
+ {
+  "id": "451122915111518211",
+  "kind": "workout",
+  "title": "Track Pyramid - Short Distance",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "sprint"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 23,
+  "targetTypes": {
+   "1": 2,
+   "5": 21
+  },
+  "intensityTypes": {
+   "0": 9,
+   "3": 14
+  },
+  "trainingLoad": 942,
+  "ok": true
+ },
+ {
+  "id": "462504359148830720",
+  "kind": "plan",
+  "title": "Intermediate Half-Marathon Training Plan - Pace",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 56,
+  "exercises": 211,
+  "sportMix": {
+   "Run": 56
+  },
+  "targetTypes": {
+   "2": 110,
+   "5": 101
+  },
+  "intensityTypes": {
+   "0": 125,
+   "3": 84,
+   "2": 2
+  },
+  "trainingLoad": 20327,
+  "ok": true
+ },
+ {
+  "id": "451122953766223897",
+  "kind": "workout",
+  "title": "Track Pyramid - Middle Distance",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 23,
+  "targetTypes": {
+   "1": 2,
+   "5": 21
+  },
+  "intensityTypes": {
+   "0": 9,
+   "3": 14
+  },
+  "trainingLoad": 922,
+  "ok": true
+ },
+ {
+  "id": "462503693697335296",
+  "kind": "plan",
+  "title": "Beginner Half-Marathon Training Plan - Pace",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 56,
+  "exercises": 209,
+  "sportMix": {
+   "Run": 56
+  },
+  "targetTypes": {
+   "2": 119,
+   "5": 90
+  },
+  "intensityTypes": {
+   "0": 123,
+   "3": 78,
+   "2": 8
+  },
+  "trainingLoad": 18110,
+  "ok": true
+ },
+ {
+  "id": "454903976977154048",
+  "kind": "workout",
+  "title": "Kilian's Favorite Uphill Workout",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "TrailRun",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 4,
+   "8": 4
+  },
+  "intensityTypes": {
+   "0": 6,
+   "2": 2
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633401730318357",
+  "kind": "plan",
+  "title": "Half Marathon HR Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 60,
+  "exercises": 217,
+  "sportMix": {
+   "Run": 60
+  },
+  "targetTypes": {
+   "2": 119,
+   "5": 98
+  },
+  "intensityTypes": {
+   "0": 135,
+   "2": 75,
+   "3": 7
+  },
+  "trainingLoad": 5466,
+  "ok": true
+ },
+ {
+  "id": "458286934811394050",
+  "kind": "workout",
+  "title": "Hill Intervals",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "workout_target": [
+   "base_workout",
+   "lower_body"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "3": 2,
+   "0": 2,
+   "8": 1
+  },
+  "trainingLoad": 584,
+  "ok": true
+ },
+ {
+  "id": "453112661276803072",
+  "kind": "plan",
+  "title": "Beginner Half-Marathon Training Plan - HR",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 56,
+  "exercises": 209,
+  "sportMix": {
+   "Run": 56
+  },
+  "targetTypes": {
+   "2": 110,
+   "5": 99
+  },
+  "intensityTypes": {
+   "0": 123,
+   "2": 86
+  },
+  "trainingLoad": 4333,
+  "ok": true
+ },
+ {
+  "id": "464137318322847744",
+  "kind": "workout",
+  "title": "Hannah Otto Sharp Efforts Cycling Workout",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "sprint"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "0": 2,
+   "9": 1,
+   "2": 2
+  },
+  "trainingLoad": 60,
+  "ok": true
+ },
+ {
+  "id": "453202908203368463",
+  "kind": "plan",
+  "title": "Intermediate Half-Marathon Training Plan - HR",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 56,
+  "exercises": 211,
+  "sportMix": {
+   "Run": 56
+  },
+  "targetTypes": {
+   "2": 110,
+   "5": 101
+  },
+  "intensityTypes": {
+   "0": 125,
+   "2": 86
+  },
+  "trainingLoad": 4733,
+  "ok": true
+ },
+ {
+  "id": "464137448245608448",
+  "kind": "workout",
+  "title": "Hannah Otto's Cycling Confidence Builder",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "sprint"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 6
+  },
+  "intensityTypes": {
+   "0": 2,
+   "9": 3,
+   "2": 1
+  },
+  "trainingLoad": 21,
+  "ok": true
+ },
+ {
+  "id": "447351693032734720",
+  "kind": "plan",
+  "title": "1:40 Half-Marathon Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 70,
+  "programs": 39,
+  "exercises": 226,
+  "sportMix": {
+   "Run": 39
+  },
+  "targetTypes": {
+   "2": 151,
+   "5": 71,
+   "0": 4
+  },
+  "intensityTypes": {
+   "2": 11,
+   "0": 138,
+   "7": 21,
+   "3": 56
+  },
+  "trainingLoad": 5376,
+  "ok": true
+ },
+ {
+  "id": "447353182581080064",
+  "kind": "workout",
+  "title": "MAF180",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate"
+  ],
+  "sportType": "Run",
+  "exercises": 2,
+  "targetTypes": {
+   "2": 2
+  },
+  "intensityTypes": {
+   "0": 1,
+   "2": 1
+  },
+  "trainingLoad": 91,
+  "ok": true
+ },
+ {
+  "id": "447352152057364481",
+  "kind": "plan",
+  "title": "1:50 Half-Marathon Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 70,
+  "programs": 39,
+  "exercises": 223,
+  "sportMix": {
+   "Run": 39
+  },
+  "targetTypes": {
+   "2": 150,
+   "5": 69,
+   "0": 4
+  },
+  "intensityTypes": {
+   "2": 11,
+   "0": 136,
+   "7": 21,
+   "3": 55
+  },
+  "trainingLoad": 5128,
+  "ok": true
+ },
+ {
+  "id": "447353176138629120",
+  "kind": "workout",
+  "title": "Long Run",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 7
+  },
+  "intensityTypes": {
+   "0": 5,
+   "2": 1,
+   "7": 1
+  },
+  "trainingLoad": 98,
+  "ok": true
+ },
+ {
+  "id": "462667235046113280",
+  "kind": "plan",
+  "title": "Sub-2:00 Half Marathon Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 114,
+  "exercises": 796,
+  "sportMix": {
+   "Strength": 57,
+   "Run": 57
+  },
+  "targetTypes": {
+   "2": 445,
+   "3": 285,
+   "5": 64,
+   "1": 2
+  },
+  "intensityTypes": {
+   "0": 209,
+   "1": 399,
+   "3": 185,
+   "2": 3
+  },
+  "trainingLoad": 21934,
+  "ok": true
+ },
+ {
+  "id": "448633548029739008",
+  "kind": "workout",
+  "title": "30 Minute Base With Pick Ups",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "3": 4,
+   "0": 1
+  },
+  "trainingLoad": 363,
+  "ok": true
+ },
+ {
+  "id": "447352284932915200",
+  "kind": "plan",
+  "title": "2:00 Half-Marathon Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 70,
+  "programs": 39,
+  "exercises": 219,
+  "sportMix": {
+   "Run": 39
+  },
+  "targetTypes": {
+   "2": 154,
+   "5": 61,
+   "0": 4
+  },
+  "intensityTypes": {
+   "2": 15,
+   "0": 134,
+   "7": 22,
+   "3": 48
+  },
+  "trainingLoad": 4853,
+  "ok": true
+ },
+ {
+  "id": "448633553664786432",
+  "kind": "workout",
+  "title": "45 Minute Base With Pick Ups",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "3": 4,
+   "0": 1
+  },
+  "trainingLoad": 565,
+  "ok": true
+ },
+ {
+  "id": "447352732951691264",
+  "kind": "plan",
+  "title": "Half-Marathon Finish Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 70,
+  "programs": 30,
+  "exercises": 150,
+  "sportMix": {
+   "Run": 30
+  },
+  "targetTypes": {
+   "2": 103,
+   "5": 42,
+   "0": 5
+  },
+  "intensityTypes": {
+   "2": 11,
+   "0": 91,
+   "7": 13,
+   "3": 35
+  },
+  "trainingLoad": 3657,
+  "ok": true
+ },
+ {
+  "id": "448633560377769984",
+  "kind": "workout",
+  "title": "1 Hour Base With Pick Ups",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "3": 4,
+   "0": 1
+  },
+  "trainingLoad": 699,
+  "ok": true
+ },
+ {
+  "id": "448053418198745094",
+  "kind": "plan",
+  "title": "2:45-3:00 Marathon Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 83,
+  "programs": 65,
+  "exercises": 211,
+  "sportMix": {
+   "Run": 65
+  },
+  "targetTypes": {
+   "5": 103,
+   "2": 102,
+   "1": 6
+  },
+  "intensityTypes": {
+   "3": 20,
+   "2": 67,
+   "0": 124
+  },
+  "trainingLoad": 17554,
+  "ok": true
+ },
+ {
+  "id": "448633609266577408",
+  "kind": "workout",
+  "title": "Core Strength Routine",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "core"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Strength",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 3,
+   "3": 3
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 4
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448565565710319616",
+  "kind": "plan",
+  "title": "Sub-3:15 Marathon Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 56,
+  "programs": 22,
+  "exercises": 124,
+  "sportMix": {
+   "Run": 22
+  },
+  "targetTypes": {
+   "2": 124
+  },
+  "intensityTypes": {
+   "0": 51,
+   "3": 73
+  },
+  "trainingLoad": 14077,
+  "ok": true
+ },
+ {
+  "id": "448633626144456704",
+  "kind": "workout",
+  "title": "Sally McRae's Power 5 Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 2,
+   "3": 5
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448035135596707840",
+  "kind": "plan",
+  "title": "3:15-3:35 12-Week Marathon Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 83,
+  "programs": 59,
+  "exercises": 205,
+  "sportMix": {
+   "Run": 59
+  },
+  "targetTypes": {
+   "5": 107,
+   "2": 92,
+   "1": 6
+  },
+  "intensityTypes": {
+   "3": 28,
+   "0": 123,
+   "2": 54
+  },
+  "trainingLoad": 14559,
+  "ok": true
+ },
+ {
+  "id": "462693770696245248",
+  "kind": "workout",
+  "title": "Alex Yee Triathlon Run Workout",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold",
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 7
+  },
+  "intensityTypes": {
+   "3": 6,
+   "0": 1
+  },
+  "trainingLoad": 980,
+  "ok": true
+ },
+ {
+  "id": "447892242034769926",
+  "kind": "plan",
+  "title": "4:00-4:30 12-Week Marathon Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 58,
+  "exercises": 196,
+  "sportMix": {
+   "Run": 58
+  },
+  "targetTypes": {
+   "2": 100,
+   "5": 88,
+   "1": 8
+  },
+  "intensityTypes": {
+   "0": 115,
+   "3": 56,
+   "2": 25
+  },
+  "trainingLoad": 9486,
+  "ok": true
+ },
+ {
+  "id": "462693939542147072",
+  "kind": "workout",
+  "title": "Alex Yee Triathlon Bike Workout",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "ftp",
+   "sprint"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 12,
+  "targetTypes": {
+   "2": 12
+  },
+  "intensityTypes": {
+   "9": 9,
+   "0": 3
+  },
+  "trainingLoad": 302,
+  "ok": true
+ },
+ {
+  "id": "453065796204281857",
+  "kind": "plan",
+  "title": "16-Week Beginner Marathon Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 16,
+  "days": 112,
+  "programs": 76,
+  "exercises": 258,
+  "sportMix": {
+   "Run": 76
+  },
+  "targetTypes": {
+   "2": 148,
+   "5": 109,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 164,
+   "2": 90,
+   "3": 4
+  },
+  "trainingLoad": 8377,
+  "ok": true
+ },
+ {
+  "id": "462694487418912769",
+  "kind": "workout",
+  "title": "Alex Yee Triathlon Swim Workout",
+  "catalog_sport": [
+   "swimming"
+  ],
+  "workout_target": [
+   "base_workout",
+   "threshold"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Swim",
+  "exercises": 12,
+  "targetTypes": {
+   "5": 9,
+   "2": 3
+  },
+  "intensityTypes": {
+   "5": 9,
+   "0": 3
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "453068266884218881",
+  "kind": "plan",
+  "title": "16-Week Intermediate Marathon Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 16,
+  "days": 112,
+  "programs": 76,
+  "exercises": 257,
+  "sportMix": {
+   "Run": 76
+  },
+  "targetTypes": {
+   "2": 148,
+   "5": 108,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 164,
+   "2": 89,
+   "3": 4
+  },
+  "trainingLoad": 8970,
+  "ok": true
+ },
+ {
+  "id": "447353198687207424",
+  "kind": "workout",
+  "title": "Threshold Intervals",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "0": 4,
+   "3": 1
+  },
+  "trainingLoad": 157,
+  "ok": true
+ },
+ {
+  "id": "453068526998175745",
+  "kind": "plan",
+  "title": "Advanced Marathon Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 16,
+  "days": 112,
+  "programs": 87,
+  "exercises": 306,
+  "sportMix": {
+   "Run": 87
+  },
+  "targetTypes": {
+   "2": 170,
+   "5": 135,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 195,
+   "2": 111
+  },
+  "trainingLoad": 10189,
+  "ok": true
+ },
+ {
+  "id": "445293177474301952",
+  "kind": "workout",
+  "title": "Elite Threshold Workout",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 15,
+  "targetTypes": {
+   "5": 4,
+   "2": 11
+  },
+  "intensityTypes": {
+   "3": 9,
+   "0": 6
+  },
+  "trainingLoad": 878,
+  "ok": true
+ },
+ {
+  "id": "453063385117016064",
+  "kind": "plan",
+  "title": "Beginner Marathon Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 20,
+  "days": 140,
+  "programs": 95,
+  "exercises": 323,
+  "sportMix": {
+   "Run": 95
+  },
+  "targetTypes": {
+   "2": 190,
+   "5": 128,
+   "0": 4,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 206,
+   "2": 117
+  },
+  "trainingLoad": 9108,
+  "ok": true
+ },
+ {
+  "id": "448633484135809032",
+  "kind": "workout",
+  "title": "Anaerobic into Threshold Development",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "threshold",
+   "vo2max",
+   "sprint"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 8
+  },
+  "intensityTypes": {
+   "2": 6,
+   "0": 2
+  },
+  "trainingLoad": 220,
+  "ok": true
+ },
+ {
+  "id": "453063389411983360",
+  "kind": "plan",
+  "title": "20-Week Intermediate Marathon Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 20,
+  "days": 140,
+  "programs": 95,
+  "exercises": 323,
+  "sportMix": {
+   "Run": 95
+  },
+  "targetTypes": {
+   "2": 186,
+   "5": 136,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 206,
+   "2": 117
+  },
+  "trainingLoad": 10687,
+  "ok": true
+ },
+ {
+  "id": "462316534591832064",
+  "kind": "workout",
+  "title": "2min VO2 Max Ride - Beginner",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "vo2max",
+   "sprint"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Bike",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 8
+  },
+  "intensityTypes": {
+   "2": 5,
+   "0": 3
+  },
+  "trainingLoad": 49,
+  "ok": true
+ },
+ {
+  "id": "453064003055435784",
+  "kind": "plan",
+  "title": "Advanced Marathon Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 20,
+  "days": 140,
+  "programs": 112,
+  "exercises": 389,
+  "sportMix": {
+   "Run": 112
+  },
+  "targetTypes": {
+   "2": 220,
+   "5": 168,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 249,
+   "2": 140
+  },
+  "trainingLoad": 13628,
+  "ok": true
+ },
+ {
+  "id": "460117229741195264",
+  "kind": "workout",
+  "title": "4min VO2 Max Ride - Intermediate",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Bike",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 8
+  },
+  "intensityTypes": {
+   "2": 5,
+   "0": 3
+  },
+  "trainingLoad": 128,
+  "ok": true
+ },
+ {
+  "id": "445788191254036481",
+  "kind": "plan",
+  "title": "12-Week Molly Seidel Marathon Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 83,
+  "programs": 68,
+  "exercises": 251,
+  "sportMix": {
+   "Run": 68
+  },
+  "targetTypes": {
+   "2": 101,
+   "5": 109,
+   "1": 41
+  },
+  "intensityTypes": {
+   "0": 163,
+   "3": 73,
+   "2": 15
+  },
+  "trainingLoad": 32220,
+  "ok": true
+ },
+ {
+  "id": "460078145538801664",
+  "kind": "workout",
+  "title": "6min VO2 Max Ride - Advanced",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 8
+  },
+  "intensityTypes": {
+   "2": 5,
+   "0": 3
+  },
+  "trainingLoad": 102,
+  "ok": true
+ },
+ {
+  "id": "447304491073716224",
+  "kind": "plan",
+  "title": "3:30 Marathon plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 48,
+  "exercises": 218,
+  "sportMix": {
+   "Run": 48
+  },
+  "targetTypes": {
+   "2": 167,
+   "5": 50,
+   "1": 1
+  },
+  "intensityTypes": {
+   "2": 31,
+   "0": 143,
+   "7": 6,
+   "3": 38
+  },
+  "trainingLoad": 6642,
+  "ok": true
+ },
+ {
+  "id": "460078048633602048",
+  "kind": "workout",
+  "title": "1-minute Intervals- Beginner",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Bike",
+  "exercises": 9,
+  "targetTypes": {
+   "2": 9
+  },
+  "intensityTypes": {
+   "2": 6,
+   "0": 3
+  },
+  "trainingLoad": 53,
+  "ok": true
+ },
+ {
+  "id": "447351626729177088",
+  "kind": "plan",
+  "title": "4:00 Marathon plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 48,
+  "exercises": 216,
+  "sportMix": {
+   "Run": 48
+  },
+  "targetTypes": {
+   "2": 167,
+   "5": 48,
+   "1": 1
+  },
+  "intensityTypes": {
+   "2": 31,
+   "0": 143,
+   "7": 5,
+   "3": 37
+  },
+  "trainingLoad": 6240,
+  "ok": true
+ },
+ {
+  "id": "447351626729177401",
+  "kind": "plan",
+  "title": "4:30 Marathon plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 47,
+  "exercises": 206,
+  "sportMix": {
+   "Run": 47
+  },
+  "targetTypes": {
+   "2": 171,
+   "5": 34,
+   "1": 1
+  },
+  "intensityTypes": {
+   "2": 35,
+   "0": 140,
+   "7": 7,
+   "3": 24
+  },
+  "trainingLoad": 5314,
+  "ok": true
+ },
+ {
+  "id": "460114756108468233",
+  "kind": "workout",
+  "title": "1 min and 2 min Intervals- Advanced",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 14,
+  "targetTypes": {
+   "2": 14
+  },
+  "intensityTypes": {
+   "2": 10,
+   "0": 4
+  },
+  "trainingLoad": 100,
+  "ok": true
+ },
+ {
+  "id": "447351629145096492",
+  "kind": "plan",
+  "title": "5:00 Marathon Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 47,
+  "exercises": 206,
+  "sportMix": {
+   "Run": 47
+  },
+  "targetTypes": {
+   "2": 194,
+   "5": 11,
+   "1": 1
+  },
+  "intensityTypes": {
+   "2": 34,
+   "0": 140,
+   "7": 7,
+   "3": 25
+  },
+  "trainingLoad": 5218,
+  "ok": true
+ },
+ {
+  "id": "453926668980109331",
+  "kind": "workout",
+  "title": "1 Minute Intervals+ Hills (Beginner)",
+  "catalog_sport": [
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 9,
+  "targetTypes": {
+   "1": 4,
+   "2": 5
+  },
+  "intensityTypes": {
+   "0": 4,
+   "3": 5
+  },
+  "trainingLoad": 479,
+  "ok": true
+ },
+ {
+  "id": "450501329996136460",
+  "kind": "plan",
+  "title": "Introduction to 10k Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "10k"
+  ],
+  "difficulty": [],
+  "weeks": 6,
+  "days": 42,
+  "programs": 18,
+  "exercises": 62,
+  "sportMix": {
+   "Run": 18
+  },
+  "targetTypes": {
+   "2": 47,
+   "5": 15
+  },
+  "intensityTypes": {
+   "0": 44,
+   "8": 16,
+   "7": 2
+  },
+  "trainingLoad": 3728,
+  "ok": true
+ },
+ {
+  "id": "453926715956314129",
+  "kind": "workout",
+  "title": "1 Minute Intervals+Hills (Intermediate/Advanced)",
+  "catalog_sport": [
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 9,
+  "targetTypes": {
+   "1": 4,
+   "2": 5
+  },
+  "intensityTypes": {
+   "0": 4,
+   "3": 5
+  },
+  "trainingLoad": 599,
+  "ok": true
+ },
+ {
+  "id": "459397223831224320",
+  "kind": "plan",
+  "title": "10k Beginner Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "10k"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 69,
+  "programs": 35,
+  "exercises": 132,
+  "sportMix": {
+   "Run": 35
+  },
+  "targetTypes": {
+   "2": 92,
+   "5": 40
+  },
+  "intensityTypes": {
+   "3": 68,
+   "0": 64
+  },
+  "trainingLoad": 11698,
+  "ok": true
+ },
+ {
+  "id": "455039942488408064",
+  "kind": "workout",
+  "title": "2 Minute Hill Intervals",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "TrailRun",
+  "exercises": 5,
+  "targetTypes": {
+   "1": 3,
+   "2": 2
+  },
+  "intensityTypes": {
+   "0": 3,
+   "8": 2
+  },
+  "trainingLoad": 249,
+  "ok": true
+ },
+ {
+  "id": "459397241011093504",
+  "kind": "plan",
+  "title": "10k Intermediate/Advanced Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "10k"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 69,
+  "programs": 45,
+  "exercises": 187,
+  "sportMix": {
+   "Run": 45
+  },
+  "targetTypes": {
+   "2": 131,
+   "5": 56
+  },
+  "intensityTypes": {
+   "3": 102,
+   "0": 84,
+   "2": 1
+  },
+  "trainingLoad": 19916,
+  "ok": true
+ },
+ {
+  "id": "460231167707365377",
+  "kind": "workout",
+  "title": "10-Minute Core Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "core"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 10,
+  "targetTypes": {
+   "2": 10
+  },
+  "intensityTypes": {
+   "0": 3,
+   "1": 7
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "447275563126800384",
+  "kind": "plan",
+  "title": "Sub-45min 10K Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "10k"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 56,
+  "programs": 31,
+  "exercises": 172,
+  "sportMix": {
+   "Run": 31
+  },
+  "targetTypes": {
+   "2": 120,
+   "5": 48,
+   "0": 4
+  },
+  "intensityTypes": {
+   "2": 11,
+   "0": 105,
+   "7": 17,
+   "3": 39
+  },
+  "trainingLoad": 3543,
+  "ok": true
+ },
+ {
+  "id": "458126689829044224",
+  "kind": "workout",
+  "title": "Core Workout",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "core"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 23,
+  "targetTypes": {
+   "2": 21,
+   "3": 2
+  },
+  "intensityTypes": {
+   "0": 7,
+   "1": 16
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "447351017917563065",
+  "kind": "plan",
+  "title": "Sub-50min 10K Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "10k"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 56,
+  "programs": 31,
+  "exercises": 169,
+  "sportMix": {
+   "Run": 31
+  },
+  "targetTypes": {
+   "2": 119,
+   "5": 46,
+   "0": 4
+  },
+  "intensityTypes": {
+   "2": 11,
+   "0": 103,
+   "7": 17,
+   "3": 38
+  },
+  "trainingLoad": 3381,
+  "ok": true
+ },
+ {
+  "id": "427957895708196864",
+  "kind": "workout",
+  "title": "Daily Core for Runners",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "core"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 3,
+   "3": 4
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "447351233202798764",
+  "kind": "plan",
+  "title": "Sub-55min 10K Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "10k"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 56,
+  "programs": 31,
+  "exercises": 169,
+  "sportMix": {
+   "Run": 31
+  },
+  "targetTypes": {
+   "2": 120,
+   "5": 45,
+   "0": 4
+  },
+  "intensityTypes": {
+   "2": 11,
+   "0": 105,
+   "7": 17,
+   "3": 36
+  },
+  "trainingLoad": 3275,
+  "ok": true
+ },
+ {
+  "id": "455504209931059208",
+  "kind": "workout",
+  "title": "Mobility and Core Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "core"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 2,
+   "3": 6
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "447351442582454441",
+  "kind": "plan",
+  "title": "Sub-60min 10K Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "10k"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 56,
+  "programs": 31,
+  "exercises": 168,
+  "sportMix": {
+   "Run": 31
+  },
+  "targetTypes": {
+   "2": 120,
+   "5": 44,
+   "0": 4
+  },
+  "intensityTypes": {
+   "2": 11,
+   "0": 105,
+   "7": 17,
+   "3": 35
+  },
+  "trainingLoad": 3175,
+  "ok": true
+ },
+ {
+  "id": "454389909657141254",
+  "kind": "workout",
+  "title": "Core Strength Routine",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "core"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Strength",
+  "exercises": 11,
+  "targetTypes": {
+   "3": 9,
+   "2": 2
+  },
+  "intensityTypes": {
+   "1": 11
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "452011227087028225",
+  "kind": "plan",
+  "title": "Sub-70min 10K Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "10k"
+  ],
+  "difficulty": [],
+  "weeks": 6,
+  "days": 42,
+  "programs": 18,
+  "exercises": 25,
+  "sportMix": {
+   "Run": 18
+  },
+  "targetTypes": {
+   "2": 24,
+   "5": 1
+  },
+  "intensityTypes": {
+   "3": 21,
+   "0": 4
+  },
+  "trainingLoad": 2530,
+  "ok": true
+ },
+ {
+  "id": "446342566026330112",
+  "kind": "workout",
+  "title": "3 Minute Fartlek Workout",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "3": 4,
+   "0": 1
+  },
+  "trainingLoad": 118,
+  "ok": true
+ },
+ {
+  "id": "448633521452531714",
+  "kind": "workout",
+  "title": "30 Minute Fartlek",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 10,
+  "targetTypes": {
+   "2": 10
+  },
+  "intensityTypes": {
+   "0": 6,
+   "2": 4
+  },
+  "trainingLoad": 29,
+  "ok": true
+ },
+ {
+  "id": "450500484156014604",
+  "kind": "plan",
+  "title": "Introduction to 5k Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k"
+  ],
+  "difficulty": [],
+  "weeks": 6,
+  "days": 42,
+  "programs": 18,
+  "exercises": 76,
+  "sportMix": {
+   "Run": 18
+  },
+  "targetTypes": {
+   "2": 66,
+   "5": 10
+  },
+  "intensityTypes": {
+   "0": 59,
+   "7": 14,
+   "2": 3
+  },
+  "trainingLoad": 127,
+  "ok": true
+ },
+ {
+  "id": "447353186070740992",
+  "kind": "workout",
+  "title": "Fartlek Run",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold",
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 16,
+  "targetTypes": {
+   "2": 16
+  },
+  "intensityTypes": {
+   "0": 4,
+   "3": 12
+  },
+  "trainingLoad": 205,
+  "ok": true
+ },
+ {
+  "id": "459092752525869056",
+  "kind": "plan",
+  "title": "5k Beginner Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 83,
+  "programs": 48,
+  "exercises": 220,
+  "sportMix": {
+   "Run": 48
+  },
+  "targetTypes": {
+   "2": 204,
+   "5": 16
+  },
+  "intensityTypes": {
+   "0": 113,
+   "3": 105,
+   "2": 2
+  },
+  "trainingLoad": 20452,
+  "ok": true
+ },
+ {
+  "id": "448633514469015554",
+  "kind": "workout",
+  "title": "Short Interval Fartlek",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold",
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 4,
+   "0": 1
+  },
+  "intensityTypes": {
+   "0": 4,
+   "2": 1
+  },
+  "trainingLoad": 60,
+  "ok": true
+ },
+ {
+  "id": "459093090756640768",
+  "kind": "plan",
+  "title": "5k Intermediate/Advanced Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 69,
+  "programs": 44,
+  "exercises": 218,
+  "sportMix": {
+   "Run": 44
+  },
+  "targetTypes": {
+   "2": 180,
+   "5": 38
+  },
+  "intensityTypes": {
+   "0": 109,
+   "3": 98,
+   "2": 11
+  },
+  "trainingLoad": 19609,
+  "ok": true
+ },
+ {
+  "id": "448633529769836549",
+  "kind": "workout",
+  "title": "Fartlek Training for Marathon",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "tempo",
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 11,
+  "targetTypes": {
+   "2": 11
+  },
+  "intensityTypes": {
+   "2": 5,
+   "0": 6
+  },
+  "trainingLoad": 71,
+  "ok": true
+ },
+ {
+  "id": "448633322541858816",
+  "kind": "plan",
+  "title": "Sub-25 5K Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k"
+  ],
+  "difficulty": [],
+  "weeks": 14,
+  "days": 98,
+  "programs": 48,
+  "exercises": 156,
+  "sportMix": {
+   "Run": 48
+  },
+  "targetTypes": {
+   "2": 109,
+   "5": 47
+  },
+  "intensityTypes": {
+   "2": 20,
+   "0": 108,
+   "3": 28
+  },
+  "trainingLoad": 5479,
+  "ok": true
+ },
+ {
+  "id": "458932405292679168",
+  "kind": "workout",
+  "title": "5k Pace Intervals- Beginner",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "3": 4,
+   "0": 1
+  },
+  "trainingLoad": 647,
+  "ok": true
+ },
+ {
+  "id": "452011004556132357",
+  "kind": "plan",
+  "title": "Sub-25min 5K Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k"
+  ],
+  "difficulty": [],
+  "weeks": 4,
+  "days": 28,
+  "programs": 12,
+  "exercises": 23,
+  "sportMix": {
+   "Run": 12
+  },
+  "targetTypes": {
+   "2": 22,
+   "5": 1
+  },
+  "intensityTypes": {
+   "3": 17,
+   "0": 6
+  },
+  "trainingLoad": 1878,
+  "ok": true
+ },
+ {
+  "id": "458931328595968000",
+  "kind": "workout",
+  "title": "5k Pace Intervals- Intermediate/Adv",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "3": 4,
+   "0": 1
+  },
+  "trainingLoad": 962,
+  "ok": true
+ },
+ {
+  "id": "452010405676630016",
+  "kind": "plan",
+  "title": "Sub-30min 5K Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k"
+  ],
+  "difficulty": [],
+  "weeks": 4,
+  "days": 28,
+  "programs": 12,
+  "exercises": 21,
+  "sportMix": {
+   "Run": 12
+  },
+  "targetTypes": {
+   "2": 20,
+   "5": 1
+  },
+  "intensityTypes": {
+   "3": 15,
+   "0": 6
+  },
+  "trainingLoad": 1730,
+  "ok": true
+ },
+ {
+  "id": "444969090782773248",
+  "kind": "workout",
+  "title": "5k Speed Improvement",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold",
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 8,
+  "targetTypes": {
+   "5": 7,
+   "2": 1
+  },
+  "intensityTypes": {
+   "3": 4,
+   "0": 4
+  },
+  "trainingLoad": 696,
+  "ok": true
+ },
+ {
+  "id": "452010861209501696",
+  "kind": "plan",
+  "title": "Sub-35min 5K Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k"
+  ],
+  "difficulty": [],
+  "weeks": 4,
+  "days": 28,
+  "programs": 12,
+  "exercises": 12,
+  "sportMix": {
+   "Run": 12
+  },
+  "targetTypes": {
+   "2": 11,
+   "5": 1
+  },
+  "intensityTypes": {
+   "3": 12
+  },
+  "trainingLoad": 1241,
+  "ok": true
+ },
+ {
+  "id": "460077481161048064",
+  "kind": "workout",
+  "title": "60-minute Tempo Ride - Beginner",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Bike",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "2": 3,
+   "0": 2
+  },
+  "trainingLoad": 153,
+  "ok": true
+ },
+ {
+  "id": "452452611480797184",
+  "kind": "plan",
+  "title": "21-Day Habit-Building Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k"
+  ],
+  "difficulty": [],
+  "weeks": 3,
+  "days": 21,
+  "programs": 10,
+  "exercises": 60,
+  "sportMix": {
+   "Run": 10
+  },
+  "targetTypes": {
+   "2": 60
+  },
+  "intensityTypes": {
+   "0": 40,
+   "3": 10,
+   "7": 10
+  },
+  "trainingLoad": 1311,
+  "ok": true
+ },
+ {
+  "id": "460092860633628672",
+  "kind": "workout",
+  "title": "90-Minute Tempo Ride - Intermediate",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Bike",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "2": 3,
+   "0": 2
+  },
+  "trainingLoad": 201,
+  "ok": true
+ },
+ {
+  "id": "455706700727631876",
+  "kind": "plan",
+  "title": "Strength Training Plan for Injury Prevention",
+  "catalog_sport": [
+   "run",
+   "trail_run"
+  ],
+  "plan_target": [
+   "5k",
+   "10k",
+   "half_marathon",
+   "marathon",
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 54,
+  "programs": 24,
+  "exercises": 176,
+  "sportMix": {
+   "Strength": 24
+  },
+  "targetTypes": {
+   "2": 61,
+   "3": 115
+  },
+  "intensityTypes": {
+   "0": 56,
+   "1": 120
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "460092865733902339",
+  "kind": "workout",
+  "title": "120-Minute Tempo Ride - Advanced",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "2": 3,
+   "0": 2
+  },
+  "trainingLoad": 301,
+  "ok": true
+ },
+ {
+  "id": "440284656659775494",
+  "kind": "plan",
+  "title": "10-Week Return to Running Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "5k",
+   "10k",
+   "half_marathon",
+   "marathon"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 70,
+  "programs": 42,
+  "exercises": 92,
+  "sportMix": {
+   "Run": 42
+  },
+  "targetTypes": {
+   "2": 86,
+   "null": 6
+  },
+  "intensityTypes": {
+   "0": 69,
+   "2": 17,
+   "null": 6
+  },
+  "trainingLoad": 450,
+  "ok": true
+ },
+ {
+  "id": "460077709062750208",
+  "kind": "workout",
+  "title": "FTP Intervals- Beginner",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "ftp"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Bike",
+  "exercises": 9,
+  "targetTypes": {
+   "2": 9
+  },
+  "intensityTypes": {
+   "2": 6,
+   "0": 3
+  },
+  "trainingLoad": 88,
+  "ok": true
+ },
+ {
+  "id": "456361811820855296",
+  "kind": "plan",
+  "title": "Intermediate Mountain Training Plan",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "plan_target": [
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 76,
+  "exercises": 533,
+  "sportMix": {
+   "TrailRun": 53,
+   "Run": 12,
+   "Strength": 11
+  },
+  "targetTypes": {
+   "1": 164,
+   "2": 184,
+   "5": 53,
+   "3": 132
+  },
+  "intensityTypes": {
+   "0": 267,
+   "8": 54,
+   "2": 29,
+   "3": 18,
+   "1": 165
+  },
+  "trainingLoad": 43613,
+  "ok": true
+ },
+ {
+  "id": "460092878350368777",
+  "kind": "workout",
+  "title": "FTP Intervals- Intermediate",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "ftp"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Bike",
+  "exercises": 12,
+  "targetTypes": {
+   "2": 12
+  },
+  "intensityTypes": {
+   "2": 8,
+   "0": 4
+  },
+  "trainingLoad": 91,
+  "ok": true
+ },
+ {
+  "id": "456344420156096512",
+  "kind": "plan",
+  "title": "Advanced Mountain Training Plan",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "plan_target": [
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 96,
+  "exercises": 672,
+  "sportMix": {
+   "TrailRun": 72,
+   "Run": 12,
+   "Strength": 12
+  },
+  "targetTypes": {
+   "1": 210,
+   "5": 72,
+   "2": 198,
+   "3": 192
+  },
+  "intensityTypes": {
+   "0": 316,
+   "2": 68,
+   "8": 48,
+   "1": 228,
+   "3": 12
+  },
+  "trainingLoad": 40353,
+  "ok": true
+ },
+ {
+  "id": "460092884255948800",
+  "kind": "workout",
+  "title": "FTP Intervals- Advanced",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "ftp"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 13,
+  "targetTypes": {
+   "2": 13
+  },
+  "intensityTypes": {
+   "2": 9,
+   "0": 4
+  },
+  "trainingLoad": 220,
+  "ok": true
+ },
+ {
+  "id": "444207568924098560",
+  "kind": "plan",
+  "title": "6-Week Mountain Running Training Plan",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "plan_target": [
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 6,
+  "days": 42,
+  "programs": 39,
+  "exercises": 233,
+  "sportMix": {
+   "Run": 31,
+   "Strength": 8
+  },
+  "targetTypes": {
+   "2": 171,
+   "5": 6,
+   "3": 56
+  },
+  "intensityTypes": {
+   "0": 70,
+   "2": 99,
+   "1": 64
+  },
+  "trainingLoad": 3648,
+  "ok": true
+ },
+ {
+  "id": "462212801199521792",
+  "kind": "workout",
+  "title": "Broken Tempo - Beginner",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 3,
+   "5": 3
+  },
+  "intensityTypes": {
+   "2": 4,
+   "0": 2
+  },
+  "trainingLoad": 77,
+  "ok": true
+ },
+ {
+  "id": "453069617114562560",
+  "kind": "plan",
+  "title": "10-Week Half-Marathon Mountain Training Plan",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "plan_target": [
+   "half_marathon"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 69,
+  "programs": 61,
+  "exercises": 339,
+  "sportMix": {
+   "Run": 45,
+   "Strength": 16
+  },
+  "targetTypes": {
+   "1": 1,
+   "2": 226,
+   "3": 112
+  },
+  "intensityTypes": {
+   "0": 160,
+   "8": 51,
+   "1": 128
+  },
+  "trainingLoad": 25857,
+  "ok": true
+ },
+ {
+  "id": "462212838780485632",
+  "kind": "workout",
+  "title": "Broken Tempo - Advanced",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 3,
+   "5": 3
+  },
+  "intensityTypes": {
+   "2": 4,
+   "0": 2
+  },
+  "trainingLoad": 123,
+  "ok": true
+ },
+ {
+  "id": "453114052846206977",
+  "kind": "plan",
+  "title": "10-Week 50k Mountain Training Plan",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "plan_target": [
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 69,
+  "programs": 62,
+  "exercises": 379,
+  "sportMix": {
+   "Run": 46,
+   "Strength": 16
+  },
+  "targetTypes": {
+   "1": 1,
+   "2": 266,
+   "3": 112
+  },
+  "intensityTypes": {
+   "0": 171,
+   "8": 70,
+   "1": 128,
+   "2": 10
+  },
+  "trainingLoad": 31687,
+  "ok": true
+ },
+ {
+  "id": "462212829653680128",
+  "kind": "workout",
+  "title": "Broken Tempo - Intermediate",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 3,
+   "5": 2
+  },
+  "intensityTypes": {
+   "2": 3,
+   "0": 2
+  },
+  "trainingLoad": 98,
+  "ok": true
+ },
+ {
+  "id": "448633419751145473",
+  "kind": "plan",
+  "title": "50k Trail Run Training Plan",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "plan_target": [
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 20,
+  "days": 139,
+  "programs": 109,
+  "exercises": 407,
+  "sportMix": {
+   "Run": 109
+  },
+  "targetTypes": {
+   "2": 260,
+   "5": 147
+  },
+  "intensityTypes": {
+   "0": 253,
+   "2": 127,
+   "3": 27
+  },
+  "trainingLoad": 15342,
+  "ok": true
+ },
+ {
+  "id": "448633499705065514",
+  "kind": "workout",
+  "title": "800m Speed Workout",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 3,
+   "0": 1,
+   "5": 1
+  },
+  "intensityTypes": {
+   "0": 4,
+   "2": 1
+  },
+  "trainingLoad": 168,
+  "ok": true
+ },
+ {
+  "id": "450446477626621972",
+  "kind": "plan",
+  "title": "100K Ultra Training Plan",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "plan_target": [
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 81,
+  "exercises": 382,
+  "sportMix": {
+   "Run": 67,
+   "Strength": 14
+  },
+  "targetTypes": {
+   "2": 175,
+   "5": 87,
+   "1": 29,
+   "3": 91
+  },
+  "intensityTypes": {
+   "0": 209,
+   "2": 51,
+   "1": 98,
+   "8": 24
+  },
+  "trainingLoad": 18068,
+  "ok": true
+ },
+ {
+  "id": "448633507758129152",
+  "kind": "workout",
+  "title": "Tabata Running Workout",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 14,
+  "targetTypes": {
+   "2": 11,
+   "0": 3
+  },
+  "intensityTypes": {
+   "0": 8,
+   "2": 6
+  },
+  "trainingLoad": 61,
+  "ok": true
+ },
+ {
+  "id": "448633444178771983",
+  "kind": "plan",
+  "title": "12-Week 100 Mile Ultra Training Plan",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "plan_target": [
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 81,
+  "exercises": 312,
+  "sportMix": {
+   "Strength": 14,
+   "Run": 67
+  },
+  "targetTypes": {
+   "2": 160,
+   "3": 73,
+   "5": 78,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 162,
+   "1": 77,
+   "2": 73
+  },
+  "trainingLoad": 9083,
+  "ok": true
+ },
+ {
+  "id": "460414053861474305",
+  "kind": "workout",
+  "title": "Power Endurance",
+  "catalog_sport": [
+   "bouldering"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Climb",
+  "exercises": 13,
+  "targetTypes": {
+   "2": 7,
+   "0": 3,
+   "9": 3
+  },
+  "intensityTypes": {
+   "10": 10,
+   "0": 3
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "459583249604329472",
+  "kind": "plan",
+  "title": "100-Miles Cycling Training Plan",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "plan_target": [
+   "ultra_distance"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 83,
+  "programs": 56,
+  "exercises": 243,
+  "sportMix": {
+   "Bike": 56
+  },
+  "targetTypes": {
+   "1": 110,
+   "5": 58,
+   "2": 75
+  },
+  "intensityTypes": {
+   "0": 135,
+   "2": 108
+  },
+  "trainingLoad": 1717,
+  "ok": true
+ },
+ {
+  "id": "460417610094395392",
+  "kind": "workout",
+  "title": "Bouldering 4x4",
+  "catalog_sport": [
+   "bouldering"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Climb",
+  "exercises": 33,
+  "targetTypes": {
+   "2": 17,
+   "0": 1,
+   "9": 15
+  },
+  "intensityTypes": {
+   "10": 32,
+   "0": 1
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633358512209920",
+  "kind": "plan",
+  "title": "Beginner Runner Base Plan (Metric)",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "base_plan"
+  ],
+  "difficulty": [],
+  "weeks": 10,
+  "days": 70,
+  "programs": 44,
+  "exercises": 132,
+  "sportMix": {
+   "Run": 43,
+   "Bike": 1
+  },
+  "targetTypes": {
+   "2": 89,
+   "5": 43
+  },
+  "intensityTypes": {
+   "0": 132
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "460414072115085312",
+  "kind": "workout",
+  "title": "Bouldering Competition Simulation",
+  "catalog_sport": [
+   "bouldering"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Climb",
+  "exercises": 10,
+  "targetTypes": {
+   "9": 6,
+   "2": 4
+  },
+  "intensityTypes": {
+   "10": 10
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "453095734273818624",
+  "kind": "plan",
+  "title": "Beginner Base Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "base_plan"
+  ],
+  "difficulty": [],
+  "weeks": 6,
+  "days": 41,
+  "programs": 48,
+  "exercises": 118,
+  "sportMix": {
+   "Strength": 24,
+   "Run": 24
+  },
+  "targetTypes": {
+   "2": 118
+  },
+  "intensityTypes": {
+   "1": 24,
+   "2": 51,
+   "0": 43
+  },
+  "trainingLoad": 868,
+  "ok": true
+ },
+ {
+  "id": "460417603920379904",
+  "kind": "workout",
+  "title": "Bouldering Pyramid",
+  "catalog_sport": [
+   "bouldering"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Climb",
+  "exercises": 33,
+  "targetTypes": {
+   "2": 18,
+   "0": 1,
+   "9": 14
+  },
+  "intensityTypes": {
+   "10": 32,
+   "0": 1
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "453139240681914369",
+  "kind": "plan",
+  "title": "Intermediate Base Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "base_plan"
+  ],
+  "difficulty": [],
+  "weeks": 6,
+  "days": 41,
+  "programs": 54,
+  "exercises": 147,
+  "sportMix": {
+   "Run": 24,
+   "Strength": 30
+  },
+  "targetTypes": {
+   "2": 105,
+   "3": 42
+  },
+  "intensityTypes": {
+   "0": 57,
+   "3": 18,
+   "1": 66,
+   "2": 6
+  },
+  "trainingLoad": 4884,
+  "ok": true
+ },
+ {
+  "id": "426778213681905668",
+  "kind": "workout",
+  "title": "Stride Development",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 4,
+   "3": 4
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633410322350080",
+  "kind": "plan",
+  "title": "Run Speed Development",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "speed_development"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 83,
+  "programs": 64,
+  "exercises": 272,
+  "sportMix": {
+   "Run": 64
+  },
+  "targetTypes": {
+   "2": 121,
+   "5": 150,
+   "0": 1
+  },
+  "intensityTypes": {
+   "3": 117,
+   "0": 154,
+   "2": 1
+  },
+  "trainingLoad": 27854,
+  "ok": true
+ },
+ {
+  "id": "455080995128000513",
+  "kind": "workout",
+  "title": "Cadence Drills",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 6
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 4
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633428842299392",
+  "kind": "plan",
+  "title": "Threshold Development",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "speed_development"
+  ],
+  "difficulty": [],
+  "weeks": 9,
+  "days": 59,
+  "programs": 48,
+  "exercises": 207,
+  "sportMix": {
+   "Run": 48
+  },
+  "targetTypes": {
+   "2": 88,
+   "5": 119
+  },
+  "intensityTypes": {
+   "0": 129,
+   "3": 78
+  },
+  "trainingLoad": 19159,
+  "ok": true
+ },
+ {
+  "id": "426778098525192198",
+  "kind": "workout",
+  "title": "Cadence Training",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Strength",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 7,
+   "3": 1
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "457010345440100360",
+  "kind": "plan",
+  "title": "Cross Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "base_plan"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 56,
+  "programs": 72,
+  "exercises": 472,
+  "sportMix": {
+   "Strength": 40,
+   "Bike": 8,
+   "Run": 24
+  },
+  "targetTypes": {
+   "2": 216,
+   "3": 224,
+   "1": 32
+  },
+  "intensityTypes": {
+   "0": 152,
+   "1": 272,
+   "2": 48
+  },
+  "trainingLoad": 2297,
+  "ok": true
+ },
+ {
+  "id": "448633436085862409",
+  "kind": "plan",
+  "title": "8-Week Off-Season Training Plan",
+  "catalog_sport": [
+   "run"
+  ],
+  "plan_target": [
+   "base_plan"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 56,
+  "programs": 42,
+  "exercises": 131,
+  "sportMix": {
+   "Run": 29,
+   "Bike": 13
+  },
+  "targetTypes": {
+   "2": 99,
+   "5": 32
+  },
+  "intensityTypes": {
+   "0": 87,
+   "2": 42,
+   "3": 2
+  },
+  "trainingLoad": 3538,
+  "ok": true
+ },
+ {
+  "id": "460078200031199232",
+  "kind": "workout",
+  "title": "Sprint Intervals- Beginner",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "sprint"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Bike",
+  "exercises": 12,
+  "targetTypes": {
+   "2": 12
+  },
+  "intensityTypes": {
+   "2": 8,
+   "0": 4
+  },
+  "trainingLoad": 63,
+  "ok": true
+ },
+ {
+  "id": "460090291437879296",
+  "kind": "plan",
+  "title": "Beginner Base Endurance Cycling Plan",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "plan_target": [
+   "base_plan"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 55,
+  "programs": 28,
+  "exercises": 143,
+  "sportMix": {
+   "Bike": 28
+  },
+  "targetTypes": {
+   "1": 56,
+   "2": 87
+  },
+  "intensityTypes": {
+   "0": 75,
+   "2": 68
+  },
+  "trainingLoad": 2949,
+  "ok": true
+ },
+ {
+  "id": "460117513745907714",
+  "kind": "workout",
+  "title": "Sprint Intervals- Intermediate",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "sprint"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Bike",
+  "exercises": 12,
+  "targetTypes": {
+   "2": 12
+  },
+  "intensityTypes": {
+   "2": 8,
+   "0": 4
+  },
+  "trainingLoad": 56,
+  "ok": true
+ },
+ {
+  "id": "459580371170934788",
+  "kind": "plan",
+  "title": "Intermediate Base Endurance Cycling Plan",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "plan_target": [
+   "base_plan"
+  ],
+  "difficulty": [],
+  "weeks": 8,
+  "days": 56,
+  "programs": 37,
+  "exercises": 192,
+  "sportMix": {
+   "Bike": 37
+  },
+  "targetTypes": {
+   "1": 74,
+   "2": 118
+  },
+  "intensityTypes": {
+   "0": 100,
+   "2": 92
+  },
+  "trainingLoad": 4243,
+  "ok": true
+ },
+ {
+  "id": "460117556158709760",
+  "kind": "workout",
+  "title": "Sprint Intervals- Advanced",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "sprint"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 12,
+  "targetTypes": {
+   "2": 12
+  },
+  "intensityTypes": {
+   "2": 8,
+   "0": 4
+  },
+  "trainingLoad": 53,
+  "ok": true
+ },
+ {
+  "id": "459583119950004224",
+  "kind": "plan",
+  "title": "Threshold Development Cycling Plan",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "plan_target": [
+   "speed_development"
+  ],
+  "difficulty": [],
+  "weeks": 6,
+  "days": 41,
+  "programs": 30,
+  "exercises": 142,
+  "sportMix": {
+   "Bike": 30
+  },
+  "targetTypes": {
+   "1": 60,
+   "2": 82
+  },
+  "intensityTypes": {
+   "0": 76,
+   "2": 66
+  },
+  "trainingLoad": 4449,
+  "ok": true
+ },
+ {
+  "id": "448633393136189441",
+  "kind": "plan",
+  "title": "Beginner Sprint Distance Triathlon Plan",
+  "catalog_sport": [
+   "triathlon"
+  ],
+  "plan_target": [
+   "plan_target_triathlon"
+  ],
+  "difficulty": [],
+  "weeks": 12,
+  "days": 84,
+  "programs": 87,
+  "exercises": 367,
+  "sportMix": {
+   "Bike": 28,
+   "Swim": 26,
+   "Run": 33
+  },
+  "targetTypes": {
+   "2": 260,
+   "5": 107
+  },
+  "intensityTypes": {
+   "0": 196,
+   "2": 91,
+   "5": 80
+  },
+  "trainingLoad": 4824,
+  "ok": true
+ },
+ {
+  "id": "453764033869430785",
+  "kind": "workout",
+  "title": "Beginner Aerobic Power Intervals",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 4,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 4,
+   "8": 1
+  },
+  "trainingLoad": 604,
+  "ok": true
+ },
+ {
+  "id": "453764076013797376",
+  "kind": "workout",
+  "title": "Intermediate/Advanced Aerobic Power Intervals",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 4,
+   "1": 1
+  },
+  "intensityTypes": {
+   "0": 4,
+   "8": 1
+  },
+  "trainingLoad": 906,
+  "ok": true
+ },
+ {
+  "id": "454876880296919040",
+  "kind": "workout",
+  "title": "Beginner Swim Workout",
+  "catalog_sport": [
+   "swimming"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Swim",
+  "exercises": 10,
+  "targetTypes": {
+   "1": 2,
+   "5": 6,
+   "2": 2
+  },
+  "intensityTypes": {
+   "0": 6,
+   "5": 4
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "454572325508137036",
+  "kind": "workout",
+  "title": "Single Leg Strength",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 12,
+  "targetTypes": {
+   "2": 2,
+   "3": 10
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 10
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "449654661465686046",
+  "kind": "workout",
+  "title": "Effort Pace: Beginner VO2max Development",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold",
+   "vo2max"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 7,
+   "1": 1
+  },
+  "intensityTypes": {
+   "8": 6,
+   "0": 2
+  },
+  "trainingLoad": 609,
+  "ok": true
+ },
+ {
+  "id": "449654618524401675",
+  "kind": "workout",
+  "title": "Effort Pace: Beginner Threshold Development",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 4,
+   "1": 1
+  },
+  "intensityTypes": {
+   "8": 4,
+   "0": 1
+  },
+  "trainingLoad": 490,
+  "ok": true
+ },
+ {
+  "id": "449653380497981470",
+  "kind": "workout",
+  "title": "Effort Pace: Advanced VO2max Development",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 12,
+  "targetTypes": {
+   "2": 11,
+   "1": 1
+  },
+  "intensityTypes": {
+   "8": 9,
+   "0": 3
+  },
+  "trainingLoad": 1470,
+  "ok": true
+ },
+ {
+  "id": "449653006292664350",
+  "kind": "workout",
+  "title": "Effort Pace: Advanced Threshold Development",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 11,
+  "targetTypes": {
+   "2": 10,
+   "1": 1
+  },
+  "intensityTypes": {
+   "8": 8,
+   "0": 3
+  },
+  "trainingLoad": 1187,
+  "ok": true
+ },
+ {
+  "id": "448633567357091845",
+  "kind": "workout",
+  "title": "\"Feel the Burn\" Strength Workout",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 32,
+  "targetTypes": {
+   "2": 2,
+   "3": 30
+  },
+  "intensityTypes": {
+   "1": 31,
+   "0": 1
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "455760489287434247",
+  "kind": "workout",
+  "title": "Winter Warm-up Routine",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 6
+  },
+  "intensityTypes": {
+   "0": 1,
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "454133369113067541",
+  "kind": "workout",
+  "title": "Dynamic Warm-up",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 3,
+   "3": 5
+  },
+  "intensityTypes": {
+   "0": 1,
+   "1": 7
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "435424630048735232",
+  "kind": "workout",
+  "title": "Abdominal Stabilization Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "core"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 1,
+   "3": 4
+  },
+  "intensityTypes": {
+   "0": 1,
+   "1": 4
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "447353176138629170",
+  "kind": "workout",
+  "title": "Recovery Run",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 2,
+  "targetTypes": {
+   "2": 2
+  },
+  "intensityTypes": {
+   "0": 1,
+   "2": 1
+  },
+  "trainingLoad": 25,
+  "ok": true
+ },
+ {
+  "id": "449958026565304322",
+  "kind": "workout",
+  "title": "Back to Training - Full Body",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 11,
+  "targetTypes": {
+   "1": 2,
+   "2": 4,
+   "3": 5
+  },
+  "intensityTypes": {
+   "0": 5,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "454761654377431052",
+  "kind": "workout",
+  "title": "Progression Run",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 8
+  },
+  "intensityTypes": {
+   "3": 7,
+   "0": 1
+  },
+  "trainingLoad": 551,
+  "ok": true
+ },
+ {
+  "id": "454761411443343374",
+  "kind": "workout",
+  "title": "Progression Run - Fast Finish",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 4,
+  "targetTypes": {
+   "2": 2,
+   "5": 2
+  },
+  "intensityTypes": {
+   "0": 2,
+   "3": 2
+  },
+  "trainingLoad": 684,
+  "ok": true
+ },
+ {
+  "id": "460462687386779648",
+  "kind": "workout",
+  "title": "Progressive Onsite Bouldering Workout",
+  "catalog_sport": [
+   "bouldering"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Climb",
+  "exercises": 14,
+  "targetTypes": {
+   "9": 8,
+   "0": 2,
+   "2": 4
+  },
+  "intensityTypes": {
+   "10": 12,
+   "0": 2
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "460414069162295297",
+  "kind": "workout",
+  "title": "Progressive onsite Lead Workout",
+  "catalog_sport": [
+   "climbing"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Track",
+  "exercises": 13,
+  "targetTypes": {
+   "9": 7,
+   "2": 6
+  },
+  "intensityTypes": {
+   "10": 13
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "454876745810755592",
+  "kind": "workout",
+  "title": "Cross Training Workout",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "tempo"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate"
+  ],
+  "sportType": "Bike",
+  "exercises": 7,
+  "targetTypes": {
+   "1": 2,
+   "2": 5
+  },
+  "intensityTypes": {
+   "0": 3,
+   "2": 4
+  },
+  "trainingLoad": 91,
+  "ok": true
+ },
+ {
+  "id": "447353200566255616",
+  "kind": "workout",
+  "title": "VO2max Intervals",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "0": 4,
+   "3": 1
+  },
+  "trainingLoad": 262,
+  "ok": true
+ },
+ {
+  "id": "456682459583660032",
+  "kind": "workout",
+  "title": "Pyramid Fartlek Run",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Run",
+  "exercises": 14,
+  "targetTypes": {
+   "2": 14
+  },
+  "intensityTypes": {
+   "0": 1,
+   "3": 13
+  },
+  "trainingLoad": 765,
+  "ok": true
+ },
+ {
+  "id": "448633537554464768",
+  "kind": "workout",
+  "title": "Pyramid Interval Workout",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 14,
+  "targetTypes": {
+   "2": 8,
+   "5": 6
+  },
+  "intensityTypes": {
+   "2": 8,
+   "0": 6
+  },
+  "trainingLoad": 147,
+  "ok": true
+ },
+ {
+  "id": "447353193855369216",
+  "kind": "workout",
+  "title": "Pyramid Training",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 8,
+  "targetTypes": {
+   "5": 1,
+   "2": 7
+  },
+  "intensityTypes": {
+   "0": 5,
+   "3": 3
+  },
+  "trainingLoad": 183,
+  "ok": true
+ },
+ {
+  "id": "447353196002852864",
+  "kind": "workout",
+  "title": "Inverted Pyramid",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 10,
+  "targetTypes": {
+   "5": 1,
+   "2": 9
+  },
+  "intensityTypes": {
+   "0": 6,
+   "3": 4
+  },
+  "trainingLoad": 291,
+  "ok": true
+ },
+ {
+  "id": "456315389666836480",
+  "kind": "workout",
+  "title": "Full Body - Eccentric/Isometric Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 4,
+   "3": 3
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "438329806868889600",
+  "kind": "workout",
+  "title": "Take a Break from Work to Train",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "core"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 7
+  },
+  "intensityTypes": {
+   "0": 1,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "445946743190896640",
+  "kind": "workout",
+  "title": "Long Ride for Marathon Training",
+  "catalog_sport": [
+   "cycling",
+   "run"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 6
+  },
+  "intensityTypes": {
+   "0": 3,
+   "2": 3
+  },
+  "trainingLoad": 430,
+  "ok": true
+ },
+ {
+  "id": "460077286813777920",
+  "kind": "workout",
+  "title": "Endurance Ride - Beginner",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Bike",
+  "exercises": 3,
+  "targetTypes": {
+   "2": 3
+  },
+  "intensityTypes": {
+   "2": 2,
+   "0": 1
+  },
+  "trainingLoad": 164,
+  "ok": true
+ },
+ {
+  "id": "462316153145049088",
+  "kind": "workout",
+  "title": "Endurance Ride - Intermediate",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Bike",
+  "exercises": 3,
+  "targetTypes": {
+   "2": 3
+  },
+  "intensityTypes": {
+   "2": 2,
+   "0": 1
+  },
+  "trainingLoad": 243,
+  "ok": true
+ },
+ {
+  "id": "462316184820432896",
+  "kind": "workout",
+  "title": "Endurance Ride - Advanced",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "base_workout"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 3,
+  "targetTypes": {
+   "2": 3
+  },
+  "intensityTypes": {
+   "2": 2,
+   "0": 1
+  },
+  "trainingLoad": 360,
+  "ok": true
+ },
+ {
+  "id": "464137375768035328",
+  "kind": "workout",
+  "title": "Aerobic Endurance Ride",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "sprint"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 3,
+  "targetTypes": {
+   "2": 3
+  },
+  "intensityTypes": {
+   "0": 2,
+   "9": 1
+  },
+  "trainingLoad": 59,
+  "ok": true
+ },
+ {
+  "id": "448633600909426688",
+  "kind": "workout",
+  "title": "Strength Routine",
+  "catalog_sport": [
+   "strength",
+   "climbing",
+   "bouldering"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Strength",
+  "exercises": 20,
+  "targetTypes": {
+   "2": 4,
+   "3": 16
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 18
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "449959148357074976",
+  "kind": "workout",
+  "title": "Power Development - Running Specific",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Strength",
+  "exercises": 17,
+  "targetTypes": {
+   "1": 2,
+   "2": 5,
+   "3": 10
+  },
+  "intensityTypes": {
+   "0": 7,
+   "1": 10
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "449958033007755272",
+  "kind": "workout",
+  "title": "Strength Development - Running Specific",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 26,
+  "targetTypes": {
+   "1": 2,
+   "2": 8,
+   "3": 16
+  },
+  "intensityTypes": {
+   "0": 7,
+   "1": 19
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633592892014592",
+  "kind": "workout",
+  "title": "Pre-Run Strength Routine",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 9,
+  "targetTypes": {
+   "2": 2,
+   "3": 7
+  },
+  "intensityTypes": {
+   "0": 1,
+   "1": 8
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "454227866715078657",
+  "kind": "workout",
+  "title": "Post Run Strength Routine",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 13,
+  "targetTypes": {
+   "3": 7,
+   "2": 6
+  },
+  "intensityTypes": {
+   "1": 8,
+   "0": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "454069542946258946",
+  "kind": "workout",
+  "title": "Hills and Threshold Combo（Beginner）",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "workout_target": [
+   "lower_body",
+   "threshold",
+   "vo2max"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "TrailRun",
+  "exercises": 7,
+  "targetTypes": {
+   "1": 4,
+   "2": 3
+  },
+  "intensityTypes": {
+   "0": 5,
+   "8": 2
+  },
+  "trainingLoad": 450,
+  "ok": true
+ },
+ {
+  "id": "454069377053147136",
+  "kind": "workout",
+  "title": "Hills and Threshold Combo (Intermediate/Advanced)",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "workout_target": [
+   "lower_body",
+   "threshold",
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "TrailRun",
+  "exercises": 7,
+  "targetTypes": {
+   "1": 4,
+   "2": 3
+  },
+  "intensityTypes": {
+   "0": 5,
+   "8": 2
+  },
+  "trainingLoad": 653,
+  "ok": true
+ },
+ {
+  "id": "456296527781085199",
+  "kind": "workout",
+  "title": "Hill Strides Beginner",
+  "catalog_sport": [
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "lower_body",
+   "vo2max"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "1": 3,
+   "2": 2
+  },
+  "intensityTypes": {
+   "0": 4,
+   "8": 1
+  },
+  "trainingLoad": 162,
+  "ok": true
+ },
+ {
+  "id": "456321468656173056",
+  "kind": "workout",
+  "title": "Hill Strides Advanced",
+  "catalog_sport": [
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "lower_body",
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 9,
+  "targetTypes": {
+   "1": 4,
+   "2": 5
+  },
+  "intensityTypes": {
+   "0": 6,
+   "8": 3
+  },
+  "trainingLoad": 337,
+  "ok": true
+ },
+ {
+  "id": "448633474744762368",
+  "kind": "workout",
+  "title": "Uphill Training",
+  "catalog_sport": [
+   "cycling"
+  ],
+  "workout_target": [
+   "threshold",
+   "vo2max",
+   "sprint"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Bike",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 4,
+   "0": 1
+  },
+  "intensityTypes": {
+   "2": 3,
+   "0": 2
+  },
+  "trainingLoad": 229,
+  "ok": true
+ },
+ {
+  "id": "444203519313100801",
+  "kind": "workout",
+  "title": "1:1 Hill Fartlek Workout",
+  "catalog_sport": [
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "threshold"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 9,
+  "targetTypes": {
+   "2": 9
+  },
+  "intensityTypes": {
+   "2": 7,
+   "0": 2
+  },
+  "trainingLoad": 161,
+  "ok": true
+ },
+ {
+  "id": "461880750835417088",
+  "kind": "workout",
+  "title": "Full Body Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 11,
+  "targetTypes": {
+   "2": 5,
+   "3": 6
+  },
+  "intensityTypes": {
+   "0": 4,
+   "1": 7
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633618359828480",
+  "kind": "workout",
+  "title": "Full Body Strength Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 3,
+   "3": 5
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633583456927744",
+  "kind": "workout",
+  "title": "Uphill Athlete: Killer Core Routine",
+  "catalog_sport": [
+   "strength",
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 14,
+  "targetTypes": {
+   "2": 2,
+   "3": 12
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 12
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633575410155546",
+  "kind": "workout",
+  "title": "Uphill Athlete: Strength Routine",
+  "catalog_sport": [
+   "strength",
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 18,
+  "targetTypes": {
+   "2": 2,
+   "3": 16
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 16
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "444527944761786369",
+  "kind": "workout",
+  "title": "Mountain Running Routine",
+  "catalog_sport": [
+   "strength",
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "lower_body",
+   "core"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 12,
+  "targetTypes": {
+   "2": 5,
+   "3": 7
+  },
+  "intensityTypes": {
+   "0": 4,
+   "1": 8
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "458165990679822336",
+  "kind": "workout",
+  "title": "Upper Body Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 15,
+  "targetTypes": {
+   "2": 9,
+   "3": 6
+  },
+  "intensityTypes": {
+   "0": 8,
+   "1": 7
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "455504071418363914",
+  "kind": "workout",
+  "title": "Upper Body Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 2,
+   "3": 6
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "429534408819785728",
+  "kind": "workout",
+  "title": "Barehanded Upper-Body Strength",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 1,
+   "3": 5
+  },
+  "intensityTypes": {
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "429699694191624195",
+  "kind": "workout",
+  "title": "Advanced Upper-Body Strength",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 5,
+  "targetTypes": {
+   "3": 5
+  },
+  "intensityTypes": {
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "460414075336310784",
+  "kind": "workout",
+  "title": "Climbing Strength",
+  "catalog_sport": [
+   "strength",
+   "climbing",
+   "bouldering"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Strength",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 3,
+   "3": 3
+  },
+  "intensityTypes": {
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "460414059767054336",
+  "kind": "workout",
+  "title": "Doubles Pure Endurance Training",
+  "catalog_sport": [
+   "climbing"
+  ],
+  "workout_target": [
+   "upper_body"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Track",
+  "exercises": 12,
+  "targetTypes": {
+   "9": 6,
+   "2": 6
+  },
+  "intensityTypes": {
+   "10": 12
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "448633491652001793",
+  "kind": "workout",
+  "title": "Speed Play Workout",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 4,
+   "0": 1
+  },
+  "intensityTypes": {
+   "0": 4,
+   "2": 1
+  },
+  "trainingLoad": 16,
+  "ok": true
+ },
+ {
+  "id": "454411209742139429",
+  "kind": "workout",
+  "title": "Hip Mobility",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 13,
+  "targetTypes": {
+   "3": 7,
+   "2": 6
+  },
+  "intensityTypes": {
+   "1": 8,
+   "0": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "455503969949761536",
+  "kind": "workout",
+  "title": "Lower Body Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 8,
+  "targetTypes": {
+   "2": 2,
+   "3": 6
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "435424529383342080",
+  "kind": "workout",
+  "title": "Lower-Body Strength Training",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 1,
+   "3": 5
+  },
+  "intensityTypes": {
+   "0": 1,
+   "1": 5
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "438329810352259072",
+  "kind": "workout",
+  "title": "Lower-Body Physical Training",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 10,
+  "targetTypes": {
+   "2": 10
+  },
+  "intensityTypes": {
+   "0": 1,
+   "1": 9
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "460069150535106560",
+  "kind": "workout",
+  "title": "Downhill Strength Workout",
+  "catalog_sport": [
+   "strength",
+   "run",
+   "trail_run"
+  ],
+  "workout_target": [
+   "lower_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 9,
+  "targetTypes": {
+   "2": 3,
+   "3": 6
+  },
+  "intensityTypes": {
+   "0": 3,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "458447501895319552",
+  "kind": "workout",
+  "title": "Eccentric Lower Body",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 10,
+  "targetTypes": {
+   "2": 6,
+   "3": 4
+  },
+  "intensityTypes": {
+   "0": 6,
+   "1": 4
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "447353202982174720",
+  "kind": "workout",
+  "title": "Yasso 800s",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "vo2max"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 3,
+   "5": 2
+  },
+  "intensityTypes": {
+   "0": 4,
+   "3": 1
+  },
+  "trainingLoad": 353,
+  "ok": true
+ },
+ {
+  "id": "453899706249166867",
+  "kind": "workout",
+  "title": "Aerobic Run ending with 30 second Strides",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout",
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 6,
+  "targetTypes": {
+   "2": 5,
+   "5": 1
+  },
+  "intensityTypes": {
+   "0": 3,
+   "3": 3
+  },
+  "trainingLoad": 410,
+  "ok": true
+ },
+ {
+  "id": "453899769331499039",
+  "kind": "workout",
+  "title": "Aerobic Endurance Run with Strides Intervals",
+  "catalog_sport": [
+   "run"
+  ],
+  "workout_target": [
+   "base_workout",
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "Run",
+  "exercises": 7,
+  "targetTypes": {
+   "2": 5,
+   "5": 2
+  },
+  "intensityTypes": {
+   "0": 3,
+   "3": 1,
+   "2": 3
+  },
+  "trainingLoad": 16,
+  "ok": true
+ },
+ {
+  "id": "460396139552882688",
+  "kind": "workout",
+  "title": "Tempo Trail Workout",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "workout_target": [
+   "tempo",
+   "vo2max"
+  ],
+  "difficulty": [
+   "beginner",
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "TrailRun",
+  "exercises": 5,
+  "targetTypes": {
+   "2": 5
+  },
+  "intensityTypes": {
+   "8": 4,
+   "0": 1
+  },
+  "trainingLoad": 610,
+  "ok": true
+ },
+ {
+  "id": "454716354820489255",
+  "kind": "workout",
+  "title": "Trail Run Fartlek",
+  "catalog_sport": [
+   "trail_run"
+  ],
+  "workout_target": [
+   "threshold",
+   "vo2max"
+  ],
+  "difficulty": [
+   "intermediate",
+   "advanced"
+  ],
+  "sportType": "TrailRun",
+  "exercises": 5,
+  "targetTypes": {
+   "1": 2,
+   "2": 3
+  },
+  "intensityTypes": {
+   "0": 3,
+   "8": 2
+  },
+  "trainingLoad": 458,
+  "ok": true
+ },
+ {
+  "id": "453784877077282816",
+  "kind": "workout",
+  "title": "Beginner Plyometrics",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "beginner"
+  ],
+  "sportType": "Strength",
+  "exercises": 20,
+  "targetTypes": {
+   "2": 20
+  },
+  "intensityTypes": {
+   "0": 13,
+   "1": 7
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "453786262204235778",
+  "kind": "workout",
+  "title": "Intermediate/Advanced Plyometrics",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "advanced"
+  ],
+  "sportType": "Strength",
+  "exercises": 19,
+  "targetTypes": {
+   "2": 18,
+   "3": 1
+  },
+  "intensityTypes": {
+   "0": 12,
+   "1": 7
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "455947645171712000",
+  "kind": "workout",
+  "title": "Climbing Hangboard Endurance",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 15,
+  "targetTypes": {
+   "2": 15
+  },
+  "intensityTypes": {
+   "0": 2,
+   "1": 13
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "456155260669575168",
+  "kind": "workout",
+  "title": "Bodyweight Tabata Workout",
+  "catalog_sport": [
+   "strength"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 13,
+  "targetTypes": {
+   "2": 13
+  },
+  "intensityTypes": {
+   "0": 7,
+   "1": 6
+  },
+  "trainingLoad": 0,
+  "ok": true
+ },
+ {
+  "id": "450306841797378048",
+  "kind": "workout",
+  "title": "Bodyweight - Running Specific",
+  "catalog_sport": [
+   "strength",
+   "run"
+  ],
+  "workout_target": [
+   "full_body"
+  ],
+  "difficulty": [
+   "intermediate"
+  ],
+  "sportType": "Strength",
+  "exercises": 13,
+  "targetTypes": {
+   "1": 2,
+   "2": 3,
+   "3": 8
+  },
+  "intensityTypes": {
+   "0": 5,
+   "1": 8
+  },
+  "trainingLoad": 0,
+  "ok": true
+ }
+]
