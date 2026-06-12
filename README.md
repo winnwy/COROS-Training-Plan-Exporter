@@ -54,6 +54,13 @@ Intervals show as repeats (`3× …`), targets as %-of-threshold ranges, and str
 ### ⌚ Garmin watch (`.FIT`)
 A calendar event is just a reminder. A `.FIT` workout is **watch-guided** — your Garmin steps you through it. Works for **run, bike, and strength** (sets become repeats). Download from the web app, or use the CLI.
 
+**Put it on your watch (USB sideload):**
+1. Download the `.FIT` `.zip` (web button or CLI) and unzip it.
+2. Plug your watch in over USB — it mounts as a **GARMIN** drive. Copy the `.fit` file(s) into **`GARMIN/NewFiles/`** (some models: `GARMIN/Workouts/`). On macOS, MTP-only watches need [Android File Transfer](https://www.android.com/filetransfer/).
+3. Eject, unplug. The workout appears under **Training → Workouts** — start it and the watch counts you through each step.
+
+> **Note:** durations, distances, reps and interval repeats are exact, but the intensity target rides in the step name (e.g. `Training @ 96–102% HR`) rather than an enforced zone — COROS uses %-of-threshold, which doesn't map cleanly onto Garmin's zone model. Older watches cap stored workouts (~25–50), so load a few at a time.
+
 ---
 
 ## 📲 How to use the web app
