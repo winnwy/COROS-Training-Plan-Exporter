@@ -8,6 +8,8 @@ COROS training plans live inside the COROS app. This tool reads a plan from its 
 
 No sign-up, no install. Paste a plan link, preview it, download.
 
+![Preview of a decoded COROS plan — collapsible weeks and per-workout detail](docs/img/preview.png)
+
 ---
 
 ## Two ways to use it
