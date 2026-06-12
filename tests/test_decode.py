@@ -139,6 +139,40 @@ def test_no_bare_kind_target(tr):
                     assert " @ HR" not in s.human() and " @ pace" not in s.human()
 
 
+def test_readable_titles_preserved_regression(tr):
+    """REGRESSION (iron rule): the title fallback must NOT clobber real names.
+
+    run_simple's program names ("4 mile with strides", ...) are human-readable
+    but are NOT dictionary keys, so translate() returns them unchanged. The
+    equality-miss fallback must keep them verbatim — only unresolved
+    *shortcode-shaped* names (W30291) fall back to "<Sport> Workout".
+    """
+    data = load("run_simple")
+    raw_names = [p.get("name") for p in data["programs"]]
+    plan = D.decode_plan(data, tr)
+    assert [w.title for w in plan.workouts] == raw_names
+
+
+def test_dictionary_resolved_titles_preserved(tr):
+    """Names that DO resolve in the dictionary keep their resolved value
+    (the fallback never fires for them)."""
+    for fx in ("bike_threshold", "strength_injury_prevention"):
+        data = load(fx)
+        plan = D.decode_plan(data, tr)
+        for w, p in zip(plan.workouts, data["programs"]):
+            assert w.title == tr(p["name"])
+            assert w.title != f"{w.sport} Workout"
+
+
+def test_title_fallback_for_untranslated_shortcode(tr):
+    """Only an unresolved, shortcode-shaped (or empty) name falls back."""
+    assert D._workout_title("ZZ99999", tr, "Run", 0) == "Run Workout"   # unknown code -> fallback
+    assert D._workout_title("", tr, "Bike", 2) == "Bike Workout"        # empty -> fallback
+    assert D._workout_title("", tr, "", 4) == "Workout 5"               # no sport -> indexed
+    assert D._workout_title("4 mile easy", tr, "Run", 0) == "4 mile easy"  # readable -> kept
+    assert D._workout_title("T3001", tr, "Run", 0) == "Training"        # resolves -> dictionary value
+
+
 def test_distance_cm_to_m(tr):
     plan = D.decode_plan(load("run_simple"), tr)
     dists = [s.dur_value for w in plan.workouts for b in w.blocks
