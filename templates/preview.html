@@ -1,189 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preview Your Plan - COROS to ICS</title>
+    <title>Preview — COROS Plan Exporter</title>
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --primary-hover: #1d4ed8;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #1e293b;
-            --border-color: #e2e8f0;
+        :root{
+            --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+            --accent:#ff9800; --accent-d:#fb8c00; --soft:#f8fafc;
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.5;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            width: 100%;
-            max-width: 800px;
-        }
-
-        h1 {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            text-align: center;
-            margin-top: 0;
-        }
-
-        .summary {
-            background-color: #eff6ff;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .summary-item {
-            text-align: center;
-        }
-
-        .summary-label {
-            display: block;
-            font-size: 0.875rem;
-            color: #64748b;
-        }
-
-        .summary-value {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 2rem;
-            font-size: 0.9rem;
-        }
-
-        th {
-            text-align: left;
-            padding: 0.75rem;
-            background-color: #f1f5f9;
-            border-bottom: 1px solid var(--border-color);
-            font-weight: 600;
-        }
-
-        td {
-            padding: 0.75rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        .actions {
-            display: flex;
-            gap: 1rem;
-        }
-
-        button {
-            flex: 1;
-            padding: 0.75rem;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .btn-secondary {
-            background-color: #e2e8f0;
-            color: var(--text-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: #cbd5e1;
-        }
-
-        .week-header {
-            background-color: #f8fafc;
-            color: #64748b;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        *{box-sizing:border-box}
+        body{margin:0; background:#fff; color:var(--ink); padding:24px;
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+            line-height:1.5; display:flex; justify-content:center}
+        .container{width:100%; max-width:760px}
+        .brand{font-weight:700; font-size:15px; margin-bottom:20px}
+        .brand b{color:var(--accent)}
+        h1{font-size:22px; letter-spacing:-.02em; margin:0 0 18px}
+        .summary{display:flex; gap:28px; padding:16px 20px; background:var(--soft);
+            border:1px solid var(--line); border-radius:12px; margin-bottom:22px}
+        .summary .k{font-size:12px; color:var(--muted); display:block}
+        .summary .v{font-size:18px; font-weight:700}
+        .list{border:1px solid var(--line); border-radius:12px; overflow:hidden; max-height:460px; overflow-y:auto}
+        table{width:100%; border-collapse:collapse; font-size:14px}
+        thead th{position:sticky; top:0; background:#fff; text-align:left; padding:11px 14px;
+            border-bottom:1px solid var(--line); font-size:12px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.04em}
+        td{padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+        tr:last-child td{border-bottom:0}
+        .week td{background:var(--soft); font-weight:700; font-size:12px; color:var(--muted);
+            text-transform:uppercase; letter-spacing:.05em}
+        .wtitle{font-weight:600}
+        details summary{cursor:pointer; color:var(--accent-d); font-weight:600; font-size:13px}
+        details div{margin-top:8px; white-space:pre-wrap; color:var(--ink); line-height:1.6; font-size:13px}
+        .nodesc{color:#94a3b8; font-size:13px}
+        .downloads{margin-top:22px}
+        .downloads h2{font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin:0 0 10px}
+        .btnrow{display:flex; gap:12px; flex-wrap:wrap}
+        button{flex:1; min-width:200px; border:0; border-radius:11px; padding:14px; font-size:15px; font-weight:700; cursor:pointer; font-family:inherit}
+        .primary{background:var(--accent); color:#fff}
+        .primary:hover{background:var(--accent-d)}
+        .ghost{background:#fff; color:var(--ink); border:1.5px solid var(--line)}
+        .ghost:hover{border-color:var(--accent); color:var(--accent-d)}
+        button:focus-visible{outline:3px solid rgba(255,152,0,.5); outline-offset:2px}
+        form{margin:0}
+        .hint{font-size:12.5px; color:var(--muted); margin:10px 2px 0}
+        .back{display:inline-block; margin-top:18px; color:var(--muted); text-decoration:none; font-size:14px; font-weight:600}
+        .back:hover{color:var(--ink)}
     </style>
 </head>
-
 <body>
     <div class="container">
-        <h1>Plan Preview</h1>
+        <div class="brand">COROS Plan <b>Exporter</b></div>
+        <h1>Your plan preview</h1>
 
         <div class="summary">
-            <div class="summary-item">
-                <span class="summary-label">Start Date</span>
-                <span class="summary-value">{{ start_date }}</span>
-            </div>
-            <div class="summary-item">
-                <span class="summary-label">Total Workouts</span>
-                <span class="summary-value">{{ total_workouts }}</span>
-            </div>
-            <div class="summary-item">
-                <span class="summary-label">Total Weeks</span>
-                <span class="summary-value">{{ total_weeks }}</span>
-            </div>
+            <div><span class="k">Start date</span><span class="v">{{ start_date }}</span></div>
+            <div><span class="k">Workouts</span><span class="v">{{ total_workouts }}</span></div>
+            <div><span class="k">Weeks</span><span class="v">{{ total_weeks }}</span></div>
         </div>
 
-        <div style="max-height: 500px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 6px;">
+        <div class="list">
             <table>
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Day</th>
-                        <th>Workout</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>Date</th><th>Day</th><th>Workout</th><th>Details</th></tr></thead>
                 <tbody>
                     {% for workout in workouts %}
                     {% if loop.first or workout.week != loop.previtem.week %}
-                    <tr class="week-header">
-                        <td colspan="4">Week {{ workout.week }}</td>
-                    </tr>
+                    <tr class="week"><td colspan="4">Week {{ workout.week }}</td></tr>
                     {% endif %}
                     <tr>
                         <td>{{ workout.date_str }}</td>
                         <td>{{ workout.weekday_name }}</td>
-                        <td style="font-weight: 500;">{{ workout.title }}</td>
-                        <td style="color: #64748b; font-size: 0.85rem;">
+                        <td class="wtitle">{{ workout.title }}</td>
+                        <td>
                             {% if workout.description %}
-                            <details style="cursor: pointer;">
-                                <summary style="color: var(--primary-color);">View Details</summary>
-                                <div style="margin-top: 0.5rem; white-space: pre-wrap; color: var(--text-color); line-height: 1.6;">{{ workout.description }}</div>
-                            </details>
-                            {% else %}
-                            <span style="color: #94a3b8;">No description</span>
-                            {% endif %}
+                            <details><summary>View</summary><div>{{ workout.description }}</div></details>
+                            {% else %}<span class="nodesc">—</span>{% endif %}
                         </td>
                     </tr>
                     {% endfor %}
@@ -191,31 +82,22 @@
             </table>
         </div>
 
-        <p style="text-align: center; color: #64748b; font-size: 0.875rem; margin-top: 1rem;">
-            Only showing the calculated dates. Click confirm to download the ICS file.
-        </p>
+        <div class="downloads">
+            <h2>Download</h2>
+            <div class="btnrow">
+                <form action="/generate" method="POST">
+                    <input type="hidden" name="workouts_json" value='{{ workouts_json }}'>
+                    <button type="submit" class="primary">📅 Add to calendar (.ics)</button>
+                </form>
+                <form action="/generate-fit" method="POST">
+                    <input type="hidden" name="plan_url" value='{{ plan_url }}'>
+                    <button type="submit" class="ghost">⌚ Garmin watch (.FIT .zip)</button>
+                </form>
+            </div>
+            <p class="hint">Calendar = reminders in any app. Garmin .FIT = watch-guided workouts — unzip and copy to your watch's <code>GARMIN/NewFiles</code> folder.</p>
+        </div>
 
-        <form action="/generate" method="POST" class="actions">
-            <!-- Hidden inputs to pass data to generation endpoint -->
-            <!-- Note: For large plans this might be heavy, but standard plans are <100kb json -->
-            <input type="hidden" name="workouts_json" value='{{ workouts_json }}'>
-
-            <a href="/" style="flex:1; text-decoration: none;">
-                <button type="button" class="btn-secondary">Back</button>
-            </a>
-            <button type="submit" class="btn-primary">Confirm &amp; Download ICS</button>
-        </form>
-
-        <!-- Garmin .FIT export (run/bike/strength): undated workout files, sideload to the watch -->
-        <form action="/generate-fit" method="POST" class="actions" style="margin-top: 10px;">
-            <input type="hidden" name="plan_url" value='{{ plan_url }}'>
-            <button type="submit" class="btn-secondary" style="flex:1;">⌚ Download Garmin .FIT (run/bike/strength, .zip)</button>
-        </form>
-        <p style="font-size: 0.8em; color: #888; text-align: center; margin-top: 6px;">
-            Calendar import gives reminders. The Garmin .FIT files are watch-guided workouts —
-            unzip and copy to your watch's <code>GARMIN/NewFiles</code> folder over USB.
-        </p>
+        <a class="back" href="/">← Start over</a>
     </div>
 </body>
-
 </html>
