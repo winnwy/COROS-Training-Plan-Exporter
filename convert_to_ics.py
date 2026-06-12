@@ -9,8 +9,67 @@ import re
 import sys
 import json
 import requests
-from datetime import datetime, timedelta, date
+import hashlib
+from collections import Counter
+from datetime import datetime, timedelta, date, timezone
 from urllib.parse import urlparse, parse_qs
+
+# Stable-identity bits so re-importing an updated plan UPDATES events in place
+# (matched by UID) instead of spawning duplicates. DTSTAMP is deterministic
+# (never wall-clock) so the same plan version regenerates a byte-identical .ics.
+_ICS_DOMAIN = "coros-training-plan-exporter"
+_ICS_DTSTAMP_FALLBACK = datetime(2024, 1, 1, tzinfo=timezone.utc)
+
+
+def _stable_uid(seed, key):
+    return f"{seed}-{key}@{_ICS_DOMAIN}"
+
+
+def _dtstamp_for(workout):
+    """Deterministic DTSTAMP from the plan's updateTimestamp when known, else a
+    fixed sentinel. Never the wall clock — that would make every regeneration
+    look 'changed' and break dedup/diffing on re-import."""
+    ts = workout.get('dtstamp_ts')
+    if ts:
+        try:
+            return datetime.fromtimestamp(int(ts), tz=timezone.utc)
+        except (ValueError, OSError, OverflowError):
+            pass
+    return _ICS_DTSTAMP_FALLBACK
+
+
+def _fallback_uid(workout):
+    """Stable UID for events that carry no plan/workout id (e.g. the legacy text
+    parser): hash title + date so distinct same-title workouts don't collide
+    into one event on import. Deterministic; dedups re-imports of the same item."""
+    seed = f"{workout.get('title') or 'workout'}|{workout.get('date_str') or ''}"
+    return f"{hashlib.sha1(seed.encode('utf-8')).hexdigest()[:16]}@{_ICS_DOMAIN}"
+
+
+def _assign_event_identity(workouts, uid_seed, version, update_ts):
+    """Add a stable per-event UID + SEQUENCE + DTSTAMP source to each plan
+    workout dict. The key is the per-entity `id_in_plan` (idInPlan) — stable and
+    unique per session, so it survives the API returning entities in a different
+    order (a positional/day-based key would swap UIDs between two sessions on the
+    same day). Falls back to the (week, day_of_week)-derived day_no + a within-day
+    counter only when idInPlan is absent (legacy payloads). These ride in the
+    dict so they survive the web JSON round-trip; create_ics_file just reads them."""
+    seen = Counter()
+    for w in workouts:
+        idp = w.get('id_in_plan')
+        if idp is not None:
+            key = f"e{idp}"
+        else:
+            day_no = (w.get('week', 1) - 1) * 7 + (w.get('day_of_week') or 0)
+            n = seen[day_no]
+            seen[day_no] += 1
+            key = f"d{day_no}" if n == 0 else f"d{day_no}-{n}"
+        w.setdefault('uid', _stable_uid(uid_seed, key))
+        if version is not None:
+            w.setdefault('sequence', int(version))
+        if update_ts:
+            w.setdefault('dtstamp_ts', int(update_ts))
+    return workouts
 try:
     from icalendar import Calendar, Event, vCalAddress, vText
 except ImportError:
@@ -158,6 +217,11 @@ def scrape_workout_from_url(url, start_date=None):
         'date_obj': start_date,
         'date_str': start_date.strftime('%Y-%m-%d'),
         'weekday_name': start_date.strftime('%A'),
+        # UID keyed on the workout id (NOT the date) so re-exporting the same
+        # workout — even on a different start date — updates in place, no dupe.
+        'uid': _stable_uid(workout_id, 'w'),
+        'sequence': int(program['version']) if program.get('version') is not None else None,
+        'dtstamp_ts': int(program['updateTimestamp']) if program.get('updateTimestamp') else None,
     }]
 
 
@@ -199,8 +263,11 @@ def scrape_from_url(url):
     if 'data' not in data or 'entities' not in data['data']:
         print("❌ Error: Invalid API response")
         return []
-    
+
     workouts = []
+    # Plan revision signals for stable event identity (DTSTAMP/SEQUENCE).
+    plan_version = data['data'].get('version')
+    plan_update_ts = data['data'].get('updateTimestamp')
     entities = data['data']['entities']
     # Build programs dict keyed by idInPlan (entities reference programs by idInPlan, not by index)
     programs = {prog.get('idInPlan'): prog for prog in data['data'].get('programs', []) if prog.get('idInPlan')}
@@ -248,6 +315,7 @@ def scrape_from_url(url):
                 workouts.append({
                     'week': week,
                     'day_of_week': day_of_week,
+                    'id_in_plan': entity_id_in_plan,
                     'title': rich.title or workout_title or 'Workout',
                     'description': rich_desc or (workout_overview or ''),
                     'duration': f"{rich.duration_s // 60}min" if rich.duration_s else None,
@@ -396,13 +464,17 @@ def scrape_from_url(url):
         workouts.append({
             'week': week,
             'day_of_week': day_of_week,
+            'id_in_plan': entity_id_in_plan,
             'title': title,
             'description': description,
             'duration': duration,
             'distance': distance,
             'training_load': training_load
         })
-    
+
+    # Stable UID/SEQUENCE/DTSTAMP so re-downloading a revised plan updates the
+    # calendar in place instead of duplicating events.
+    _assign_event_identity(workouts, plan_id, plan_version, plan_update_ts)
     return workouts
 
 
@@ -600,7 +672,18 @@ def create_ics_file(workouts, start_date=None, output_file='coros_training_plan.
         # Create event
         event = Event()
         event.add('summary', workout['title'])
-        
+
+        # Stable identity: matched-by-UID re-import updates events in place
+        # (no duplicates); deterministic DTSTAMP (never wall-clock) keeps the
+        # same plan version byte-identical; SEQUENCE lets clients apply edits.
+        event.add('uid', workout.get('uid') or _fallback_uid(workout))
+        event.add('dtstamp', _dtstamp_for(workout))
+        if workout.get('sequence') is not None:
+            try:
+                event.add('sequence', int(workout['sequence']))
+            except (ValueError, TypeError):
+                pass   # non-numeric sequence (e.g. a crafted /generate POST) -> omit, don't crash
+
         # Use All Day Event (VALUE=DATE)
         event_date_val = event_date.date() if isinstance(event_date, datetime) else event_date
         
