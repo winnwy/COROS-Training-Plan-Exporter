@@ -278,6 +278,20 @@ def decode_plan(data: dict, translate) -> Plan:
     return plan
 
 
+def decode_workout(data: dict, translate) -> Workout:
+    """Decode a standalone COROS workout (`teamapi.coros.com/training/program/
+    detail` -> response['data']) into a single Workout.
+
+    A workout payload is shaped exactly like one element of a plan's
+    `programs[]` (same sportType / name / overview / exercises), just without
+    the plan's dated schedule wrapper. So wrap it as a one-program synthetic
+    plan and reuse decode_plan — one decode path for plans and workouts, no
+    duplicated logic."""
+    synthetic = {"name": data.get("name", ""), "region": data.get("region", 1),
+                 "programs": [data]}
+    return decode_plan(synthetic, translate).workouts[0]
+
+
 # ---------------- rendering: rich .ics DESCRIPTION ----------------
 def format_description(w: Workout, max_chars: int = 4000, include_summary: bool = True) -> str:
     """Human-readable structured body for an .ics VEVENT DESCRIPTION.
