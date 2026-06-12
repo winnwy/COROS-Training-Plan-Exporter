@@ -60,6 +60,18 @@ def load_training_data(filename='training_data.txt'):
         print("   Please follow the instructions in README.md to create this file.")
         sys.exit(1)
 
+def day_no_to_week_dow(day_no):
+    """Map a COROS absolute day index (`dayNo`, 0-based across the whole plan:
+    0,1,2,…) to (week, day_of_week), both used by calculate_plan_dates.
+
+    Invariant: (week - 1) * 7 + day_of_week == day_no  (must hold for all dayNo,
+    or workout dates drift — see tests/test_dates.py). day_of_week is the weekday
+    only under a Monday plan-start; calculate_plan_dates re-anchors to the user's
+    chosen start date afterward.
+    """
+    return (day_no // 7) + 1, day_no % 7
+
+
 def scrape_from_url(url):
     """Fetch training plan from COROS API and translate dictionary keys"""
     # Extract plan ID and region from URL
@@ -118,8 +130,7 @@ def scrape_from_url(url):
     # Calculate which week each day belongs to (7 days per week)
     for entity in entities:
         day_no = entity.get('dayNo', 1)
-        week = ((day_no - 1) // 7) + 1
-        day_of_week = day_no % 7  # dayNo directly maps: 0=Mon, 1=Tue, 2=Wed, 3=Thu, 4=Fri, 5=Sat, 6=Sun
+        week, day_of_week = day_no_to_week_dow(day_no)
         
         # Get program info for this entity using idInPlan
         entity_id_in_plan = entity.get('idInPlan')
@@ -532,13 +543,48 @@ def create_ics_file(workouts, start_date=None, output_file='coros_training_plan.
     else:
         return cal.to_ical()
 
+def resolve_start_date(start_arg=None):
+    """Resolve the plan start date.
+
+    - start_arg is a 'YYYY-MM-DD' string -> parse and return it (no prompt).
+      Invalid strings raise ValueError (the CLI validates up front).
+    - start_arg is None -> prompt interactively; Enter / EOF / no TTY = today.
+    Returns a datetime.
+    """
+    if start_arg is not None:
+        return datetime.strptime(start_arg, '%Y-%m-%d')
+
+    print("\n📅 When would you like to start the training plan? (Week 1 Day 1)")
+    print("   Press Enter to start today, or enter a date (YYYY-MM-DD):")
+    try:
+        user_input = input().strip()
+    except EOFError:
+        user_input = ""
+    if user_input:
+        try:
+            return datetime.strptime(user_input, '%Y-%m-%d')
+        except ValueError:
+            print("⚠️  Invalid date format. Using today as start date.")
+    return datetime.now()
+
+
 def main():
     """Main function"""
     import argparse
     parser = argparse.ArgumentParser(description='Convert COROS plan to ICS')
     parser.add_argument('--url', help='COROS Training Plan URL')
     parser.add_argument('--file', default='training_data.txt', help='Input text file')
+    parser.add_argument('--start', '--date', dest='start', metavar='YYYY-MM-DD',
+                        help='Plan start date (Week 1 Day 1). Skips the interactive '
+                             'prompt for non-interactive use. Defaults to today.')
     args = parser.parse_args()
+
+    # Validate --start up front so we fail fast (before any network work).
+    if args.start is not None:
+        try:
+            datetime.strptime(args.start, '%Y-%m-%d')
+        except ValueError:
+            parser.error(f"invalid --start date '{args.start}': expected YYYY-MM-DD")
     
     workouts = []
     
@@ -564,24 +610,9 @@ def main():
         
     print(f"✅ Found {len(workouts)} workouts")
     
-    # Ask user for start date
-    print("\n📅 When would you like to start the training plan? (Week 1 Day 1)")
-    print("   Press Enter to start today, or enter a date (YYYY-MM-DD):")
-    try:
-        user_input = input().strip()
-    except EOFError:
-        user_input = ""
-    
-    start_date = None
-    if user_input:
-        try:
-            start_date = datetime.strptime(user_input, '%Y-%m-%d')
-        except ValueError:
-            print("⚠️  Invalid date format. Using today as start date.")
-    
-    if start_date is None:
-        start_date = datetime.now()
-    
+    # Use --start if given (non-interactive), else prompt.
+    start_date = resolve_start_date(args.start)
+
     print(f"\n🚀 Creating ICS file starting from {start_date.strftime('%Y-%m-%d')}...")
     output_file = create_ics_file(workouts, start_date)
     
