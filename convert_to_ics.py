@@ -40,23 +40,30 @@ def _dtstamp_for(workout):
 
 def _fallback_uid(workout):
     """Stable UID for events that carry no plan/workout id (e.g. the legacy text
-    parser): hash the title — deterministic, dedups re-imports of the same item."""
-    seed = (workout.get('title') or 'workout')
+    parser): hash title + date so distinct same-title workouts don't collide
+    into one event on import. Deterministic; dedups re-imports of the same item."""
+    seed = f"{workout.get('title') or 'workout'}|{workout.get('date_str') or ''}"
     return f"{hashlib.sha1(seed.encode('utf-8')).hexdigest()[:16]}@{_ICS_DOMAIN}"
 
 
 def _assign_event_identity(workouts, uid_seed, version, update_ts):
     """Add a stable per-event UID + SEQUENCE + DTSTAMP source to each plan
-    workout dict. day_no (plan-relative, start-date-independent) is the stable
-    key, reconstructed from the (week, day_of_week) invariant; a within-day
-    counter disambiguates the rare multi-session day. These ride in the dict so
-    they survive the web JSON round-trip and create_ics_file just reads them."""
+    workout dict. The key is the per-entity `id_in_plan` (idInPlan) — stable and
+    unique per session, so it survives the API returning entities in a different
+    order (a positional/day-based key would swap UIDs between two sessions on the
+    same day). Falls back to the (week, day_of_week)-derived day_no + a within-day
+    counter only when idInPlan is absent (legacy payloads). These ride in the
+    dict so they survive the web JSON round-trip; create_ics_file just reads them."""
     seen = Counter()
     for w in workouts:
-        day_no = (w.get('week', 1) - 1) * 7 + (w.get('day_of_week') or 0)
-        n = seen[day_no]
-        seen[day_no] += 1
-        key = f"d{day_no}" if n == 0 else f"d{day_no}-{n}"
+        idp = w.get('id_in_plan')
+        if idp is not None:
+            key = f"e{idp}"
+        else:
+            day_no = (w.get('week', 1) - 1) * 7 + (w.get('day_of_week') or 0)
+            n = seen[day_no]
+            seen[day_no] += 1
+            key = f"d{day_no}" if n == 0 else f"d{day_no}-{n}"
         w.setdefault('uid', _stable_uid(uid_seed, key))
         if version is not None:
             w.setdefault('sequence', int(version))
@@ -308,6 +315,7 @@ def scrape_from_url(url):
                 workouts.append({
                     'week': week,
                     'day_of_week': day_of_week,
+                    'id_in_plan': entity_id_in_plan,
                     'title': rich.title or workout_title or 'Workout',
                     'description': rich_desc or (workout_overview or ''),
                     'duration': f"{rich.duration_s // 60}min" if rich.duration_s else None,
@@ -456,6 +464,7 @@ def scrape_from_url(url):
         workouts.append({
             'week': week,
             'day_of_week': day_of_week,
+            'id_in_plan': entity_id_in_plan,
             'title': title,
             'description': description,
             'duration': duration,
@@ -670,7 +679,10 @@ def create_ics_file(workouts, start_date=None, output_file='coros_training_plan.
         event.add('uid', workout.get('uid') or _fallback_uid(workout))
         event.add('dtstamp', _dtstamp_for(workout))
         if workout.get('sequence') is not None:
-            event.add('sequence', int(workout['sequence']))
+            try:
+                event.add('sequence', int(workout['sequence']))
+            except (ValueError, TypeError):
+                pass   # non-numeric sequence (e.g. a crafted /generate POST) -> omit, don't crash
 
         # Use All Day Event (VALUE=DATE)
         event_date_val = event_date.date() if isinstance(event_date, datetime) else event_date

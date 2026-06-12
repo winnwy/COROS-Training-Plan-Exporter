@@ -26,13 +26,39 @@ def test_assign_identity_uid_keyed_on_dayno():
     assert all(w["dtstamp_ts"] == 1779108252 for w in ws)
 
 
-def test_assign_identity_disambiguates_multisession_day():
+def test_assign_identity_disambiguates_multisession_day_fallback():
+    # no id_in_plan -> day_no + within-day counter (legacy fallback)
     ws = [_wk(1, 0, "AM"), _wk(1, 0, "PM")]
     C._assign_event_identity(ws, "P", None, None)
     assert ws[0]["uid"] == f"P-d0@{DOMAIN}"
     assert ws[1]["uid"] == f"P-d0-1@{DOMAIN}"
     assert ws[0]["uid"] != ws[1]["uid"]
     assert "sequence" not in ws[0]   # version None -> not set
+
+
+def test_assign_identity_keys_on_idinplan_order_independent():
+    # two sessions on the SAME day, keyed by idInPlan -> UID must NOT depend on
+    # the order COROS returns them (the multi-session swap bug).
+    am = dict(_wk(1, 0, "AM"), id_in_plan=19)
+    pm = dict(_wk(1, 0, "PM"), id_in_plan=97)
+    C._assign_event_identity([am, pm], "P", 6, None)
+    C._assign_event_identity([dict(_wk(1, 0, "PM"), id_in_plan=97),
+                              dict(_wk(1, 0, "AM"), id_in_plan=19)], "P", 6, None)
+    assert am["uid"] == f"P-e19@{DOMAIN}"
+    assert pm["uid"] == f"P-e97@{DOMAIN}"   # stable regardless of order
+
+
+def test_fallback_uid_distinguishes_same_title_different_date():
+    a = C._fallback_uid(_wk(1, 0, "3 mile aerobic endurance", "2026-07-01"))
+    b = C._fallback_uid(_wk(2, 0, "3 mile aerobic endurance", "2026-07-08"))
+    assert a != b, "same-title workouts on different days must get distinct UIDs (no merge on import)"
+
+
+def test_create_ics_non_numeric_sequence_does_not_crash():
+    w = _wk(1, 0)
+    w["sequence"] = "not-a-number"   # e.g. a crafted /generate POST
+    out = C.create_ics_file([w], output_file=None)
+    assert b"BEGIN:VEVENT" in out and b"SEQUENCE:not" not in out   # omitted, not crashed
 
 
 def test_create_ics_is_deterministic_and_carries_identity():
