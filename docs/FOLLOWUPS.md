@@ -41,3 +41,9 @@ See `BUILD_PLAN.md` for full context.
 - [ ] A2: strength/exercise-plan rich decode (sets/reps/weight/rest/form cues).
 - [ ] §4 (research-gated): structured export to production (intervals.icu / .ZWO /
   Garmin FIT) — needs user sign-off per BUILD_PLAN §2/§8.1.
+
+## Standing task
+- [ ] **Keep `README.md` in sync with deliverables — rewrite it whenever deliverables change.**
+  Current README predates the decoder/rich-.ics work, the POC, and the structured-export
+  research. Rewrite for readability + match actual outputs (.ics rich detail now; .ZWO/
+  intervals.icu/Garmin as researched/optional). Update on every deliverable change.
