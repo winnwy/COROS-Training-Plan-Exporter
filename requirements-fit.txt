@@ -1,3 +1,0 @@
-# Optional: only needed for the Garmin .FIT exporter (coros_to_fit.py).
-# Not required for the web app / .ics export.
-fit-tool

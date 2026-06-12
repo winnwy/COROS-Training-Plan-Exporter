@@ -203,8 +203,18 @@
             <a href="/" style="flex:1; text-decoration: none;">
                 <button type="button" class="btn-secondary">Back</button>
             </a>
-            <button type="submit" class="btn-primary">Confirm & Download ICS</button>
+            <button type="submit" class="btn-primary">Confirm &amp; Download ICS</button>
         </form>
+
+        <!-- Garmin .FIT export (run/bike): undated workout files, sideload to the watch -->
+        <form action="/generate-fit" method="POST" class="actions" style="margin-top: 10px;">
+            <input type="hidden" name="plan_url" value='{{ plan_url }}'>
+            <button type="submit" class="btn-secondary" style="flex:1;">⌚ Download Garmin .FIT (run/bike, .zip)</button>
+        </form>
+        <p style="font-size: 0.8em; color: #888; text-align: center; margin-top: 6px;">
+            Calendar import gives reminders. The Garmin .FIT files are watch-guided workouts —
+            unzip and copy to your watch's <code>GARMIN/NewFiles</code> folder over USB.
+        </p>
     </div>
 </body>
 

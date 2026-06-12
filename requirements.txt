@@ -2,3 +2,4 @@ icalendar
 flask
 requests
 beautifulsoup4
+fit-tool
