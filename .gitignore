@@ -11,7 +11,9 @@ venv/
 
 # Generated output
 *.ics
+*.fit
 poc/out/
+fit_out/
 training_data.txt
 
 # OS / tooling

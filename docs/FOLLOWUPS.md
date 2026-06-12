@@ -41,8 +41,12 @@ See `BUILD_PLAN.md` for full context.
 - [x] A2: strength/exercise-plan rich decode — DONE 2026-06-12 (sets×reps @ weight,
   holds, rest, bodyweight; supersets via groups; `part` decodable but omitted with
   muscle/equipment per coverage findings). Form cues not shown inline (length).
-- [ ] §4 (research-gated): structured export to production (intervals.icu / .ZWO /
-  Garmin FIT) — needs user sign-off per BUILD_PLAN §2/§8.1.
+- [x] §4: Garmin `.FIT` export (run/bike) DONE 2026-06-12 — `coros_to_fit.py`,
+  reuses the shared decoder; durations + interval repeats exact, targets carried
+  in step names; tests/test_fit.py. Sideload via GARMIN/NewFiles. Strength/swim FIT
+  (different schema) and direct Garmin Connect upload still open.
+- [ ] §4 (still open): `.ZWO`/intervals.icu to production (POC exists), direct
+  Garmin Connect upload (unofficial API), and strength/swim FIT schemas.
 
 ## Standing task
 - [x] First full README rewrite done 2026-06-12 — readability + matches current
