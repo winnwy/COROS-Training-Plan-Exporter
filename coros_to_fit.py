@@ -20,8 +20,11 @@ Usage:
     python coros_to_fit.py --plan 459583119950004224 [--region 1] [--out ./fit] [--limit N]
 """
 import argparse
+import io
 import os
+import re
 import sys
+import zipfile
 from datetime import datetime
 
 from fit_tool.fit_file_builder import FitFileBuilder
@@ -127,6 +130,51 @@ def fetch_plan(plan_id, region):
     return r.json().get("data") or {}
 
 
+def parse_plan_url(url):
+    """Extract (plan_id, region) from a COROS share/schedule URL."""
+    pid = re.search(r'planId=([0-9]+)', url or "")
+    reg = re.search(r'region=([0-9]+)', url or "")
+    return (pid.group(1) if pid else None, reg.group(1) if reg else "1")
+
+
+def decode_plan_for(plan_id, region):
+    dictionary = C.load_dictionary()
+    tr = lambda k: (C.translate_key(k, dictionary) if k else "")
+    return D.decode_plan(fetch_plan(plan_id, region), tr)
+
+
+def _fit_filename(n, w):
+    safe = "".join(c if c.isalnum() else "_" for c in w.title)[:30]
+    return f"{n:03d}_{w.sport.lower()}_{safe}.fit"
+
+
+def exportable(workouts):
+    """Run/bike workouts with real steps (the FIT-exportable subset)."""
+    return [w for w in workouts if w.sport in SPORT_FIT and w.blocks]
+
+
+def workouts_to_zip(workouts):
+    """Zip one .fit per exportable workout. Returns zip bytes (empty zip if none)."""
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        for n, w in enumerate(exportable(workouts), 1):
+            z.writestr(_fit_filename(n, w), build_fit(w))
+    buf.seek(0)
+    return buf.getvalue()
+
+
+def fit_zip_for_plan(plan_url):
+    """End-to-end: COROS plan URL -> zip of Garmin .fit workout files."""
+    plan_id, region = parse_plan_url(plan_url)
+    if not plan_id:
+        raise ValueError("Could not find a planId in the URL")
+    plan = decode_plan_for(plan_id, region)
+    workouts = exportable(plan.workouts)
+    if not workouts:
+        raise ValueError("No run/bike workouts in this plan to export as .FIT")
+    return workouts_to_zip(plan.workouts)
+
+
 def main():
     ap = argparse.ArgumentParser(description="COROS run/bike plan -> Garmin .FIT workouts")
     ap.add_argument("--plan", required=True)
@@ -135,22 +183,17 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     args = ap.parse_args()
 
-    dictionary = C.load_dictionary()
-    tr = lambda k: (C.translate_key(k, dictionary) if k else "")
-    data = fetch_plan(args.plan, args.region)
-    plan = D.decode_plan(data, tr)
-    workouts = [w for w in plan.workouts if w.sport in SPORT_FIT and w.blocks]
+    plan = decode_plan_for(args.plan, args.region)
+    workouts = exportable(plan.workouts)
     if args.limit:
         workouts = workouts[:args.limit]
 
     os.makedirs(args.out, exist_ok=True)
     print(f"Plan: {plan.title!r} — {len(workouts)} run/bike workouts -> .FIT")
     for n, w in enumerate(workouts, 1):
-        fit = build_fit(w)
-        safe = "".join(c if c.isalnum() else "_" for c in w.title)[:30]
-        path = os.path.join(args.out, f"{n:03d}_{w.sport.lower()}_{safe}.fit")
+        path = os.path.join(args.out, _fit_filename(n, w))
         with open(path, "wb") as f:
-            f.write(fit)
+            f.write(build_fit(w))
     print(f"Wrote {len(workouts)} .fit files to {args.out}/")
     print("Sideload: copy to your watch's GARMIN/NewFiles/ folder over USB.")
 

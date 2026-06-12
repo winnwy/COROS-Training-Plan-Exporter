@@ -89,3 +89,23 @@ def test_fit_run_plan_has_distance_steps_and_named_targets():
 def test_fit_only_run_bike_in_scope():
     # strength workouts are out of scope; SPORT_FIT excludes them
     assert "Strength" not in F.SPORT_FIT and "Run" in F.SPORT_FIT and "Bike" in F.SPORT_FIT
+
+
+def test_parse_plan_url():
+    assert F.parse_plan_url("https://x/share?planId=123&region=2") == ("123", "2")
+    assert F.parse_plan_url("https://x/share?planId=123") == ("123", "1")  # region defaults
+    assert F.parse_plan_url("https://x/nope") == (None, "1")
+
+
+def test_workouts_to_zip_contains_valid_fit_files():
+    import io, zipfile
+    plan = _plan("bike_threshold")
+    data = F.workouts_to_zip(plan.workouts)
+    zf = zipfile.ZipFile(io.BytesIO(data))
+    names = zf.namelist()
+    assert names and all(n.endswith(".fit") for n in names)
+    assert len(names) == len(F.exportable(plan.workouts))
+    # each entry must itself decode as a WORKOUT file
+    m = _messages(zf.read(names[0]))
+    assert _v(m["FileIdMessage"][0].type) == FileType.WORKOUT.value
+    assert m["WorkoutStepMessage"]

@@ -59,12 +59,13 @@ def index():
             
             workouts_json = json.dumps(json_workouts)
             
-            return render_template('preview.html', 
-                                   workouts=workouts_with_dates, 
+            return render_template('preview.html',
+                                   workouts=workouts_with_dates,
                                    start_date=start_date.strftime('%Y-%m-%d'),
                                    total_workouts=len(workouts),
                                    total_weeks=total_weeks,
-                                   workouts_json=workouts_json)
+                                   workouts_json=workouts_json,
+                                   plan_url=plan_url)
             
         except Exception as e:
             flash(f'An error occurred: {str(e)}', 'error')
@@ -100,6 +101,29 @@ def generate():
         )
     except Exception as e:
         return f"Error generating ICS: {str(e)}", 500
+
+
+@app.route('/generate-fit', methods=['POST'])
+def generate_fit():
+    """Build Garmin .FIT workout files (run/bike) and return them as a .zip."""
+    plan_url = request.form.get('plan_url')
+    if not plan_url:
+        return "Error: No plan URL provided", 400
+    try:
+        import coros_to_fit
+        zip_bytes = coros_to_fit.fit_zip_for_plan(plan_url)
+        return send_file(
+            io.BytesIO(zip_bytes),
+            as_attachment=True,
+            download_name='coros_garmin_workouts.zip',
+            mimetype='application/zip'
+        )
+    except ValueError as e:
+        # e.g. no run/bike workouts to export
+        return f"Could not build Garmin workouts: {str(e)}", 400
+    except Exception as e:
+        return f"Error generating FIT: {str(e)}", 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)

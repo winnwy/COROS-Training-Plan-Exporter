@@ -42,8 +42,8 @@ Intervals are shown as repeats (`3× (...)`), and HR / pace targets are decoded 
 ### ⌚ Garmin watch export (`.FIT`)
 A `.ics` event is just a reminder. To get a **watch-guided** workout (your Garmin steps you through warm-up, every interval, and cool-down), use `coros_to_fit.py` — it turns a **run/bike** plan into Garmin `.FIT` workout files:
 
+Easiest from the web app: on the preview page, click **Download Garmin .FIT**. Or from the CLI:
 ```bash
-pip install -r requirements-fit.txt
 python3 coros_to_fit.py --plan <ID> --out ./fit_out
 # then copy the .fit files to your watch's GARMIN/NewFiles/ folder over USB
 ```
@@ -120,7 +120,7 @@ COROS plan URL
 | `coros_decode.py` | Shared decoder → normalized workout model + rich description |
 | `coros_dictionary.json` | Shortcode → natural-language dictionary (~6,800 entries) |
 | `templates/` | Web frontend (`index.html`, `preview.html`) |
-| `coros_to_fit.py` | Garmin `.FIT` workout exporter (run/bike) — needs `requirements-fit.txt` |
+| `coros_to_fit.py` | Garmin `.FIT` workout exporter (run/bike); also served by the web app |
 | `poc/` | Structured-export proof of concept (`.ZWO` / intervals.icu) |
 | `tests/` | pytest + committed raw API fixtures |
 | `docs/` | [Build plan](docs/BUILD_PLAN.md), [full site map](docs/coros_map/COROS_MAP.md), [follow-ups](docs/FOLLOWUPS.md) |
